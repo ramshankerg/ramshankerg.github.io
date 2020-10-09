@@ -1,0 +1,4030 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="./theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="./theme/pygments/github.min.css">
+  <link rel="stylesheet" type="text/css" href="./theme/font-awesome/css/font-awesome.min.css">
+
+
+    <link href="ramshankerg.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Ram Shanker G Atom">
+
+
+
+
+
+<meta name="author" content="me" />
+<meta name="description" content="Click on read more link to find out more about the project" />
+<meta name="keywords" content="python">
+
+<meta property="og:site_name" content="Ram Shanker G"/>
+<meta property="og:title" content="Guided Project: Analyzing Wikipedia Pages"/>
+<meta property="og:description" content="Click on read more link to find out more about the project"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="./Guided Project: Analyzing Wikipedia Pages.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2015-07-08 20:00:00+05:30"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="./author/me.html">
+<meta property="article:section" content="Projects"/>
+<meta property="article:tag" content="python"/>
+<meta property="og:image" content="">
+
+  <title>Ram Shanker G &ndash; Guided Project: Analyzing Wikipedia Pages</title>
+
+</head>
+<body>
+  <aside>
+    <div>
+      <a href=".">
+        <img src="./theme/img/profile.png" alt="" title="">
+      </a>
+      <h1><a href="."></a></h1>
+
+
+      <nav>
+        <ul class="list">
+          <li><a href="./pages/about-me.html#about-me">About me</a></li>
+
+          <li><a href="http://getpelican.com/" target="_blank">Pelican</a></li>
+          <li><a href="http://python.org/" target="_blank">Python.org</a></li>
+          <li><a href="http://jinja.pocoo.org/" target="_blank">Jinja2</a></li>
+          <li><a href="#" target="_blank">You can modify these links in your config file</a></li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+        <li><a class="sc-GitHub" href="https://github.com/ramshankerg" target="_blank"><i class="fa fa-GitHub"></i></a></li>
+        <li><a class="sc-Linkedin" href="https://www.linkedin.com/in/ram-shanker-g/" target="_blank"><i class="fa fa-Linkedin"></i></a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+
+<article class="single">
+  <header>
+      
+    <h1 id="Guided Project: Analyzing Wikipedia Pages">Guided Project: Analyzing Wikipedia Pages</h1>
+    <p>
+          Posted on Wed 08 July 2015 in <a href="./category/projects.html">Projects</a>
+
+
+    </p>
+  </header>
+
+
+  <div>
+    <style type="text/css">/*!
+*
+* IPython notebook
+*
+*/
+/* CSS font colors for translated ANSI escape sequences */
+/* The color values are a mix of
+   http://www.xcolors.net/dl/baskerville-ivorylight and
+   http://www.xcolors.net/dl/euphrasia */
+.ansi-black-fg {
+  color: #3E424D;
+}
+.ansi-black-bg {
+  background-color: #3E424D;
+}
+.ansi-black-intense-fg {
+  color: #282C36;
+}
+.ansi-black-intense-bg {
+  background-color: #282C36;
+}
+.ansi-red-fg {
+  color: #E75C58;
+}
+.ansi-red-bg {
+  background-color: #E75C58;
+}
+.ansi-red-intense-fg {
+  color: #B22B31;
+}
+.ansi-red-intense-bg {
+  background-color: #B22B31;
+}
+.ansi-green-fg {
+  color: #00A250;
+}
+.ansi-green-bg {
+  background-color: #00A250;
+}
+.ansi-green-intense-fg {
+  color: #007427;
+}
+.ansi-green-intense-bg {
+  background-color: #007427;
+}
+.ansi-yellow-fg {
+  color: #DDB62B;
+}
+.ansi-yellow-bg {
+  background-color: #DDB62B;
+}
+.ansi-yellow-intense-fg {
+  color: #B27D12;
+}
+.ansi-yellow-intense-bg {
+  background-color: #B27D12;
+}
+.ansi-blue-fg {
+  color: #208FFB;
+}
+.ansi-blue-bg {
+  background-color: #208FFB;
+}
+.ansi-blue-intense-fg {
+  color: #0065CA;
+}
+.ansi-blue-intense-bg {
+  background-color: #0065CA;
+}
+.ansi-magenta-fg {
+  color: #D160C4;
+}
+.ansi-magenta-bg {
+  background-color: #D160C4;
+}
+.ansi-magenta-intense-fg {
+  color: #A03196;
+}
+.ansi-magenta-intense-bg {
+  background-color: #A03196;
+}
+.ansi-cyan-fg {
+  color: #60C6C8;
+}
+.ansi-cyan-bg {
+  background-color: #60C6C8;
+}
+.ansi-cyan-intense-fg {
+  color: #258F8F;
+}
+.ansi-cyan-intense-bg {
+  background-color: #258F8F;
+}
+.ansi-white-fg {
+  color: #C5C1B4;
+}
+.ansi-white-bg {
+  background-color: #C5C1B4;
+}
+.ansi-white-intense-fg {
+  color: #A1A6B2;
+}
+.ansi-white-intense-bg {
+  background-color: #A1A6B2;
+}
+.ansi-default-inverse-fg {
+  color: #FFFFFF;
+}
+.ansi-default-inverse-bg {
+  background-color: #000000;
+}
+.ansi-bold {
+  font-weight: bold;
+}
+.ansi-underline {
+  text-decoration: underline;
+}
+/* The following styles are deprecated an will be removed in a future version */
+.ansibold {
+  font-weight: bold;
+}
+.ansi-inverse {
+  outline: 0.5px dotted;
+}
+/* use dark versions for foreground, to improve visibility */
+.ansiblack {
+  color: black;
+}
+.ansired {
+  color: darkred;
+}
+.ansigreen {
+  color: darkgreen;
+}
+.ansiyellow {
+  color: #c4a000;
+}
+.ansiblue {
+  color: darkblue;
+}
+.ansipurple {
+  color: darkviolet;
+}
+.ansicyan {
+  color: steelblue;
+}
+.ansigray {
+  color: gray;
+}
+/* and light for background, for the same reason */
+.ansibgblack {
+  background-color: black;
+}
+.ansibgred {
+  background-color: red;
+}
+.ansibggreen {
+  background-color: green;
+}
+.ansibgyellow {
+  background-color: yellow;
+}
+.ansibgblue {
+  background-color: blue;
+}
+.ansibgpurple {
+  background-color: magenta;
+}
+.ansibgcyan {
+  background-color: cyan;
+}
+.ansibggray {
+  background-color: gray;
+}
+div.cell {
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  border-radius: 2px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+  width: 100%;
+  padding: 5px;
+  /* This acts as a spacer between cells, that is outside the border */
+  margin: 0px;
+  outline: none;
+  position: relative;
+  overflow: visible;
+}
+div.cell:before {
+  position: absolute;
+  display: block;
+  top: -1px;
+  left: -1px;
+  width: 5px;
+  height: calc(100% +  2px);
+  content: '';
+  background: transparent;
+}
+div.cell.jupyter-soft-selected {
+  border-left-color: #E3F2FD;
+  border-left-width: 1px;
+  padding-left: 5px;
+  border-right-color: #E3F2FD;
+  border-right-width: 1px;
+  background: #E3F2FD;
+}
+@media print {
+  div.cell.jupyter-soft-selected {
+    border-color: transparent;
+  }
+}
+div.cell.selected,
+div.cell.selected.jupyter-soft-selected {
+  border-color: #ababab;
+}
+div.cell.selected:before,
+div.cell.selected.jupyter-soft-selected:before {
+  position: absolute;
+  display: block;
+  top: -1px;
+  left: -1px;
+  width: 5px;
+  height: calc(100% +  2px);
+  content: '';
+  background: #42A5F5;
+}
+@media print {
+  div.cell.selected,
+  div.cell.selected.jupyter-soft-selected {
+    border-color: transparent;
+  }
+}
+.edit_mode div.cell.selected {
+  border-color: #66BB6A;
+}
+.edit_mode div.cell.selected:before {
+  position: absolute;
+  display: block;
+  top: -1px;
+  left: -1px;
+  width: 5px;
+  height: calc(100% +  2px);
+  content: '';
+  background: #66BB6A;
+}
+@media print {
+  .edit_mode div.cell.selected {
+    border-color: transparent;
+  }
+}
+.prompt {
+  /* This needs to be wide enough for 3 digit prompt numbers: In[100]: */
+  min-width: 14ex;
+  /* This padding is tuned to match the padding on the CodeMirror editor. */
+  padding: 0.4em;
+  margin: 0px;
+  font-family: monospace;
+  text-align: right;
+  /* This has to match that of the the CodeMirror class line-height below */
+  line-height: 1.21429em;
+  /* Don't highlight prompt number selection */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  /* Use default cursor */
+  cursor: default;
+}
+@media (max-width: 540px) {
+  .prompt {
+    text-align: left;
+  }
+}
+div.inner_cell {
+  min-width: 0;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  /* Old browsers */
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  /* Modern browsers */
+  flex: 1;
+}
+/* input_area and input_prompt must match in top border and margin for alignment */
+div.input_area {
+  border: 1px solid #cfcfcf;
+  border-radius: 2px;
+  background: #f7f7f7;
+  line-height: 1.21429em;
+}
+/* This is needed so that empty prompt areas can collapse to zero height when there
+   is no content in the output_subarea and the prompt. The main purpose of this is
+   to make sure that empty JavaScript output_subareas have no height. */
+div.prompt:empty {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+div.unrecognized_cell {
+  padding: 5px 5px 5px 0px;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: horizontal;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+div.unrecognized_cell .inner_cell {
+  border-radius: 2px;
+  padding: 5px;
+  font-weight: bold;
+  color: red;
+  border: 1px solid #cfcfcf;
+  background: #eaeaea;
+}
+div.unrecognized_cell .inner_cell a {
+  color: inherit;
+  text-decoration: none;
+}
+div.unrecognized_cell .inner_cell a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+@media (max-width: 540px) {
+  div.unrecognized_cell > div.prompt {
+    display: none;
+  }
+}
+div.code_cell {
+  /* avoid page breaking on code cells when printing */
+}
+@media print {
+  div.code_cell {
+    page-break-inside: avoid;
+  }
+}
+/* any special styling for code cells that are currently running goes here */
+div.input {
+  page-break-inside: avoid;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: horizontal;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+@media (max-width: 540px) {
+  div.input {
+    /* Old browsers */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-align: stretch;
+    display: -moz-box;
+    -moz-box-orient: vertical;
+    -moz-box-align: stretch;
+    display: box;
+    box-orient: vertical;
+    box-align: stretch;
+    /* Modern browsers */
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+/* input_area and input_prompt must match in top border and margin for alignment */
+div.input_prompt {
+  color: #303F9F;
+  border-top: 1px solid transparent;
+}
+div.input_area > div.highlight {
+  margin: 0.4em;
+  border: none;
+  padding: 0px;
+  background-color: transparent;
+}
+div.input_area > div.highlight > pre {
+  margin: 0px;
+  border: none;
+  padding: 0px;
+  background-color: transparent;
+}
+/* The following gets added to the <head> if it is detected that the user has a
+ * monospace font with inconsistent normal/bold/italic height.  See
+ * notebookmain.js.  Such fonts will have keywords vertically offset with
+ * respect to the rest of the text.  The user should select a better font.
+ * See: https://github.com/ipython/ipython/issues/1503
+ *
+ * .CodeMirror span {
+ *      vertical-align: bottom;
+ * }
+ */
+.CodeMirror {
+  line-height: 1.21429em;
+  /* Changed from 1em to our global default */
+  font-size: 14px;
+  height: auto;
+  /* Changed to auto to autogrow */
+  background: none;
+  /* Changed from white to allow our bg to show through */
+}
+.CodeMirror-scroll {
+  /*  The CodeMirror docs are a bit fuzzy on if overflow-y should be hidden or visible.*/
+  /*  We have found that if it is visible, vertical scrollbars appear with font size changes.*/
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+.CodeMirror-lines {
+  /* In CM2, this used to be 0.4em, but in CM3 it went to 4px. We need the em value because */
+  /* we have set a different line-height and want this to scale with that. */
+  /* Note that this should set vertical padding only, since CodeMirror assumes
+       that horizontal padding will be set on CodeMirror pre */
+  padding: 0.4em 0;
+}
+.CodeMirror-linenumber {
+  padding: 0 8px 0 4px;
+}
+.CodeMirror-gutters {
+  border-bottom-left-radius: 2px;
+  border-top-left-radius: 2px;
+}
+.CodeMirror pre {
+  /* In CM3 this went to 4px from 0 in CM2. This sets horizontal padding only,
+    use .CodeMirror-lines for vertical */
+  padding: 0 0.4em;
+  border: 0;
+  border-radius: 0;
+}
+.CodeMirror-cursor {
+  border-left: 1.4px solid black;
+}
+@media screen and (min-width: 2138px) and (max-width: 4319px) {
+  .CodeMirror-cursor {
+    border-left: 2px solid black;
+  }
+}
+@media screen and (min-width: 4320px) {
+  .CodeMirror-cursor {
+    border-left: 4px solid black;
+  }
+}
+/*
+
+Original style from softwaremaniacs.org (c) Ivan Sagalaev <Maniac@SoftwareManiacs.Org>
+Adapted from GitHub theme
+
+*/
+.highlight-base {
+  color: #000;
+}
+.highlight-variable {
+  color: #000;
+}
+.highlight-variable-2 {
+  color: #1a1a1a;
+}
+.highlight-variable-3 {
+  color: #333333;
+}
+.highlight-string {
+  color: #BA2121;
+}
+.highlight-comment {
+  color: #408080;
+  font-style: italic;
+}
+.highlight-number {
+  color: #080;
+}
+.highlight-atom {
+  color: #88F;
+}
+.highlight-keyword {
+  color: #008000;
+  font-weight: bold;
+}
+.highlight-builtin {
+  color: #008000;
+}
+.highlight-error {
+  color: #f00;
+}
+.highlight-operator {
+  color: #AA22FF;
+  font-weight: bold;
+}
+.highlight-meta {
+  color: #AA22FF;
+}
+/* previously not defined, copying from default codemirror */
+.highlight-def {
+  color: #00f;
+}
+.highlight-string-2 {
+  color: #f50;
+}
+.highlight-qualifier {
+  color: #555;
+}
+.highlight-bracket {
+  color: #997;
+}
+.highlight-tag {
+  color: #170;
+}
+.highlight-attribute {
+  color: #00c;
+}
+.highlight-header {
+  color: blue;
+}
+.highlight-quote {
+  color: #090;
+}
+.highlight-link {
+  color: #00c;
+}
+/* apply the same style to codemirror */
+.cm-s-ipython span.cm-keyword {
+  color: #008000;
+  font-weight: bold;
+}
+.cm-s-ipython span.cm-atom {
+  color: #88F;
+}
+.cm-s-ipython span.cm-number {
+  color: #080;
+}
+.cm-s-ipython span.cm-def {
+  color: #00f;
+}
+.cm-s-ipython span.cm-variable {
+  color: #000;
+}
+.cm-s-ipython span.cm-operator {
+  color: #AA22FF;
+  font-weight: bold;
+}
+.cm-s-ipython span.cm-variable-2 {
+  color: #1a1a1a;
+}
+.cm-s-ipython span.cm-variable-3 {
+  color: #333333;
+}
+.cm-s-ipython span.cm-comment {
+  color: #408080;
+  font-style: italic;
+}
+.cm-s-ipython span.cm-string {
+  color: #BA2121;
+}
+.cm-s-ipython span.cm-string-2 {
+  color: #f50;
+}
+.cm-s-ipython span.cm-meta {
+  color: #AA22FF;
+}
+.cm-s-ipython span.cm-qualifier {
+  color: #555;
+}
+.cm-s-ipython span.cm-builtin {
+  color: #008000;
+}
+.cm-s-ipython span.cm-bracket {
+  color: #997;
+}
+.cm-s-ipython span.cm-tag {
+  color: #170;
+}
+.cm-s-ipython span.cm-attribute {
+  color: #00c;
+}
+.cm-s-ipython span.cm-header {
+  color: blue;
+}
+.cm-s-ipython span.cm-quote {
+  color: #090;
+}
+.cm-s-ipython span.cm-link {
+  color: #00c;
+}
+.cm-s-ipython span.cm-error {
+  color: #f00;
+}
+.cm-s-ipython span.cm-tab {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAMCAYAAAAkuj5RAAAAAXNSR0IArs4c6QAAAGFJREFUSMft1LsRQFAQheHPowAKoACx3IgEKtaEHujDjORSgWTH/ZOdnZOcM/sgk/kFFWY0qV8foQwS4MKBCS3qR6ixBJvElOobYAtivseIE120FaowJPN75GMu8j/LfMwNjh4HUpwg4LUAAAAASUVORK5CYII=);
+  background-position: right;
+  background-repeat: no-repeat;
+}
+div.output_wrapper {
+  /* this position must be relative to enable descendents to be absolute within it */
+  position: relative;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  z-index: 1;
+}
+/* class for the output area when it should be height-limited */
+div.output_scroll {
+  /* ideally, this would be max-height, but FF barfs all over that */
+  height: 24em;
+  /* FF needs this *and the wrapper* to specify full width, or it will shrinkwrap */
+  width: 100%;
+  overflow: auto;
+  border-radius: 2px;
+  -webkit-box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.8);
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.8);
+  display: block;
+}
+/* output div while it is collapsed */
+div.output_collapsed {
+  margin: 0px;
+  padding: 0px;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+div.out_prompt_overlay {
+  height: 100%;
+  padding: 0px 0.4em;
+  position: absolute;
+  border-radius: 2px;
+}
+div.out_prompt_overlay:hover {
+  /* use inner shadow to get border that is computed the same on WebKit/FF */
+  -webkit-box-shadow: inset 0 0 1px #000;
+  box-shadow: inset 0 0 1px #000;
+  background: rgba(240, 240, 240, 0.5);
+}
+div.output_prompt {
+  color: #D84315;
+}
+/* This class is the outer container of all output sections. */
+div.output_area {
+  padding: 0px;
+  page-break-inside: avoid;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: horizontal;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+div.output_area .MathJax_Display {
+  text-align: left !important;
+}
+div.output_area 
+div.output_area 
+div.output_area img,
+div.output_area svg {
+  max-width: 100%;
+  height: auto;
+}
+div.output_area img.unconfined,
+div.output_area svg.unconfined {
+  max-width: none;
+}
+div.output_area .mglyph > img {
+  max-width: none;
+}
+/* This is needed to protect the pre formating from global settings such
+   as that of bootstrap */
+.output {
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+@media (max-width: 540px) {
+  div.output_area {
+    /* Old browsers */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-align: stretch;
+    display: -moz-box;
+    -moz-box-orient: vertical;
+    -moz-box-align: stretch;
+    display: box;
+    box-orient: vertical;
+    box-align: stretch;
+    /* Modern browsers */
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+div.output_area pre {
+  margin: 0;
+  padding: 1px 0 1px 0;
+  border: 0;
+  vertical-align: baseline;
+  color: black;
+  background-color: transparent;
+  border-radius: 0;
+}
+/* This class is for the output subarea inside the output_area and after
+   the prompt div. */
+div.output_subarea {
+  overflow-x: auto;
+  padding: 0.4em;
+  /* Old browsers */
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  /* Modern browsers */
+  flex: 1;
+  max-width: calc(100% - 14ex);
+}
+div.output_scroll div.output_subarea {
+  overflow-x: visible;
+}
+/* The rest of the output_* classes are for special styling of the different
+   output types */
+/* all text output has this class: */
+div.output_text {
+  text-align: left;
+  color: #000;
+  /* This has to match that of the the CodeMirror class line-height below */
+  line-height: 1.21429em;
+}
+/* stdout/stderr are 'text' as well as 'stream', but execute_result/error are *not* streams */
+div.output_stderr {
+  background: #fdd;
+  /* very light red background for stderr */
+}
+div.output_latex {
+  text-align: left;
+}
+/* Empty output_javascript divs should have no height */
+div.output_javascript:empty {
+  padding: 0;
+}
+.js-error {
+  color: darkred;
+}
+/* raw_input styles */
+div.raw_input_container {
+  line-height: 1.21429em;
+  padding-top: 5px;
+}
+pre.raw_input_prompt {
+  /* nothing needed here. */
+}
+input.raw_input {
+  font-family: monospace;
+  font-size: inherit;
+  color: inherit;
+  width: auto;
+  /* make sure input baseline aligns with prompt */
+  vertical-align: baseline;
+  /* padding + margin = 0.5em between prompt and cursor */
+  padding: 0em 0.25em;
+  margin: 0em 0.25em;
+}
+input.raw_input:focus {
+  box-shadow: none;
+}
+p.p-space {
+  margin-bottom: 10px;
+}
+div.output_unrecognized {
+  padding: 5px;
+  font-weight: bold;
+  color: red;
+}
+div.output_unrecognized a {
+  color: inherit;
+  text-decoration: none;
+}
+div.output_unrecognized a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+.rendered_html {
+  color: #000;
+  /* any extras will just be numbers: */
+}
+
+
+
+.rendered_html :link {
+  text-decoration: underline;
+}
+.rendered_html :visited {
+  text-decoration: underline;
+}
+
+
+
+
+
+
+.rendered_html h1:first-child {
+  margin-top: 0.538em;
+}
+.rendered_html h2:first-child {
+  margin-top: 0.636em;
+}
+.rendered_html h3:first-child {
+  margin-top: 0.777em;
+}
+.rendered_html h4:first-child {
+  margin-top: 1em;
+}
+.rendered_html h5:first-child {
+  margin-top: 1em;
+}
+.rendered_html h6:first-child {
+  margin-top: 1em;
+}
+.rendered_html ul:not(.list-inline),
+.rendered_html ol:not(.list-inline) {
+  padding-left: 2em;
+}
+
+
+
+
+
+
+
+
+.rendered_html * + ul {
+  margin-top: 1em;
+}
+.rendered_html * + ol {
+  margin-top: 1em;
+}
+
+
+
+
+
+.rendered_html pre,
+
+
+
+
+.rendered_html tr,
+.rendered_html th,
+
+
+.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
+}
+.rendered_html * + table {
+  margin-top: 1em;
+}
+
+.rendered_html * + p {
+  margin-top: 1em;
+}
+
+.rendered_html * + img {
+  margin-top: 1em;
+}
+.rendered_html img,
+
+.rendered_html img.unconfined,
+
+
+.rendered_html * + .alert {
+  margin-top: 1em;
+}
+[dir="rtl"] 
+div.text_cell {
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: horizontal;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+@media (max-width: 540px) {
+  div.text_cell > div.prompt {
+    display: none;
+  }
+}
+div.text_cell_render {
+  /*font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;*/
+  outline: none;
+  resize: none;
+  width: inherit;
+  border-style: none;
+  padding: 0.5em 0.5em 0.5em 0.4em;
+  color: #000;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+a.anchor-link:link {
+  text-decoration: none;
+  padding: 0px 20px;
+  visibility: hidden;
+}
+h1:hover .anchor-link,
+h2:hover .anchor-link,
+h3:hover .anchor-link,
+h4:hover .anchor-link,
+h5:hover .anchor-link,
+h6:hover .anchor-link {
+  visibility: visible;
+}
+.text_cell.rendered .input_area {
+  display: none;
+}
+.text_cell.rendered 
+.text_cell.rendered .rendered_html tr,
+.text_cell.rendered .rendered_html th,
+.text_cell.rendered 
+.text_cell.unrendered .text_cell_render {
+  display: none;
+}
+.text_cell .dropzone .input_area {
+  border: 2px dashed #bababa;
+  margin: -1px;
+}
+.cm-header-1,
+.cm-header-2,
+.cm-header-3,
+.cm-header-4,
+.cm-header-5,
+.cm-header-6 {
+  font-weight: bold;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.cm-header-1 {
+  font-size: 185.7%;
+}
+.cm-header-2 {
+  font-size: 157.1%;
+}
+.cm-header-3 {
+  font-size: 128.6%;
+}
+.cm-header-4 {
+  font-size: 110%;
+}
+.cm-header-5 {
+  font-size: 100%;
+  font-style: italic;
+}
+.cm-header-6 {
+  font-size: 100%;
+  font-style: italic;
+}
+</style>
+<style type="text/css">.highlight .hll { background-color: #ffffcc }
+.highlight  { background: #f8f8f8; }
+.highlight .c { color: #408080; font-style: italic } /* Comment */
+.highlight .err { border: 1px solid #FF0000 } /* Error */
+.highlight .k { color: #008000; font-weight: bold } /* Keyword */
+.highlight .o { color: #666666 } /* Operator */
+.highlight .ch { color: #408080; font-style: italic } /* Comment.Hashbang */
+.highlight .cm { color: #408080; font-style: italic } /* Comment.Multiline */
+.highlight .cp { color: #BC7A00 } /* Comment.Preproc */
+.highlight .cpf { color: #408080; font-style: italic } /* Comment.PreprocFile */
+.highlight .c1 { color: #408080; font-style: italic } /* Comment.Single */
+.highlight .cs { color: #408080; font-style: italic } /* Comment.Special */
+.highlight .gd { color: #A00000 } /* Generic.Deleted */
+.highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .gr { color: #FF0000 } /* Generic.Error */
+.highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.highlight .gi { color: #00A000 } /* Generic.Inserted */
+.highlight .go { color: #888888 } /* Generic.Output */
+.highlight .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+.highlight .gs { font-weight: bold } /* Generic.Strong */
+.highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.highlight .gt { color: #0044DD } /* Generic.Traceback */
+.highlight .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+.highlight .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+.highlight .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+.highlight .kp { color: #008000 } /* Keyword.Pseudo */
+.highlight .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+.highlight .kt { color: #B00040 } /* Keyword.Type */
+.highlight .m { color: #666666 } /* Literal.Number */
+.highlight .s { color: #BA2121 } /* Literal.String */
+.highlight .na { color: #7D9029 } /* Name.Attribute */
+.highlight .nb { color: #008000 } /* Name.Builtin */
+.highlight .nc { color: #0000FF; font-weight: bold } /* Name.Class */
+.highlight .no { color: #880000 } /* Name.Constant */
+.highlight .nd { color: #AA22FF } /* Name.Decorator */
+.highlight .ni { color: #999999; font-weight: bold } /* Name.Entity */
+.highlight .ne { color: #D2413A; font-weight: bold } /* Name.Exception */
+.highlight .nf { color: #0000FF } /* Name.Function */
+.highlight .nl { color: #A0A000 } /* Name.Label */
+.highlight .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+.highlight .nt { color: #008000; font-weight: bold } /* Name.Tag */
+.highlight .nv { color: #19177C } /* Name.Variable */
+.highlight .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+.highlight .w { color: #bbbbbb } /* Text.Whitespace */
+.highlight .mb { color: #666666 } /* Literal.Number.Bin */
+.highlight .mf { color: #666666 } /* Literal.Number.Float */
+.highlight .mh { color: #666666 } /* Literal.Number.Hex */
+.highlight .mi { color: #666666 } /* Literal.Number.Integer */
+.highlight .mo { color: #666666 } /* Literal.Number.Oct */
+.highlight .sa { color: #BA2121 } /* Literal.String.Affix */
+.highlight .sb { color: #BA2121 } /* Literal.String.Backtick */
+.highlight .sc { color: #BA2121 } /* Literal.String.Char */
+.highlight .dl { color: #BA2121 } /* Literal.String.Delimiter */
+.highlight .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+.highlight .s2 { color: #BA2121 } /* Literal.String.Double */
+.highlight .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
+.highlight .sh { color: #BA2121 } /* Literal.String.Heredoc */
+.highlight .si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
+.highlight .sx { color: #008000 } /* Literal.String.Other */
+.highlight .sr { color: #BB6688 } /* Literal.String.Regex */
+.highlight .s1 { color: #BA2121 } /* Literal.String.Single */
+.highlight .ss { color: #19177C } /* Literal.String.Symbol */
+.highlight .bp { color: #008000 } /* Name.Builtin.Pseudo */
+.highlight .fm { color: #0000FF } /* Name.Function.Magic */
+.highlight .vc { color: #19177C } /* Name.Variable.Class */
+.highlight .vg { color: #19177C } /* Name.Variable.Global */
+.highlight .vi { color: #19177C } /* Name.Variable.Instance */
+.highlight .vm { color: #19177C } /* Name.Variable.Magic */
+.highlight .il { color: #666666 } /* Literal.Number.Integer.Long */</style><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Introducing-Wikipedia-Data">Introducing Wikipedia Data<a class="anchor-link" href="#Introducing-Wikipedia-Data">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+
+<span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="s2">&quot;wiki&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[2]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[&#39;%C3%81lvaro_Sierra.html&#39;,
+ &#39;%C3%89cole_des_Mines_de_Douai.html&#39;,
+ &#39;%C3%89taule.html&#39;,
+ &#39;%C3%96lm%C3%BCs_bir_kadinin_evraki_metrukesi.html&#39;,
+ &#39;%C5%81osie-Do%C5%82%C4%99gi.html&#39;,
+ &#39;%C5%8Cnog%C5%8D_Station.html&#39;,
+ &#39;%C5%9Eah%C3%AEn%C3%AA_Bekir%C3%AA_Sorekl%C3%AE.html&#39;,
+ &#39;(1-4)-a-D-glucan_1-a-D-glucosylmutase.html&#39;,
+ &#39;1._FC_Eschborn.html&#39;,
+ &#39;100%25_Banco.html&#39;,
+ &#39;100_Greatest_Romanians.html&#39;,
+ &#39;100_mm_field_gun_M1944_(BS-3).html&#39;,
+ &#39;104th_Logistic_Support_Brigade_(United_Kingdom).html&#39;,
+ &#39;1208_(band).html&#39;,
+ &#39;125th_(Lancashire_Fusiliers)_Brigade.html&#39;,
+ &#39;16th_Virginia_Infantry.html&#39;,
+ &#39;1860_in_science.html&#39;,
+ &#39;1866_in_birding_and_ornithology.html&#39;,
+ &#39;1879_FA_Cup_Final.html&#39;,
+ &#39;1896_Indiana_Hoosiers_football_team.html&#39;,
+ &#39;1898_Colgate_football_team.html&#39;,
+ &#39;1904_Case_football_team.html&#39;,
+ &#39;1905%E2%80%9306_FC_Barcelona_season.html&#39;,
+ &#39;1910_in_literature.html&#39;,
+ &#39;1915_Montana_football_team.html&#39;,
+ &#39;1937_Social_Credit_backbenchers%27_revolt.html&#39;,
+ &#39;1947_Notre_Dame_Fighting_Irish_football_team.html&#39;,
+ &#39;1951_National_League_tie-breaker_series.html&#39;,
+ &#39;1953%E2%80%9354_FA_Cup_qualifying_rounds.html&#39;,
+ &#39;1958_Wightman_Cup.html&#39;,
+ &#39;1963_Pittsburgh_Panthers_football_team.html&#39;,
+ &#39;1968_Duke_Blue_Devils_football_team.html&#39;,
+ &#39;1970_African_Cup_of_Nations.html&#39;,
+ &#39;1975%E2%80%9376_FIBA_Kora%C4%87_Cup.html&#39;,
+ &#39;1976_Kansas_State_Wildcats_football_team.html&#39;,
+ &#39;1978_College_Football_All-America_Team.html&#39;,
+ &#39;1982_Kentucky_Derby.html&#39;,
+ &#39;1982_World_Series.html&#39;,
+ &#39;1984%E2%80%9385_Southern_Football_League.html&#39;,
+ &#39;1984_WAC_Men%27s_Basketball_Tournament.html&#39;,
+ &#39;1987_Football_League_Trophy_Final.html&#39;,
+ &#39;1988_Chatham_Cup.html&#39;,
+ &#39;1988_State_of_Origin_series.html&#39;,
+ &#39;1989_Preakness_Stakes.html&#39;,
+ &#39;1990%E2%80%9391_Southern_Football_League.html&#39;,
+ &#39;1991%E2%80%9392_BHL_season.html&#39;,
+ &#39;1991_RTHK_Top_10_Gold_Songs_Awards.html&#39;,
+ &#39;1991_uprising_in_Basra.html&#39;,
+ &#39;1991_US_Open_%E2%80%93_Women%27s_Doubles.html&#39;,
+ &#39;1992_European_Athletics_Indoor_Championships.html&#39;,
+ &#39;1994_French_Open_%E2%80%93_Men%27s_Doubles.html&#39;,
+ &#39;1994_Scotland_rugby_union_tour_of_Argentina.html&#39;,
+ &#39;1995_FINA_Men%27s_Water_Polo_World_Cup.html&#39;,
+ &#39;1996_UEFA_Futsal_Championship.html&#39;,
+ &#39;1997_Edmonton_Eskimos_season.html&#39;,
+ &#39;1999%E2%80%932000_UEFA_Champions_League_second_group_stage.html&#39;,
+ &#39;1999_Caribbean_Cup.html&#39;,
+ &#39;1999_MTV_Video_Music_Awards.html&#39;,
+ &#39;1st_Strategic_Aerospace_Division.html&#39;,
+ &#39;2000_Pepsi_Southern_500.html&#39;,
+ &#39;2001%E2%80%9302_NBA_season.html&#39;,
+ &#39;2001_Australian_Individual_Speedway_Championship.html&#39;,
+ &#39;2001_Copa_del_Rey_Final.html&#39;,
+ &#39;2001_NCAA_Division_I_Field_Hockey_Championship.html&#39;,
+ &#39;2002%E2%80%9303_Scottish_Second_Division.html&#39;,
+ &#39;2003_World_Championships_in_Athletics_%E2%80%93_Women%27s_hammer_throw.html&#39;,
+ &#39;2004_Tuvalu_A-Division.html&#39;,
+ &#39;2005%E2%80%9306_in_Welsh_football.html&#39;,
+ &#39;2005_Asian_Women%27s_Club_Volleyball_Championship.html&#39;,
+ &#39;2005_in_radio.html&#39;,
+ &#39;2005_NCAA_Division_I_Men%27s_Basketball_Tournament.html&#39;,
+ &#39;2006_European_Athletics_Championships_%E2%80%93_Women%27s_triple_jump.html&#39;,
+ &#39;2007%E2%80%9308_Huddersfield_Town_A.F.C._season.html&#39;,
+ &#39;2007%E2%80%9308_Women%27s_EHF_Cup.html&#39;,
+ &#39;2007_in_Belgian_television.html&#39;,
+ &#39;2007_Kilkenny_Senior_Hurling_Championship.html&#39;,
+ &#39;2008_2._deild_karla.html&#39;,
+ &#39;2008_Fed_Cup_World_Group_II.html&#39;,
+ &#39;2008_Swedish_Open.html&#39;,
+ &#39;2009_English_cricket_season.html&#39;,
+ &#39;2009_European_Junior_Swimming_Championships.html&#39;,
+ &#39;2009_Giro_di_Lombardia.html&#39;,
+ &#39;2009_Open_Costa_Adeje_%E2%80%93_Isla_de_Tenerife_%E2%80%93_Singles.html&#39;,
+ &#39;2009_World_Junior_Ice_Hockey_Championships_rosters.html&#39;,
+ &#39;2010_Karshi_Challenger_%E2%80%93_Singles.html&#39;,
+ &#39;2010_New_Year%27s_Eve_tornado_outbreak.html&#39;,
+ &#39;2011%E2%80%9312_Western_Collegiate_Hockey_Association_women%27s_ice_hockey_season.html&#39;,
+ &#39;2011_Dutch_National_Track_Championships_%E2%80%93_Men%27s_1_km_time_trial.html&#39;,
+ &#39;2011_ITU_Duathlon_World_Championships.html&#39;,
+ &#39;2011_Mosconi_Cup.html&#39;,
+ &#39;2011_UK_Open_Qualifier_4.html&#39;,
+ &#39;2011_Wainwright_Roaming_Buffalo_Classic.html&#39;,
+ &#39;2012%E2%80%9313_Liga_Na%C8%9Bional%C4%83_(women%27s_handball).html&#39;,
+ &#39;2012%E2%80%9313_SVB_Hoofdklasse.html&#39;,
+ &#39;2013%E2%80%9314_Stirling_%26_District_Amateur_Football_Association.html&#39;,
+ &#39;2013_Curlers_Corner_Autumn_Gold_Curling_Classic.html&#39;,
+ &#39;2013_FIA_WTCC_Race_of_Russia.html&#39;,
+ &#39;2013_Mississippi_State_Bulldogs_baseball_team.html&#39;,
+ &#39;2013_San_Luis_Open_Challenger_%E2%80%93_Doubles.html&#39;,
+ &#39;2013_World_Grand_Prix_(darts).html&#39;,
+ &#39;2014%E2%80%9315_Albanian_Third_Division.html&#39;,
+ &#39;2014%E2%80%9315_Kansas_State_Wildcats_men%27s_basketball_team.html&#39;,
+ &#39;2014%E2%80%9316_European_Nations_Cup_Second_Division.html&#39;,
+ &#39;2014_Kano_bombing.html&#39;,
+ &#39;2014_Special_Honours.html&#39;,
+ &#39;2014_World_RX_of_Turkey.html&#39;,
+ &#39;2015%E2%80%9316_PLK_season.html&#39;,
+ &#39;2015%E2%80%9316_Washington_Huskies_men%27s_basketball_team.html&#39;,
+ &#39;2015_NWSL_College_Draft.html&#39;,
+ &#39;2015_Thai_League_Cup.html&#39;,
+ &#39;2016%E2%80%9317_Little_Rock_Trojans_women%27s_basketball_team.html&#39;,
+ &#39;2016%E2%80%9317_New_Zealand_Football_Championship.html&#39;,
+ &#39;2016_Danmark_Rundt.html&#39;,
+ &#39;2016_FK_Haugesund_season.html&#39;,
+ &#39;2016_Minnesota_Vikings_season.html&#39;,
+ &#39;2017_Orange_County_Breakers_season.html&#39;,
+ &#39;23rd_Reserve_Battalion,_CEF.html&#39;,
+ &#39;24th_Genie_Awards.html&#39;,
+ &#39;25B-NBOMe.html&#39;,
+ &#39;26th_Illinois_Volunteer_Infantry_Regiment.html&#39;,
+ &#39;3-(Trifluoromethyl)aniline.html&#39;,
+ &#39;33rd_New_Jersey_Volunteer_Infantry.html&#39;,
+ &#39;427.html&#39;,
+ &#39;4_Way_Street.html&#39;,
+ &#39;50_caliber_Mark_7_gun.html&#39;,
+ &#39;55th_parallel_south.html&#39;,
+ &#39;59th_Oza.html&#39;,
+ &#39;83_(number).html&#39;,
+ &#39;877_Naval_Air_Squadron.html&#39;,
+ &#39;985_Innovative_Platforms_for_Key_Disciplines_Project.html&#39;,
+ &#39;A%C3%A9ro_Services_Gu%C3%A9pard_Gu%C3%A9pard_912.html&#39;,
+ &#39;A._P._Komala.html&#39;,
+ &#39;A_Beautiful_Valley.html&#39;,
+ &#39;A_Month_of_Sundays_(miniseries).html&#39;,
+ &#39;A_Slow_Messe.html&#39;,
+ &#39;A_Sport_and_a_Pastime.html&#39;,
+ &#39;Aaron_Paul.html&#39;,
+ &#39;Aaron_Williams_and_the_Hoodoo.html&#39;,
+ &#39;Aaronsburg_Historic_District.html&#39;,
+ &#39;Aattanayagann.html&#39;,
+ &#39;AAU_Junior_Olympic_Games.html&#39;,
+ &#39;AB_v_CD.html&#39;,
+ &#39;Abanycha_bicolor.html&#39;,
+ &#39;Abbas_Jadidi.html&#39;,
+ &#39;Abbeville_Sluggers.html&#39;,
+ &#39;Abdelwahid_Aboud_Mackaye.html&#39;,
+ &#39;Abdulla_Majid_Al_Naimi.html&#39;,
+ &#39;Abdulrahman_al-Awlaki.html&#39;,
+ &#39;Abortion_in_Italy.html&#39;,
+ &#39;Abortion_in_Oklahoma.html&#39;,
+ &#39;Abou_Redis.html&#39;,
+ &#39;Abraham_Booth.html&#39;,
+ &#39;Abraham_Stanyan.html&#39;,
+ &#39;Absolutely_Zippo.html&#39;,
+ &#39;Abu_Oleymeh,_Ramshir.html&#39;,
+ &#39;Abyssobela_atoxica.html&#39;,
+ &#39;Acacia_dermatophylla.html&#39;,
+ &#39;Academic_grading_in_Bosnia_and_Herzegovina.html&#39;,
+ &#39;Acceptance_(Heroes).html&#39;,
+ &#39;Acceptilation.html&#39;,
+ &#39;Accommodation_bridge.html&#39;,
+ &#39;Achaea_faber.html&#39;,
+ &#39;Acharapakkam_(State_Assembly_Constituency).html&#39;,
+ &#39;Achim_Schwarze.html&#39;,
+ &#39;ACM_Transactions_on_Computational_Biology_and_Bioinformatics.html&#39;,
+ &#39;Acrocercops_calycophthalma.html&#39;,
+ &#39;Acrolophus_simulatus.html&#39;,
+ &#39;Adelaide%E2%80%93Darwin_railway.html&#39;,
+ &#39;Adios_(B%C3%B6hse_Onkelz_album).html&#39;,
+ &#39;Adish_Aggarwala.html&#39;,
+ &#39;ADNI.html&#39;,
+ &#39;Adolf%C3%B3w,_%C5%81%C3%B3d%C5%BA_Voivodeship.html&#39;,
+ &#39;Adolf_Schulte.html&#39;,
+ &#39;Adoration_of_the_Magi_(Filippino_Lippi).html&#39;,
+ &#39;Adrian_Bawtree.html&#39;,
+ &#39;Adrian_Clarke_(footballer).html&#39;,
+ &#39;Aechmea_%27Pica%27.html&#39;,
+ &#39;Agaritine_gamma-glutamyltransferase.html&#39;,
+ &#39;Agesarchus_of_Tritaea.html&#39;,
+ &#39;Agnes_Tait.html&#39;,
+ &#39;Agnolin.html&#39;,
+ &#39;Agostino_Gemelli.html&#39;,
+ &#39;Agripina_Samper_Agudelo.html&#39;,
+ &#39;Agullent.html&#39;,
+ &#39;Agyneta_allosubtilis.html&#39;,
+ &#39;Ahanta_West_District.html&#39;,
+ &#39;Ahmad_Khatami_(professor).html&#39;,
+ &#39;AIM_Phoneline.html&#39;,
+ &#39;Air_Barons.html&#39;,
+ &#39;Aiva.html&#39;,
+ &#39;Ajminal.html&#39;,
+ &#39;Aku_Partanen.html&#39;,
+ &#39;Al-Midan.html&#39;,
+ &#39;Al-Nurayn_Mosque.html&#39;,
+ &#39;Al_Azim_Mosque.html&#39;,
+ &#39;Al_Mahon.html&#39;,
+ &#39;Al_Sherman.html&#39;,
+ &#39;Alan_Oakley.html&#39;,
+ &#39;Alan_Orr.html&#39;,
+ &#39;Alan_Sheehan.html&#39;,
+ &#39;Albanians_in_Egypt.html&#39;,
+ &#39;Albert_French.html&#39;,
+ &#39;Album-equivalent_unit.html&#39;,
+ &#39;Aldona_Orman.html&#39;,
+ &#39;Aleksandra_Jagie%C5%82o.html&#39;,
+ &#39;Aleksei_Lazarev.html&#39;,
+ &#39;Alex_Karalexis.html&#39;,
+ &#39;Alex_Kurtzman.html&#39;,
+ &#39;Alex_McEachern.html&#39;,
+ &#39;Alexander_Armstrong_(explorer).html&#39;,
+ &#39;Alexander_King_(author).html&#39;,
+ &#39;Alexander_McCue.html&#39;,
+ &#39;Alexander_Rizzoni.html&#39;,
+ &#39;Alexandru_Greab.html&#39;,
+ &#39;Alexei_Vinogradov.html&#39;,
+ &#39;Alexios_Aspietes.html&#39;,
+ &#39;Alexis_Lloyd.html&#39;,
+ &#39;Ali_Al_Bulaihi.html&#39;,
+ &#39;Aliabad-e_Robat.html&#39;,
+ &#39;Alireza_JJ.html&#39;,
+ &#39;Alisa_(soap_opera).html&#39;,
+ &#39;All-Polish_Youth.html&#39;,
+ &#39;All_Ceylon_Tamil_Congress.html&#39;,
+ &#39;All_Lights_Fucked_on_the_Hairy_Amp_Drooling.html&#39;,
+ &#39;All_Tangled_Up_in_Love.html&#39;,
+ &#39;All_the_Fun.html&#39;,
+ &#39;All_You_Get_from_Love_Is_a_Love_Song.html&#39;,
+ &#39;Allama_Iqbal_Medical_College.html&#39;,
+ &#39;Allan_Egolf.html&#39;,
+ &#39;Allan_Lister_Samuel_Brown.html&#39;,
+ &#39;Allen_Snyder_(lawyer).html&#39;,
+ &#39;Alnwick_District_Council_election,_2007.html&#39;,
+ &#39;Alojz_Knafelc.html&#39;,
+ &#39;Alpine_skiing_at_the_1994_Winter_Olympics_%E2%80%93_Men%27s_combined.html&#39;,
+ &#39;Amanda_Peet.html&#39;,
+ &#39;Amano_Artisan_Chocolate.html&#39;,
+ &#39;Amber_Butchart.html&#39;,
+ &#39;Amborella.html&#39;,
+ &#39;AMD_XGP.html&#39;,
+ &#39;Ameenapuram.html&#39;,
+ &#39;American_Federation_of_Labor_Building.html&#39;,
+ &#39;American_Journal_of_Kidney_Diseases.html&#39;,
+ &#39;Aminonaphthalenesulfonic_acids.html&#39;,
+ &#39;Amorphogynia.html&#39;,
+ &#39;Ampelasia.html&#39;,
+ &#39;Amphidromia.html&#39;,
+ &#39;Amy_Watkins.html&#39;,
+ &#39;Ana_Beatriz.html&#39;,
+ &#39;Anatolii_Sloiko.html&#39;,
+ &#39;Ancita_antennata.html&#39;,
+ &#39;Ancylostoma_duodenale.html&#39;,
+ &#39;Anders_Ahlgren.html&#39;,
+ &#39;Andrei_Gamalyan.html&#39;,
+ &#39;Andrew_McNally.html&#39;,
+ &#39;Andrew_S._Tanenbaum.html&#39;,
+ &#39;Andrew_Wilson_(classical_archaeologist).html&#39;,
+ &#39;Angelic_non-determinism.html&#39;,
+ &#39;Angolan_Union_for_Peace,_Democracy_and_Development.html&#39;,
+ &#39;Aniavan.html&#39;,
+ &#39;Anish_Giri.html&#39;,
+ &#39;Anjada_Gandu.html&#39;,
+ &#39;Anne_Whateley.html&#39;,
+ &#39;Annopole_Stare.html&#39;,
+ &#39;Annunciation_Church,_Walsall.html&#39;,
+ &#39;Ant%C3%B3nio_Maria_Baptista.html&#39;,
+ &#39;Ant%C3%B3nio_Marinho_e_Pinto.html&#39;,
+ &#39;Antae_temple.html&#39;,
+ &#39;Anthony_Cesario.html&#39;,
+ &#39;Anthony_Marten.html&#39;,
+ &#39;Antibiotic_use_in_livestock.html&#39;,
+ &#39;Antigonadotropin.html&#39;,
+ &#39;Antipater_of_Thessalonica.html&#39;,
+ &#39;Antoine_Gakeme.html&#39;,
+ &#39;Anton_von_Troeltsch.html&#39;,
+ &#39;Antonio_Ciano.html&#39;,
+ &#39;Antonio_de_Zayas_(bishop).html&#39;,
+ &#39;Anuradhapura_West_Electoral_District.html&#39;,
+ &#39;Apache_Bloodhound.html&#39;,
+ &#39;Aphonopelma_chiricahua.html&#39;,
+ &#39;Apocephalus_borealis.html&#39;,
+ &#39;Appa_(film).html&#39;,
+ &#39;Aq_Dash,_East_Azerbaijan.html&#39;,
+ &#39;Aquaphobia.html&#39;,
+ &#39;ARA_Garibaldi.html&#39;,
+ &#39;Arabic_Toilers%27_Movement.html&#39;,
+ &#39;Arcadio_Gonz%C3%A1lez.html&#39;,
+ &#39;Archibald_Gordon_(British_Army_officer).html&#39;,
+ &#39;Archiepiscopal_Palace,_Rouen.html&#39;,
+ &#39;Area_code_218.html&#39;,
+ &#39;Area_of_refuge.html&#39;,
+ &#39;Argentina_at_the_2015_World_Championships_in_Athletics.html&#39;,
+ &#39;Arkansas_gubernatorial_election,_1968.html&#39;,
+ &#39;Arkansas_Highway_178.html&#39;,
+ &#39;Arnold_Freiherr_von_Biegeleben.html&#39;,
+ &#39;Arrest_warrant.html&#39;,
+ &#39;Arrondissements_of_the_Yvelines_department.html&#39;,
+ &#39;Art_collection_of_Fondazione_Cassa_di_Risparmio_di_Perugia.html&#39;,
+ &#39;Arthur_Baldwinson.html&#39;,
+ &#39;Arthur_L._Aidala.html&#39;,
+ &#39;Arthur_Lelyveld.html&#39;,
+ &#39;Arthur_Mendes.html&#39;,
+ &#39;Arthur_Norman.html&#39;,
+ &#39;Arturo_Liebstein.html&#39;,
+ &#39;Arun_K._Pati.html&#39;,
+ &#39;Arvind_Gokhale.html&#39;,
+ &#39;Ash_Rees.html&#39;,
+ &#39;Asheqlu.html&#39;,
+ &#39;Ashley,_Wisconsin.html&#39;,
+ &#39;Ashu_Dani.html&#39;,
+ &#39;Asparuh_Peak.html&#39;,
+ &#39;Assegaaibosch_Nature_Reserve.html&#39;,
+ &#39;Asun_Balzola.html&#39;,
+ &#39;Athletics_at_the_1994_Commonwealth_Games_%E2%80%93_Men%27s_pole_vault.html&#39;,
+ &#39;Athletics_at_the_2007_Games_of_the_Small_States_of_Europe.html&#39;,
+ &#39;Athletics_at_the_2012_Summer_Paralympics_%E2%80%93_Women%27s_200_metres_T36.html&#39;,
+ &#39;Atlanta_Area_School_for_the_Deaf.html&#39;,
+ &#39;Atlantic_Studios.html&#39;,
+ &#39;Atractaspis_duerdeni.html&#39;,
+ &#39;Atrypanius_scitulus.html&#39;,
+ &#39;Attila,_Illinois.html&#39;,
+ &#39;Aubrey_Fair.html&#39;,
+ &#39;Audefroi_le_Bastart.html&#39;,
+ &#39;August_Duranowski.html&#39;,
+ &#39;Augustine_Chacon.html&#39;,
+ &#39;Austral_Alien.html&#39;,
+ &#39;Australian_federal_election,_1954.html&#39;,
+ &#39;Australian_hardcore.html&#39;,
+ &#39;Australian_Musician_(magazine).html&#39;,
+ &#39;Australiteuthis_aldrichi.html&#39;,
+ &#39;Avalara.html&#39;,
+ &#39;Avengers_Academy.html&#39;,
+ &#39;Avenira.html&#39;,
+ &#39;AVM_GmbH.html&#39;,
+ &#39;Avyarud.html&#39;,
+ &#39;Awali.html&#39;,
+ &#39;Axel_Revold.html&#39;,
+ &#39;Ayish_Bayou.html&#39;,
+ &#39;Aylon_Darwin_Tavella.html&#39;,
+ &#39;Ayodhya_Mandapam.html&#39;,
+ &#39;Baadj.html&#39;,
+ &#39;Baadshah_(1999_film).html&#39;,
+ &#39;Bad_Axe_River.html&#39;,
+ &#39;Bad_Luck_(Social_Distortion_song).html&#39;,
+ &#39;Baddiewinkle.html&#39;,
+ &#39;Bagrat_VI_of_Georgia.html&#39;,
+ &#39;Bahia_bigelovii.html&#39;,
+ &#39;Bahmanabad-e_Olya.html&#39;,
+ &#39;Baigts-de-B%C3%A9arn.html&#39;,
+ &#39;Baithakata_College.html&#39;,
+ &#39;Bal%C3%A1zs_Vill%C3%A1m.html&#39;,
+ &#39;Ballard_Memorial_High_School.html&#39;,
+ &#39;Ballonet.html&#39;,
+ &#39;Balloon_light.html&#39;,
+ &#39;Baltic_Peak.html&#39;,
+ &#39;Ban_On.html&#39;,
+ &#39;Bandar_Botanik_LRT_Station.html&#39;,
+ &#39;Banovina_of_Croatia.html&#39;,
+ &#39;Bar_One_Racing_Juvenile_Hurdle.html&#39;,
+ &#39;Baraf.html&#39;,
+ &#39;Barbara_McKinzie.html&#39;,
+ &#39;Barbus_caudosignatus.html&#39;,
+ &#39;Baritius_cyclozonata.html&#39;,
+ &#39;Barn.html&#39;,
+ &#39;Barnsdall_Art_Park.html&#39;,
+ &#39;Barra_do_Rocha.html&#39;,
+ &#39;Barren_vegetation.html&#39;,
+ &#39;Bart_van_Leeuwen.html&#39;,
+ &#39;Bartrum_Glacier.html&#39;,
+ &#39;Batfink.html&#39;,
+ &#39;Battle_of_Abydos.html&#39;,
+ &#39;Battle_of_Finta.html&#39;,
+ &#39;Battle_of_Isonzo_(489).html&#39;,
+ &#39;Battle_of_Sulukh.html&#39;,
+ &#39;Battle_of_Wattignies.html&#39;,
+ &#39;Battleford-Cut_Knife.html&#39;,
+ &#39;Bawdrip_Halt_railway_station.html&#39;,
+ &#39;Bay_of_Concepci%C3%B3n.html&#39;,
+ &#39;Bayandalai,_%C3%96mn%C3%B6govi.html&#39;,
+ &#39;Bazemore,_Alabama.html&#39;,
+ &#39;BBCH-scale_(rice).html&#39;,
+ &#39;BBG_Academy.html&#39;,
+ &#39;Be%C5%82chat%C3%B3w_Power_Station.html&#39;,
+ &#39;Beaubassin_East,_New_Brunswick.html&#39;,
+ &#39;Beaune_Altarpiece.html&#39;,
+ &#39;Beaupr%C3%A9,_Quebec.html&#39;,
+ &#39;Bebearia_romboutsi.html&#39;,
+ &#39;Bechdel_test.html&#39;,
+ &#39;Bed_and_Breakfast_(album).html&#39;,
+ &#39;Begin_(Riyu_Kosaka_album).html&#39;,
+ &#39;Beijing_Dongyue_Temple.html&#39;,
+ &#39;Belgium_women%27s_national_field_hockey_team.html&#39;,
+ &#39;Beli_language_(South_Sudan).html&#39;,
+ &#39;Bellanca_28-92.html&#39;,
+ &#39;Belmont_Estate.html&#39;,
+ &#39;Belosavci.html&#39;,
+ &#39;Belvedere,_London.html&#39;,
+ &#39;Belvedere_Park,_Georgia.html&#39;,
+ &#39;Ben_H._Williams.html&#39;,
+ &#39;Ben_Rimalower.html&#39;,
+ &#39;Bengt_Forsberg.html&#39;,
+ &#39;Benidorm_Bastards.html&#39;,
+ &#39;Benktander_type_II_distribution.html&#39;,
+ &#39;Benny_Lee.html&#39;,
+ &#39;Bernard-Augustin_Conroy.html&#39;,
+ &#39;Bert_Leboe.html&#39;,
+ &#39;Bertilda_Samper_Acosta.html&#39;,
+ &#39;Berzeliustinden.html&#39;,
+ &#39;Bethoncourt.html&#39;,
+ &#39;Beverley_Hills_Apartment_Block.html&#39;,
+ &#39;Beyond_Magnetic.html&#39;,
+ &#39;Bhimnagar,_Supaul.html&#39;,
+ &#39;Bhubanananda_Das.html&#39;,
+ &#39;Bianna_Golodryga.html&#39;,
+ &#39;Bias.html&#39;,
+ &#39;Bibiana_Beglau.html&#39;,
+ &#39;Bibliography_of_Niue.html&#39;,
+ &#39;Bicycle_basket.html&#39;,
+ &#39;Bifidocarpus.html&#39;,
+ &#39;Bijou,_California.html&#39;,
+ &#39;Bilan_d%27aptitude_d%C3%A9livr%C3%A9_par_les_grandes_%C3%A9coles.html&#39;,
+ &#39;Bill_Overstreet.html&#39;,
+ &#39;Bill_Price_(baseball).html&#39;,
+ &#39;Bill_Widenhouse.html&#39;,
+ &#39;Bill_Williamson_(footballer).html&#39;,
+ &#39;Billi%C3%A8me.html&#39;,
+ &#39;Billy_Grammer.html&#39;,
+ &#39;Billy_McNeill.html&#39;,
+ &#39;Biorock.html&#39;,
+ &#39;Bishop_of_Kingston.html&#39;,
+ &#39;Biz_Kid$.html&#39;,
+ &#39;Black_Moshannon_State_Park_Historic_Districts.html&#39;,
+ &#39;Black_Pond_Township,_Oregon_County,_Missouri.html&#39;,
+ &#39;Blackshear_Prison.html&#39;,
+ &#39;Blick_nach_Rechts.html&#39;,
+ &#39;Blohm.html&#39;,
+ &#39;Blomheller_Station.html&#39;,
+ &#39;Blommersia.html&#39;,
+ &#39;Blue_Heelers_(season_8).html&#39;,
+ &#39;Blue_Sky_Mining.html&#39;,
+ &#39;Blue_SWAT.html&#39;,
+ &#39;Bluesin%27_Around.html&#39;,
+ &#39;Board_of_Jewish_Education_(Toronto).html&#39;,
+ &#39;Boardman_Township,_Mahoning_County,_Ohio.html&#39;,
+ &#39;Bob_Allen_(shortstop).html&#39;,
+ &#39;Bob_Bass.html&#39;,
+ &#39;Bob_Lustig.html&#39;,
+ &#39;Bobo_Sikorski.html&#39;,
+ &#39;Bon_Accord_Free_Church.html&#39;,
+ &#39;Bone_morphogenetic_protein_4.html&#39;,
+ &#39;Bones_Apart.html&#39;,
+ &#39;Bonny_River.html&#39;,
+ &#39;Boogie_Bunnies.html&#39;,
+ &#39;Boone_Square.html&#39;,
+ &#39;Boothapandi.html&#39;,
+ &#39;Botswana_passport.html&#39;,
+ &#39;Bowie_Race_Track.html&#39;,
+ &#39;Bowlers%27_Club_of_New_South_Wales.html&#39;,
+ &#39;Boynton_baronets.html&#39;,
+ &#39;Br%C3%A9zina_District.html&#39;,
+ &#39;Brachylogus.html&#39;,
+ &#39;Brady_Hicks.html&#39;,
+ &#39;Braille_pattern_dots-126.html&#39;,
+ &#39;Branko_Maru%C5%A1i%C4%8D.html&#39;,
+ &#39;Brede_Waterworks.html&#39;,
+ &#39;Brendan_Foster.html&#39;,
+ &#39;Brian_Collins_(2010s_singer).html&#39;,
+ &#39;Brian_G._W._Manning.html&#39;,
+ &#39;Brian_Sims.html&#39;,
+ &#39;Brightside_Apartments.html&#39;,
+ &#39;British_Academy_Television_Award_for_Best_Comedy_(Programme_or_Series).html&#39;,
+ &#39;Bro_Safari.html&#39;,
+ &#39;Brograve_Mill.html&#39;,
+ &#39;Brownfield_(software_development).html&#39;,
+ &#39;Bruce_Conte.html&#39;,
+ &#39;Bruce_Lyon.html&#39;,
+ &#39;Bryan_Payton.html&#39;,
+ &#39;Bryzg%C3%B3w.html&#39;,
+ &#39;Buchanan_%26_Press.html&#39;,
+ &#39;Buffington_Township,_Indiana_County,_Pennsylvania.html&#39;,
+ &#39;Buford,_North_Dakota.html&#39;,
+ &#39;Buko_pie.html&#39;,
+ &#39;Bukovica_(Cazin).html&#39;,
+ &#39;Bulbonaricus.html&#39;,
+ &#39;Bulbophyllum_biflorum.html&#39;,
+ &#39;Burbridge_Creek.html&#39;,
+ &#39;Burmese_shrike.html&#39;,
+ &#39;Burnin%27_Sneakers.html&#39;,
+ &#39;Burnley_(surname).html&#39;,
+ &#39;Burnley_Borough_Council_election,_2011.html&#39;,
+ &#39;Burrough_Court.html&#39;,
+ &#39;Busan%E2%80%93Gimhae_Light_Rail_Transit_Operation_Corporation.html&#39;,
+ &#39;Business.com.html&#39;,
+ &#39;BW_Vulpeculae.html&#39;,
+ &#39;Bycz,_Kuyavian-Pomeranian_Voivodeship.html&#39;,
+ &#39;Bye!_My_Boy!.html&#39;,
+ &#39;Bye_Bye_Mon_Cowboy.html&#39;,
+ &#39;C%27est_la_vie_(Khaled_song).html&#39;,
+ &#39;C%C3%AA.html&#39;,
+ &#39;C10H8.html&#39;,
+ &#39;C11orf30.html&#39;,
+ &#39;C18H23NO6.html&#39;,
+ &#39;Cabrini%E2%80%93Green,_Chicago.html&#39;,
+ &#39;Caladenia_amoena.html&#39;,
+ &#39;Caldelas,_Sequeiros_e_Paranhos.html&#39;,
+ &#39;California_Historical_Landmarks_in_San_Bernardino_County,_California.html&#39;,
+ &#39;California_roach.html&#39;,
+ &#39;California_Unfair_Competition_Law.html&#39;,
+ &#39;Calin_Rovinescu.html&#39;,
+ &#39;Calvin_Harrell.html&#39;,
+ &#39;Camp_Liberty_killings.html&#39;,
+ &#39;Camp_Nelson_Confederate_Cemetery.html&#39;,
+ &#39;Campus_of_Texas_A%26M_University.html&#39;,
+ &#39;Canada_Bay.html&#39;,
+ &#39;Canbelego_County.html&#39;,
+ &#39;Caney_Creek_(Matagorda_Bay).html&#39;,
+ &#39;Cannabis_in_Spain.html&#39;,
+ &#39;Canyamars.html&#39;,
+ &#39;Cape_Bonavista.html&#39;,
+ &#39;Cape_Mayo.html&#39;,
+ &#39;Cappella_San_Donato,_Venafro.html&#39;,
+ &#39;Capriccio_Italien.html&#39;,
+ &#39;Caprinia_versicolor.html&#39;,
+ &#39;Caramel_Box_Yarukibako.html&#39;,
+ &#39;Cardinals_created_by_Alexander_VIII.html&#39;,
+ &#39;Cardipeltis.html&#39;,
+ &#39;Carley_State_Park.html&#39;,
+ &#39;Carlos_Martins_(musician).html&#39;,
+ &#39;Carmen_Weber.html&#39;,
+ &#39;Carroll_O._Switzer.html&#39;,
+ &#39;Carrollwood_Day_School.html&#39;,
+ &#39;Carte_Imagine%27R.html&#39;,
+ &#39;Carthage,_Cincinnati.html&#39;,
+ &#39;Caryl_Nowson.html&#39;,
+ &#39;Cascade_Summit,_Oregon.html&#39;,
+ &#39;Cascate_del_Rio_Verde.html&#39;,
+ &#39;Caste_system_in_India.html&#39;,
+ &#39;Castle_of_Cardona.html&#39;,
+ &#39;Catlett_House_(Staunton,_Virginia).html&#39;,
+ &#39;CCL8.html&#39;,
+ &#39;CDC42EP3.html&#39;,
+ &#39;Cechenena_sperlingi.html&#39;,
+ &#39;Cecil,_Oregon.html&#39;,
+ &#39;Cecil_Biggs.html&#39;,
+ &#39;Cecil_Bothwell.html&#39;,
+ &#39;Cecil_Peak.html&#39;,
+ &#39;Cecile_of_Baux.html&#39;,
+ &#39;Cecyl%C3%B3wka-Brz%C3%B3zka.html&#39;,
+ &#39;Celebrity_doll.html&#39;,
+ &#39;Celta_de_Vigo_B.html&#39;,
+ &#39;Center_(group_theory).html&#39;,
+ &#39;Central_District_(Rezvanshahr_County).html&#39;,
+ &#39;Central_Luzon.html&#39;,
+ &#39;Central_Park_(Tolyatti).html&#39;,
+ &#39;Centzon_Totochtin.html&#39;,
+ &#39;Ceryx_hageni.html&#39;,
+ &#39;Ch%C3%A2telet_surface.html&#39;,
+ &#39;Ch%C3%A9nens.html&#39;,
+ &#39;Chadefaudiellaceae.html&#39;,
+ &#39;Chah-e_Zakaria.html&#39;,
+ &#39;Challenger_Banque_Nationale_de_Drummondville.html&#39;,
+ &#39;Channel_48_digital_TV_stations_in_the_United_States.html&#39;,
+ &#39;Chapel_of_Mercy,_Monaco-Ville.html&#39;,
+ &#39;Charalampos_Brilakis.html&#39;,
+ &#39;Charged_Records.html&#39;,
+ &#39;Charles_Golding_Constable.html&#39;,
+ &#39;Charles_Micallef.html&#39;,
+ &#39;Charles_Page_(cricketer).html&#39;,
+ &#39;Charles_S._Benton.html&#39;,
+ &#39;Charles_Sears.html&#39;,
+ &#39;Charles_Smith_Wilcox.html&#39;,
+ &#39;Charles_Stuart_(rugby_union).html&#39;,
+ &#39;Charles_Trudeau_(politician).html&#39;,
+ &#39;Charles_Wadsworth.html&#39;,
+ &#39;Charlton_baronets.html&#39;,
+ &#39;Chaun_Thompson.html&#39;,
+ &#39;Checkerspot_(magazine).html&#39;,
+ &#39;Cheddar_Ales.html&#39;,
+ &#39;Chef_Wan.html&#39;,
+ &#39;Chemin_d%27Aylmer.html&#39;,
+ &#39;Cherechiu.html&#39;,
+ &#39;Cheryl_Prewitt.html&#39;,
+ &#39;Chester_Morris.html&#39;,
+ &#39;Chestnut_pie.html&#39;,
+ &#39;Chhaparband_(Muslim).html&#39;,
+ &#39;Chhatrasal.html&#39;,
+ &#39;Chicoreus_cervicornis.html&#39;,
+ &#39;Chief_Justice_of_New_Zealand.html&#39;,
+ &#39;Chihuahuan_Desert_Nature_Center_and_Botanical_Gardens.html&#39;,
+ &#39;Chilango_(magazine).html&#39;,
+ &#39;Children_of_Air_India.html&#39;,
+ &#39;Children_of_the_Grave.html&#39;,
+ &#39;Chile_de_%C3%A1rbol.html&#39;,
+ &#39;Chilo_auricilius.html&#39;,
+ &#39;Chinlone.html&#39;,
+ &#39;Chionodes_retiniella.html&#39;,
+ &#39;Chiriguelo.html&#39;,
+ &#39;Chisocheton_cumingianus_subsp._kinabaluensis.html&#39;,
+ &#39;Chocolate_Factory.html&#39;,
+ &#39;Choseng_Trungpa.html&#39;,
+ &#39;Christia_Mercer.html&#39;,
+ &#39;Christian_Amoroso.html&#39;,
+ &#39;Christian_Jessen.html&#39;,
+ &#39;Christianity_and_antisemitism.html&#39;,
+ &#39;Christine_Gardner.html&#39;,
+ &#39;Christopher_Speer.html&#39;,
+ &#39;Chromis_iomelas.html&#39;,
+ &#39;Church_of_St_Mary_the_Virgin,_Keysoe.html&#39;,
+ &#39;Church_of_the_SubGenius.html&#39;,
+ &#39;CIE_1964_color_space.html&#39;,
+ &#39;Circle_Repertory_Company.html&#39;,
+ &#39;Circus_Avenue.html&#39;,
+ &#39;Cisy,_Byt%C3%B3w_County.html&#39;,
+ &#39;Cit%C3%A9_du_Vin.html&#39;,
+ &#39;City_of_Mandaluyong_Science_High_School.html&#39;,
+ &#39;Claire_Danes.html&#39;,
+ &#39;Clarinet_Quintet_(T%C3%A4glichsbeck).html&#39;,
+ &#39;Clarksville,_Pennsylvania.html&#39;,
+ &#39;Class_C_GPCR.html&#39;,
+ &#39;Claude%27s_syndrome.html&#39;,
+ &#39;Claude-Godefroy_Coquart.html&#39;,
+ &#39;Claude_Mandil.html&#39;,
+ &#39;Claudia_Neidig.html&#39;,
+ &#39;Clay_Research_Award.html&#39;,
+ &#39;Clay_Township,_Clark_County,_Missouri.html&#39;,
+ &#39;Clear_Creek_Township,_Cooper_County,_Missouri.html&#39;,
+ &#39;Cleveland,_Oklahoma.html&#39;,
+ &#39;Cleveland_Institution_of_Engineers.html&#39;,
+ &#39;Cleveland_Play_House.html&#39;,
+ &#39;Clinton_Engineer_Works.html&#39;,
+ &#39;Clive_Brown_(footballer).html&#39;,
+ &#39;Clocking_Out_Is_for_Suckers.html&#39;,
+ &#39;Clothes_Show_Live.html&#39;,
+ &#39;Coalition_for_Unity_and_Democracy.html&#39;,
+ &#39;Coalville_Town_railway_station.html&#39;,
+ &#39;Coastal_upwelling_of_the_South_Eastern_Arabian_Sea.html&#39;,
+ &#39;Cobble_Hill,_Brooklyn.html&#39;,
+ &#39;Coble_hypersurface.html&#39;,
+ &#39;Code_page_1023.html&#39;,
+ &#39;Coenaculum_secundum.html&#39;,
+ &#39;Col_Pearce.html&#39;,
+ &#39;Colantonio_Incorporated.html&#39;,
+ &#39;Colchester_Village_Historic_District.html&#39;,
+ &#39;Cole_Shade_Sule.html&#39;,
+ &#39;Colleen_Haskell.html&#39;,
+ &#39;Colors_for_Trombone.html&#39;,
+ &#39;Colossal_Titan_Strife.html&#39;,
+ &#39;Colosseum_LiveS_%E2%80%93_The_Reunion_Concerts.html&#39;,
+ &#39;Columbia_Airport_(Ohio).html&#39;,
+ &#39;Comedy_Now!.html&#39;,
+ &#39;Comisi%C3%B3n_Femenil_Mexicana_Nacional.html&#39;,
+ &#39;Common_Sense_Revolution.html&#39;,
+ &#39;Communities_of_Tulu_Nadu.html&#39;,
+ &#39;Companys,_proc%C3%A9s_a_Catalunya.html&#39;,
+ &#39;Compton%27s_Most_Wanted_discography.html&#39;,
+ &#39;Computational_Geometry_(journal).html&#39;,
+ &#39;Congregation_Agudath_Achim.html&#39;,
+ &#39;Conjugate_depth.html&#39;,
+ &#39;Connecticut_House_of_Representatives.html&#39;,
+ &#39;Connell_Mansion.html&#39;,
+ &#39;Consolidated_Commodore.html&#39;,
+ &#39;Constance_D%27Arcy_Mackay.html&#39;,
+ &#39;Constantin_Ro%C8%99u.html&#39;,
+ &#39;Constitution_of_Kyrgyzstan.html&#39;,
+ &#39;Continuity_of_Operations.html&#39;,
+ &#39;Coosa_County_School_District.html&#39;,
+ &#39;Copamyntis_infusella.html&#39;,
+ &#39;Copenhagen_Skatepark.html&#39;,
+ &#39;Copier_family.html&#39;,
+ &#39;Corey_Lee.html&#39;,
+ &#39;Cornix.html&#39;,
+ &#39;Coronium_(gastropod).html&#39;,
+ &#39;Coronoid_process_of_the_ulna.html&#39;,
+ &#39;Corozal_Hospital.html&#39;,
+ &#39;Corporation_(university).html&#39;,
+ &#39;Corredores_Ferroviarios.html&#39;,
+ &#39;Cortile_del_Belvedere.html&#39;,
+ &#39;Cosmopterix_similis.html&#39;,
+ &#39;Coup_d%27%C3%A9tat.html&#39;,
+ &#39;Cr%C3%A8me_de_violette.html&#39;,
+ &#39;Crab-eating_frog.html&#39;,
+ &#39;Craig_Chester.html&#39;,
+ &#39;Crawley_Down.html&#39;,
+ &#39;Crazy_(2000_film).html&#39;,
+ &#39;Crazy_House_(1928_film).html&#39;,
+ &#39;Crepidula_atrasolea.html&#39;,
+ &#39;Cricoid_pressure.html&#39;,
+ &#39;Criminal_Code_(Canada).html&#39;,
+ &#39;Crisfield_Municipal_Airport.html&#39;,
+ &#39;Crispoldus.html&#39;,
+ &#39;Criss_Cross_(film).html&#39;,
+ &#39;Cristian_Berdeja.html&#39;,
+ &#39;Cryptographic_primitive.html&#39;,
+ &#39;Ctenodes_zonata.html&#39;,
+ &#39;Cultural_tourism_in_Egypt.html&#39;,
+ &#39;Cuproxena_hoffmanana.html&#39;,
+ &#39;Curridge.html&#39;,
+ &#39;Curtis_F._Marbut.html&#39;,
+ &#39;Curtis_Jones_(law).html&#39;,
+ &#39;Curtis_Whitley.html&#39;,
+ &#39;Curtiss-Wright_Hangar_(Columbia,_South_Carolina).html&#39;,
+ &#39;Cyclohexane_conformation.html&#39;,
+ &#39;Cyclone_Gamede.html&#39;,
+ &#39;Cygany,_Masovian_Voivodeship.html&#39;,
+ &#39;Dabir_Khan.html&#39;,
+ &#39;Dachuan_District.html&#39;,
+ &#39;Dahan-e_Kanak.html&#39;,
+ &#39;Dailyhunt.html&#39;,
+ &#39;Dakar_2:_The_World%27s_Ultimate_Rally.html&#39;,
+ &#39;Dalian_Road_Station.html&#39;,
+ &#39;Danbury_Ridge_Nature_Reserves.html&#39;,
+ &#39;Dance_notation.html&#39;,
+ &#39;Dancing_with_the_Stars_(Greece_season_5).html&#39;,
+ &#39;Dani%C3%ABl_de_Clercq.html&#39;,
+ &#39;Daniel_Cerone.html&#39;,
+ &#39;Daniel_Glazman.html&#39;,
+ &#39;Daniela_Del_Din.html&#39;,
+ &#39;Daniella_Abreu.html&#39;,
+ &#39;Danish_Maritime_Safety_Administration.html&#39;,
+ &#39;Danny_Gray.html&#39;,
+ &#39;Darantasia_cuneiplena.html&#39;,
+ &#39;Daryl_Stanley.html&#39;,
+ &#39;DataMeet.html&#39;,
+ &#39;Datang,_Zhuji.html&#39;,
+ &#39;Dave_Hill_(golfer).html&#39;,
+ &#39;David_Beasley.html&#39;,
+ &#39;David_Jesson.html&#39;,
+ &#39;David_Mandel.html&#39;,
+ &#39;David_Sands_(psychologist).html&#39;,
+ &#39;David_Sencer.html&#39;,
+ &#39;David_Solomona.html&#39;,
+ &#39;David_Thomson,_3rd_Baron_Thomson_of_Fleet.html&#39;,
+ &#39;Days_Creek_Formation.html&#39;,
+ &#39;De_Bruijn_index.html&#39;,
+ &#39;De_La_Salle_University_%E2%80%93_Dasmari%C3%B1as.html&#39;,
+ &#39;Dean_Downing.html&#39;,
+ &#39;Dean_Kukan.html&#39;,
+ &#39;Deception_(Irish_TV_series).html&#39;,
+ &#39;Decker_Township,_Richland_County,_Illinois.html&#39;,
+ &#39;Decoy_receptors.html&#39;,
+ &#39;Degerfors_IF.html&#39;,
+ &#39;Delta_Wedding.html&#39;,
+ &#39;Delvenau.html&#39;,
+ &#39;Democratic_Forum_of_Germans_in_Romania.html&#39;,
+ &#39;Demographics_of_American_Samoa.html&#39;,
+ &#39;Demographics_of_Wallis_and_Futuna.html&#39;,
+ &#39;Denis_Augustine_Hanley.html&#39;,
+ &#39;Dennis_Chapman.html&#39;,
+ &#39;Dennis_Shere.html&#39;,
+ &#39;Denyse_Sibley.html&#39;,
+ &#39;Der_Opernball.html&#39;,
+ &#39;Derek_Acorah.html&#39;,
+ &#39;Dermatomycosis.html&#39;,
+ &#39;Derrick_White_(baseball).html&#39;,
+ &#39;Desert_Rain_(song).html&#39;,
+ &#39;Deserticossus_murinus.html&#39;,
+ &#39;Desmiphora_bijuba.html&#39;,
+ &#39;Destroyer_Squadron_7.html&#39;,
+ &#39;Deuterocohnia_schreiteri.html&#39;,
+ &#39;Devarampally.html&#39;,
+ &#39;Developmental_robotics.html&#39;,
+ &#39;Devil_on_Horseback.html&#39;,
+ &#39;Devitt_Insurance.html&#39;,
+ &#39;Devizes_Town_F.C..html&#39;,
+ &#39;Dewoitine_D.21.html&#39;,
+ &#39;Dextran_1.html&#39;,
+ &#39;Dhanbad_(Vidhan_Sabha_constituency).html&#39;,
+ &#39;Diablo_Swing_Orchestra.html&#39;,
+ &#39;Dialogue_for_Hungary.html&#39;,
+ &#39;Dick_Johnson_(clarinetist).html&#39;,
+ &#39;Dick_Persson.html&#39;,
+ &#39;Diego_Galv%C3%A1n.html&#39;,
+ &#39;DiGiorgio_Corporation.html&#39;,
+ &#39;Digital_Light_Processing.html&#39;,
+ &#39;Dik%C4%BCi_parish.html&#39;,
+ &#39;Dimanche_%C3%A0_Bamako.html&#39;,
+ &#39;Dimension_of_an_algebraic_variety.html&#39;,
+ &#39;Diphilus_(physician).html&#39;,
+ &#39;Diplacus_aurantiacus.html&#39;,
+ &#39;Discretionary_trust.html&#39;,
+ &#39;Distance_Education_Centre,_Victoria.html&#39;,
+ &#39;Divine_Incantations_Scripture.html&#39;,
+ &#39;DJ-Kicks:_Henrik_Schwarz.html&#39;,
+ &#39;Dmytrivka,_Shakhtarsk_Raion.html&#39;,
+ &#39;Dokri_Taluka.html&#39;,
+ &#39;Domaniowice.html&#39;,
+ &#39;Domenico_Siniscalco.html&#39;,
+ &#39;Dominique_Voynet.html&#39;,
+ &#39;Don_Kindt,_Jr..html&#39;,
+ &#39;Don_Nelson_Laramore.html&#39;,
+ &#39;Don_Parsons_(ice_hockey).html&#39;,
+ &#39;Don_Raye.html&#39;,
+ &#39;Donal_Moloney.html&#39;,
+ &#39;Donegal_Township,_Westmoreland_County,_Pennsylvania.html&#39;,
+ &#39;Double_Wing_Attack.html&#39;,
+ &#39;Doug_Sahm_and_Band.html&#39;,
+ &#39;Doughty.html&#39;,
+ &#39;Douglas_Trojans.html&#39;,
+ &#39;Doumanaba.html&#39;,
+ &#39;Dowell_Philip_O%27Reilly.html&#39;,
+ &#39;Downhill_Domination.html&#39;,
+ &#39;Dr._Feelgood_(album).html&#39;,
+ &#39;Dragnet_(franchise).html&#39;,
+ &#39;Dresden-Plauen_railway_station.html&#39;,
+ &#39;Drumstruck.html&#39;,
+ &#39;Dryas_integrifolia.html&#39;,
+ &#39;Du%C5%A1anovo.html&#39;,
+ &#39;Du%C5%BEi_Monastery.html&#39;,
+ &#39;Durham_Women%27s_F.C..html&#39;,
+ &#39;DWTE-TV.html&#39;,
+ &#39;DXRA.html&#39;,
+ &#39;Dysgonia_pudica.html&#39;,
+ &#39;Dzahadjou_Lamzand%C3%A9.html&#39;,
+ &#39;DZYM.html&#39;,
+ &#39;E._E._Evans-Pritchard.html&#39;,
+ &#39;E._F._McClellan.html&#39;,
+ &#39;Earl_of_Anglesey.html&#39;,
+ &#39;Early_medieval_states_in_Kazakhstan.html&#39;,
+ &#39;Earth_Liberation_Front.html&#39;,
+ &#39;EarthCheck_Assessed.html&#39;,
+ &#39;East_Bloomfield_Historic_District.html&#39;,
+ &#39;East_Down_(Northern_Ireland_Parliament_constituency).html&#39;,
+ &#39;Eastbrook_Academy.html&#39;,
+ &#39;Eastern_Finnmark_Police_District.html&#39;,
+ &#39;Echembrotus.html&#39;,
+ &#39;Eco-Drive.html&#39;,
+ &#39;Ed_Jackson_(rugby_player).html&#39;,
+ &#39;Eddie_Durie.html&#39;,
+ &#39;Eddie_Eyre.html&#39;,
+ &#39;Edmonton_municipal_election,_1961.html&#39;,
+ &#39;EDP_Sarichioi_Wind_Farm.html&#39;,
+ &#39;Eduardo_De_Filippo.html&#39;,
+ &#39;Education_and_Training_Board.html&#39;,
+ &#39;Education_in_Tacloban.html&#39;,
+ &#39;Edward_Grosvenor.html&#39;,
+ &#39;Edward_Holmes_Baldock_(dealer).html&#39;,
+ &#39;Edwin_Bollier.html&#39;,
+ &#39;Egg_coffee.html&#39;,
+ &#39;Eggerberg_railway_station.html&#39;,
+ &#39;Ego_Dominus_Tuus.html&#39;,
+ &#39;Einstein_(horse).html&#39;,
+ &#39;Eivind_Hiis_Hauge.html&#39;,
+ &#39;Ek_Dil_Sau_Afsane.html&#39;,
+ &#39;El%C5%BCbieta_Dru%C5%BCbacka.html&#39;,
+ &#39;El_Bordj.html&#39;,
+ &#39;El_Pas_de_la_Casa.html&#39;,
+ &#39;Elaine_Fleming.html&#39;,
+ &#39;ELED.html&#39;,
+ &#39;Elgin_National_Watch_Company.html&#39;,
+ &#39;Elio_Calderini.html&#39;,
+ &#39;Elisa_von_der_Recke.html&#39;,
+ &#39;Elizabeth_Gray_(fossil_collector).html&#39;,
+ &#39;Elo%C3%ADna_Miyares_Berm%C3%BAdez.html&#39;,
+ &#39;Els_Dottermans.html&#39;,
+ &#39;Elzear_Torreggiani.html&#39;,
+ &#39;Emarginula_koon.html&#39;,
+ &#39;Embraer_Unidade_Gavi%C3%A3o_Peixoto_Airport.html&#39;,
+ &#39;EMD_SD40-2.html&#39;,
+ &#39;Emily_(1964_song).html&#39;,
+ &#39;Eminencia.html&#39;,
+ &#39;Emmanuel_Muhammad.html&#39;,
+ &#39;Emperor_(novel_series).html&#39;,
+ &#39;Enamul_Haque_(cricketer,_born_1966).html&#39;,
+ &#39;Endre_Church.html&#39;,
+ &#39;ENESSERE.html&#39;,
+ &#39;English_cricket_team_in_South_Africa_in_1956%E2%80%9357.html&#39;,
+ &#39;ENMAX_Centrium.html&#39;,
+ &#39;Enrique_Morales.html&#39;,
+ &#39;Environmental_impact_of_agriculture.html&#39;,
+ &#39;Epichorista.html&#39;,
+ &#39;Epropetes_metallica.html&#39;,
+ &#39;Equestrian_at_the_1936_Summer_Olympics.html&#39;,
+ &#39;Erd%C5%91s%E2%80%93Faber%E2%80%93Lov%C3%A1sz_conjecture.html&#39;,
+ &#39;Eressa_aperiens.html&#39;,
+ &#39;Eric_Ziebold.html&#39;,
+ &#39;Erigeron_canaani.html&#39;,
+ &#39;Erwin_Lutzer.html&#39;,
+ &#39;Eryngium_planum.html&#39;,
+ &#39;Esher_Church_of_England_High_School.html&#39;,
+ &#39;Estadio_Municipal_Pozoblanco.html&#39;,
+ &#39;Estelle_v._Smith.html&#39;,
+ &#39;Eternamente_Romanticos.html&#39;,
+ &#39;Ethan_Van_der_Ryn.html&#39;,
+ &#39;Ethel_Johns.html&#39;,
+ &#39;ETS-VIII.html&#39;,
+ &#39;Eudonia_notozeucta.html&#39;,
+ &#39;Eugamandus_brunneus.html&#39;,
+ &#39;Eugenio_Morelli.html&#39;,
+ &#39;Eupithecia_trancasae.html&#39;,
+ &#39;Europa_(Roman_province).html&#39;,
+ &#39;Euxoa_simulata.html&#39;,
+ &#39;Evanston,_Cincinnati.html&#39;,
+ &#39;Evene.html&#39;,
+ &#39;Ewa_Kasprzyk_(athlete).html&#39;,
+ &#39;Explanation_module.html&#39;,
+ &#39;Exploratorium_(film).html&#39;,
+ &#39;Extension_of_the_Wish.html&#39;,
+ &#39;Eye_of_the_Beholder_III:_Assault_on_Myth_Drannor.html&#39;,
+ &#39;Eyes_Galaxies.html&#39;,
+ &#39;F%C3%A9lix_C%C3%A1rdenas.html&#39;,
+ &#39;F._L._Griggs.html&#39;,
+ &#39;Faat_Zakirov.html&#39;,
+ &#39;Face_Drop.html&#39;,
+ &#39;Faces_(Run%E2%80%93D.M.C._song).html&#39;,
+ &#39;Facial_cleft.html&#39;,
+ &#39;Facundo_Gamband%C3%A9.html&#39;,
+ &#39;Fahy,_County_Mayo.html&#39;,
+ &#39;Failing_Office_Building.html&#39;,
+ &#39;Faizullah.html&#39;,
+ &#39;Falman-County_Acres,_Texas.html&#39;,
+ &#39;False_pregnancy.html&#39;,
+ &#39;Faryab,_Dashtestan.html&#39;,
+ &#39;FC_Bobruisk.html&#39;,
+ &#39;FC_Khikhani_Khulo.html&#39;,
+ &#39;Fe%27i_banana.html&#39;,
+ &#39;Fear_play.html&#39;,
+ &#39;Feel_No_Fret.html&#39;,
+ &#39;Feiner_v._New_York.html&#39;,
+ &#39;Feodosia_Morozova.html&#39;,
+ &#39;Ferdinand_Arnodin.html&#39;,
+ &#39;Ferdinand_Mainzer.html&#39;,
+ &#39;Feria_del_Sol_(M%C3%A9rida).html&#39;,
+ &#39;Fernanda_Vasconcellos.html&#39;,
+ &#39;Feuerzangenbowle.html&#39;,
+ &#39;Fictionwise.html&#39;,
+ &#39;Fifty_Years_of_Music.html&#39;,
+ &#39;Filip_Pyrochta.html&#39;,
+ &#39;Filochy.html&#39;,
+ &#39;Findwell.html&#39;,
+ &#39;FinnSec_Security.html&#39;,
+ &#39;Finnveden.html&#39;,
+ &#39;Firebaugh,_California.html&#39;,
+ &#39;Fireworks_EP.html&#39;,
+ &#39;Firmin%C3%B3polis.html&#39;,
+ &#39;Fischli.html&#39;,
+ &#39;Flag_of_Chicago.html&#39;,
+ &#39;Flag_of_the_Austral_Islands.html&#39;,
+ &#39;Flashmob_(album).html&#39;,
+ &#39;Flat_roof.html&#39;,
+ &#39;Fleetwood,_Oklahoma.html&#39;,
+ &#39;Flight_Design_Boxtair.html&#39;,
+ &#39;Flour_Babies.html&#39;,
+ &#39;Foidolite.html&#39;,
+ &#39;Foilbacks.html&#39;,
+ &#39;Follow_(album).html&#39;,
+ &#39;Football_at_the_National_Games_of_China.html&#39;,
+ &#39;Football_Foundation.html&#39;,
+ &#39;Fort_Astoria.html&#39;,
+ &#39;Fortabat_Art_Collection.html&#39;,
+ &#39;Forth_and_Bargy_dialect.html&#39;,
+ &#39;Fortuna_Glacier.html&#39;,
+ &#39;Forward_Operating_Base_Grizzly.html&#39;,
+ &#39;Fougangoue.html&#39;,
+ &#39;Foulonia.html&#39;,
+ &#39;Fractured_(Everything_I_Said_Was_True).html&#39;,
+ &#39;France_in_the_Eurovision_Song_Contest_2010.html&#39;,
+ &#39;Frances_Morris_(actress).html&#39;,
+ &#39;Frank_C._Archibald_(Vermont_politician).html&#39;,
+ &#39;Frank_Drum.html&#39;,
+ &#39;Frank_Gross.html&#39;,
+ &#39;Frans,_Ain.html&#39;,
+ &#39;Franz_Georg_Benkert.html&#39;,
+ &#39;Fraser_Lake_Airport.html&#39;,
+ &#39;Fred_H._Hildebrandt.html&#39;,
+ &#39;Fred_Marks.html&#39;,
+ &#39;Frederick_Leadbetter.html&#39;,
+ &#39;Freedom_(White_Heart_album).html&#39;,
+ &#39;Freehold_Township_Schools.html&#39;,
+ &#39;Friedrich_Albrecht_Anton_Meyer.html&#39;,
+ &#39;Friedrich_Kirchner.html&#39;,
+ &#39;Friendship,_Wake_County,_North_Carolina.html&#39;,
+ &#39;Frisilia_sulcata.html&#39;,
+ &#39;Frithjof_Schmidt.html&#39;,
+ &#39;From_All_Sides.html&#39;,
+ &#39;Frost_Township,_Michigan.html&#39;,
+ &#39;Fu_Biao.html&#39;,
+ &#39;Fucibet.html&#39;,
+ &#39;Functoid.html&#39;,
+ &#39;Fureai_kippu.html&#39;,
+ &#39;Furkan_Korkmaz.html&#39;,
+ &#39;Furto_di_sera_bel_colpo_si_spera.html&#39;,
+ &#39;Furubira_District,_Hokkaido.html&#39;,
+ &#39;Fusinus_carvalhoriosi.html&#39;,
+ &#39;Future_Weather.html&#39;,
+ &#39;G%C3%B3ra,_Mogilno_County.html&#39;,
+ &#39;G%C3%B6ncruszka.html&#39;,
+ &#39;G.O.Y.A._(Gunz_Or_Yay_Available).html&#39;,
+ &#39;G.S._Lamias_Achilleus.html&#39;,
+ &#39;Ga%C5%A1parci.html&#39;,
+ &#39;Gabriele_Poso.html&#39;,
+ &#39;Gacharageini.html&#39;,
+ &#39;Gad_(deity).html&#39;,
+ &#39;Gaetanus_Matthew_Perez.html&#39;,
+ &#39;Gal%C3%A1pagos,_Guadalajara.html&#39;,
+ &#39;Galician_Nationalist_Bloc.html&#39;,
+ &#39;Galloway_and_Upper_Nithsdale_(Scottish_Parliament_constituency).html&#39;,
+ &#39;Gander_(surname).html&#39;,
+ &#39;Gandigwad.html&#39;,
+ &#39;Gang_run_printing.html&#39;,
+ &#39;Garde_Civique.html&#39;,
+ &#39;Garden-based_learning.html&#39;,
+ ...]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="s2">&quot;wiki&quot;</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[3]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>2997</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;wiki/Cecil_Peak.html&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>&lt;!DOCTYPE html&gt;
+&lt;html class=&#34;client-nojs&#34; lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;
+&lt;head&gt;
+&lt;meta charset=&#34;UTF-8&#34;/&gt;
+&lt;title&gt;Cecil Peak - Wikipedia&lt;/title&gt;
+&lt;script&gt;document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, &#34;$1client-js$2&#34; );&lt;/script&gt;
+&lt;script&gt;(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({&#34;wgCanonicalNamespace&#34;:&#34;&#34;,&#34;wgCanonicalSpecialPageName&#34;:false,&#34;wgNamespaceNumber&#34;:0,&#34;wgPageName&#34;:&#34;Cecil_Peak&#34;,&#34;wgTitle&#34;:&#34;Cecil Peak&#34;,&#34;wgCurRevisionId&#34;:724716112,&#34;wgRevisionId&#34;:724716112,&#34;wgArticleId&#34;:36574331,&#34;wgIsArticle&#34;:true,&#34;wgIsRedirect&#34;:false,&#34;wgAction&#34;:&#34;view&#34;,&#34;wgUserName&#34;:null,&#34;wgUserGroups&#34;:[&#34;*&#34;],&#34;wgCategories&#34;:[&#34;Coordinates on Wikidata&#34;,&#34;All stub articles&#34;,&#34;Mountains of Otago&#34;,&#34;Queenstown-Lakes District&#34;,&#34;Southern Alps&#34;,&#34;Otago geography stubs&#34;],&#34;wgBreakFrames&#34;:false,&#34;wgPageContentLanguage&#34;:&#34;en&#34;,&#34;wgPageContentModel&#34;:&#34;wikitext&#34;,&#34;wgSeparatorTransformTable&#34;:[&#34;&#34;,&#34;&#34;],&#34;wgDigitTransformTable&#34;:[&#34;&#34;,&#34;&#34;],&#34;wgDefaultDateFormat&#34;:&#34;dmy&#34;,&#34;wgMonthNames&#34;:[&#34;&#34;,&#34;January&#34;,&#34;February&#34;,&#34;March&#34;,&#34;April&#34;,&#34;May&#34;,&#34;June&#34;,&#34;July&#34;,&#34;August&#34;,&#34;September&#34;,&#34;October&#34;,&#34;November&#34;,&#34;December&#34;],&#34;wgMonthNamesShort&#34;:[&#34;&#34;,&#34;Jan&#34;,&#34;Feb&#34;,&#34;Mar&#34;,&#34;Apr&#34;,&#34;May&#34;,&#34;Jun&#34;,&#34;Jul&#34;,&#34;Aug&#34;,&#34;Sep&#34;,&#34;Oct&#34;,&#34;Nov&#34;,&#34;Dec&#34;],&#34;wgRelevantPageName&#34;:&#34;Cecil_Peak&#34;,&#34;wgRelevantArticleId&#34;:36574331,&#34;wgRequestId&#34;:&#34;WLhgJApAADkAAI@nTZ4AAACB&#34;,&#34;wgIsProbablyEditable&#34;:true,&#34;wgRestrictionEdit&#34;:[],&#34;wgRestrictionMove&#34;:[],&#34;wgFlaggedRevsParams&#34;:{&#34;tags&#34;:{}},&#34;wgStableRevisionId&#34;:null,&#34;wgWikiEditorEnabledModules&#34;:{&#34;toolbar&#34;:true,&#34;dialogs&#34;:true,&#34;preview&#34;:false,&#34;publish&#34;:false},&#34;wgBetaFeaturesFeatures&#34;:[],&#34;wgMediaViewerOnClick&#34;:true,&#34;wgMediaViewerEnabledByDefault&#34;:true,&#34;wgPopupsShouldSendModuleToUser&#34;:false,&#34;wgPopupsConflictsWithNavPopupGadget&#34;:false,&#34;wgVisualEditor&#34;:{&#34;pageLanguageCode&#34;:&#34;en&#34;,&#34;pageLanguageDir&#34;:&#34;ltr&#34;,&#34;usePageImages&#34;:true,&#34;usePageDescriptions&#34;:true},&#34;wgPreferredVariant&#34;:&#34;en&#34;,&#34;wgMFDisplayWikibaseDescriptions&#34;:{&#34;search&#34;:true,&#34;nearby&#34;:true,&#34;watchlist&#34;:true,&#34;tagline&#34;:true},&#34;wgRelatedArticles&#34;:null,&#34;wgRelatedArticlesBetaFeatureEnabled&#34;:false,&#34;wgRelatedArticlesUseCirrusSearch&#34;:true,&#34;wgRelatedArticlesOnlyUseCirrusSearch&#34;:false,&#34;wgULSCurrentAutonym&#34;:&#34;English&#34;,&#34;wgNoticeProject&#34;:&#34;wikipedia&#34;,&#34;wgCentralNoticeCookiesToDelete&#34;:[],&#34;wgCentralNoticeCategoriesUsingLegacy&#34;:[&#34;Fundraising&#34;,&#34;fundraising&#34;],&#34;wgCategoryTreePageCategoryOptions&#34;:&#34;{\&#34;mode\&#34;:0,\&#34;hideprefix\&#34;:20,\&#34;showcount\&#34;:true,\&#34;namespaces\&#34;:false}&#34;,&#34;wgCoordinates&#34;:{&#34;lat&#34;:-45.108831,&#34;lon&#34;:168.628463},&#34;wgWikibaseItemId&#34;:&#34;Q5056265&#34;,&#34;wgCentralAuthMobileDomain&#34;:false,&#34;wgVisualEditorToolbarScrollOffset&#34;:0,&#34;wgEditSubmitButtonLabelPublish&#34;:false});mw.loader.state({&#34;ext.globalCssJs.user.styles&#34;:&#34;ready&#34;,&#34;ext.globalCssJs.site.styles&#34;:&#34;ready&#34;,&#34;site.styles&#34;:&#34;ready&#34;,&#34;noscript&#34;:&#34;ready&#34;,&#34;user.styles&#34;:&#34;ready&#34;,&#34;user&#34;:&#34;ready&#34;,&#34;user.options&#34;:&#34;loading&#34;,&#34;user.tokens&#34;:&#34;loading&#34;,&#34;ext.cite.styles&#34;:&#34;ready&#34;,&#34;wikibase.client.init&#34;:&#34;ready&#34;,&#34;ext.visualEditor.desktopArticleTarget.noscript&#34;:&#34;ready&#34;,&#34;ext.uls.interlanguage&#34;:&#34;ready&#34;,&#34;ext.wikimediaBadges&#34;:&#34;ready&#34;,&#34;mediawiki.legacy.shared&#34;:&#34;ready&#34;,&#34;mediawiki.legacy.commonPrint&#34;:&#34;ready&#34;,&#34;mediawiki.sectionAnchor&#34;:&#34;ready&#34;,&#34;mediawiki.skinning.interface&#34;:&#34;ready&#34;,&#34;skins.vector.styles&#34;:&#34;ready&#34;,&#34;ext.globalCssJs.user&#34;:&#34;ready&#34;,&#34;ext.globalCssJs.site&#34;:&#34;ready&#34;});mw.loader.implement(&#34;user.options@0j3lz3q&#34;,function($,jQuery,require,module){mw.user.options.set({&#34;variant&#34;:&#34;en&#34;});});mw.loader.implement(&#34;user.tokens@1dqfd7l&#34;,function ( $, jQuery, require, module ) {
+mw.user.tokens.set({&#34;editToken&#34;:&#34;+\\&#34;,&#34;patrolToken&#34;:&#34;+\\&#34;,&#34;watchToken&#34;:&#34;+\\&#34;,&#34;csrfToken&#34;:&#34;+\\&#34;});/*@nomin*/;
+
+});mw.loader.load([&#34;ext.cite.a11y&#34;,&#34;mediawiki.action.view.postEdit&#34;,&#34;site&#34;,&#34;mediawiki.page.startup&#34;,&#34;mediawiki.user&#34;,&#34;mediawiki.hidpi&#34;,&#34;mediawiki.page.ready&#34;,&#34;mediawiki.legacy.wikibits&#34;,&#34;mediawiki.searchSuggest&#34;,&#34;ext.gadget.teahouse&#34;,&#34;ext.gadget.ReferenceTooltips&#34;,&#34;ext.gadget.watchlist-notice&#34;,&#34;ext.gadget.DRN-wizard&#34;,&#34;ext.gadget.charinsert&#34;,&#34;ext.gadget.refToolbar&#34;,&#34;ext.gadget.extra-toolbar-buttons&#34;,&#34;ext.gadget.switcher&#34;,&#34;ext.gadget.featured-articles-links&#34;,&#34;ext.centralauth.centralautologin&#34;,&#34;mmv.head&#34;,&#34;mmv.bootstrap.autostart&#34;,&#34;ext.visualEditor.desktopArticleTarget.init&#34;,&#34;ext.visualEditor.targetLoader&#34;,&#34;ext.eventLogging.subscriber&#34;,&#34;ext.wikimediaEvents&#34;,&#34;ext.navigationTiming&#34;,&#34;ext.uls.eventlogger&#34;,&#34;ext.uls.init&#34;,&#34;ext.uls.interface&#34;,&#34;ext.quicksurveys.init&#34;,&#34;ext.centralNotice.geoIP&#34;,&#34;ext.centralNotice.startUp&#34;,&#34;skins.vector.js&#34;]);});&lt;/script&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;/w/load.php?debug=false&amp;amp;lang=en&amp;amp;modules=ext.cite.styles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.interface%7Cskins.vector.styles%7Cwikibase.client.init&amp;amp;only=styles&amp;amp;skin=vector&#34;/&gt;
+&lt;script async=&#34;&#34; src=&#34;/w/load.php?debug=false&amp;amp;lang=en&amp;amp;modules=startup&amp;amp;only=scripts&amp;amp;skin=vector&#34;&gt;&lt;/script&gt;
+&lt;meta name=&#34;ResourceLoaderDynamicStyles&#34; content=&#34;&#34;/&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;/w/load.php?debug=false&amp;amp;lang=en&amp;amp;modules=site.styles&amp;amp;only=styles&amp;amp;skin=vector&#34;/&gt;
+&lt;meta name=&#34;generator&#34; content=&#34;MediaWiki 1.29.0-wmf.13&#34;/&gt;
+&lt;meta name=&#34;referrer&#34; content=&#34;origin-when-cross-origin&#34;/&gt;
+&lt;link rel=&#34;alternate&#34; href=&#34;android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Cecil_Peak&#34;/&gt;
+&lt;link rel=&#34;alternate&#34; type=&#34;application/x-wiki&#34; title=&#34;Edit this page&#34; href=&#34;/w/index.php?title=Cecil_Peak&amp;amp;action=edit&#34;/&gt;
+&lt;link rel=&#34;edit&#34; title=&#34;Edit this page&#34; href=&#34;/w/index.php?title=Cecil_Peak&amp;amp;action=edit&#34;/&gt;
+&lt;link rel=&#34;apple-touch-icon&#34; href=&#34;/static/apple-touch/wikipedia.png&#34;/&gt;
+&lt;link rel=&#34;shortcut icon&#34; href=&#34;/static/favicon/wikipedia.ico&#34;/&gt;
+&lt;link rel=&#34;search&#34; type=&#34;application/opensearchdescription+xml&#34; href=&#34;/w/opensearch_desc.php&#34; title=&#34;Wikipedia (en)&#34;/&gt;
+&lt;link rel=&#34;EditURI&#34; type=&#34;application/rsd+xml&#34; href=&#34;//en.wikipedia.org/w/api.php?action=rsd&#34;/&gt;
+&lt;link rel=&#34;copyright&#34; href=&#34;//creativecommons.org/licenses/by-sa/3.0/&#34;/&gt;
+&lt;link rel=&#34;canonical&#34; href=&#34;https://en.wikipedia.org/wiki/Cecil_Peak&#34;/&gt;
+&lt;link rel=&#34;dns-prefetch&#34; href=&#34;//login.wikimedia.org&#34;/&gt;
+&lt;link rel=&#34;dns-prefetch&#34; href=&#34;//meta.wikimedia.org&#34; /&gt;
+&lt;/head&gt;
+&lt;body class=&#34;mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Cecil_Peak rootpage-Cecil_Peak skin-vector action-view&#34;&gt;		&lt;div id=&#34;mw-page-base&#34; class=&#34;noprint&#34;&gt;&lt;/div&gt;
+		&lt;div id=&#34;mw-head-base&#34; class=&#34;noprint&#34;&gt;&lt;/div&gt;
+		&lt;div id=&#34;content&#34; class=&#34;mw-body&#34; role=&#34;main&#34;&gt;
+			&lt;a id=&#34;top&#34;&gt;&lt;/a&gt;
+
+							&lt;div id=&#34;siteNotice&#34;&gt;&lt;!-- CentralNotice --&gt;&lt;/div&gt;
+						&lt;div class=&#34;mw-indicators&#34;&gt;
+&lt;/div&gt;
+			&lt;h1 id=&#34;firstHeading&#34; class=&#34;firstHeading&#34; lang=&#34;en&#34;&gt;Cecil Peak&lt;/h1&gt;
+									&lt;div id=&#34;bodyContent&#34; class=&#34;mw-body-content&#34;&gt;
+									&lt;div id=&#34;siteSub&#34;&gt;From Wikipedia, the free encyclopedia&lt;/div&gt;
+								&lt;div id=&#34;contentSub&#34;&gt;&lt;/div&gt;
+												&lt;div id=&#34;jump-to-nav&#34; class=&#34;mw-jump&#34;&gt;
+					Jump to:					&lt;a href=&#34;#mw-head&#34;&gt;navigation&lt;/a&gt;, 					&lt;a href=&#34;#p-search&#34;&gt;search&lt;/a&gt;
+				&lt;/div&gt;
+				&lt;div id=&#34;mw-content-text&#34; lang=&#34;en&#34; dir=&#34;ltr&#34; class=&#34;mw-content-ltr&#34;&gt;&lt;p&gt;&lt;b&gt;Cecil Peak&lt;/b&gt; is a mountain in the &lt;a href=&#34;/wiki/Wakatipu_Basin&#34; title=&#34;Wakatipu Basin&#34;&gt;Wakatipu Basin&lt;/a&gt;, &lt;a href=&#34;/wiki/New_Zealand&#34; title=&#34;New Zealand&#34;&gt;New Zealand&lt;/a&gt; and reaches a height of 1,978 metres.&lt;sup id=&#34;cite_ref-1&#34; class=&#34;reference&#34;&gt;&lt;a href=&#34;#cite_note-1&#34;&gt;[1]&lt;/a&gt;&lt;/sup&gt; It is on the south side of &lt;a href=&#34;/wiki/Lake_Wakatipu&#34; title=&#34;Lake Wakatipu&#34;&gt;Lake Wakatipu&lt;/a&gt;, south south-west of &lt;a href=&#34;/wiki/Queenstown,_New_Zealand&#34; title=&#34;Queenstown, New Zealand&#34;&gt;Queenstown&lt;/a&gt; and is highly prominent from around this area. &lt;sup id=&#34;cite_ref-2&#34; class=&#34;reference&#34;&gt;&lt;a href=&#34;#cite_note-2&#34;&gt;[2]&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;div class=&#34;thumb tright&#34;&gt;
+&lt;div class=&#34;thumbinner&#34; style=&#34;width:502px;&#34;&gt;&lt;a href=&#34;/wiki/File:Cecil-Peak-and-Walter-Peak-with-snow.jpg&#34; class=&#34;image&#34;&gt;&lt;img alt=&#34;&#34; src=&#34;//upload.wikimedia.org/wikipedia/commons/thumb/9/97/Cecil-Peak-and-Walter-Peak-with-snow.jpg/500px-Cecil-Peak-and-Walter-Peak-with-snow.jpg&#34; width=&#34;500&#34; height=&#34;158&#34; class=&#34;thumbimage&#34; srcset=&#34;//upload.wikimedia.org/wikipedia/commons/thumb/9/97/Cecil-Peak-and-Walter-Peak-with-snow.jpg/750px-Cecil-Peak-and-Walter-Peak-with-snow.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/9/97/Cecil-Peak-and-Walter-Peak-with-snow.jpg/1000px-Cecil-Peak-and-Walter-Peak-with-snow.jpg 2x&#34; data-file-width=&#34;3608&#34; data-file-height=&#34;1143&#34; /&gt;&lt;/a&gt;
+&lt;div class=&#34;thumbcaption&#34;&gt;
+&lt;div class=&#34;magnify&#34;&gt;&lt;a href=&#34;/wiki/File:Cecil-Peak-and-Walter-Peak-with-snow.jpg&#34; class=&#34;internal&#34; title=&#34;Enlarge&#34;&gt;&lt;/a&gt;&lt;/div&gt;
+View from Fernhill of Cecil Peak (&lt;a href=&#34;/wiki/Walter_Peak,_New_Zealand&#34; class=&#34;mw-redirect&#34; title=&#34;Walter Peak, New Zealand&#34;&gt;Walter Peak&lt;/a&gt; on right). Kā Kamu-a-Hakitekura is the &lt;a href=&#34;/wiki/M%C4%81ori_language&#34; title=&#34;Māori language&#34;&gt;Māori&lt;/a&gt; name for both mountains.&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Vegetation is mainly grass and tussock (as it is under a pastoral lease&lt;sup id=&#34;cite_ref-3&#34; class=&#34;reference&#34;&gt;&lt;a href=&#34;#cite_note-3&#34;&gt;[3]&lt;/a&gt;&lt;/sup&gt;) with trees near the waterline. &lt;a href=&#34;/wiki/Hidden_Island,_New_Zealand&#34; class=&#34;mw-redirect&#34; title=&#34;Hidden Island, New Zealand&#34;&gt;Hidden Island&lt;/a&gt; is one of four islands in Lake Wakatipu and sits very close to the shoreline of Cecil Peak. On 27 March 2010 a local band performed an outdoor concert in a natural amphitheatre on the peak playing songs from the band &lt;a href=&#34;/wiki/Pink_Floyd&#34; title=&#34;Pink Floyd&#34;&gt;Pink Floyd&lt;/a&gt;.&lt;sup id=&#34;cite_ref-4&#34; class=&#34;reference&#34;&gt;&lt;a href=&#34;#cite_note-4&#34;&gt;[4]&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;h2&gt;&lt;span class=&#34;mw-headline&#34; id=&#34;Name&#34;&gt;Name&lt;/span&gt;&lt;span class=&#34;mw-editsection&#34;&gt;&lt;span class=&#34;mw-editsection-bracket&#34;&gt;[&lt;/span&gt;&lt;a href=&#34;/w/index.php?title=Cecil_Peak&amp;amp;action=edit&amp;amp;section=1&#34; title=&#34;Edit section: Name&#34;&gt;edit&lt;/a&gt;&lt;span class=&#34;mw-editsection-bracket&#34;&gt;]&lt;/span&gt;&lt;/span&gt;&lt;/h2&gt;
+&lt;p&gt;Both Cecil Peak and the nearby mountain of Walter Peak were named after &lt;a href=&#34;/wiki/William_Gilbert_Rees&#34; title=&#34;William Gilbert Rees&#34;&gt;William Rees&#39;&lt;/a&gt; eldest sons&#39; first given names by the surveyor &lt;a href=&#34;/wiki/James_McKerrow&#34; title=&#34;James McKerrow&#34;&gt;James McKerrow&lt;/a&gt; in 1862.&lt;sup id=&#34;cite_ref-5&#34; class=&#34;reference&#34;&gt;&lt;a href=&#34;#cite_note-5&#34;&gt;[5]&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;h2&gt;&lt;span class=&#34;mw-headline&#34; id=&#34;See_also&#34;&gt;See also&lt;/span&gt;&lt;span class=&#34;mw-editsection&#34;&gt;&lt;span class=&#34;mw-editsection-bracket&#34;&gt;[&lt;/span&gt;&lt;a href=&#34;/w/index.php?title=Cecil_Peak&amp;amp;action=edit&amp;amp;section=2&#34; title=&#34;Edit section: See also&#34;&gt;edit&lt;/a&gt;&lt;span class=&#34;mw-editsection-bracket&#34;&gt;]&lt;/span&gt;&lt;/span&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;/wiki/List_of_mountains_of_New_Zealand_by_height&#34; title=&#34;List of mountains of New Zealand by height&#34;&gt;List of mountains of New Zealand by height&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/wiki/Walter_Peak_(New_Zealand)&#34; title=&#34;Walter Peak (New Zealand)&#34;&gt;Walter Peak&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;&lt;span class=&#34;mw-headline&#34; id=&#34;References&#34;&gt;References&lt;/span&gt;&lt;span class=&#34;mw-editsection&#34;&gt;&lt;span class=&#34;mw-editsection-bracket&#34;&gt;[&lt;/span&gt;&lt;a href=&#34;/w/index.php?title=Cecil_Peak&amp;amp;action=edit&amp;amp;section=3&#34; title=&#34;Edit section: References&#34;&gt;edit&lt;/a&gt;&lt;span class=&#34;mw-editsection-bracket&#34;&gt;]&lt;/span&gt;&lt;/span&gt;&lt;/h2&gt;
+&lt;div class=&#34;reflist&#34; style=&#34;list-style-type: decimal;&#34;&gt;
+&lt;ol class=&#34;references&#34;&gt;
+&lt;li id=&#34;cite_note-1&#34;&gt;&lt;span class=&#34;mw-cite-backlink&#34;&gt;&lt;b&gt;&lt;a href=&#34;#cite_ref-1&#34;&gt;^&lt;/a&gt;&lt;/b&gt;&lt;/span&gt; &lt;span class=&#34;reference-text&#34;&gt;&lt;cite class=&#34;citation web&#34;&gt;Malcolm, McKinnon. &lt;a rel=&#34;nofollow&#34; class=&#34;external text&#34; href=&#34;http://www.teara.govt.nz/en/otago-places/17&#34;&gt;&#34;Otago places - Wakatipu basin&#34;&lt;/a&gt;. Te Ara - the Encyclopedia of New Zealand.&lt;/cite&gt;&lt;span title=&#34;ctx_ver=Z39.88-2004&amp;amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACecil+Peak&amp;amp;rft.aufirst=McKinnon&amp;amp;rft.aulast=Malcolm&amp;amp;rft.btitle=Otago+places+-+Wakatipu+basin&amp;amp;rft.genre=unknown&amp;amp;rft_id=http%3A%2F%2Fwww.teara.govt.nz%2Fen%2Fotago-places%2F17&amp;amp;rft.pub=Te+Ara+-+the+Encyclopedia+of+New+Zealand&amp;amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&#34; class=&#34;Z3988&#34;&gt;&lt;span style=&#34;display:none;&#34;&gt;&amp;#160;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li id=&#34;cite_note-2&#34;&gt;&lt;span class=&#34;mw-cite-backlink&#34;&gt;&lt;b&gt;&lt;a href=&#34;#cite_ref-2&#34;&gt;^&lt;/a&gt;&lt;/b&gt;&lt;/span&gt; &lt;span class=&#34;reference-text&#34;&gt;&lt;cite class=&#34;citation web&#34;&gt;&lt;a rel=&#34;nofollow&#34; class=&#34;external text&#34; href=&#34;http://www.tekaraka.co.nz/Issues/TeKaraka44.pdf&#34;&gt;&#34;Ngai Tahu Names&#34;&lt;/a&gt; &lt;span style=&#34;font-size:85%;&#34;&gt;(PDF)&lt;/span&gt;. &lt;i&gt;Te Karaka Issue 44, pg 13&lt;/i&gt;. tekaraka.co.nz&lt;span class=&#34;reference-accessdate&#34;&gt;. Retrieved &lt;span class=&#34;nowrap&#34;&gt;18 September&lt;/span&gt; 2013&lt;/span&gt;.&lt;/cite&gt;&lt;span title=&#34;ctx_ver=Z39.88-2004&amp;amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACecil+Peak&amp;amp;rft.atitle=Ngai+Tahu+Names&amp;amp;rft.genre=unknown&amp;amp;rft_id=http%3A%2F%2Fwww.tekaraka.co.nz%2FIssues%2FTeKaraka44.pdf&amp;amp;rft.jtitle=Te+Karaka+Issue+44%2C+pg+13&amp;amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&#34; class=&#34;Z3988&#34;&gt;&lt;span style=&#34;display:none;&#34;&gt;&amp;#160;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li id=&#34;cite_note-3&#34;&gt;&lt;span class=&#34;mw-cite-backlink&#34;&gt;&lt;b&gt;&lt;a href=&#34;#cite_ref-3&#34;&gt;^&lt;/a&gt;&lt;/b&gt;&lt;/span&gt; &lt;span class=&#34;reference-text&#34;&gt;&lt;cite class=&#34;citation web&#34;&gt;&lt;a rel=&#34;nofollow&#34; class=&#34;external text&#34; href=&#34;http://www.linz.govt.nz/sites/default/files/docs/crownproperty/high-country-leases/leaselist/cecil-peak-ddr-pt1.pdf&#34;&gt;&#34;Crown Pastoral Land Tenure Review&#34;&lt;/a&gt; &lt;span style=&#34;font-size:85%;&#34;&gt;(PDF)&lt;/span&gt;. Land Information New Zealand.&lt;/cite&gt;&lt;span title=&#34;ctx_ver=Z39.88-2004&amp;amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACecil+Peak&amp;amp;rft.btitle=Crown+Pastoral+Land+Tenure+Review&amp;amp;rft.genre=unknown&amp;amp;rft_id=http%3A%2F%2Fwww.linz.govt.nz%2Fsites%2Fdefault%2Ffiles%2Fdocs%2Fcrownproperty%2Fhigh-country-leases%2Fleaselist%2Fcecil-peak-ddr-pt1.pdf&amp;amp;rft.pub=Land+Information+New+Zealand&amp;amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&#34; class=&#34;Z3988&#34;&gt;&lt;span style=&#34;display:none;&#34;&gt;&amp;#160;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li id=&#34;cite_note-4&#34;&gt;&lt;span class=&#34;mw-cite-backlink&#34;&gt;&lt;b&gt;&lt;a href=&#34;#cite_ref-4&#34;&gt;^&lt;/a&gt;&lt;/b&gt;&lt;/span&gt; &lt;span class=&#34;reference-text&#34;&gt;&lt;cite class=&#34;citation web&#34;&gt;&lt;a rel=&#34;nofollow&#34; class=&#34;external text&#34; href=&#34;http://www.scoop.co.nz/stories/CU1003/S00353.htm&#34;&gt;&#34;Rocking it on Cecil Peak&#34;&lt;/a&gt;. Scoop Media.&lt;/cite&gt;&lt;span title=&#34;ctx_ver=Z39.88-2004&amp;amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACecil+Peak&amp;amp;rft.btitle=Rocking+it+on+Cecil+Peak&amp;amp;rft.genre=unknown&amp;amp;rft_id=http%3A%2F%2Fwww.scoop.co.nz%2Fstories%2FCU1003%2FS00353.htm&amp;amp;rft.pub=Scoop+Media&amp;amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&#34; class=&#34;Z3988&#34;&gt;&lt;span style=&#34;display:none;&#34;&gt;&amp;#160;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li id=&#34;cite_note-5&#34;&gt;&lt;span class=&#34;mw-cite-backlink&#34;&gt;&lt;b&gt;&lt;a href=&#34;#cite_ref-5&#34;&gt;^&lt;/a&gt;&lt;/b&gt;&lt;/span&gt; &lt;span class=&#34;reference-text&#34;&gt;&lt;cite class=&#34;citation book&#34;&gt;Jardine, D.G. (1978). &lt;i&gt;Shadows on the Hill&lt;/i&gt;. A.H. &amp;amp; A.W. Reed Ltd. p.&amp;#160;185. &lt;a href=&#34;/wiki/International_Standard_Book_Number&#34; title=&#34;International Standard Book Number&#34;&gt;ISBN&lt;/a&gt;&amp;#160;&lt;a href=&#34;/wiki/Special:BookSources/0589010093&#34; title=&#34;Special:BookSources/0589010093&#34;&gt;0589010093&lt;/a&gt;.&lt;/cite&gt;&lt;span title=&#34;ctx_ver=Z39.88-2004&amp;amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACecil+Peak&amp;amp;rft.aufirst=D.G.&amp;amp;rft.aulast=Jardine&amp;amp;rft.btitle=Shadows+on+the+Hill&amp;amp;rft.date=1978&amp;amp;rft.genre=book&amp;amp;rft.isbn=0589010093&amp;amp;rft.pages=185&amp;amp;rft.pub=A.H.+%26+A.W.+Reed+Ltd&amp;amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&#34; class=&#34;Z3988&#34;&gt;&lt;span style=&#34;display:none;&#34;&gt;&amp;#160;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;span style=&#34;font-size: small;&#34;&gt;&lt;span id=&#34;coordinates&#34;&gt;&lt;a href=&#34;/wiki/Geographic_coordinate_system&#34; title=&#34;Geographic coordinate system&#34;&gt;Coordinates&lt;/a&gt;: &lt;span class=&#34;plainlinks nourlexpansion&#34;&gt;&lt;a class=&#34;external text&#34; href=&#34;//tools.wmflabs.org/geohack/geohack.php?pagename=Cecil_Peak&amp;amp;params=-45.108831_N_168.628463_E_&#34;&gt;&lt;span class=&#34;geo-nondefault&#34;&gt;&lt;span class=&#34;geo-dms&#34; title=&#34;Maps, aerial photos, and other data for this location&#34;&gt;&lt;span class=&#34;latitude&#34;&gt;45°06′32″S&lt;/span&gt; &lt;span class=&#34;longitude&#34;&gt;168°37′42″E&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;geo-multi-punct&#34;&gt;﻿ / ﻿&lt;/span&gt;&lt;span class=&#34;geo-default&#34;&gt;&lt;span class=&#34;geo-dec&#34; title=&#34;Maps, aerial photos, and other data for this location&#34;&gt;45.108831°S 168.628463°E&lt;/span&gt;&lt;span style=&#34;display:none&#34;&gt;﻿ / &lt;span class=&#34;geo&#34;&gt;-45.108831; 168.628463&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;table class=&#34;metadata plainlinks stub&#34; role=&#34;presentation&#34; style=&#34;background:transparent&#34;&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;/wiki/File:Position_of_Otago.png&#34; class=&#34;image&#34;&gt;&lt;img alt=&#34;Stub icon&#34; src=&#34;//upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Position_of_Otago.png/32px-Position_of_Otago.png&#34; width=&#34;32&#34; height=&#34;47&#34; srcset=&#34;//upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Position_of_Otago.png/48px-Position_of_Otago.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Position_of_Otago.png/64px-Position_of_Otago.png 2x&#34; data-file-width=&#34;405&#34; data-file-height=&#34;590&#34; /&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;i&gt;This &lt;a href=&#34;/wiki/Otago&#34; title=&#34;Otago&#34;&gt;Otago&lt;/a&gt; geography article is a &lt;a href=&#34;/wiki/Wikipedia:Stub&#34; title=&#34;Wikipedia:Stub&#34;&gt;stub&lt;/a&gt;. You can help Wikipedia by &lt;a class=&#34;external text&#34; href=&#34;//en.wikipedia.org/w/index.php?title=Cecil_Peak&amp;amp;action=edit&#34;&gt;expanding it&lt;/a&gt;.&lt;/i&gt;
+&lt;div class=&#34;plainlinks hlist navbar mini&#34; style=&#34;position: absolute; right: 15px; display: none;&#34;&gt;
+&lt;ul&gt;
+&lt;li class=&#34;nv-view&#34;&gt;&lt;a href=&#34;/wiki/Template:Otago-geo-stub&#34; title=&#34;Template:Otago-geo-stub&#34;&gt;&lt;abbr title=&#34;View this template&#34;&gt;v&lt;/abbr&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&#34;nv-talk&#34;&gt;&lt;a href=&#34;/wiki/Template_talk:Otago-geo-stub&#34; title=&#34;Template talk:Otago-geo-stub&#34;&gt;&lt;abbr title=&#34;Discuss this template&#34;&gt;t&lt;/abbr&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&#34;nv-edit&#34;&gt;&lt;a class=&#34;external text&#34; href=&#34;//en.wikipedia.org/w/index.php?title=Template:Otago-geo-stub&amp;amp;action=edit&#34;&gt;&lt;abbr title=&#34;Edit this template&#34;&gt;e&lt;/abbr&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+
+
+&lt;!-- 
+NewPP limit report
+Parsed by mw1211
+Cached time: 20170210085052
+Cache expiry: 2592000
+Dynamic content: false
+CPU time usage: 0.080 seconds
+Real time usage: 0.107 seconds
+Preprocessor visited node count: 253/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 10233/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 4/40
+Expensive parser function count: 0/500
+Lua time usage: 0.043/10.000 seconds
+Lua memory usage: 2.57 MB/50 MB
+--&gt;
+&lt;!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   89.189      1 -total
+ 62.17%   55.447      1 Template:Reflist
+ 48.96%   43.664      4 Template:Cite_web
+ 24.91%   22.219      1 Template:Coord
+ 12.74%   11.365      1 Template:Otago-geo-stub
+ 11.34%   10.113      1 Template:Asbox
+  4.71%    4.200      1 Template:Cite_book
+--&gt;
+
+&lt;!-- Saved in parser cache with key enwiki:pcache:idhash:36574331-0!*!0!!*!4!* and timestamp 20170210085052 and revision id 724716112
+ --&gt;
+&lt;noscript&gt;&lt;img src=&#34;//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1&#34; alt=&#34;&#34; title=&#34;&#34; width=&#34;1&#34; height=&#34;1&#34; style=&#34;border: none; position: absolute;&#34; /&gt;&lt;/noscript&gt;&lt;/div&gt;					&lt;div class=&#34;printfooter&#34;&gt;
+						Retrieved from &#34;&lt;a dir=&#34;ltr&#34; href=&#34;https://en.wikipedia.org/w/index.php?title=Cecil_Peak&amp;amp;oldid=724716112&#34;&gt;https://en.wikipedia.org/w/index.php?title=Cecil_Peak&amp;amp;oldid=724716112&lt;/a&gt;&#34;					&lt;/div&gt;
+				&lt;div id=&#34;catlinks&#34; class=&#34;catlinks&#34; data-mw=&#34;interface&#34;&gt;&lt;div id=&#34;mw-normal-catlinks&#34; class=&#34;mw-normal-catlinks&#34;&gt;&lt;a href=&#34;/wiki/Help:Category&#34; title=&#34;Help:Category&#34;&gt;Categories&lt;/a&gt;: &lt;ul&gt;&lt;li&gt;&lt;a href=&#34;/wiki/Category:Mountains_of_Otago&#34; title=&#34;Category:Mountains of Otago&#34;&gt;Mountains of Otago&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#34;/wiki/Category:Queenstown-Lakes_District&#34; title=&#34;Category:Queenstown-Lakes District&#34;&gt;Queenstown-Lakes District&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#34;/wiki/Category:Southern_Alps&#34; title=&#34;Category:Southern Alps&#34;&gt;Southern Alps&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#34;/wiki/Category:Otago_geography_stubs&#34; title=&#34;Category:Otago geography stubs&#34;&gt;Otago geography stubs&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;div id=&#34;mw-hidden-catlinks&#34; class=&#34;mw-hidden-catlinks mw-hidden-cats-hidden&#34;&gt;Hidden categories: &lt;ul&gt;&lt;li&gt;&lt;a href=&#34;/wiki/Category:Coordinates_on_Wikidata&#34; title=&#34;Category:Coordinates on Wikidata&#34;&gt;Coordinates on Wikidata&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#34;/wiki/Category:All_stub_articles&#34; title=&#34;Category:All stub articles&#34;&gt;All stub articles&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;				&lt;div class=&#34;visualClear&#34;&gt;&lt;/div&gt;
+							&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div id=&#34;mw-navigation&#34;&gt;
+			&lt;h2&gt;Navigation menu&lt;/h2&gt;
+
+			&lt;div id=&#34;mw-head&#34;&gt;
+									&lt;div id=&#34;p-personal&#34; role=&#34;navigation&#34; class=&#34;&#34; aria-labelledby=&#34;p-personal-label&#34;&gt;
+						&lt;h3 id=&#34;p-personal-label&#34;&gt;Personal tools&lt;/h3&gt;
+						&lt;ul&gt;
+							&lt;li id=&#34;pt-anonuserpage&#34;&gt;Not logged in&lt;/li&gt;&lt;li id=&#34;pt-anontalk&#34;&gt;&lt;a href=&#34;/wiki/Special:MyTalk&#34; title=&#34;Discussion about edits from this IP address [n]&#34; accesskey=&#34;n&#34;&gt;Talk&lt;/a&gt;&lt;/li&gt;&lt;li id=&#34;pt-anoncontribs&#34;&gt;&lt;a href=&#34;/wiki/Special:MyContributions&#34; title=&#34;A list of edits made from this IP address [y]&#34; accesskey=&#34;y&#34;&gt;Contributions&lt;/a&gt;&lt;/li&gt;&lt;li id=&#34;pt-createaccount&#34;&gt;&lt;a href=&#34;/w/index.php?title=Special:CreateAccount&amp;amp;returnto=Cecil+Peak&#34; title=&#34;You are encouraged to create an account and log in; however, it is not mandatory&#34;&gt;Create account&lt;/a&gt;&lt;/li&gt;&lt;li id=&#34;pt-login&#34;&gt;&lt;a href=&#34;/w/index.php?title=Special:UserLogin&amp;amp;returnto=Cecil+Peak&#34; title=&#34;You&#39;re encouraged to log in; however, it&#39;s not mandatory. [o]&#34; accesskey=&#34;o&#34;&gt;Log in&lt;/a&gt;&lt;/li&gt;						&lt;/ul&gt;
+					&lt;/div&gt;
+									&lt;div id=&#34;left-navigation&#34;&gt;
+										&lt;div id=&#34;p-namespaces&#34; role=&#34;navigation&#34; class=&#34;vectorTabs&#34; aria-labelledby=&#34;p-namespaces-label&#34;&gt;
+						&lt;h3 id=&#34;p-namespaces-label&#34;&gt;Namespaces&lt;/h3&gt;
+						&lt;ul&gt;
+															&lt;li  id=&#34;ca-nstab-main&#34; class=&#34;selected&#34;&gt;&lt;span&gt;&lt;a href=&#34;/wiki/Cecil_Peak&#34;  title=&#34;View the content page [c]&#34; accesskey=&#34;c&#34;&gt;Article&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
+															&lt;li  id=&#34;ca-talk&#34;&gt;&lt;span&gt;&lt;a href=&#34;/wiki/Talk:Cecil_Peak&#34;  title=&#34;Discussion about the content page [t]&#34; accesskey=&#34;t&#34; rel=&#34;discussion&#34;&gt;Talk&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
+													&lt;/ul&gt;
+					&lt;/div&gt;
+										&lt;div id=&#34;p-variants&#34; role=&#34;navigation&#34; class=&#34;vectorMenu emptyPortlet&#34; aria-labelledby=&#34;p-variants-label&#34;&gt;
+												&lt;h3 id=&#34;p-variants-label&#34;&gt;
+							&lt;span&gt;Variants&lt;/span&gt;&lt;a href=&#34;#&#34;&gt;&lt;/a&gt;
+						&lt;/h3&gt;
+
+						&lt;div class=&#34;menu&#34;&gt;
+							&lt;ul&gt;
+															&lt;/ul&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+									&lt;/div&gt;
+				&lt;div id=&#34;right-navigation&#34;&gt;
+										&lt;div id=&#34;p-views&#34; role=&#34;navigation&#34; class=&#34;vectorTabs&#34; aria-labelledby=&#34;p-views-label&#34;&gt;
+						&lt;h3 id=&#34;p-views-label&#34;&gt;Views&lt;/h3&gt;
+						&lt;ul&gt;
+															&lt;li id=&#34;ca-view&#34; class=&#34;selected&#34;&gt;&lt;span&gt;&lt;a href=&#34;/wiki/Cecil_Peak&#34; &gt;Read&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
+															&lt;li id=&#34;ca-edit&#34;&gt;&lt;span&gt;&lt;a href=&#34;/w/index.php?title=Cecil_Peak&amp;amp;action=edit&#34;  title=&#34;Edit this page [e]&#34; accesskey=&#34;e&#34;&gt;Edit&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
+															&lt;li id=&#34;ca-history&#34; class=&#34;collapsible&#34;&gt;&lt;span&gt;&lt;a href=&#34;/w/index.php?title=Cecil_Peak&amp;amp;action=history&#34;  title=&#34;Past revisions of this page [h]&#34; accesskey=&#34;h&#34;&gt;View history&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
+													&lt;/ul&gt;
+					&lt;/div&gt;
+										&lt;div id=&#34;p-cactions&#34; role=&#34;navigation&#34; class=&#34;vectorMenu emptyPortlet&#34; aria-labelledby=&#34;p-cactions-label&#34;&gt;
+						&lt;h3 id=&#34;p-cactions-label&#34;&gt;&lt;span&gt;More&lt;/span&gt;&lt;a href=&#34;#&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
+
+						&lt;div class=&#34;menu&#34;&gt;
+							&lt;ul&gt;
+															&lt;/ul&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+										&lt;div id=&#34;p-search&#34; role=&#34;search&#34;&gt;
+						&lt;h3&gt;
+							&lt;label for=&#34;searchInput&#34;&gt;Search&lt;/label&gt;
+						&lt;/h3&gt;
+
+						&lt;form action=&#34;/w/index.php&#34; id=&#34;searchform&#34;&gt;
+							&lt;div id=&#34;simpleSearch&#34;&gt;
+							&lt;input type=&#34;search&#34; name=&#34;search&#34; placeholder=&#34;Search Wikipedia&#34; title=&#34;Search Wikipedia [f]&#34; accesskey=&#34;f&#34; id=&#34;searchInput&#34;/&gt;&lt;input type=&#34;hidden&#34; value=&#34;Special:Search&#34; name=&#34;title&#34;/&gt;&lt;input type=&#34;submit&#34; name=&#34;fulltext&#34; value=&#34;Search&#34; title=&#34;Search Wikipedia for this text&#34; id=&#34;mw-searchButton&#34; class=&#34;searchButton mw-fallbackSearchButton&#34;/&gt;&lt;input type=&#34;submit&#34; name=&#34;go&#34; value=&#34;Go&#34; title=&#34;Go to a page with this exact name if it exists&#34; id=&#34;searchButton&#34; class=&#34;searchButton&#34;/&gt;							&lt;/div&gt;
+						&lt;/form&gt;
+					&lt;/div&gt;
+									&lt;/div&gt;
+			&lt;/div&gt;
+			&lt;div id=&#34;mw-panel&#34;&gt;
+				&lt;div id=&#34;p-logo&#34; role=&#34;banner&#34;&gt;&lt;a class=&#34;mw-wiki-logo&#34; href=&#34;/wiki/Main_Page&#34;  title=&#34;Visit the main page&#34;&gt;&lt;/a&gt;&lt;/div&gt;
+						&lt;div class=&#34;portal&#34; role=&#34;navigation&#34; id=&#39;p-navigation&#39; aria-labelledby=&#39;p-navigation-label&#39;&gt;
+			&lt;h3 id=&#39;p-navigation-label&#39;&gt;Navigation&lt;/h3&gt;
+
+			&lt;div class=&#34;body&#34;&gt;
+									&lt;ul&gt;
+						&lt;li id=&#34;n-mainpage-description&#34;&gt;&lt;a href=&#34;/wiki/Main_Page&#34; title=&#34;Visit the main page [z]&#34; accesskey=&#34;z&#34;&gt;Main page&lt;/a&gt;&lt;/li&gt;&lt;li id=&#34;n-contents&#34;&gt;&lt;a href=&#34;/wiki/Portal:Contents&#34; title=&#34;Guides to browsing Wikipedia&#34;&gt;Contents&lt;/a&gt;&lt;/li&gt;&lt;li id=&#34;n-featuredcontent&#34;&gt;&lt;a href=&#34;/wiki/Portal:Featured_content&#34; title=&#34;Featured content – the best of Wikipedia&#34;&gt;Featured content&lt;/a&gt;&lt;/li&gt;&lt;li id=&#34;n-currentevents&#34;&gt;&lt;a href=&#34;/wiki/Portal:Current_events&#34; title=&#34;Find background information on current events&#34;&gt;Current events&lt;/a&gt;&lt;/li&gt;&lt;li id=&#34;n-randompage&#34;&gt;&lt;a href=&#34;/wiki/Special:Random&#34; title=&#34;Load a random article [x]&#34; accesskey=&#34;x&#34;&gt;Random article&lt;/a&gt;&lt;/li&gt;&lt;li id=&#34;n-sitesupport&#34;&gt;&lt;a href=&#34;https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;amp;utm_medium=sidebar&amp;amp;utm_campaign=C13_en.wikipedia.org&amp;amp;uselang=en&#34; title=&#34;Support us&#34;&gt;Donate to Wikipedia&lt;/a&gt;&lt;/li&gt;&lt;li id=&#34;n-shoplink&#34;&gt;&lt;a href=&#34;//shop.wikimedia.org&#34; title=&#34;Visit the Wikipedia store&#34;&gt;Wikipedia store&lt;/a&gt;&lt;/li&gt;					&lt;/ul&gt;
+							&lt;/div&gt;
+		&lt;/div&gt;
+			&lt;div class=&#34;portal&#34; role=&#34;navigation&#34; id=&#39;p-interaction&#39; aria-labelledby=&#39;p-interaction-label&#39;&gt;
+			&lt;h3 id=&#39;p-interaction-label&#39;&gt;Interaction&lt;/h3&gt;
+
+			&lt;div class=&#34;body&#34;&gt;
+									&lt;ul&gt;
+						&lt;li id=&#34;n-help&#34;&gt;&lt;a href=&#34;/wiki/Help:Contents&#34; title=&#34;Guidance on how to use and edit Wikipedia&#34;&gt;Help&lt;/a&gt;&lt;/li&gt;&lt;li id=&#34;n-aboutsite&#34;&gt;&lt;a href=&#34;/wiki/Wikipedia:About&#34; title=&#34;Find out about Wikipedia&#34;&gt;About Wikipedia&lt;/a&gt;&lt;/li&gt;&lt;li id=&#34;n-portal&#34;&gt;&lt;a href=&#34;/wiki/Wikipedia:Community_portal&#34; title=&#34;About the project, what you can do, where to find things&#34;&gt;Community portal&lt;/a&gt;&lt;/li&gt;&lt;li id=&#34;n-recentchanges&#34;&gt;&lt;a href=&#34;/wiki/Special:RecentChanges&#34; title=&#34;A list of recent changes in the wiki [r]&#34; accesskey=&#34;r&#34;&gt;Recent changes&lt;/a&gt;&lt;/li&gt;&lt;li id=&#34;n-contactpage&#34;&gt;&lt;a href=&#34;//en.wikipedia.org/wiki/Wikipedia:Contact_us&#34; title=&#34;How to contact Wikipedia&#34;&gt;Contact page&lt;/a&gt;&lt;/li&gt;					&lt;/ul&gt;
+							&lt;/div&gt;
+		&lt;/div&gt;
+			&lt;div class=&#34;portal&#34; role=&#34;navigation&#34; id=&#39;p-tb&#39; aria-labelledby=&#39;p-tb-label&#39;&gt;
+			&lt;h3 id=&#39;p-tb-label&#39;&gt;Tools&lt;/h3&gt;
+
+			&lt;div class=&#34;body&#34;&gt;
+									&lt;ul&gt;
+						&lt;li id=&#34;t-whatlinkshere&#34;&gt;&lt;a href=&#34;/wiki/Special:WhatLinksHere/Cecil_Peak&#34; title=&#34;List of all English Wikipedia pages containing links to this page [j]&#34; accesskey=&#34;j&#34;&gt;What links here&lt;/a&gt;&lt;/li&gt;&lt;li id=&#34;t-recentchangeslinked&#34;&gt;&lt;a href=&#34;/wiki/Special:RecentChangesLinked/Cecil_Peak&#34; rel=&#34;nofollow&#34; title=&#34;Recent changes in pages linked from this page [k]&#34; accesskey=&#34;k&#34;&gt;Related changes&lt;/a&gt;&lt;/li&gt;&lt;li id=&#34;t-upload&#34;&gt;&lt;a href=&#34;/wiki/Wikipedia:File_Upload_Wizard&#34; title=&#34;Upload files [u]&#34; accesskey=&#34;u&#34;&gt;Upload file&lt;/a&gt;&lt;/li&gt;&lt;li id=&#34;t-specialpages&#34;&gt;&lt;a href=&#34;/wiki/Special:SpecialPages&#34; title=&#34;A list of all special pages [q]&#34; accesskey=&#34;q&#34;&gt;Special pages&lt;/a&gt;&lt;/li&gt;&lt;li id=&#34;t-permalink&#34;&gt;&lt;a href=&#34;/w/index.php?title=Cecil_Peak&amp;amp;oldid=724716112&#34; title=&#34;Permanent link to this revision of the page&#34;&gt;Permanent link&lt;/a&gt;&lt;/li&gt;&lt;li id=&#34;t-info&#34;&gt;&lt;a href=&#34;/w/index.php?title=Cecil_Peak&amp;amp;action=info&#34; title=&#34;More information about this page&#34;&gt;Page information&lt;/a&gt;&lt;/li&gt;&lt;li id=&#34;t-wikibase&#34;&gt;&lt;a href=&#34;https://www.wikidata.org/wiki/Q5056265&#34; title=&#34;Link to connected data repository item [g]&#34; accesskey=&#34;g&#34;&gt;Wikidata item&lt;/a&gt;&lt;/li&gt;&lt;li id=&#34;t-cite&#34;&gt;&lt;a href=&#34;/w/index.php?title=Special:CiteThisPage&amp;amp;page=Cecil_Peak&amp;amp;id=724716112&#34; title=&#34;Information on how to cite this page&#34;&gt;Cite this page&lt;/a&gt;&lt;/li&gt;					&lt;/ul&gt;
+							&lt;/div&gt;
+		&lt;/div&gt;
+			&lt;div class=&#34;portal&#34; role=&#34;navigation&#34; id=&#39;p-coll-print_export&#39; aria-labelledby=&#39;p-coll-print_export-label&#39;&gt;
+			&lt;h3 id=&#39;p-coll-print_export-label&#39;&gt;Print/export&lt;/h3&gt;
+
+			&lt;div class=&#34;body&#34;&gt;
+									&lt;ul&gt;
+						&lt;li id=&#34;coll-create_a_book&#34;&gt;&lt;a href=&#34;/w/index.php?title=Special:Book&amp;amp;bookcmd=book_creator&amp;amp;referer=Cecil+Peak&#34;&gt;Create a book&lt;/a&gt;&lt;/li&gt;&lt;li id=&#34;coll-download-as-rdf2latex&#34;&gt;&lt;a href=&#34;/w/index.php?title=Special:Book&amp;amp;bookcmd=render_article&amp;amp;arttitle=Cecil+Peak&amp;amp;returnto=Cecil+Peak&amp;amp;oldid=724716112&amp;amp;writer=rdf2latex&#34;&gt;Download as PDF&lt;/a&gt;&lt;/li&gt;&lt;li id=&#34;t-print&#34;&gt;&lt;a href=&#34;/w/index.php?title=Cecil_Peak&amp;amp;printable=yes&#34; title=&#34;Printable version of this page [p]&#34; accesskey=&#34;p&#34;&gt;Printable version&lt;/a&gt;&lt;/li&gt;					&lt;/ul&gt;
+							&lt;/div&gt;
+		&lt;/div&gt;
+			&lt;div class=&#34;portal&#34; role=&#34;navigation&#34; id=&#39;p-lang&#39; aria-labelledby=&#39;p-lang-label&#39;&gt;
+			&lt;h3 id=&#39;p-lang-label&#39;&gt;Languages&lt;/h3&gt;
+
+			&lt;div class=&#34;body&#34;&gt;
+									&lt;ul&gt;
+						&lt;li class=&#34;interlanguage-link interwiki-ceb&#34;&gt;&lt;a href=&#34;https://ceb.wikipedia.org/wiki/Cecil_Peak_(tumoy_sa_bukid)&#34; title=&#34;Cecil Peak (tumoy sa bukid) – Cebuano&#34; lang=&#34;ceb&#34; hreflang=&#34;ceb&#34; class=&#34;interlanguage-link-target&#34;&gt;Cebuano&lt;/a&gt;&lt;/li&gt;&lt;li class=&#34;interlanguage-link interwiki-cs&#34;&gt;&lt;a href=&#34;https://cs.wikipedia.org/wiki/Cecil_Peak&#34; title=&#34;Cecil Peak – Czech&#34; lang=&#34;cs&#34; hreflang=&#34;cs&#34; class=&#34;interlanguage-link-target&#34;&gt;Čeština&lt;/a&gt;&lt;/li&gt;&lt;li class=&#34;interlanguage-link interwiki-ka&#34;&gt;&lt;a href=&#34;https://ka.wikipedia.org/wiki/%E1%83%A1%E1%83%94%E1%83%A1%E1%83%98%E1%83%9A%E1%83%98%E1%83%A1_%E1%83%9E%E1%83%98%E1%83%99%E1%83%98&#34; title=&#34;სესილის პიკი – Georgian&#34; lang=&#34;ka&#34; hreflang=&#34;ka&#34; class=&#34;interlanguage-link-target&#34;&gt;ქართული&lt;/a&gt;&lt;/li&gt;&lt;li class=&#34;interlanguage-link interwiki-ru&#34;&gt;&lt;a href=&#34;https://ru.wikipedia.org/wiki/%D0%A1%D0%B5%D1%81%D0%B8%D0%BB-%D0%9F%D0%B8%D0%BA&#34; title=&#34;Сесил-Пик – Russian&#34; lang=&#34;ru&#34; hreflang=&#34;ru&#34; class=&#34;interlanguage-link-target&#34;&gt;Русский&lt;/a&gt;&lt;/li&gt;					&lt;/ul&gt;
+				&lt;div class=&#39;after-portlet after-portlet-lang&#39;&gt;&lt;span class=&#34;wb-langlinks-edit wb-langlinks-link&#34;&gt;&lt;a href=&#34;https://www.wikidata.org/wiki/Q5056265#sitelinks-wikipedia&#34; title=&#34;Edit interlanguage links&#34; class=&#34;wbc-editpage&#34;&gt;Edit links&lt;/a&gt;&lt;/span&gt;&lt;/div&gt;			&lt;/div&gt;
+		&lt;/div&gt;
+				&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div id=&#34;footer&#34; role=&#34;contentinfo&#34;&gt;
+							&lt;ul id=&#34;footer-info&#34;&gt;
+											&lt;li id=&#34;footer-info-lastmod&#34;&gt; This page was last modified on 11 June 2016, at 01:06.&lt;/li&gt;
+											&lt;li id=&#34;footer-info-copyright&#34;&gt;Text is available under the &lt;a rel=&#34;license&#34; href=&#34;//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License&#34;&gt;Creative Commons Attribution-ShareAlike License&lt;/a&gt;&lt;a rel=&#34;license&#34; href=&#34;//creativecommons.org/licenses/by-sa/3.0/&#34; style=&#34;display:none;&#34;&gt;&lt;/a&gt;;
+additional terms may apply.  By using this site, you agree to the &lt;a href=&#34;//wikimediafoundation.org/wiki/Terms_of_Use&#34;&gt;Terms of Use&lt;/a&gt; and &lt;a href=&#34;//wikimediafoundation.org/wiki/Privacy_policy&#34;&gt;Privacy Policy&lt;/a&gt;. Wikipedia® is a registered trademark of the &lt;a href=&#34;//www.wikimediafoundation.org/&#34;&gt;Wikimedia Foundation, Inc.&lt;/a&gt;, a non-profit organization.&lt;/li&gt;
+									&lt;/ul&gt;
+							&lt;ul id=&#34;footer-places&#34;&gt;
+											&lt;li id=&#34;footer-places-privacy&#34;&gt;&lt;a href=&#34;https://wikimediafoundation.org/wiki/Privacy_policy&#34; class=&#34;extiw&#34; title=&#34;wmf:Privacy policy&#34;&gt;Privacy policy&lt;/a&gt;&lt;/li&gt;
+											&lt;li id=&#34;footer-places-about&#34;&gt;&lt;a href=&#34;/wiki/Wikipedia:About&#34; title=&#34;Wikipedia:About&#34;&gt;About Wikipedia&lt;/a&gt;&lt;/li&gt;
+											&lt;li id=&#34;footer-places-disclaimer&#34;&gt;&lt;a href=&#34;/wiki/Wikipedia:General_disclaimer&#34; title=&#34;Wikipedia:General disclaimer&#34;&gt;Disclaimers&lt;/a&gt;&lt;/li&gt;
+											&lt;li id=&#34;footer-places-contact&#34;&gt;&lt;a href=&#34;//en.wikipedia.org/wiki/Wikipedia:Contact_us&#34;&gt;Contact Wikipedia&lt;/a&gt;&lt;/li&gt;
+											&lt;li id=&#34;footer-places-developers&#34;&gt;&lt;a href=&#34;https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute&#34;&gt;Developers&lt;/a&gt;&lt;/li&gt;
+											&lt;li id=&#34;footer-places-cookiestatement&#34;&gt;&lt;a href=&#34;https://wikimediafoundation.org/wiki/Cookie_statement&#34;&gt;Cookie statement&lt;/a&gt;&lt;/li&gt;
+											&lt;li id=&#34;footer-places-mobileview&#34;&gt;&lt;a href=&#34;//en.m.wikipedia.org/w/index.php?title=Cecil_Peak&amp;amp;mobileaction=toggle_view_mobile&#34; class=&#34;noprint stopMobileRedirectToggle&#34;&gt;Mobile view&lt;/a&gt;&lt;/li&gt;
+									&lt;/ul&gt;
+										&lt;ul id=&#34;footer-icons&#34; class=&#34;noprint&#34;&gt;
+											&lt;li id=&#34;footer-copyrightico&#34;&gt;
+							&lt;a href=&#34;https://wikimediafoundation.org/&#34;&gt;&lt;img src=&#34;/static/images/wikimedia-button.png&#34; srcset=&#34;/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x&#34; width=&#34;88&#34; height=&#34;31&#34; alt=&#34;Wikimedia Foundation&#34;/&gt;&lt;/a&gt;						&lt;/li&gt;
+											&lt;li id=&#34;footer-poweredbyico&#34;&gt;
+							&lt;a href=&#34;//www.mediawiki.org/&#34;&gt;&lt;img src=&#34;/static/images/poweredby_mediawiki_88x31.png&#34; alt=&#34;Powered by MediaWiki&#34; srcset=&#34;/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x&#34; width=&#34;88&#34; height=&#34;31&#34;/&gt;&lt;/a&gt;						&lt;/li&gt;
+									&lt;/ul&gt;
+						&lt;div style=&#34;clear:both&#34;&gt;&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;script&gt;(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({&#34;wgPageParseReport&#34;:{&#34;limitreport&#34;:{&#34;cputime&#34;:&#34;0.080&#34;,&#34;walltime&#34;:&#34;0.107&#34;,&#34;ppvisitednodes&#34;:{&#34;value&#34;:253,&#34;limit&#34;:1000000},&#34;ppgeneratednodes&#34;:{&#34;value&#34;:0,&#34;limit&#34;:1500000},&#34;postexpandincludesize&#34;:{&#34;value&#34;:10233,&#34;limit&#34;:2097152},&#34;templateargumentsize&#34;:{&#34;value&#34;:0,&#34;limit&#34;:2097152},&#34;expansiondepth&#34;:{&#34;value&#34;:4,&#34;limit&#34;:40},&#34;expensivefunctioncount&#34;:{&#34;value&#34;:0,&#34;limit&#34;:500},&#34;entityaccesscount&#34;:{&#34;value&#34;:1,&#34;limit&#34;:400},&#34;timingprofile&#34;:[&#34;100.00%   89.189      1 -total&#34;,&#34; 62.17%   55.447      1 Template:Reflist&#34;,&#34; 48.96%   43.664      4 Template:Cite_web&#34;,&#34; 24.91%   22.219      1 Template:Coord&#34;,&#34; 12.74%   11.365      1 Template:Otago-geo-stub&#34;,&#34; 11.34%   10.113      1 Template:Asbox&#34;,&#34;  4.71%    4.200      1 Template:Cite_book&#34;]},&#34;scribunto&#34;:{&#34;limitreport-timeusage&#34;:{&#34;value&#34;:&#34;0.043&#34;,&#34;limit&#34;:&#34;10.000&#34;},&#34;limitreport-memusage&#34;:{&#34;value&#34;:2691141,&#34;limit&#34;:52428800}},&#34;cachereport&#34;:{&#34;origin&#34;:&#34;mw1211&#34;,&#34;timestamp&#34;:&#34;20170210085052&#34;,&#34;ttl&#34;:2592000,&#34;transientcontent&#34;:false}}});});&lt;/script&gt;&lt;script&gt;(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({&#34;wgBackendResponseTime&#34;:71,&#34;wgHostname&#34;:&#34;mw1262&#34;});});&lt;/script&gt;
+	&lt;/body&gt;
+&lt;/html&gt;
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>It appears that the main content is nested inside the <code>div</code> tag with the id <code>content</code>.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Reading-In-The-Data">Reading In The Data<a class="anchor-link" href="#Reading-In-The-Data">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">concurrent.futures</span>
+<span class="kn">import</span> <span class="nn">time</span>
+
+<span class="n">pool</span> <span class="o">=</span> <span class="n">concurrent</span><span class="o">.</span><span class="n">futures</span><span class="o">.</span><span class="n">ThreadPoolExecutor</span><span class="p">(</span><span class="n">max_workers</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">read_data</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">data</span>
+
+<span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="n">filenames</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;wiki/</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">f</span><span class="p">)</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="s2">&quot;wiki&quot;</span><span class="p">)]</span>
+<span class="n">content</span> <span class="o">=</span> <span class="n">pool</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">read_data</span><span class="p">,</span> <span class="n">filenames</span><span class="p">)</span>
+<span class="n">content</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
+
+<span class="n">end</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">end</span> <span class="o">-</span> <span class="n">start</span><span class="p">)</span>
+<span class="n">articles</span> <span class="o">=</span> <span class="p">[</span><span class="n">f</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;.html&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;wiki/&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">filenames</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>2.952831983566284
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>After doing some profiling, it doesn't appear that threading makes a huge difference to performance.  It may be because although files are opened, most of the task is offset by the overhead of creating new threads.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Remove-Extraneous-Markup">Remove Extraneous Markup<a class="anchor-link" href="#Remove-Extraneous-Markup">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+
+<span class="k">def</span> <span class="nf">parse_html</span><span class="p">(</span><span class="n">html</span><span class="p">):</span>
+    <span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">html</span><span class="p">,</span> <span class="s1">&#39;html.parser&#39;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">&quot;div&quot;</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;content&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span>
+
+<span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="n">pool</span> <span class="o">=</span> <span class="n">concurrent</span><span class="o">.</span><span class="n">futures</span><span class="o">.</span><span class="n">ProcessPoolExecutor</span><span class="p">(</span><span class="n">max_workers</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">parsed</span> <span class="o">=</span> <span class="n">pool</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">parse_html</span><span class="p">,</span> <span class="n">content</span><span class="p">)</span>
+<span class="n">parsed</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">parsed</span><span class="p">)</span>
+<span class="n">end</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">end</span> <span class="o">-</span> <span class="n">start</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>139.67757391929626
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">parsed</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[27]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;&lt;div class=&#34;mw-body&#34; id=&#34;content&#34; role=&#34;main&#34;&gt;\n&lt;a id=&#34;top&#34;&gt;&lt;/a&gt;\n&lt;div id=&#34;siteNotice&#34;&gt;&lt;!-- CentralNotice --&gt;&lt;/div&gt;\n&lt;div class=&#34;mw-indicators&#34;&gt;\n&lt;/div&gt;\n&lt;h1 class=&#34;firstHeading&#34; id=&#34;firstHeading&#34; lang=&#34;en&#34;&gt;Álvaro Sierra&lt;/h1&gt;\n&lt;div class=&#34;mw-body-content&#34; id=&#34;bodyContent&#34;&gt;\n&lt;div id=&#34;siteSub&#34;&gt;From Wikipedia, the free encyclopedia&lt;/div&gt;\n&lt;div id=&#34;contentSub&#34;&gt;&lt;/div&gt;\n&lt;div class=&#34;mw-jump&#34; id=&#34;jump-to-nav&#34;&gt;\n\t\t\t\t\tJump to:\t\t\t\t\t&lt;a href=&#34;#mw-head&#34;&gt;navigation&lt;/a&gt;, \t\t\t\t\t&lt;a href=&#34;#p-search&#34;&gt;search&lt;/a&gt;\n&lt;/div&gt;\n&lt;div class=&#34;mw-content-ltr&#34; dir=&#34;ltr&#34; id=&#34;mw-content-text&#34; lang=&#34;en&#34;&gt;&lt;div class=&#34;hatnote&#34; role=&#34;note&#34;&gt;This name uses &lt;a href=&#34;/wiki/Spanish_naming_customs&#34; title=&#34;Spanish naming customs&#34;&gt;Spanish naming customs&lt;/a&gt;: the first or paternal &lt;a href=&#34;/wiki/Surname&#34; title=&#34;Surname&#34;&gt;family name&lt;/a&gt; is &lt;i&gt;Sierra&lt;/i&gt;\xa0and the second or maternal family name is &lt;i&gt;Peña&lt;/i&gt;.&lt;/div&gt;\n&lt;p&gt;&lt;b&gt;Álvaro Sierra Peña&lt;/b&gt; (born April 4, 1967 in &lt;a href=&#34;/wiki/Sogamoso&#34; title=&#34;Sogamoso&#34;&gt;Sogamoso&lt;/a&gt;, &lt;a href=&#34;/wiki/Boyac%C3%A1_Department&#34; title=&#34;Boyacá Department&#34;&gt;Boyacá&lt;/a&gt;) is a retired male professional &lt;a class=&#34;mw-redirect&#34; href=&#34;/wiki/Road_racing_cyclist&#34; title=&#34;Road racing cyclist&#34;&gt;road racing cyclist&lt;/a&gt; from &lt;a href=&#34;/wiki/Colombia&#34; title=&#34;Colombia&#34;&gt;Colombia&lt;/a&gt;.&lt;/p&gt;\n&lt;h2&gt;&lt;span class=&#34;mw-headline&#34; id=&#34;Career&#34;&gt;Career&lt;/span&gt;&lt;span class=&#34;mw-editsection&#34;&gt;&lt;span class=&#34;mw-editsection-bracket&#34;&gt;[&lt;/span&gt;&lt;a href=&#34;/w/index.php?title=%C3%81lvaro_Sierra&amp;amp;action=edit&amp;amp;section=1&#34; title=&#34;Edit section: Career&#34;&gt;edit&lt;/a&gt;&lt;span class=&#34;mw-editsection-bracket&#34;&gt;]&lt;/span&gt;&lt;/span&gt;&lt;/h2&gt;\n&lt;div class=&#34;div-col columns column-count column-count-2&#34; style=&#34;-moz-column-count: 2; -webkit-column-count: 2; column-count: 2;&#34;&gt;\n&lt;dl&gt;\n&lt;dt&gt;1990&lt;/dt&gt;\n&lt;dd&gt;6th in General Classification GP Internacional de Café, Bogota (COL)&lt;/dd&gt;\n&lt;dt&gt;1991&lt;/dt&gt;\n&lt;dd&gt;1st in General Classification &lt;a class=&#34;new&#34; href=&#34;/w/index.php?title=1991_Vuelta_a_Colombia&amp;amp;action=edit&amp;amp;redlink=1&#34; title=&#34;1991 Vuelta a Colombia (page does not exist)&#34;&gt;Vuelta a Colombia&lt;/a&gt; (COL)&lt;/dd&gt;\n&lt;dt&gt;1993&lt;/dt&gt;\n&lt;dd&gt;8th in General Classification &lt;a href=&#34;/wiki/1993_Vuelta_a_Colombia&#34; title=&#34;1993 Vuelta a Colombia&#34;&gt;Vuelta a Colombia&lt;/a&gt; (COL)&lt;/dd&gt;\n&lt;dt&gt;1994&lt;/dt&gt;\n&lt;dd&gt;2nd in General Classification &lt;a href=&#34;/wiki/1994_Vuelta_a_Colombia&#34; title=&#34;1994 Vuelta a Colombia&#34;&gt;Vuelta a Colombia&lt;/a&gt; (COL)&lt;/dd&gt;\n&lt;dt&gt;1995&lt;/dt&gt;\n&lt;dd&gt;3rd in Stage 4 &lt;a href=&#34;/wiki/1995_Vuelta_a_Colombia&#34; title=&#34;1995 Vuelta a Colombia&#34;&gt;Vuelta a Colombia&lt;/a&gt;, Manizales (COL)&lt;/dd&gt;\n&lt;dd&gt;2nd in Stage 8 Vuelta a Colombia, Buenaventura (COL)&lt;/dd&gt;\n&lt;dd&gt;3rd in Stage 11 Vuelta a Colombia, Ibagué (COL)&lt;/dd&gt;\n&lt;dd&gt;3rd in General Classification Vuelta a Colombia (COL)&lt;/dd&gt;\n&lt;dt&gt;1996&lt;/dt&gt;\n&lt;dd&gt;2nd in Stage 9 &lt;a href=&#34;/wiki/1996_Cl%C3%A1sico_RCN&#34; title=&#34;1996 Clásico RCN&#34;&gt;Clásico RCN&lt;/a&gt;, Santa Helena (COL)&lt;/dd&gt;\n&lt;dd&gt;6th in General Classification &lt;a href=&#34;/wiki/1996_Cl%C3%A1sico_RCN&#34; title=&#34;1996 Clásico RCN&#34;&gt;Clásico RCN&lt;/a&gt; (COL)&lt;/dd&gt;\n&lt;dt&gt;1997&lt;/dt&gt;\n&lt;dd&gt;7th in General Classification &lt;a href=&#34;/wiki/1997_Cl%C3%A1sico_RCN&#34; title=&#34;1997 Clásico RCN&#34;&gt;Clásico RCN&lt;/a&gt; (COL)&lt;/dd&gt;\n&lt;dd&gt;7th in General Classification &lt;a href=&#34;/wiki/1997_Vuelta_a_Colombia&#34; title=&#34;1997 Vuelta a Colombia&#34;&gt;Vuelta a Colombia&lt;/a&gt; (COL)&lt;/dd&gt;\n&lt;dt&gt;1998&lt;/dt&gt;\n&lt;dd&gt;1st in General Classification Vuelta a Antioquia (COL)&lt;/dd&gt;\n&lt;dd&gt;1st in General Classification Vuelta a Boyacà (COL)&lt;/dd&gt;\n&lt;dd&gt;1st in Stage 9 &lt;a href=&#34;/wiki/1998_Cl%C3%A1sico_RCN&#34; title=&#34;1998 Clásico RCN&#34;&gt;Clásico RCN&lt;/a&gt;, Bogotá (COL)&lt;/dd&gt;\n&lt;dd&gt;5th in General Classification &lt;a href=&#34;/wiki/1998_Cl%C3%A1sico_RCN&#34; title=&#34;1998 Clásico RCN&#34;&gt;Clásico RCN&lt;/a&gt; (COL)&lt;/dd&gt;\n&lt;dt&gt;1999&lt;/dt&gt;\n&lt;dd&gt;1st in General Classification Vuelta a Boyacà (COL)&lt;/dd&gt;\n&lt;dd&gt;7th in General Classification &lt;a href=&#34;/wiki/1999_Vuelta_a_Colombia&#34; title=&#34;1999 Vuelta a Colombia&#34;&gt;Vuelta a Colombia&lt;/a&gt; (COL)&lt;/dd&gt;\n&lt;dd&gt;1st in Stage 3 &lt;a href=&#34;/wiki/1999_Cl%C3%A1sico_RCN&#34; title=&#34;1999 Clásico RCN&#34;&gt;Clásico RCN&lt;/a&gt;, Alto de Patios (COL)&lt;/dd&gt;\n&lt;dd&gt;2nd in Stage 7 Clasico RCN, El Cable (COL)&lt;/dd&gt;\n&lt;dd&gt;2nd in General Classification Clasico RCN (COL)&lt;/dd&gt;\n&lt;dt&gt;2000&lt;/dt&gt;\n&lt;dd&gt;2nd in Stage 15 &lt;a href=&#34;/wiki/2000_Vuelta_a_Colombia&#34; title=&#34;2000 Vuelta a Colombia&#34;&gt;Vuelta a Colombia&lt;/a&gt;, Tunja (COL)&lt;/dd&gt;\n&lt;dd&gt;1st in Stage 2 Vuelta a Boyacà, El Humilladero (COL)&lt;/dd&gt;\n&lt;dd&gt;2nd in Stage 3 Vuelta a Boyacà, Mongui (COL)&lt;/dd&gt;\n&lt;dd&gt;2nd in General Classification Vuelta a Boyacá (COL)&lt;/dd&gt;\n&lt;dd&gt;5th in General Classification &lt;a href=&#34;/wiki/2000_Cl%C3%A1sico_RCN&#34; title=&#34;2000 Clásico RCN&#34;&gt;Clásico RCN&lt;/a&gt; (COL)&lt;/dd&gt;\n&lt;dd&gt;3rd in General Classification &lt;a href=&#34;/wiki/2000_Vuelta_a_Venezuela&#34; title=&#34;2000 Vuelta a Venezuela&#34;&gt;Vuelta a Venezuela&lt;/a&gt; (VEN)&lt;/dd&gt;\n&lt;dt&gt;2001&lt;/dt&gt;\n&lt;dd&gt;1st in General Classification Vuelta a Boyacà (COL)&lt;/dd&gt;\n&lt;dd&gt;3rd in Stage 7 Vuelta al Tachira, Circuito en Mérida con llegada en Tovar (VEN)&lt;/dd&gt;\n&lt;dt&gt;2002&lt;/dt&gt;\n&lt;dd&gt;2nd in Stage 4 Clasica del Meta, Alto de Buenavista (COL)&lt;/dd&gt;\n&lt;dd&gt;1st in Stage 4 Vuelta al Tolima, Ibagué (COL)&lt;/dd&gt;\n&lt;dd&gt;3rd in Stage 5 Vuelta a Boyacà, Toca (COL)&lt;/dd&gt;\n&lt;dd&gt;2nd in General Classification Vuelta a Boyacà (COL)&lt;/dd&gt;\n&lt;dd&gt;3rd in Stage 6 Vuelta a Boyacà, Tunja (COL)&lt;/dd&gt;\n&lt;dt&gt;2003&lt;/dt&gt;\n&lt;dd&gt;1st in General Classification Doble Sucre Potosí GP Cemento Fancesa (BOL)&lt;/dd&gt;\n&lt;dd&gt;1st in Stage 1 Clasica Integración de la Guadua-Gobernación de Risaralda, Marsella (COL)&lt;/dd&gt;\n&lt;dd&gt;2nd in Stage 2 Clasica Integración de la Guadua-Gobernación de Risaralda, Apia (COL)&lt;/dd&gt;\n&lt;dd&gt;1st in General Classification Clasica Integración de la Guadua-Gobernación de Risaralda (COL)&lt;/dd&gt;\n&lt;dd&gt;3rd in Stage 3 Vuelta a Antioquia, Jerico (COL)&lt;/dd&gt;\n&lt;dd&gt;1st in Stage 4 Vuelta a Antioquia, Alto de El Escobero (COL)&lt;/dd&gt;\n&lt;dd&gt;2nd in General Classification Vuelta a Antioquia (COL)&lt;/dd&gt;\n&lt;dd&gt;2nd in Stage 5 &lt;a href=&#34;/wiki/2003_Vuelta_a_Colombia&#34; title=&#34;2003 Vuelta a Colombia&#34;&gt;Vuelta a Colombia&lt;/a&gt;, El Escobero (COL)&lt;/dd&gt;\n&lt;dd&gt;2nd in Stage 13 Vuelta a Colombia, Cali (COL)&lt;/dd&gt;\n&lt;dd&gt;3rd in General Classification Vuelta a Colombia (COL)&lt;/dd&gt;\n&lt;dd&gt;3rd in Stage 4 Vuelta a Boyacà, Jenesano (COL)&lt;/dd&gt;\n&lt;dd&gt;3rd in Stage 5 Vuelta a Boyacà, Tunja (COL)&lt;/dd&gt;\n&lt;dd&gt;2nd in Stage 7 &lt;a href=&#34;/wiki/2003_Cl%C3%A1sico_RCN&#34; title=&#34;2003 Clásico RCN&#34;&gt;Clásico RCN&lt;/a&gt;, Tunja (COL)&lt;/dd&gt;\n&lt;dd&gt;3rd in Stage 8 Clasico RCN, Alto de Patios (COL)&lt;/dd&gt;\n&lt;dd&gt;2nd in General Classification Clasico RCN (COL)&lt;/dd&gt;\n&lt;dd&gt;1st in Stage 3 Doble Copacabana GP Fides, La Paz (BOL)&lt;/dd&gt;\n&lt;dd&gt;1st in Stage 4 Doble Copacabana GP Fides, Viarcha (BOL)&lt;/dd&gt;\n&lt;dd&gt;2nd in Stage 5 part b Doble Copacabana GP Fides, Copacabana (BOL)&lt;/dd&gt;\n&lt;dd&gt;1st in General Classification Doble Copacabana GP Fides (BOL)&lt;/dd&gt;\n&lt;dd&gt;2nd in Stage 4 &lt;a class=&#34;mw-redirect&#34; href=&#34;/wiki/Vuelta_a_Costa_Rica&#34; title=&#34;Vuelta a Costa Rica&#34;&gt;Vuelta a Costa Rica&lt;/a&gt;, Ciudad Quesada (CRC)&lt;/dd&gt;\n&lt;dd&gt;1st in Stage 7 Vuelta a Costa Rica, Barva (CRC)&lt;/dd&gt;\n&lt;dd&gt;2nd in Stage 8 Vuelta a Costa Rica, Cascajal de Coronado (CRC)&lt;/dd&gt;\n&lt;dd&gt;1st in Stage 10 Vuelta a Costa Rica, Pérez Zeledón (CRC)&lt;/dd&gt;\n&lt;dd&gt;3rd in General Classification Vuelta a Costa Rica (CRC)&lt;/dd&gt;\n&lt;dt&gt;2004&lt;/dt&gt;\n&lt;dd&gt;2nd in Stage 1 Clásica Club Deportivo Boyacá, Alto del Topo (COL)&lt;/dd&gt;\n&lt;dd&gt;1st in General Classification Clásica Club Deportivo Boyacá (COL)&lt;/dd&gt;\n&lt;dd&gt;1st in Stage 2 Vuelta a Cundinamarca, Fusagasugá (COL)&lt;/dd&gt;\n&lt;dd&gt;1st in General Classification Vuelta a Cundinamarca (COL)&lt;/dd&gt;\n&lt;dd&gt;5th in General Classification &lt;a href=&#34;/wiki/2004_Cl%C3%A1sico_RCN&#34; title=&#34;2004 Clásico RCN&#34;&gt;Clásico RCN&lt;/a&gt; (COL)&lt;/dd&gt;\n&lt;dt&gt;2005&lt;/dt&gt;\n&lt;dd&gt;1st in Stage 1 Doble Sucre Potosí GP Cemento Fancesa, Potosí (BOL)&lt;/dd&gt;\n&lt;dd&gt;1st in Stage 2 Doble Sucre Potosí GP Cemento Fancesa, Potosí (BOL)&lt;/dd&gt;\n&lt;dd&gt;1st in General Classification Doble Sucre Potosí GP Cemento Fancesa (BOL)&lt;/dd&gt;\n&lt;dd&gt;1st in Stage 3 Vuelta a Boyacà, Saboyá (COL)&lt;/dd&gt;\n&lt;dd&gt;3rd in Stage 4 Vuelta a Boyacà, Cucaita (COL)&lt;/dd&gt;\n&lt;dd&gt;2nd in Stage 3 &lt;a href=&#34;/wiki/2005_Vuelta_a_Colombia&#34; title=&#34;2005 Vuelta a Colombia&#34;&gt;Vuelta a Colombia&lt;/a&gt;, Armenia (COL)&lt;/dd&gt;\n&lt;dd&gt;3rd in Stage 8 Vuelta a Colombia, Jerico (COL)&lt;/dd&gt;\n&lt;dd&gt;3rd in Stage 13 Vuelta a Colombia, La Y (COL)&lt;/dd&gt;\n&lt;dd&gt;3rd in General Classification Vuelta a Colombia (COL)&lt;/dd&gt;\n&lt;dd&gt;3rd in General Classification GP Cootranspensilvania (COL)&lt;/dd&gt;\n&lt;dd&gt;3rd in Stage 7 &lt;a href=&#34;/wiki/2005_Cl%C3%A1sico_RCN&#34; title=&#34;2005 Clásico RCN&#34;&gt;Clásico RCN&lt;/a&gt;, Armenia (COL)&lt;/dd&gt;\n&lt;dd&gt;2nd in General Classification Clasico RCN (COL)&lt;/dd&gt;\n&lt;dd&gt;3rd in Stage 8 Clasico RCN, Manizales (COL)&lt;/dd&gt;\n&lt;dd&gt;2nd in Stage 2 Doble Copacabana GP Fides, La Paz (BOL)&lt;/dd&gt;\n&lt;dd&gt;1st in Stage 4 Doble Copacabana GP Fides, Viacha (BOL)&lt;/dd&gt;\n&lt;dt&gt;2006&lt;/dt&gt;\n&lt;dd&gt;2nd in General Classification Doble Sucre Potosí GP Cemento Fancesa (BOL)&lt;/dd&gt;\n&lt;dd&gt;1st in Stage 8 &lt;a href=&#34;/wiki/2006_Vuelta_a_Colombia&#34; title=&#34;2006 Vuelta a Colombia&#34;&gt;Vuelta a Colombia&lt;/a&gt;, Armenia (COL)&lt;/dd&gt;\n&lt;dd&gt;1st in Stage 14 Vuelta a Colombia, Alto del Escobero (COL)&lt;/dd&gt;\n&lt;dd&gt;3rd in General Classification Vuelta a Colombia (COL)&lt;/dd&gt;\n&lt;dd&gt;2nd in Stage 1 Vuelta a Boyacà, Boyaca (COL)&lt;/dd&gt;\n&lt;dd&gt;1st in Stage 4 Doble Copacabana GP Fides, Viacha (BOL)&lt;/dd&gt;\n&lt;dd&gt;3rd in General Classification Doble Copacabana GP Fides (BOL)&lt;/dd&gt;\n&lt;dd&gt;6th in General Classification &lt;a href=&#34;/wiki/2006_Cl%C3%A1sico_RCN&#34; title=&#34;2006 Clásico RCN&#34;&gt;Clásico RCN&lt;/a&gt; (COL)&lt;/dd&gt;\n&lt;dt&gt;2007&lt;/dt&gt;\n&lt;dd&gt;3rd in Stage 2 Doble Sucre Potosí GP Cemento Fancesa, Potosi (BOL)&lt;/dd&gt;\n&lt;dd&gt;3rd in General Classification Doble Sucre Potosí GP Cemento Fancesa (BOL)&lt;/dd&gt;\n&lt;dt&gt;2008&lt;/dt&gt;\n&lt;dd&gt;3rd in Prologue Vuelta a Cundinamarca, Cogua (COL)&lt;/dd&gt;\n&lt;dd&gt;2nd in General Classification Vuelta a Cundinamarca (COL)&lt;/dd&gt;\n&lt;dd&gt;4th in General Classification Vuelta a Boyacà (COL)&lt;/dd&gt;\n&lt;dd&gt;2nd in Stage 6 Vuelta a Boyacà, Tunja (COL)&lt;/dd&gt;\n&lt;dd&gt;2nd in Stage 5 &lt;a href=&#34;/wiki/Vuelta_a_Bolivia&#34; title=&#34;Vuelta a Bolivia&#34;&gt;Vuelta a Bolivia&lt;/a&gt;, Oruro (BOL)&lt;/dd&gt;\n&lt;dd&gt;1st in Stage 7 part b Vuelta a Bolivia, Copacabana (BOL)&lt;/dd&gt;\n&lt;dd&gt;3rd in General Classification Vuelta a Bolivia (BOL)&lt;/dd&gt;\n&lt;dd&gt;3rd in Stage 8 part a Vuelta a Bolivia, San Pablo de Tiquina (BOL)&lt;/dd&gt;\n&lt;dd&gt;2nd in Stage 3 Vuelta Ciclista a la Republica del Ecuador, Quito (ECU)&lt;/dd&gt;\n&lt;dd&gt;2nd in Stage 5 Vuelta Ciclista a la Republica del Ecuador, Riobamba (ECU)&lt;/dd&gt;\n&lt;dd&gt;2nd in General Classification Vuelta Ciclista a la Republica del Ecuador (ECU)&lt;/dd&gt;\n&lt;/dl&gt;\n&lt;/div&gt;\n&lt;h2&gt;&lt;span class=&#34;mw-headline&#34; id=&#34;References&#34;&gt;References&lt;/span&gt;&lt;span class=&#34;mw-editsection&#34;&gt;&lt;span class=&#34;mw-editsection-bracket&#34;&gt;[&lt;/span&gt;&lt;a href=&#34;/w/index.php?title=%C3%81lvaro_Sierra&amp;amp;action=edit&amp;amp;section=2&#34; title=&#34;Edit section: References&#34;&gt;edit&lt;/a&gt;&lt;span class=&#34;mw-editsection-bracket&#34;&gt;]&lt;/span&gt;&lt;/span&gt;&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;&lt;a class=&#34;external text&#34; href=&#34;http://www.cyclingarchives.com/coureurfiche.php?coureurid=12567&#34; rel=&#34;nofollow&#34;&gt;Álvaro Sierra profile&lt;/a&gt; at &lt;i&gt;Cycling Archives&lt;/i&gt;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;!-- \nNewPP limit report\nParsed by mw1288\nCached time: 20170212142643\nCache expiry: 2592000\nDynamic content: false\nCPU time usage: 0.048 seconds\nReal time usage: 0.083 seconds\nPreprocessor visited node count: 173/1000000\nPreprocessor generated node count: 0/1500000\nPost‐expand include size: 1801/2097152 bytes\nTemplate argument size: 85/2097152 bytes\nHighest expansion depth: 7/40\nExpensive parser function count: 0/500\nLua time usage: 0.009/10.000 seconds\nLua memory usage: 731 KB/50 MB\n--&gt;\n&lt;!--\nTransclusion expansion time report (%,ms,calls,template)\n100.00%   67.444      1 -total\n 59.19%   39.923      1 Template:Cycling_archives\n 28.55%   19.255      1 Template:Spanish_name_2\n 25.22%   17.009      1 Template:Hatnote\n 10.56%    7.121      1 Template:WikidataCheck\n  9.98%    6.733      1 Template:PAGENAMEBASE\n  7.60%    5.124      1 Template:Palmares_start\n  5.77%    3.893      1 Template:Colbegin\n  4.22%    2.843      1 Template:Palmares_end\n  2.69%    1.815      1 Template:Colend\n--&gt;\n&lt;!-- Saved in parser cache with key enwiki:pcache:idhash:24558666-0!*!0!!*!*!* and timestamp 20170212142643 and revision id 729711134\n --&gt;\n&lt;noscript&gt;&lt;img alt=&#34;&#34; height=&#34;1&#34; src=&#34;//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1&#34; style=&#34;border: none; position: absolute;&#34; title=&#34;&#34; width=&#34;1&#34;/&gt;&lt;/noscript&gt;&lt;/div&gt; &lt;div class=&#34;printfooter&#34;&gt;\n\t\t\t\t\t\tRetrieved from &#34;&lt;a dir=&#34;ltr&#34; href=&#34;https://en.wikipedia.org/w/index.php?title=Álvaro_Sierra&amp;amp;oldid=729711134&#34;&gt;https://en.wikipedia.org/w/index.php?title=Álvaro_Sierra&amp;amp;oldid=729711134&lt;/a&gt;&#34;\t\t\t\t\t&lt;/div&gt;\n&lt;div class=&#34;catlinks&#34; data-mw=&#34;interface&#34; id=&#34;catlinks&#34;&gt;&lt;div class=&#34;mw-normal-catlinks&#34; id=&#34;mw-normal-catlinks&#34;&gt;&lt;a href=&#34;/wiki/Help:Category&#34; title=&#34;Help:Category&#34;&gt;Categories&lt;/a&gt;: &lt;ul&gt;&lt;li&gt;&lt;a href=&#34;/wiki/Category:1967_births&#34; title=&#34;Category:1967 births&#34;&gt;1967 births&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#34;/wiki/Category:Living_people&#34; title=&#34;Category:Living people&#34;&gt;Living people&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#34;/wiki/Category:People_from_Sogamoso&#34; title=&#34;Category:People from Sogamoso&#34;&gt;People from Sogamoso&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#34;/wiki/Category:Colombian_male_cyclists&#34; title=&#34;Category:Colombian male cyclists&#34;&gt;Colombian male cyclists&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#34;/wiki/Category:Vuelta_a_Colombia_stage_winners&#34; title=&#34;Category:Vuelta a Colombia stage winners&#34;&gt;Vuelta a Colombia stage winners&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;div class=&#34;mw-hidden-catlinks mw-hidden-cats-hidden&#34; id=&#34;mw-hidden-catlinks&#34;&gt;Hidden categories: &lt;ul&gt;&lt;li&gt;&lt;a href=&#34;/wiki/Category:Cycling_Archives_ID_(cyclist)_same_as_Wikidata&#34; title=&#34;Category:Cycling Archives ID (cyclist) same as Wikidata&#34;&gt;Cycling Archives ID (cyclist) same as Wikidata&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt; &lt;div class=&#34;visualClear&#34;&gt;&lt;/div&gt;\n&lt;/div&gt;\n&lt;/div&gt;&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This operation is quite slow and CPU-intensive.  It looks like using as many processes are there are available processors speeds things up.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Finding-Common-Tags">Finding Common Tags<a class="anchor-link" href="#Finding-Common-Tags">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+
+<span class="k">def</span> <span class="nf">count_tags</span><span class="p">(</span><span class="n">html</span><span class="p">):</span>
+    <span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">html</span><span class="p">,</span> <span class="s1">&#39;html.parser&#39;</span><span class="p">)</span>
+    <span class="n">tags</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">tag</span> <span class="ow">in</span> <span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">():</span>
+        <span class="k">if</span> <span class="n">tag</span><span class="o">.</span><span class="n">name</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">tags</span><span class="p">:</span>
+            <span class="n">tags</span><span class="p">[</span><span class="n">tag</span><span class="o">.</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">tags</span><span class="p">[</span><span class="n">tag</span><span class="o">.</span><span class="n">name</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">tags</span>
+
+<span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="n">pool</span> <span class="o">=</span> <span class="n">concurrent</span><span class="o">.</span><span class="n">futures</span><span class="o">.</span><span class="n">ProcessPoolExecutor</span><span class="p">(</span><span class="n">max_workers</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">tags</span> <span class="o">=</span> <span class="n">pool</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">count_tags</span><span class="p">,</span> <span class="n">parsed</span><span class="p">)</span>
+<span class="n">tags</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">tags</span><span class="p">)</span>
+
+<span class="n">tag_counts</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">tag</span> <span class="ow">in</span> <span class="n">tags</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="n">tag</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="k">if</span> <span class="n">k</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">tag_counts</span><span class="p">:</span>
+            <span class="n">tag_counts</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">tag_counts</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">+=</span> <span class="n">v</span>
+<span class="n">end</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">end</span> <span class="o">-</span> <span class="n">start</span><span class="p">)</span>
+<span class="n">tag_counts</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>71.57306599617004
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[33]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>{&#39;a&#39;: 498830,
+ &#39;abbr&#39;: 11536,
+ &#39;annotation&#39;: 205,
+ &#39;area&#39;: 138,
+ &#39;audio&#39;: 8,
+ &#39;b&#39;: 45291,
+ &#39;bdi&#39;: 34,
+ &#39;big&#39;: 416,
+ &#39;blockquote&#39;: 148,
+ &#39;br&#39;: 15599,
+ &#39;caption&#39;: 609,
+ &#39;center&#39;: 657,
+ &#39;cite&#39;: 11605,
+ &#39;code&#39;: 281,
+ &#39;dd&#39;: 3761,
+ &#39;del&#39;: 6,
+ &#39;div&#39;: 88787,
+ &#39;dl&#39;: 1425,
+ &#39;dt&#39;: 953,
+ &#39;font&#39;: 44,
+ &#39;h1&#39;: 2997,
+ &#39;h2&#39;: 12336,
+ &#39;h3&#39;: 2720,
+ &#39;h4&#39;: 405,
+ &#39;h5&#39;: 26,
+ &#39;h6&#39;: 1,
+ &#39;hr&#39;: 240,
+ &#39;i&#39;: 55074,
+ &#39;img&#39;: 24457,
+ &#39;li&#39;: 263520,
+ &#39;map&#39;: 9,
+ &#39;math&#39;: 205,
+ &#39;mfrac&#39;: 181,
+ &#39;mi&#39;: 1538,
+ &#39;mn&#39;: 657,
+ &#39;mo&#39;: 1399,
+ &#39;mover&#39;: 14,
+ &#39;mrow&#39;: 1302,
+ &#39;mspace&#39;: 65,
+ &#39;msqrt&#39;: 21,
+ &#39;mstyle&#39;: 214,
+ &#39;msub&#39;: 319,
+ &#39;msubsup&#39;: 56,
+ &#39;msup&#39;: 163,
+ &#39;mtable&#39;: 4,
+ &#39;mtd&#39;: 93,
+ &#39;mtext&#39;: 13,
+ &#39;mtr&#39;: 13,
+ &#39;munder&#39;: 7,
+ &#39;munderover&#39;: 17,
+ &#39;noscript&#39;: 2997,
+ &#39;ol&#39;: 2626,
+ &#39;p&#39;: 24099,
+ &#39;pre&#39;: 12,
+ &#39;q&#39;: 162,
+ &#39;rb&#39;: 16,
+ &#39;rp&#39;: 32,
+ &#39;rt&#39;: 16,
+ &#39;ruby&#39;: 16,
+ &#39;s&#39;: 76,
+ &#39;samp&#39;: 2,
+ &#39;semantics&#39;: 205,
+ &#39;small&#39;: 9415,
+ &#39;source&#39;: 8,
+ &#39;span&#39;: 218982,
+ &#39;strong&#39;: 1847,
+ &#39;sub&#39;: 547,
+ &#39;sup&#39;: 36301,
+ &#39;table&#39;: 13114,
+ &#39;td&#39;: 175989,
+ &#39;th&#39;: 46258,
+ &#39;time&#39;: 34,
+ &#39;tr&#39;: 84116,
+ &#39;tt&#39;: 7,
+ &#39;u&#39;: 110,
+ &#39;ul&#39;: 32928,
+ &#39;wbr&#39;: 277}</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Based on our findings, it looks like there are quite a few <code>td</code>, <code>a</code>, <code>li</code>, and <code>span</code> tags.  This indicates that articles tend to have lots of links, along with lists and tables.  Links are the most numerous tag, which indicates how interconnected articles on Wikipedia are.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Finding-Common-Words">Finding Common Words<a class="anchor-link" href="#Finding-Common-Words">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+<span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">Counter</span>
+<span class="kn">import</span> <span class="nn">re</span>
+
+<span class="k">def</span> <span class="nf">count_words</span><span class="p">(</span><span class="n">html</span><span class="p">):</span>
+    <span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">html</span><span class="p">,</span> <span class="s1">&#39;html.parser&#39;</span><span class="p">)</span>
+    <span class="n">words</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">get_text</span><span class="p">()</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s2">&quot;\W+&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="n">text</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span>
+    <span class="n">words</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
+    <span class="n">words</span> <span class="o">=</span> <span class="p">[</span><span class="n">w</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">words</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">w</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">5</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">Counter</span><span class="p">(</span><span class="n">words</span><span class="p">)</span><span class="o">.</span><span class="n">most_common</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+
+<span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="n">pool</span> <span class="o">=</span> <span class="n">concurrent</span><span class="o">.</span><span class="n">futures</span><span class="o">.</span><span class="n">ProcessPoolExecutor</span><span class="p">(</span><span class="n">max_workers</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">words</span> <span class="o">=</span> <span class="n">pool</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">count_words</span><span class="p">,</span> <span class="n">parsed</span><span class="p">)</span>
+<span class="n">words</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">words</span><span class="p">)</span>
+
+<span class="n">word_counts</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">wc</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">word</span><span class="p">,</span> <span class="n">count</span> <span class="ow">in</span> <span class="n">wc</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">word</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">word_counts</span><span class="p">:</span>
+            <span class="n">word_counts</span><span class="p">[</span><span class="n">word</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">word_counts</span><span class="p">[</span><span class="n">word</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="n">end</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">end</span> <span class="o">-</span> <span class="n">start</span><span class="p">)</span>
+<span class="n">word_counts</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>133.99117708206177
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[40]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>{&#39;junior&#39;: 8,
+ &#39;prannathji&#39;: 1,
+ &#39;touring&#39;: 1,
+ &#39;sofia&#39;: 1,
+ &#39;patrick&#39;: 5,
+ &#39;twice&#39;: 1,
+ &#39;managers&#39;: 3,
+ &#39;agostini&#39;: 1,
+ &#39;domination&#39;: 1,
+ &#39;billième&#39;: 1,
+ &#39;kavčič&#39;: 1,
+ &#39;dönhoff&#39;: 1,
+ &#39;uprising&#39;: 1,
+ &#39;moshe&#39;: 1,
+ &#39;bangladesh&#39;: 3,
+ &#39;muntaner&#39;: 1,
+ &#39;mayor&#39;: 11,
+ &#39;beasley&#39;: 1,
+ &#39;zeitweiser&#39;: 1,
+ &#39;first&#39;: 100,
+ &#39;gives&#39;: 1,
+ &#39;films1940s&#39;: 1,
+ &#39;januszkowo&#39;: 1,
+ &#39;minesweeper&#39;: 2,
+ &#39;commons&#39;: 6,
+ &#39;83222&#39;: 1,
+ &#39;rayon&#39;: 2,
+ &#39;humorist&#39;: 1,
+ &#39;hercules&#39;: 1,
+ &#39;encarnaçao&#39;: 1,
+ &#39;calling&#39;: 2,
+ &#39;today&#39;: 3,
+ &#39;kazuki&#39;: 1,
+ &#39;zoltán&#39;: 1,
+ &#39;fortified&#39;: 1,
+ &#39;martinez&#39;: 1,
+ &#39;båstad&#39;: 1,
+ &#39;presidential&#39;: 5,
+ &#39;contributor&#39;: 1,
+ &#39;trăng&#39;: 1,
+ &#39;preparatory&#39;: 1,
+ &#39;governor&#39;: 12,
+ &#39;pietism&#39;: 1,
+ &#39;least&#39;: 1,
+ &#39;sulfonic&#39;: 1,
+ &#39;manipuli&#39;: 1,
+ &#39;scindalmota&#39;: 1,
+ &#39;colliery&#39;: 1,
+ &#39;birchall&#39;: 1,
+ &#39;plotinus&#39;: 1,
+ &#39;narasaraopet&#39;: 1,
+ &#39;awareness&#39;: 2,
+ &#39;willimon&#39;: 1,
+ &#39;appear&#39;: 1,
+ &#39;monadenia&#39;: 1,
+ &#39;antioquia&#39;: 2,
+ &#39;polynomials&#39;: 1,
+ &#39;kitplanes&#39;: 1,
+ &#39;chiriguelo&#39;: 1,
+ &#39;asteraceae&#39;: 2,
+ &#39;nadia&#39;: 1,
+ &#39;thoracic&#39;: 1,
+ &#39;entrance&#39;: 1,
+ &#39;chiudinelli&#39;: 2,
+ &#39;wilcox&#39;: 1,
+ &#39;welfare&#39;: 2,
+ &#39;choice&#39;: 1,
+ &#39;cricoid&#39;: 1,
+ &#39;zielona&#39;: 1,
+ &#39;greyish&#39;: 2,
+ &#39;naghizadeh&#39;: 1,
+ &#39;arhndt&#39;: 1,
+ &#39;vladimir&#39;: 1,
+ &#39;flyin&#39;: 1,
+ &#39;vilnius&#39;: 2,
+ &#39;inflanty&#39;: 1,
+ &#39;guaraldi&#39;: 1,
+ &#39;viticultural&#39;: 1,
+ &#39;scholars&#39;: 1,
+ &#39;nagar&#39;: 5,
+ &#39;hepburn&#39;: 1,
+ &#39;reports&#39;: 1,
+ &#39;1357883&#39;: 1,
+ &#39;artificial&#39;: 1,
+ &#39;biological&#39;: 2,
+ &#39;francesco&#39;: 1,
+ &#39;marguérite&#39;: 1,
+ &#39;arxiv&#39;: 2,
+ &#39;billion&#39;: 1,
+ &#39;morgana&#39;: 1,
+ &#39;confederation&#39;: 1,
+ &#39;bahia&#39;: 2,
+ &#39;brăila&#39;: 1,
+ &#39;giuliani&#39;: 1,
+ &#39;veronica&#39;: 1,
+ &#39;sunde&#39;: 1,
+ &#39;scoville&#39;: 1,
+ &#39;surrounding&#39;: 1,
+ &#39;chaun&#39;: 1,
+ &#39;makindye&#39;: 1,
+ &#39;derek&#39;: 1,
+ &#39;regiments&#39;: 1,
+ &#39;bosnia&#39;: 6,
+ &#39;southend&#39;: 1,
+ &#39;taylour&#39;: 1,
+ &#39;waller&#39;: 1,
+ &#39;opposite&#39;: 1,
+ &#39;consultant&#39;: 1,
+ &#39;ballyhale&#39;: 1,
+ &#39;worcestershire&#39;: 1,
+ &#39;godavari&#39;: 1,
+ &#39;araneae&#39;: 1,
+ &#39;physician&#39;: 1,
+ &#39;draft&#39;: 10,
+ &#39;raith&#39;: 1,
+ &#39;congo&#39;: 1,
+ &#39;paraguay&#39;: 2,
+ &#39;highest&#39;: 5,
+ &#39;argos&#39;: 1,
+ &#39;citation&#39;: 9,
+ &#39;chung&#39;: 1,
+ &#39;erigeron&#39;: 1,
+ &#39;ramirez&#39;: 1,
+ &#39;fubinaca&#39;: 1,
+ &#39;jordan&#39;: 3,
+ &#39;iyama&#39;: 1,
+ &#39;anatolia&#39;: 1,
+ &#39;eugenio&#39;: 1,
+ &#39;disney&#39;: 3,
+ &#39;nacional&#39;: 2,
+ &#39;funen&#39;: 1,
+ &#39;luehderi&#39;: 1,
+ &#39;urodilatin&#39;: 1,
+ &#39;background&#39;: 1,
+ &#39;vijay&#39;: 2,
+ &#39;needs&#39;: 1,
+ &#39;patriots&#39;: 1,
+ &#39;permanent&#39;: 4,
+ &#39;recuay&#39;: 1,
+ &#39;clinic&#39;: 1,
+ &#39;imperialis&#39;: 1,
+ &#39;seibu&#39;: 1,
+ &#39;ćetković&#39;: 1,
+ &#39;wolfe&#39;: 1,
+ &#39;fernanda&#39;: 1,
+ &#39;scientist&#39;: 2,
+ &#39;aminonaphthalenesulfonic&#39;: 1,
+ &#39;vittra&#39;: 1,
+ &#39;other&#39;: 38,
+ &#39;zgierz&#39;: 2,
+ &#39;bluegrass&#39;: 2,
+ &#39;catalog&#39;: 2,
+ &#39;nyblom&#39;: 1,
+ &#39;44333&#39;: 1,
+ &#39;damsa&#39;: 1,
+ &#39;forever&#39;: 1,
+ &#39;advocates&#39;: 1,
+ &#39;heckstall&#39;: 1,
+ &#39;unincorporated&#39;: 17,
+ &#39;munich&#39;: 3,
+ &#39;avalon&#39;: 1,
+ &#39;snakebite&#39;: 1,
+ &#39;porrit&#39;: 1,
+ &#39;ellison&#39;: 1,
+ &#39;debian&#39;: 1,
+ &#39;young&#39;: 14,
+ &#39;nuway&#39;: 1,
+ &#39;tyson&#39;: 1,
+ &#39;bexley&#39;: 1,
+ &#39;boehringer&#39;: 1,
+ &#39;franklin&#39;: 2,
+ &#39;pyrénées&#39;: 1,
+ &#39;telescope&#39;: 1,
+ &#39;metropolitan&#39;: 4,
+ &#39;olfactory&#39;: 1,
+ &#39;cardinals&#39;: 3,
+ &#39;bausch&#39;: 1,
+ &#39;middlesbrough&#39;: 3,
+ &#39;score&#39;: 5,
+ &#39;henares&#39;: 1,
+ &#39;flowered&#39;: 1,
+ &#39;truck&#39;: 2,
+ &#39;naichau&#39;: 1,
+ &#39;production&#39;: 19,
+ &#39;paschal&#39;: 1,
+ &#39;jessen&#39;: 1,
+ &#39;lebanon&#39;: 4,
+ &#39;ratchaburi&#39;: 1,
+ &#39;glazman&#39;: 1,
+ &#39;daniels&#39;: 1,
+ &#39;tottori&#39;: 1,
+ &#39;información&#39;: 1,
+ &#39;genome&#39;: 2,
+ &#39;moscow&#39;: 6,
+ &#39;nagashi&#39;: 1,
+ &#39;abaúj&#39;: 1,
+ &#39;allsvenskan&#39;: 1,
+ &#39;vries&#39;: 1,
+ &#39;poultry&#39;: 1,
+ &#39;culkin&#39;: 1,
+ &#39;chase&#39;: 1,
+ &#39;ralph&#39;: 1,
+ &#39;times&#39;: 22,
+ &#39;gould&#39;: 1,
+ &#39;borsod&#39;: 1,
+ &#39;ghriss&#39;: 1,
+ &#39;surgeon&#39;: 3,
+ &#39;troglodytarum&#39;: 1,
+ &#39;velika&#39;: 1,
+ &#39;docking&#39;: 1,
+ &#39;islam&#39;: 2,
+ &#39;underground&#39;: 1,
+ &#39;grackle&#39;: 1,
+ &#39;points&#39;: 6,
+ &#39;clean&#39;: 3,
+ &#39;vanuatu&#39;: 1,
+ &#39;pompey&#39;: 1,
+ &#39;jarosław&#39;: 1,
+ &#39;varus&#39;: 1,
+ &#39;jaromír&#39;: 1,
+ &#39;bibcode&#39;: 1,
+ &#39;reader&#39;: 1,
+ &#39;identifierswikipedia&#39;: 43,
+ &#39;envelope&#39;: 1,
+ &#39;wimberg&#39;: 1,
+ &#39;xhcaa&#39;: 1,
+ &#39;farida&#39;: 1,
+ &#39;settlers&#39;: 1,
+ &#39;ramanathan&#39;: 1,
+ &#39;decimal&#39;: 1,
+ &#39;stjørdal&#39;: 1,
+ &#39;gender&#39;: 2,
+ &#39;kamen&#39;: 1,
+ &#39;arčikauskas&#39;: 1,
+ &#39;simod&#39;: 1,
+ &#39;wildlife&#39;: 4,
+ &#39;holidays&#39;: 1,
+ &#39;lighting&#39;: 1,
+ &#39;kummerow&#39;: 1,
+ &#39;siniscalco&#39;: 1,
+ &#39;litera&#39;: 1,
+ &#39;spookey&#39;: 1,
+ &#39;member&#39;: 21,
+ &#39;wilco&#39;: 1,
+ &#39;songs&#39;: 23,
+ &#39;abeno&#39;: 1,
+ &#39;dordogne&#39;: 2,
+ &#39;sciences&#39;: 2,
+ &#39;maanikya&#39;: 1,
+ &#39;000000002016&#39;: 1,
+ &#39;backs&#39;: 1,
+ &#39;weapons&#39;: 2,
+ &#39;spiel&#39;: 1,
+ &#39;kirklees&#39;: 1,
+ &#39;bruses&#39;: 1,
+ &#39;sidéradougou&#39;: 1,
+ &#39;studios&#39;: 4,
+ &#39;vincent&#39;: 2,
+ &#39;mandel&#39;: 1,
+ &#39;named&#39;: 4,
+ &#39;mangalore&#39;: 1,
+ &#39;mickey&#39;: 1,
+ &#39;salma&#39;: 1,
+ &#39;lawsuit&#39;: 1,
+ &#39;pietismus&#39;: 1,
+ &#39;kalangis&#39;: 1,
+ &#39;higgins&#39;: 1,
+ &#39;tunisia&#39;: 2,
+ &#39;vetriswaran&#39;: 1,
+ &#39;dolni&#39;: 2,
+ &#39;activities&#39;: 1,
+ &#39;patanga&#39;: 1,
+ &#39;coulommiers&#39;: 1,
+ &#39;châtillon&#39;: 2,
+ &#39;capriccio&#39;: 1,
+ &#39;sędki&#39;: 1,
+ &#39;accessory&#39;: 1,
+ &#39;turret&#39;: 1,
+ &#39;visitors&#39;: 2,
+ &#39;magazine&#39;: 17,
+ &#39;yvelines&#39;: 1,
+ &#39;caney&#39;: 1,
+ &#39;bathurst&#39;: 1,
+ &#39;brenda&#39;: 2,
+ &#39;muğanlı&#39;: 1,
+ &#39;detroit&#39;: 5,
+ &#39;parrots&#39;: 1,
+ &#39;railways&#39;: 1,
+ &#39;rolling&#39;: 1,
+ &#39;59611&#39;: 1,
+ &#39;köping&#39;: 1,
+ &#39;ramachandran&#39;: 1,
+ &#39;larvae&#39;: 6,
+ &#39;likely&#39;: 1,
+ &#39;pochyta&#39;: 1,
+ &#39;mascara&#39;: 1,
+ &#39;canot&#39;: 1,
+ &#39;directive&#39;: 2,
+ &#39;eighty&#39;: 1,
+ &#39;bahuguna&#39;: 1,
+ &#39;peptide&#39;: 2,
+ &#39;macmillan&#39;: 1,
+ &#39;furkan&#39;: 1,
+ &#39;cable&#39;: 2,
+ &#39;keonjhar&#39;: 1,
+ &#39;boogie&#39;: 1,
+ &#39;szczawin&#39;: 1,
+ &#39;dašić&#39;: 1,
+ &#39;antennata&#39;: 1,
+ &#39;zschokke&#39;: 1,
+ &#39;backyard&#39;: 1,
+ &#39;sirusho&#39;: 1,
+ &#39;pippo&#39;: 1,
+ &#39;creative&#39;: 1,
+ &#39;tropische&#39;: 1,
+ &#39;chenar&#39;: 1,
+ &#39;original&#39;: 19,
+ &#39;gosling&#39;: 1,
+ &#39;overstreet&#39;: 2,
+ &#39;chisocheton&#39;: 1,
+ &#39;öland&#39;: 1,
+ &#39;chaux&#39;: 2,
+ &#39;goiás&#39;: 2,
+ &#39;ground&#39;: 3,
+ &#39;event&#39;: 12,
+ &#39;namhaedo&#39;: 1,
+ &#39;teacher&#39;: 1,
+ &#39;sylvian&#39;: 1,
+ &#39;palmer&#39;: 5,
+ &#39;writer&#39;: 11,
+ &#39;macrobertson&#39;: 1,
+ &#39;javier&#39;: 1,
+ &#39;students&#39;: 20,
+ &#39;helmond&#39;: 1,
+ &#39;twiggy&#39;: 1,
+ &#39;73917&#39;: 1,
+ &#39;rescue&#39;: 1,
+ &#39;daniele&#39;: 1,
+ &#39;innings&#39;: 1,
+ &#39;rhialto&#39;: 1,
+ &#39;dinamo&#39;: 3,
+ &#39;edwin&#39;: 1,
+ &#39;moderni&#39;: 1,
+ &#39;shrek&#39;: 1,
+ &#39;haider&#39;: 1,
+ &#39;viamala&#39;: 1,
+ &#39;pedro&#39;: 2,
+ &#39;cheddar&#39;: 1,
+ &#39;exploratorium&#39;: 1,
+ &#39;bayfield&#39;: 1,
+ &#39;subdivision&#39;: 1,
+ &#39;sevens&#39;: 2,
+ &#39;nelonen&#39;: 1,
+ &#39;pergamus&#39;: 1,
+ &#39;requires&#39;: 2,
+ &#39;santa&#39;: 19,
+ &#39;mengs&#39;: 1,
+ &#39;vitaly&#39;: 1,
+ &#39;bombardment&#39;: 1,
+ &#39;gimhae&#39;: 1,
+ &#39;deshamanya&#39;: 1,
+ &#39;maine&#39;: 4,
+ &#39;rivals&#39;: 1,
+ &#39;ponder&#39;: 1,
+ &#39;jeffs&#39;: 1,
+ &#39;spicules&#39;: 1,
+ &#39;unicode&#39;: 1,
+ &#39;tomorrow&#39;: 1,
+ &#39;cincinnati&#39;: 5,
+ &#39;amborellaceae&#39;: 1,
+ &#39;analog&#39;: 1,
+ &#39;mediaș&#39;: 1,
+ &#39;roxburgh&#39;: 1,
+ &#39;huddersfield&#39;: 1,
+ &#39;appenzell&#39;: 1,
+ &#39;turista&#39;: 1,
+ &#39;branches&#39;: 1,
+ &#39;kumamoto&#39;: 1,
+ &#39;aliabad&#39;: 4,
+ &#39;sloop&#39;: 1,
+ &#39;montana&#39;: 5,
+ &#39;funny&#39;: 1,
+ &#39;document&#39;: 1,
+ &#39;łosie&#39;: 1,
+ &#39;66083&#39;: 1,
+ &#39;later&#39;: 7,
+ &#39;atoxica&#39;: 1,
+ &#39;paranhos&#39;: 1,
+ &#39;former&#39;: 10,
+ &#39;qualifier&#39;: 2,
+ &#39;competed&#39;: 1,
+ &#39;witzenhausen&#39;: 1,
+ &#39;latin&#39;: 11,
+ &#39;adams&#39;: 3,
+ &#39;scales&#39;: 1,
+ &#39;splash&#39;: 1,
+ &#39;gorkha&#39;: 1,
+ &#39;trojans&#39;: 2,
+ &#39;floor&#39;: 2,
+ &#39;hampson&#39;: 3,
+ &#39;precinct&#39;: 1,
+ &#39;arterial&#39;: 1,
+ &#39;fidélis&#39;: 1,
+ &#39;cutervo&#39;: 1,
+ &#39;danmark&#39;: 1,
+ &#39;groups&#39;: 3,
+ &#39;veloso&#39;: 1,
+ &#39;emulations&#39;: 1,
+ &#39;pontiac&#39;: 1,
+ &#39;dundas&#39;: 1,
+ &#39;ariarathes&#39;: 1,
+ &#39;channel&#39;: 8,
+ &#39;description&#39;: 4,
+ &#39;innocent&#39;: 1,
+ &#39;sequences&#39;: 1,
+ &#39;fuscozonata&#39;: 1,
+ &#39;maharaj&#39;: 1,
+ &#39;networking&#39;: 1,
+ &#39;wizard&#39;: 2,
+ &#39;criterium&#39;: 1,
+ &#39;gasht&#39;: 1,
+ &#39;acosta&#39;: 1,
+ &#39;loving&#39;: 1,
+ &#39;guarro&#39;: 1,
+ &#39;bigelovii&#39;: 1,
+ &#39;inches&#39;: 1,
+ &#39;stian_aker&#39;: 1,
+ &#39;gardner&#39;: 3,
+ &#39;mudramothiram&#39;: 1,
+ &#39;cobreloa&#39;: 1,
+ &#39;mahony&#39;: 1,
+ &#39;lithophila&#39;: 1,
+ &#39;concepción&#39;: 1,
+ &#39;smeaton&#39;: 1,
+ &#39;haven&#39;: 2,
+ &#39;reviews&#39;: 4,
+ &#39;cindy&#39;: 1,
+ &#39;references&#39;: 34,
+ &#39;dzahadjou&#39;: 1,
+ &#39;sicily&#39;: 1,
+ &#39;garrisson&#39;: 1,
+ &#39;schneider&#39;: 1,
+ &#39;psychology&#39;: 5,
+ &#39;warsaw&#39;: 2,
+ &#39;guangde&#39;: 1,
+ &#39;nominee&#39;: 1,
+ &#39;muirí&#39;: 1,
+ &#39;written&#39;: 10,
+ &#39;leeuwen&#39;: 1,
+ &#39;chaharduli&#39;: 1,
+ &#39;tachinidae&#39;: 2,
+ &#39;incumbent&#39;: 1,
+ &#39;diego&#39;: 4,
+ &#39;ennico&#39;: 1,
+ &#39;kazan&#39;: 2,
+ &#39;italiane&#39;: 1,
+ &#39;coupier&#39;: 1,
+ &#39;riffle&#39;: 1,
+ &#39;saxophone&#39;: 1,
+ &#39;fleet&#39;: 7,
+ &#39;residence&#39;: 2,
+ &#39;auryn&#39;: 1,
+ &#39;hotels&#39;: 1,
+ &#39;association&#39;: 10,
+ &#39;histoplasmosis&#39;: 1,
+ &#39;leuke&#39;: 1,
+ &#39;imphal&#39;: 1,
+ &#39;baloch&#39;: 1,
+ &#39;asheqlu&#39;: 1,
+ &#39;supernova&#39;: 1,
+ &#39;namhae&#39;: 2,
+ &#39;zebina&#39;: 1,
+ &#39;mazowiecki&#39;: 1,
+ &#39;taluka&#39;: 2,
+ &#39;rican&#39;: 1,
+ &#39;subcutaneous&#39;: 1,
+ &#39;admiral&#39;: 2,
+ &#39;alakbarova&#39;: 1,
+ &#39;nerve&#39;: 1,
+ &#39;lyrics&#39;: 3,
+ &#39;porto&#39;: 1,
+ &#39;finnmark&#39;: 1,
+ &#39;transistor&#39;: 1,
+ &#39;pilot&#39;: 5,
+ &#39;anwar&#39;: 1,
+ &#39;mafeteng&#39;: 1,
+ &#39;bridge&#39;: 13,
+ &#39;tryavna&#39;: 2,
+ &#39;doble&#39;: 2,
+ &#39;maritime&#39;: 3,
+ &#39;circumcarinata&#39;: 1,
+ &#39;manor&#39;: 1,
+ &#39;grichka&#39;: 1,
+ &#39;planetary&#39;: 1,
+ &#39;leprieuri&#39;: 1,
+ &#39;plants&#39;: 4,
+ &#39;sarojini&#39;: 1,
+ &#39;lough&#39;: 1,
+ &#39;safety&#39;: 2,
+ &#39;meneng&#39;: 1,
+ &#39;kartli&#39;: 1,
+ &#39;badgers&#39;: 1,
+ &#39;opinions&#39;: 1,
+ &#39;contralateral&#39;: 1,
+ &#39;tiranë&#39;: 1,
+ &#39;bethoncourt&#39;: 1,
+ &#39;kapinovo&#39;: 1,
+ &#39;civil&#39;: 17,
+ &#39;those&#39;: 1,
+ &#39;estrone&#39;: 1,
+ &#39;babak&#39;: 1,
+ &#39;brian&#39;: 4,
+ &#39;leaders&#39;: 7,
+ &#39;mossman&#39;: 1,
+ &#39;carley&#39;: 1,
+ &#39;honey&#39;: 2,
+ &#39;normandin&#39;: 1,
+ &#39;known&#39;: 14,
+ &#39;hydroxynaphthalene&#39;: 1,
+ &#39;marcus&#39;: 1,
+ &#39;personalities&#39;: 1,
+ &#39;kapoor&#39;: 3,
+ &#39;government&#39;: 29,
+ &#39;ghisallo&#39;: 1,
+ &#39;regional&#39;: 10,
+ &#39;reaction&#39;: 1,
+ &#39;works&#39;: 13,
+ &#39;neville&#39;: 1,
+ &#39;mausoleum&#39;: 1,
+ &#39;icelandic&#39;: 1,
+ &#39;methodist&#39;: 1,
+ &#39;lakshmanan&#39;: 1,
+ &#39;script&#39;: 1,
+ &#39;three&#39;: 11,
+ &#39;herzegovina&#39;: 7,
+ &#39;runoff&#39;: 1,
+ &#39;dawson&#39;: 1,
+ &#39;eliskases&#39;: 1,
+ &#39;vinca&#39;: 1,
+ &#39;television&#39;: 50,
+ &#39;bukovica&#39;: 1,
+ &#39;reward&#39;: 1,
+ &#39;noctuoidea&#39;: 1,
+ &#39;jetpack&#39;: 1,
+ &#39;picture&#39;: 2,
+ &#39;kildare&#39;: 1,
+ &#39;rheumatoid&#39;: 1,
+ &#39;romagna&#39;: 1,
+ &#39;phong&#39;: 1,
+ &#39;abbas&#39;: 2,
+ &#39;season&#39;: 61,
+ &#39;dictionary&#39;: 4,
+ &#39;peparethos&#39;: 1,
+ &#39;brugnoli&#39;: 1,
+ &#39;peptides&#39;: 1,
+ &#39;passive&#39;: 1,
+ &#39;spectra&#39;: 2,
+ &#39;chandan&#39;: 1,
+ &#39;circuit&#39;: 5,
+ &#39;alvord&#39;: 1,
+ &#39;keisling&#39;: 1,
+ &#39;canberra&#39;: 1,
+ &#39;adviser&#39;: 1,
+ &#39;watford&#39;: 2,
+ &#39;lubbock&#39;: 1,
+ &#39;constant&#39;: 4,
+ &#39;lantern&#39;: 1,
+ &#39;pampanga&#39;: 1,
+ &#39;membranacea&#39;: 1,
+ &#39;partial&#39;: 1,
+ &#39;vessels&#39;: 2,
+ &#39;residenztheater&#39;: 1,
+ &#39;inducing&#39;: 1,
+ &#39;chamber&#39;: 2,
+ &#39;sales&#39;: 3,
+ &#39;geforce&#39;: 1,
+ &#39;suburban&#39;: 2,
+ &#39;kissing&#39;: 1,
+ &#39;video&#39;: 24,
+ &#39;center&#39;: 27,
+ &#39;125th&#39;: 1,
+ &#39;leyte&#39;: 1,
+ &#39;christopher&#39;: 1,
+ &#39;bradford&#39;: 1,
+ &#39;stealing&#39;: 1,
+ &#39;carracedo&#39;: 1,
+ &#39;dołęgi&#39;: 1,
+ &#39;commission&#39;: 8,
+ &#39;homebuilding&#39;: 1,
+ &#39;catholic&#39;: 21,
+ &#39;whiting&#39;: 1,
+ &#39;chacon&#39;: 1,
+ &#39;healing&#39;: 1,
+ &#39;aereon&#39;: 1,
+ &#39;dasyure&#39;: 1,
+ &#39;busan&#39;: 2,
+ &#39;career&#39;: 82,
+ &#39;bratz&#39;: 1,
+ &#39;rolli&#39;: 1,
+ &#39;holstein&#39;: 1,
+ &#39;dewey&#39;: 1,
+ &#39;utiel&#39;: 1,
+ &#39;creek&#39;: 15,
+ &#39;edward&#39;: 5,
+ &#39;destroyer&#39;: 2,
+ &#39;coalfield&#39;: 1,
+ &#39;354927000&#39;: 1,
+ &#39;aspietes&#39;: 1,
+ &#39;clothes&#39;: 1,
+ &#39;relegated&#39;: 1,
+ &#39;regiment&#39;: 7,
+ &#39;annunciation&#39;: 1,
+ &#39;corps&#39;: 6,
+ &#39;monkey&#39;: 2,
+ &#39;thompson&#39;: 2,
+ &#39;saudi&#39;: 3,
+ &#39;bicycle&#39;: 1,
+ &#39;angèle&#39;: 1,
+ &#39;sentence&#39;: 1,
+ &#39;brzózka&#39;: 1,
+ &#39;85111&#39;: 1,
+ &#39;mechanisms&#39;: 1,
+ &#39;kappa&#39;: 1,
+ &#39;syntomis&#39;: 1,
+ &#39;larvicide&#39;: 1,
+ &#39;bangkok&#39;: 3,
+ &#39;observer&#39;: 1,
+ &#39;uttarakhand&#39;: 1,
+ &#39;rally&#39;: 3,
+ &#39;heuch&#39;: 1,
+ &#39;bayadh&#39;: 1,
+ &#39;animals&#39;: 1,
+ &#39;nicola&#39;: 1,
+ &#39;feedjit&#39;: 1,
+ &#39;koishiteru&#39;: 1,
+ &#39;bloomfield&#39;: 1,
+ &#39;thornaby&#39;: 1,
+ &#39;human&#39;: 12,
+ &#39;internal&#39;: 1,
+ &#39;wilkes&#39;: 1,
+ &#39;filmsturkish&#39;: 1,
+ &#39;watch&#39;: 5,
+ &#39;okoye&#39;: 1,
+ &#39;fuchs&#39;: 1,
+ &#39;metallurg&#39;: 1,
+ &#39;sulukh&#39;: 1,
+ &#39;khedoori&#39;: 1,
+ &#39;coronium&#39;: 1,
+ &#39;benítez&#39;: 1,
+ &#39;fusiliers&#39;: 1,
+ &#39;warrant&#39;: 1,
+ &#39;precursor&#39;: 1,
+ &#39;family&#39;: 73,
+ &#39;theorem&#39;: 2,
+ &#39;defence&#39;: 3,
+ &#39;immunity&#39;: 2,
+ &#39;kramer&#39;: 1,
+ &#39;lucky&#39;: 1,
+ &#39;livonia&#39;: 1,
+ &#39;ereader&#39;: 1,
+ &#39;israelites&#39;: 1,
+ &#39;ramaranjan&#39;: 1,
+ &#39;maria&#39;: 6,
+ &#39;isaac&#39;: 1,
+ &#39;force&#39;: 8,
+ &#39;paralympic&#39;: 2,
+ &#39;maribor&#39;: 1,
+ &#39;tatars&#39;: 1,
+ &#39;baddie&#39;: 1,
+ &#39;ruins&#39;: 1,
+ &#39;stade&#39;: 1,
+ &#39;ryots&#39;: 1,
+ &#39;worldcat&#39;: 4,
+ &#39;coccidioidomycosis&#39;: 1,
+ &#39;reunion&#39;: 1,
+ &#39;boland&#39;: 1,
+ &#39;nellie&#39;: 2,
+ &#39;speed&#39;: 10,
+ &#39;redwater&#39;: 1,
+ &#39;bowles&#39;: 1,
+ &#39;katie&#39;: 1,
+ &#39;merelim&#39;: 1,
+ &#39;solkan&#39;: 1,
+ &#39;germar&#39;: 1,
+ &#39;missing&#39;: 6,
+ &#39;greek&#39;: 25,
+ &#39;fulcher&#39;: 1,
+ &#39;monument&#39;: 3,
+ &#39;harvard&#39;: 4,
+ &#39;sustainability&#39;: 1,
+ &#39;summer&#39;: 30,
+ &#39;bromo&#39;: 1,
+ &#39;chemokine&#39;: 1,
+ &#39;rainstorm&#39;: 1,
+ &#39;kenneth&#39;: 2,
+ &#39;straloch&#39;: 1,
+ &#39;stone&#39;: 8,
+ &#39;hirst&#39;: 1,
+ &#39;horsey&#39;: 1,
+ &#39;šumadija&#39;: 1,
+ &#39;parfitt&#39;: 1,
+ &#39;galaxies&#39;: 2,
+ &#39;climate&#39;: 9,
+ &#39;westminster&#39;: 1,
+ &#39;herbert&#39;: 3,
+ &#39;fungal&#39;: 1,
+ &#39;giovanni&#39;: 3,
+ &#39;believer&#39;: 1,
+ &#39;conveyor&#39;: 1,
+ &#39;bechdel&#39;: 1,
+ &#39;søren&#39;: 1,
+ &#39;eugamandus&#39;: 1,
+ &#39;medal&#39;: 21,
+ &#39;ömnögovi&#39;: 1,
+ &#39;begin&#39;: 1,
+ &#39;01333&#39;: 1,
+ &#39;valle&#39;: 1,
+ &#39;meaning&#39;: 1,
+ &#39;baltimore&#39;: 4,
+ &#39;gosei&#39;: 1,
+ &#39;krispies&#39;: 1,
+ &#39;eastern&#39;: 13,
+ &#39;oplast&#39;: 1,
+ &#39;serpentine&#39;: 1,
+ &#39;january&#39;: 96,
+ &#39;macroagelaius&#39;: 1,
+ &#39;posters&#39;: 1,
+ &#39;stuart&#39;: 3,
+ &#39;elizabeth&#39;: 6,
+ &#39;apocephalus&#39;: 1,
+ &#39;philip&#39;: 1,
+ &#39;sherry&#39;: 1,
+ &#39;mussels&#39;: 1,
+ &#39;raggett&#39;: 1,
+ &#39;dream&#39;: 4,
+ &#39;zhejiang&#39;: 1,
+ &#39;forewings&#39;: 2,
+ &#39;saves&#39;: 1,
+ &#39;makkasan&#39;: 1,
+ &#39;mansion&#39;: 1,
+ &#39;trucks&#39;: 1,
+ &#39;animated&#39;: 1,
+ &#39;azerbaijani&#39;: 2,
+ &#39;purged&#39;: 1,
+ &#39;recke&#39;: 1,
+ &#39;infections&#39;: 1,
+ &#39;batted&#39;: 2,
+ &#39;kosaka&#39;: 1,
+ &#39;categories&#39;: 217,
+ &#39;shanghai&#39;: 2,
+ &#39;heroines&#39;: 1,
+ &#39;laser&#39;: 1,
+ &#39;always&#39;: 1,
+ &#39;khikhani&#39;: 1,
+ &#39;rovers&#39;: 7,
+ &#39;verpelét&#39;: 1,
+ &#39;germán&#39;: 1,
+ &#39;evermore&#39;: 1,
+ &#39;stefano&#39;: 1,
+ &#39;asiab&#39;: 1,
+ &#39;viola&#39;: 1,
+ &#39;flour&#39;: 1,
+ &#39;aviva&#39;: 1,
+ &#39;volumes&#39;: 1,
+ &#39;figaro&#39;: 1,
+ &#39;mclaren&#39;: 1,
+ &#39;gnome&#39;: 1,
+ &#39;junction&#39;: 6,
+ &#39;against&#39;: 11,
+ &#39;lorne&#39;: 1,
+ &#39;slavery&#39;: 1,
+ &#39;manga&#39;: 3,
+ &#39;phorids&#39;: 1,
+ &#39;gospel&#39;: 1,
+ &#39;wiltshire&#39;: 1,
+ &#39;discretization&#39;: 1,
+ &#39;headache&#39;: 1,
+ &#39;transilien&#39;: 1,
+ &#39;volunteer&#39;: 1,
+ &#39;авени&#39;: 1,
+ &#39;hyderabad&#39;: 1,
+ &#39;volleyball&#39;: 5,
+ &#39;beverley&#39;: 1,
+ &#39;induced&#39;: 1,
+ &#39;yarumal&#39;: 1,
+ &#39;cells&#39;: 1,
+ &#39;romance&#39;: 3,
+ &#39;evraki&#39;: 1,
+ &#39;tacloban&#39;: 1,
+ &#39;grows&#39;: 2,
+ &#39;lagunitas&#39;: 1,
+ &#39;elevation&#39;: 2,
+ &#39;territory&#39;: 2,
+ &#39;qualifying&#39;: 2,
+ &#39;contains&#39;: 3,
+ &#39;economics&#39;: 4,
+ &#39;deseret&#39;: 1,
+ &#39;noise&#39;: 2,
+ &#39;kirby&#39;: 1,
+ &#39;transportation&#39;: 5,
+ &#39;agripina&#39;: 1,
+ &#39;smoszewo&#39;: 1,
+ &#39;stiles&#39;: 1,
+ &#39;scott&#39;: 6,
+ &#39;andorra&#39;: 2,
+ &#39;italien&#39;: 1,
+ &#39;göttingen&#39;: 1,
+ &#39;presenters&#39;: 1,
+ &#39;luigné&#39;: 1,
+ &#39;vatican&#39;: 1,
+ &#39;seyyed&#39;: 1,
+ &#39;midnight&#39;: 3,
+ &#39;vaibbhav&#39;: 1,
+ &#39;fusidic&#39;: 1,
+ &#39;newport&#39;: 1,
+ &#39;unusual&#39;: 1,
+ &#39;casey&#39;: 1,
+ &#39;payments&#39;: 1,
+ &#39;pages&#39;: 2,
+ &#39;mullins&#39;: 1,
+ &#39;gubernatorial&#39;: 1,
+ &#39;density&#39;: 1,
+ &#39;tanenbaum&#39;: 1,
+ &#39;exchange&#39;: 1,
+ &#39;hasan&#39;: 2,
+ &#39;richt&#39;: 1,
+ &#39;genealogical&#39;: 2,
+ &#39;000000001989&#39;: 1,
+ &#39;leuty&#39;: 1,
+ &#39;natural&#39;: 9,
+ &#39;guineas&#39;: 1,
+ &#39;carol&#39;: 1,
+ &#39;policy&#39;: 2,
+ &#39;woolley&#39;: 1,
+ &#39;rolin&#39;: 1,
+ &#39;vista&#39;: 1,
+ &#39;murinus&#39;: 1,
+ &#39;lawngtlai&#39;: 1,
+ &#39;logan&#39;: 2,
+ &#39;chapel&#39;: 3,
+ &#39;banovinas&#39;: 1,
+ &#39;general&#39;: 42,
+ &#39;enhanced&#39;: 1,
+ &#39;bresse&#39;: 1,
+ &#39;fresno&#39;: 3,
+ &#39;porch&#39;: 1,
+ &#39;fisher&#39;: 2,
+ &#39;anish&#39;: 1,
+ &#39;equestrian&#39;: 1,
+ &#39;smilax&#39;: 1,
+ &#39;drain&#39;: 1,
+ &#39;municipality&#39;: 32,
+ &#39;chapter&#39;: 2,
+ &#39;surnames&#39;: 1,
+ &#39;steinbauer&#39;: 1,
+ &#39;faber&#39;: 3,
+ &#39;czech&#39;: 8,
+ &#39;international&#39;: 45,
+ &#39;choral&#39;: 2,
+ &#39;class&#39;: 30,
+ &#39;94750&#39;: 1,
+ &#39;moginie&#39;: 1,
+ &#39;houghton&#39;: 1,
+ &#39;cymru&#39;: 1,
+ &#39;astoria&#39;: 2,
+ &#39;36528&#39;: 1,
+ &#39;oznoz&#39;: 1,
+ &#39;italy&#39;: 12,
+ &#39;villers&#39;: 6,
+ &#39;autism&#39;: 1,
+ &#39;touch&#39;: 2,
+ &#39;svalbard&#39;: 1,
+ &#39;rapper&#39;: 1,
+ &#39;spanish&#39;: 34,
+ &#39;breads&#39;: 1,
+ &#39;taproot&#39;: 1,
+ &#39;founder&#39;: 1,
+ &#39;braunschweig&#39;: 1,
+ &#39;neolepetopsidae&#39;: 1,
+ &#39;including&#39;: 1,
+ &#39;firefox&#39;: 1,
+ &#39;lincoln&#39;: 7,
+ &#39;garuh&#39;: 1,
+ &#39;giang&#39;: 2,
+ &#39;eleuteri&#39;: 1,
+ &#39;match&#39;: 12,
+ &#39;iwaki&#39;: 1,
+ &#39;osteoporosis&#39;: 1,
+ &#39;préliminaires&#39;: 1,
+ &#39;couple&#39;: 1,
+ &#39;armstrong&#39;: 3,
+ &#39;musica&#39;: 1,
+ &#39;shackleton&#39;: 1,
+ &#39;funeral&#39;: 1,
+ &#39;ortiz&#39;: 1,
+ &#39;kyril&#39;: 1,
+ &#39;zvereva&#39;: 1,
+ &#39;continuity&#39;: 1,
+ &#39;brasil&#39;: 1,
+ &#39;nepali&#39;: 1,
+ &#39;winters&#39;: 1,
+ &#39;runner&#39;: 1,
+ &#39;hammerstein&#39;: 1,
+ &#39;hanna&#39;: 1,
+ &#39;lalden&#39;: 1,
+ &#39;chemo&#39;: 1,
+ &#39;granduciel&#39;: 1,
+ &#39;anterior&#39;: 2,
+ &#39;wolfpack&#39;: 1,
+ &#39;lincolnshire&#39;: 1,
+ &#39;kawabe&#39;: 1,
+ &#39;nueva&#39;: 1,
+ &#39;jagiellonia&#39;: 1,
+ &#39;friendship&#39;: 4,
+ &#39;stoke&#39;: 1,
+ &#39;scenic&#39;: 1,
+ &#39;ricardo&#39;: 2,
+ &#39;stream&#39;: 1,
+ &#39;sweden&#39;: 10,
+ &#39;boost&#39;: 1,
+ &#39;paranaense&#39;: 1,
+ &#39;torkaman&#39;: 1,
+ &#39;suvarnabhumi&#39;: 1,
+ &#39;anglican&#39;: 1,
+ &#39;frisian&#39;: 1,
+ &#39;germany&#39;: 21,
+ &#39;huesca&#39;: 1,
+ &#39;shaun&#39;: 1,
+ &#39;propantheline&#39;: 1,
+ &#39;filled&#39;: 1,
+ &#39;tomakomai&#39;: 1,
+ &#39;gnophaela&#39;: 1,
+ &#39;lecanoromycetes&#39;: 1,
+ &#39;database&#39;: 6,
+ &#39;johnstown&#39;: 1,
+ &#39;celta&#39;: 2,
+ &#39;vaughn&#39;: 1,
+ &#39;gibraltar&#39;: 1,
+ &#39;mitsuki&#39;: 1,
+ &#39;hairy&#39;: 1,
+ &#39;ayeyarwady&#39;: 1,
+ &#39;ordinary&#39;: 2,
+ &#39;bruderschaft&#39;: 1,
+ &#39;operative&#39;: 1,
+ &#39;cocktail&#39;: 1,
+ &#39;tazeh&#39;: 2,
+ &#39;hasanein&#39;: 1,
+ &#39;shortest&#39;: 1,
+ &#39;completed&#39;: 1,
+ &#39;velike&#39;: 1,
+ &#39;celtic&#39;: 3,
+ &#39;darvazeh&#39;: 1,
+ &#39;london&#39;: 40,
+ &#39;myoictis&#39;: 1,
+ &#39;component&#39;: 1,
+ &#39;matilda&#39;: 1,
+ &#39;arabic&#39;: 8,
+ &#39;radomsko&#39;: 1,
+ &#39;pirama&#39;: 1,
+ &#39;baxter&#39;: 1,
+ &#39;gliese&#39;: 2,
+ &#39;cantonese&#39;: 1,
+ &#39;allegro&#39;: 1,
+ &#39;brooks&#39;: 1,
+ &#39;biggest&#39;: 1,
+ &#39;fischli&#39;: 1,
+ &#39;girolamo&#39;: 1,
+ &#39;erksan&#39;: 1,
+ &#39;affairs&#39;: 2,
+ &#39;steamroller&#39;: 1,
+ &#39;contest&#39;: 3,
+ &#39;awarded&#39;: 2,
+ &#39;selling&#39;: 1,
+ &#39;msnbc&#39;: 1,
+ &#39;pequeñas&#39;: 1,
+ &#39;assault&#39;: 1,
+ &#39;police&#39;: 9,
+ &#39;censorship&#39;: 1,
+ &#39;reloaded&#39;: 1,
+ &#39;bušić&#39;: 1,
+ &#39;encyclopædia&#39;: 1,
+ &#39;barbus&#39;: 1,
+ &#39;mobile&#39;: 6,
+ &#39;finishes&#39;: 1,
+ &#39;bills&#39;: 1,
+ &#39;baronetcy&#39;: 1,
+ &#39;kansas&#39;: 9,
+ &#39;drooling&#39;: 1,
+ &#39;philippines&#39;: 5,
+ &#39;seine&#39;: 2,
+ &#39;passing&#39;: 1,
+ &#39;pregnant&#39;: 1,
+ &#39;caspase&#39;: 1,
+ &#39;liverpool&#39;: 1,
+ &#39;green&#39;: 11,
+ &#39;greenhouses&#39;: 1,
+ &#39;princess&#39;: 1,
+ &#39;uttar&#39;: 2,
+ &#39;desmiphora&#39;: 1,
+ &#39;coordinates&#39;: 56,
+ ...}</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Only selecting the top <code>10</code> words from each article speeds up performance quite a bit.</p>
+
+</div>
+</div>
+</div>
+ 
+
+
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = '//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: 'center'," +
+        "    displayIndent: '0em'," +
+        "    showMathMenu: true," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['$','$'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        " linebreaks: { automatic: true, width: '95% container' }, " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'black ! important'} }" +
+        "    } " +
+        "}); ";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="./tag/python.html">python</a>
+    </p>
+  </div>
+
+
+
+
+
+</article>
+
+    <footer>
+<p>&copy;  </p>
+<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Ram Shanker G ",
+  "url" : ".",
+  "image": "",
+  "description": ""
+}
+</script>
+
+</body>
+</html>

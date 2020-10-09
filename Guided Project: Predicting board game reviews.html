@@ -1,0 +1,2089 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="./theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="./theme/pygments/github.min.css">
+  <link rel="stylesheet" type="text/css" href="./theme/font-awesome/css/font-awesome.min.css">
+
+
+    <link href="ramshankerg.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Ram Shanker G Atom">
+
+
+
+
+
+<meta name="author" content="me" />
+<meta name="description" content="Click on read more link to find out more about the project" />
+<meta name="keywords" content="python">
+
+<meta property="og:site_name" content="Ram Shanker G"/>
+<meta property="og:title" content="Guided Project: Predicting board game reviews"/>
+<meta property="og:description" content="Click on read more link to find out more about the project"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="./Guided Project: Predicting board game reviews.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2015-07-08 20:00:00+05:30"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="./author/me.html">
+<meta property="article:section" content="Projects"/>
+<meta property="article:tag" content="python"/>
+<meta property="og:image" content="">
+
+  <title>Ram Shanker G &ndash; Guided Project: Predicting board game reviews</title>
+
+</head>
+<body>
+  <aside>
+    <div>
+      <a href=".">
+        <img src="./theme/img/profile.png" alt="" title="">
+      </a>
+      <h1><a href="."></a></h1>
+
+
+      <nav>
+        <ul class="list">
+          <li><a href="./pages/about-me.html#about-me">About me</a></li>
+
+          <li><a href="http://getpelican.com/" target="_blank">Pelican</a></li>
+          <li><a href="http://python.org/" target="_blank">Python.org</a></li>
+          <li><a href="http://jinja.pocoo.org/" target="_blank">Jinja2</a></li>
+          <li><a href="#" target="_blank">You can modify these links in your config file</a></li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+        <li><a class="sc-GitHub" href="https://github.com/ramshankerg" target="_blank"><i class="fa fa-GitHub"></i></a></li>
+        <li><a class="sc-Linkedin" href="https://www.linkedin.com/in/ram-shanker-g/" target="_blank"><i class="fa fa-Linkedin"></i></a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+
+<article class="single">
+  <header>
+      
+    <h1 id="Guided Project: Predicting board game reviews">Guided Project: Predicting board game reviews</h1>
+    <p>
+          Posted on Wed 08 July 2015 in <a href="./category/projects.html">Projects</a>
+
+
+    </p>
+  </header>
+
+
+  <div>
+    <style type="text/css">/*!
+*
+* IPython notebook
+*
+*/
+/* CSS font colors for translated ANSI escape sequences */
+/* The color values are a mix of
+   http://www.xcolors.net/dl/baskerville-ivorylight and
+   http://www.xcolors.net/dl/euphrasia */
+.ansi-black-fg {
+  color: #3E424D;
+}
+.ansi-black-bg {
+  background-color: #3E424D;
+}
+.ansi-black-intense-fg {
+  color: #282C36;
+}
+.ansi-black-intense-bg {
+  background-color: #282C36;
+}
+.ansi-red-fg {
+  color: #E75C58;
+}
+.ansi-red-bg {
+  background-color: #E75C58;
+}
+.ansi-red-intense-fg {
+  color: #B22B31;
+}
+.ansi-red-intense-bg {
+  background-color: #B22B31;
+}
+.ansi-green-fg {
+  color: #00A250;
+}
+.ansi-green-bg {
+  background-color: #00A250;
+}
+.ansi-green-intense-fg {
+  color: #007427;
+}
+.ansi-green-intense-bg {
+  background-color: #007427;
+}
+.ansi-yellow-fg {
+  color: #DDB62B;
+}
+.ansi-yellow-bg {
+  background-color: #DDB62B;
+}
+.ansi-yellow-intense-fg {
+  color: #B27D12;
+}
+.ansi-yellow-intense-bg {
+  background-color: #B27D12;
+}
+.ansi-blue-fg {
+  color: #208FFB;
+}
+.ansi-blue-bg {
+  background-color: #208FFB;
+}
+.ansi-blue-intense-fg {
+  color: #0065CA;
+}
+.ansi-blue-intense-bg {
+  background-color: #0065CA;
+}
+.ansi-magenta-fg {
+  color: #D160C4;
+}
+.ansi-magenta-bg {
+  background-color: #D160C4;
+}
+.ansi-magenta-intense-fg {
+  color: #A03196;
+}
+.ansi-magenta-intense-bg {
+  background-color: #A03196;
+}
+.ansi-cyan-fg {
+  color: #60C6C8;
+}
+.ansi-cyan-bg {
+  background-color: #60C6C8;
+}
+.ansi-cyan-intense-fg {
+  color: #258F8F;
+}
+.ansi-cyan-intense-bg {
+  background-color: #258F8F;
+}
+.ansi-white-fg {
+  color: #C5C1B4;
+}
+.ansi-white-bg {
+  background-color: #C5C1B4;
+}
+.ansi-white-intense-fg {
+  color: #A1A6B2;
+}
+.ansi-white-intense-bg {
+  background-color: #A1A6B2;
+}
+.ansi-default-inverse-fg {
+  color: #FFFFFF;
+}
+.ansi-default-inverse-bg {
+  background-color: #000000;
+}
+.ansi-bold {
+  font-weight: bold;
+}
+.ansi-underline {
+  text-decoration: underline;
+}
+/* The following styles are deprecated an will be removed in a future version */
+.ansibold {
+  font-weight: bold;
+}
+.ansi-inverse {
+  outline: 0.5px dotted;
+}
+/* use dark versions for foreground, to improve visibility */
+.ansiblack {
+  color: black;
+}
+.ansired {
+  color: darkred;
+}
+.ansigreen {
+  color: darkgreen;
+}
+.ansiyellow {
+  color: #c4a000;
+}
+.ansiblue {
+  color: darkblue;
+}
+.ansipurple {
+  color: darkviolet;
+}
+.ansicyan {
+  color: steelblue;
+}
+.ansigray {
+  color: gray;
+}
+/* and light for background, for the same reason */
+.ansibgblack {
+  background-color: black;
+}
+.ansibgred {
+  background-color: red;
+}
+.ansibggreen {
+  background-color: green;
+}
+.ansibgyellow {
+  background-color: yellow;
+}
+.ansibgblue {
+  background-color: blue;
+}
+.ansibgpurple {
+  background-color: magenta;
+}
+.ansibgcyan {
+  background-color: cyan;
+}
+.ansibggray {
+  background-color: gray;
+}
+div.cell {
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  border-radius: 2px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+  width: 100%;
+  padding: 5px;
+  /* This acts as a spacer between cells, that is outside the border */
+  margin: 0px;
+  outline: none;
+  position: relative;
+  overflow: visible;
+}
+div.cell:before {
+  position: absolute;
+  display: block;
+  top: -1px;
+  left: -1px;
+  width: 5px;
+  height: calc(100% +  2px);
+  content: '';
+  background: transparent;
+}
+div.cell.jupyter-soft-selected {
+  border-left-color: #E3F2FD;
+  border-left-width: 1px;
+  padding-left: 5px;
+  border-right-color: #E3F2FD;
+  border-right-width: 1px;
+  background: #E3F2FD;
+}
+@media print {
+  div.cell.jupyter-soft-selected {
+    border-color: transparent;
+  }
+}
+div.cell.selected,
+div.cell.selected.jupyter-soft-selected {
+  border-color: #ababab;
+}
+div.cell.selected:before,
+div.cell.selected.jupyter-soft-selected:before {
+  position: absolute;
+  display: block;
+  top: -1px;
+  left: -1px;
+  width: 5px;
+  height: calc(100% +  2px);
+  content: '';
+  background: #42A5F5;
+}
+@media print {
+  div.cell.selected,
+  div.cell.selected.jupyter-soft-selected {
+    border-color: transparent;
+  }
+}
+.edit_mode div.cell.selected {
+  border-color: #66BB6A;
+}
+.edit_mode div.cell.selected:before {
+  position: absolute;
+  display: block;
+  top: -1px;
+  left: -1px;
+  width: 5px;
+  height: calc(100% +  2px);
+  content: '';
+  background: #66BB6A;
+}
+@media print {
+  .edit_mode div.cell.selected {
+    border-color: transparent;
+  }
+}
+.prompt {
+  /* This needs to be wide enough for 3 digit prompt numbers: In[100]: */
+  min-width: 14ex;
+  /* This padding is tuned to match the padding on the CodeMirror editor. */
+  padding: 0.4em;
+  margin: 0px;
+  font-family: monospace;
+  text-align: right;
+  /* This has to match that of the the CodeMirror class line-height below */
+  line-height: 1.21429em;
+  /* Don't highlight prompt number selection */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  /* Use default cursor */
+  cursor: default;
+}
+@media (max-width: 540px) {
+  .prompt {
+    text-align: left;
+  }
+}
+div.inner_cell {
+  min-width: 0;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  /* Old browsers */
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  /* Modern browsers */
+  flex: 1;
+}
+/* input_area and input_prompt must match in top border and margin for alignment */
+div.input_area {
+  border: 1px solid #cfcfcf;
+  border-radius: 2px;
+  background: #f7f7f7;
+  line-height: 1.21429em;
+}
+/* This is needed so that empty prompt areas can collapse to zero height when there
+   is no content in the output_subarea and the prompt. The main purpose of this is
+   to make sure that empty JavaScript output_subareas have no height. */
+div.prompt:empty {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+div.unrecognized_cell {
+  padding: 5px 5px 5px 0px;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: horizontal;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+div.unrecognized_cell .inner_cell {
+  border-radius: 2px;
+  padding: 5px;
+  font-weight: bold;
+  color: red;
+  border: 1px solid #cfcfcf;
+  background: #eaeaea;
+}
+div.unrecognized_cell .inner_cell a {
+  color: inherit;
+  text-decoration: none;
+}
+div.unrecognized_cell .inner_cell a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+@media (max-width: 540px) {
+  div.unrecognized_cell > div.prompt {
+    display: none;
+  }
+}
+div.code_cell {
+  /* avoid page breaking on code cells when printing */
+}
+@media print {
+  div.code_cell {
+    page-break-inside: avoid;
+  }
+}
+/* any special styling for code cells that are currently running goes here */
+div.input {
+  page-break-inside: avoid;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: horizontal;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+@media (max-width: 540px) {
+  div.input {
+    /* Old browsers */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-align: stretch;
+    display: -moz-box;
+    -moz-box-orient: vertical;
+    -moz-box-align: stretch;
+    display: box;
+    box-orient: vertical;
+    box-align: stretch;
+    /* Modern browsers */
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+/* input_area and input_prompt must match in top border and margin for alignment */
+div.input_prompt {
+  color: #303F9F;
+  border-top: 1px solid transparent;
+}
+div.input_area > div.highlight {
+  margin: 0.4em;
+  border: none;
+  padding: 0px;
+  background-color: transparent;
+}
+div.input_area > div.highlight > pre {
+  margin: 0px;
+  border: none;
+  padding: 0px;
+  background-color: transparent;
+}
+/* The following gets added to the <head> if it is detected that the user has a
+ * monospace font with inconsistent normal/bold/italic height.  See
+ * notebookmain.js.  Such fonts will have keywords vertically offset with
+ * respect to the rest of the text.  The user should select a better font.
+ * See: https://github.com/ipython/ipython/issues/1503
+ *
+ * .CodeMirror span {
+ *      vertical-align: bottom;
+ * }
+ */
+.CodeMirror {
+  line-height: 1.21429em;
+  /* Changed from 1em to our global default */
+  font-size: 14px;
+  height: auto;
+  /* Changed to auto to autogrow */
+  background: none;
+  /* Changed from white to allow our bg to show through */
+}
+.CodeMirror-scroll {
+  /*  The CodeMirror docs are a bit fuzzy on if overflow-y should be hidden or visible.*/
+  /*  We have found that if it is visible, vertical scrollbars appear with font size changes.*/
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+.CodeMirror-lines {
+  /* In CM2, this used to be 0.4em, but in CM3 it went to 4px. We need the em value because */
+  /* we have set a different line-height and want this to scale with that. */
+  /* Note that this should set vertical padding only, since CodeMirror assumes
+       that horizontal padding will be set on CodeMirror pre */
+  padding: 0.4em 0;
+}
+.CodeMirror-linenumber {
+  padding: 0 8px 0 4px;
+}
+.CodeMirror-gutters {
+  border-bottom-left-radius: 2px;
+  border-top-left-radius: 2px;
+}
+.CodeMirror pre {
+  /* In CM3 this went to 4px from 0 in CM2. This sets horizontal padding only,
+    use .CodeMirror-lines for vertical */
+  padding: 0 0.4em;
+  border: 0;
+  border-radius: 0;
+}
+.CodeMirror-cursor {
+  border-left: 1.4px solid black;
+}
+@media screen and (min-width: 2138px) and (max-width: 4319px) {
+  .CodeMirror-cursor {
+    border-left: 2px solid black;
+  }
+}
+@media screen and (min-width: 4320px) {
+  .CodeMirror-cursor {
+    border-left: 4px solid black;
+  }
+}
+/*
+
+Original style from softwaremaniacs.org (c) Ivan Sagalaev <Maniac@SoftwareManiacs.Org>
+Adapted from GitHub theme
+
+*/
+.highlight-base {
+  color: #000;
+}
+.highlight-variable {
+  color: #000;
+}
+.highlight-variable-2 {
+  color: #1a1a1a;
+}
+.highlight-variable-3 {
+  color: #333333;
+}
+.highlight-string {
+  color: #BA2121;
+}
+.highlight-comment {
+  color: #408080;
+  font-style: italic;
+}
+.highlight-number {
+  color: #080;
+}
+.highlight-atom {
+  color: #88F;
+}
+.highlight-keyword {
+  color: #008000;
+  font-weight: bold;
+}
+.highlight-builtin {
+  color: #008000;
+}
+.highlight-error {
+  color: #f00;
+}
+.highlight-operator {
+  color: #AA22FF;
+  font-weight: bold;
+}
+.highlight-meta {
+  color: #AA22FF;
+}
+/* previously not defined, copying from default codemirror */
+.highlight-def {
+  color: #00f;
+}
+.highlight-string-2 {
+  color: #f50;
+}
+.highlight-qualifier {
+  color: #555;
+}
+.highlight-bracket {
+  color: #997;
+}
+.highlight-tag {
+  color: #170;
+}
+.highlight-attribute {
+  color: #00c;
+}
+.highlight-header {
+  color: blue;
+}
+.highlight-quote {
+  color: #090;
+}
+.highlight-link {
+  color: #00c;
+}
+/* apply the same style to codemirror */
+.cm-s-ipython span.cm-keyword {
+  color: #008000;
+  font-weight: bold;
+}
+.cm-s-ipython span.cm-atom {
+  color: #88F;
+}
+.cm-s-ipython span.cm-number {
+  color: #080;
+}
+.cm-s-ipython span.cm-def {
+  color: #00f;
+}
+.cm-s-ipython span.cm-variable {
+  color: #000;
+}
+.cm-s-ipython span.cm-operator {
+  color: #AA22FF;
+  font-weight: bold;
+}
+.cm-s-ipython span.cm-variable-2 {
+  color: #1a1a1a;
+}
+.cm-s-ipython span.cm-variable-3 {
+  color: #333333;
+}
+.cm-s-ipython span.cm-comment {
+  color: #408080;
+  font-style: italic;
+}
+.cm-s-ipython span.cm-string {
+  color: #BA2121;
+}
+.cm-s-ipython span.cm-string-2 {
+  color: #f50;
+}
+.cm-s-ipython span.cm-meta {
+  color: #AA22FF;
+}
+.cm-s-ipython span.cm-qualifier {
+  color: #555;
+}
+.cm-s-ipython span.cm-builtin {
+  color: #008000;
+}
+.cm-s-ipython span.cm-bracket {
+  color: #997;
+}
+.cm-s-ipython span.cm-tag {
+  color: #170;
+}
+.cm-s-ipython span.cm-attribute {
+  color: #00c;
+}
+.cm-s-ipython span.cm-header {
+  color: blue;
+}
+.cm-s-ipython span.cm-quote {
+  color: #090;
+}
+.cm-s-ipython span.cm-link {
+  color: #00c;
+}
+.cm-s-ipython span.cm-error {
+  color: #f00;
+}
+.cm-s-ipython span.cm-tab {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAMCAYAAAAkuj5RAAAAAXNSR0IArs4c6QAAAGFJREFUSMft1LsRQFAQheHPowAKoACx3IgEKtaEHujDjORSgWTH/ZOdnZOcM/sgk/kFFWY0qV8foQwS4MKBCS3qR6ixBJvElOobYAtivseIE120FaowJPN75GMu8j/LfMwNjh4HUpwg4LUAAAAASUVORK5CYII=);
+  background-position: right;
+  background-repeat: no-repeat;
+}
+div.output_wrapper {
+  /* this position must be relative to enable descendents to be absolute within it */
+  position: relative;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  z-index: 1;
+}
+/* class for the output area when it should be height-limited */
+div.output_scroll {
+  /* ideally, this would be max-height, but FF barfs all over that */
+  height: 24em;
+  /* FF needs this *and the wrapper* to specify full width, or it will shrinkwrap */
+  width: 100%;
+  overflow: auto;
+  border-radius: 2px;
+  -webkit-box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.8);
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.8);
+  display: block;
+}
+/* output div while it is collapsed */
+div.output_collapsed {
+  margin: 0px;
+  padding: 0px;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+div.out_prompt_overlay {
+  height: 100%;
+  padding: 0px 0.4em;
+  position: absolute;
+  border-radius: 2px;
+}
+div.out_prompt_overlay:hover {
+  /* use inner shadow to get border that is computed the same on WebKit/FF */
+  -webkit-box-shadow: inset 0 0 1px #000;
+  box-shadow: inset 0 0 1px #000;
+  background: rgba(240, 240, 240, 0.5);
+}
+div.output_prompt {
+  color: #D84315;
+}
+/* This class is the outer container of all output sections. */
+div.output_area {
+  padding: 0px;
+  page-break-inside: avoid;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: horizontal;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+div.output_area .MathJax_Display {
+  text-align: left !important;
+}
+div.output_area 
+div.output_area 
+div.output_area img,
+div.output_area svg {
+  max-width: 100%;
+  height: auto;
+}
+div.output_area img.unconfined,
+div.output_area svg.unconfined {
+  max-width: none;
+}
+div.output_area .mglyph > img {
+  max-width: none;
+}
+/* This is needed to protect the pre formating from global settings such
+   as that of bootstrap */
+.output {
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+@media (max-width: 540px) {
+  div.output_area {
+    /* Old browsers */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-align: stretch;
+    display: -moz-box;
+    -moz-box-orient: vertical;
+    -moz-box-align: stretch;
+    display: box;
+    box-orient: vertical;
+    box-align: stretch;
+    /* Modern browsers */
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+div.output_area pre {
+  margin: 0;
+  padding: 1px 0 1px 0;
+  border: 0;
+  vertical-align: baseline;
+  color: black;
+  background-color: transparent;
+  border-radius: 0;
+}
+/* This class is for the output subarea inside the output_area and after
+   the prompt div. */
+div.output_subarea {
+  overflow-x: auto;
+  padding: 0.4em;
+  /* Old browsers */
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  /* Modern browsers */
+  flex: 1;
+  max-width: calc(100% - 14ex);
+}
+div.output_scroll div.output_subarea {
+  overflow-x: visible;
+}
+/* The rest of the output_* classes are for special styling of the different
+   output types */
+/* all text output has this class: */
+div.output_text {
+  text-align: left;
+  color: #000;
+  /* This has to match that of the the CodeMirror class line-height below */
+  line-height: 1.21429em;
+}
+/* stdout/stderr are 'text' as well as 'stream', but execute_result/error are *not* streams */
+div.output_stderr {
+  background: #fdd;
+  /* very light red background for stderr */
+}
+div.output_latex {
+  text-align: left;
+}
+/* Empty output_javascript divs should have no height */
+div.output_javascript:empty {
+  padding: 0;
+}
+.js-error {
+  color: darkred;
+}
+/* raw_input styles */
+div.raw_input_container {
+  line-height: 1.21429em;
+  padding-top: 5px;
+}
+pre.raw_input_prompt {
+  /* nothing needed here. */
+}
+input.raw_input {
+  font-family: monospace;
+  font-size: inherit;
+  color: inherit;
+  width: auto;
+  /* make sure input baseline aligns with prompt */
+  vertical-align: baseline;
+  /* padding + margin = 0.5em between prompt and cursor */
+  padding: 0em 0.25em;
+  margin: 0em 0.25em;
+}
+input.raw_input:focus {
+  box-shadow: none;
+}
+p.p-space {
+  margin-bottom: 10px;
+}
+div.output_unrecognized {
+  padding: 5px;
+  font-weight: bold;
+  color: red;
+}
+div.output_unrecognized a {
+  color: inherit;
+  text-decoration: none;
+}
+div.output_unrecognized a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+.rendered_html {
+  color: #000;
+  /* any extras will just be numbers: */
+}
+
+
+
+.rendered_html :link {
+  text-decoration: underline;
+}
+.rendered_html :visited {
+  text-decoration: underline;
+}
+
+
+
+
+
+
+.rendered_html h1:first-child {
+  margin-top: 0.538em;
+}
+.rendered_html h2:first-child {
+  margin-top: 0.636em;
+}
+.rendered_html h3:first-child {
+  margin-top: 0.777em;
+}
+.rendered_html h4:first-child {
+  margin-top: 1em;
+}
+.rendered_html h5:first-child {
+  margin-top: 1em;
+}
+.rendered_html h6:first-child {
+  margin-top: 1em;
+}
+.rendered_html ul:not(.list-inline),
+.rendered_html ol:not(.list-inline) {
+  padding-left: 2em;
+}
+
+
+
+
+
+
+
+
+.rendered_html * + ul {
+  margin-top: 1em;
+}
+.rendered_html * + ol {
+  margin-top: 1em;
+}
+
+
+
+
+
+.rendered_html pre,
+
+
+
+
+.rendered_html tr,
+.rendered_html th,
+
+
+.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
+}
+.rendered_html * + table {
+  margin-top: 1em;
+}
+
+.rendered_html * + p {
+  margin-top: 1em;
+}
+
+.rendered_html * + img {
+  margin-top: 1em;
+}
+.rendered_html img,
+
+.rendered_html img.unconfined,
+
+
+.rendered_html * + .alert {
+  margin-top: 1em;
+}
+[dir="rtl"] 
+div.text_cell {
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: horizontal;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+@media (max-width: 540px) {
+  div.text_cell > div.prompt {
+    display: none;
+  }
+}
+div.text_cell_render {
+  /*font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;*/
+  outline: none;
+  resize: none;
+  width: inherit;
+  border-style: none;
+  padding: 0.5em 0.5em 0.5em 0.4em;
+  color: #000;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+a.anchor-link:link {
+  text-decoration: none;
+  padding: 0px 20px;
+  visibility: hidden;
+}
+h1:hover .anchor-link,
+h2:hover .anchor-link,
+h3:hover .anchor-link,
+h4:hover .anchor-link,
+h5:hover .anchor-link,
+h6:hover .anchor-link {
+  visibility: visible;
+}
+.text_cell.rendered .input_area {
+  display: none;
+}
+.text_cell.rendered 
+.text_cell.rendered .rendered_html tr,
+.text_cell.rendered .rendered_html th,
+.text_cell.rendered 
+.text_cell.unrendered .text_cell_render {
+  display: none;
+}
+.text_cell .dropzone .input_area {
+  border: 2px dashed #bababa;
+  margin: -1px;
+}
+.cm-header-1,
+.cm-header-2,
+.cm-header-3,
+.cm-header-4,
+.cm-header-5,
+.cm-header-6 {
+  font-weight: bold;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.cm-header-1 {
+  font-size: 185.7%;
+}
+.cm-header-2 {
+  font-size: 157.1%;
+}
+.cm-header-3 {
+  font-size: 128.6%;
+}
+.cm-header-4 {
+  font-size: 110%;
+}
+.cm-header-5 {
+  font-size: 100%;
+  font-style: italic;
+}
+.cm-header-6 {
+  font-size: 100%;
+  font-style: italic;
+}
+</style>
+<style type="text/css">.highlight .hll { background-color: #ffffcc }
+.highlight  { background: #f8f8f8; }
+.highlight .c { color: #408080; font-style: italic } /* Comment */
+.highlight .err { border: 1px solid #FF0000 } /* Error */
+.highlight .k { color: #008000; font-weight: bold } /* Keyword */
+.highlight .o { color: #666666 } /* Operator */
+.highlight .ch { color: #408080; font-style: italic } /* Comment.Hashbang */
+.highlight .cm { color: #408080; font-style: italic } /* Comment.Multiline */
+.highlight .cp { color: #BC7A00 } /* Comment.Preproc */
+.highlight .cpf { color: #408080; font-style: italic } /* Comment.PreprocFile */
+.highlight .c1 { color: #408080; font-style: italic } /* Comment.Single */
+.highlight .cs { color: #408080; font-style: italic } /* Comment.Special */
+.highlight .gd { color: #A00000 } /* Generic.Deleted */
+.highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .gr { color: #FF0000 } /* Generic.Error */
+.highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.highlight .gi { color: #00A000 } /* Generic.Inserted */
+.highlight .go { color: #888888 } /* Generic.Output */
+.highlight .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+.highlight .gs { font-weight: bold } /* Generic.Strong */
+.highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.highlight .gt { color: #0044DD } /* Generic.Traceback */
+.highlight .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+.highlight .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+.highlight .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+.highlight .kp { color: #008000 } /* Keyword.Pseudo */
+.highlight .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+.highlight .kt { color: #B00040 } /* Keyword.Type */
+.highlight .m { color: #666666 } /* Literal.Number */
+.highlight .s { color: #BA2121 } /* Literal.String */
+.highlight .na { color: #7D9029 } /* Name.Attribute */
+.highlight .nb { color: #008000 } /* Name.Builtin */
+.highlight .nc { color: #0000FF; font-weight: bold } /* Name.Class */
+.highlight .no { color: #880000 } /* Name.Constant */
+.highlight .nd { color: #AA22FF } /* Name.Decorator */
+.highlight .ni { color: #999999; font-weight: bold } /* Name.Entity */
+.highlight .ne { color: #D2413A; font-weight: bold } /* Name.Exception */
+.highlight .nf { color: #0000FF } /* Name.Function */
+.highlight .nl { color: #A0A000 } /* Name.Label */
+.highlight .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+.highlight .nt { color: #008000; font-weight: bold } /* Name.Tag */
+.highlight .nv { color: #19177C } /* Name.Variable */
+.highlight .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+.highlight .w { color: #bbbbbb } /* Text.Whitespace */
+.highlight .mb { color: #666666 } /* Literal.Number.Bin */
+.highlight .mf { color: #666666 } /* Literal.Number.Float */
+.highlight .mh { color: #666666 } /* Literal.Number.Hex */
+.highlight .mi { color: #666666 } /* Literal.Number.Integer */
+.highlight .mo { color: #666666 } /* Literal.Number.Oct */
+.highlight .sa { color: #BA2121 } /* Literal.String.Affix */
+.highlight .sb { color: #BA2121 } /* Literal.String.Backtick */
+.highlight .sc { color: #BA2121 } /* Literal.String.Char */
+.highlight .dl { color: #BA2121 } /* Literal.String.Delimiter */
+.highlight .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+.highlight .s2 { color: #BA2121 } /* Literal.String.Double */
+.highlight .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
+.highlight .sh { color: #BA2121 } /* Literal.String.Heredoc */
+.highlight .si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
+.highlight .sx { color: #008000 } /* Literal.String.Other */
+.highlight .sr { color: #BB6688 } /* Literal.String.Regex */
+.highlight .s1 { color: #BA2121 } /* Literal.String.Single */
+.highlight .ss { color: #19177C } /* Literal.String.Symbol */
+.highlight .bp { color: #008000 } /* Name.Builtin.Pseudo */
+.highlight .fm { color: #0000FF } /* Name.Function.Magic */
+.highlight .vc { color: #19177C } /* Name.Variable.Class */
+.highlight .vg { color: #19177C } /* Name.Variable.Global */
+.highlight .vi { color: #19177C } /* Name.Variable.Instance */
+.highlight .vm { color: #19177C } /* Name.Variable.Magic */
+.highlight .il { color: #666666 } /* Literal.Number.Integer.Long */</style><div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span>
+
+<span class="n">board_games</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;board_games.csv&quot;</span><span class="p">)</span>
+<span class="n">board_games</span> <span class="o">=</span> <span class="n">board_games</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">board_games</span> <span class="o">=</span> <span class="n">board_games</span><span class="p">[</span><span class="n">board_games</span><span class="p">[</span><span class="s2">&quot;users_rated&quot;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">]</span>
+
+<span class="n">board_games</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[3]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div style="max-height:1000px;max-width:1500px;overflow:auto;">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>type</th>
+      <th>name</th>
+      <th>yearpublished</th>
+      <th>minplayers</th>
+      <th>maxplayers</th>
+      <th>playingtime</th>
+      <th>minplaytime</th>
+      <th>maxplaytime</th>
+      <th>minage</th>
+      <th>users_rated</th>
+      <th>average_rating</th>
+      <th>bayes_average_rating</th>
+      <th>total_owners</th>
+      <th>total_traders</th>
+      <th>total_wanters</th>
+      <th>total_wishers</th>
+      <th>total_comments</th>
+      <th>total_weights</th>
+      <th>average_weight</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>12333</td>
+      <td>boardgame</td>
+      <td>Twilight Struggle</td>
+      <td>2005</td>
+      <td>2</td>
+      <td>2</td>
+      <td>180</td>
+      <td>180</td>
+      <td>180</td>
+      <td>13</td>
+      <td>20113</td>
+      <td>8.33774</td>
+      <td>8.22186</td>
+      <td>26647</td>
+      <td>372</td>
+      <td>1219</td>
+      <td>5865</td>
+      <td>5347</td>
+      <td>2562</td>
+      <td>3.4785</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>120677</td>
+      <td>boardgame</td>
+      <td>Terra Mystica</td>
+      <td>2012</td>
+      <td>2</td>
+      <td>5</td>
+      <td>150</td>
+      <td>60</td>
+      <td>150</td>
+      <td>12</td>
+      <td>14383</td>
+      <td>8.28798</td>
+      <td>8.14232</td>
+      <td>16519</td>
+      <td>132</td>
+      <td>1586</td>
+      <td>6277</td>
+      <td>2526</td>
+      <td>1423</td>
+      <td>3.8939</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>102794</td>
+      <td>boardgame</td>
+      <td>Caverna: The Cave Farmers</td>
+      <td>2013</td>
+      <td>1</td>
+      <td>7</td>
+      <td>210</td>
+      <td>30</td>
+      <td>210</td>
+      <td>12</td>
+      <td>9262</td>
+      <td>8.28994</td>
+      <td>8.06886</td>
+      <td>12230</td>
+      <td>99</td>
+      <td>1476</td>
+      <td>5600</td>
+      <td>1700</td>
+      <td>777</td>
+      <td>3.7761</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>25613</td>
+      <td>boardgame</td>
+      <td>Through the Ages: A Story of Civilization</td>
+      <td>2006</td>
+      <td>2</td>
+      <td>4</td>
+      <td>240</td>
+      <td>240</td>
+      <td>240</td>
+      <td>12</td>
+      <td>13294</td>
+      <td>8.20407</td>
+      <td>8.05804</td>
+      <td>14343</td>
+      <td>362</td>
+      <td>1084</td>
+      <td>5075</td>
+      <td>3378</td>
+      <td>1642</td>
+      <td>4.1590</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>3076</td>
+      <td>boardgame</td>
+      <td>Puerto Rico</td>
+      <td>2002</td>
+      <td>2</td>
+      <td>5</td>
+      <td>150</td>
+      <td>90</td>
+      <td>150</td>
+      <td>12</td>
+      <td>39883</td>
+      <td>8.14261</td>
+      <td>8.04524</td>
+      <td>44362</td>
+      <td>795</td>
+      <td>861</td>
+      <td>5414</td>
+      <td>9173</td>
+      <td>5213</td>
+      <td>3.2943</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">board_games</span><span class="p">[</span><span class="s2">&quot;average_rating&quot;</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[4]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(array([   602.,   1231.,   2824.,   5206.,   8223.,  13593.,  13849.,
+          8470.,   2224.,    672.]),
+ array([  1. ,   1.9,   2.8,   3.7,   4.6,   5.5,   6.4,   7.3,   8.2,
+          9.1,  10. ]),
+ &lt;a list of 10 Patch objects&gt;)</pre>
+</div>
+
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">board_games</span><span class="p">[</span><span class="s2">&quot;average_rating&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">board_games</span><span class="p">[</span><span class="s2">&quot;average_rating&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1.57882993483
+6.01611284933
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Error-metric">Error metric<a class="anchor-link" href="#Error-metric">&#182;</a></h2><p>In this data set, using mean squared error as an error metric makes sense.  This is because the data is continuous, and follows a somewhat normal distribution.  We'll be able to compare our error to the standard deviation to see how good the model is at predictions.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.cluster</span> <span class="kn">import</span> <span class="n">KMeans</span>
+
+<span class="n">clus</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">cols</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">board_games</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
+<span class="n">cols</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">)</span>
+<span class="n">cols</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s2">&quot;id&quot;</span><span class="p">)</span>
+<span class="n">cols</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s2">&quot;type&quot;</span><span class="p">)</span>
+<span class="n">numeric</span> <span class="o">=</span> <span class="n">board_games</span><span class="p">[</span><span class="n">cols</span><span class="p">]</span>
+
+<span class="n">clus</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">numeric</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[39]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>KMeans(copy_x=True, init=&#39;k-means++&#39;, max_iter=300, n_clusters=5, n_init=10,
+    n_jobs=1, precompute_distances=True, random_state=None, tol=0.0001,
+    verbose=0)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span>
+<span class="n">game_mean</span> <span class="o">=</span> <span class="n">numeric</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">numpy</span><span class="o">.</span><span class="n">mean</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">game_std</span> <span class="o">=</span> <span class="n">numeric</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">numpy</span><span class="o">.</span><span class="n">std</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">labels</span> <span class="o">=</span> <span class="n">clus</span><span class="o">.</span><span class="n">labels_</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">game_mean</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">game_std</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">labels</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[27]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&lt;matplotlib.collections.PathCollection at 0x10b5516d8&gt;</pre>
+</div>
+
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+nCvI/wPHlKEPLEczaAAAAABJRU5ErkJggg==
+"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Game-clusters">Game clusters<a class="anchor-link" href="#Game-clusters">&#182;</a></h2><p>It looks like most of the games are similar, but as the game attributes tend to increase in value (such as number of users who rated), there are fewer high quality games.  So most games don't get played much, but a few get a lot of players.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">correlations</span> <span class="o">=</span> <span class="n">numeric</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
+
+<span class="n">correlations</span><span class="p">[</span><span class="s2">&quot;average_rating&quot;</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[29]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>yearpublished           0.108461
+minplayers             -0.032701
+maxplayers             -0.008335
+playingtime             0.048994
+minplaytime             0.043985
+maxplaytime             0.048994
+minage                  0.210049
+users_rated             0.112564
+average_rating          1.000000
+bayes_average_rating    0.231563
+total_owners            0.137478
+total_traders           0.119452
+total_wanters           0.196566
+total_wishers           0.171375
+total_comments          0.123714
+total_weights           0.109691
+average_weight          0.351081
+Name: average_rating, dtype: float64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Correlations">Correlations<a class="anchor-link" href="#Correlations">&#182;</a></h2><p>The <code>yearpublished</code> column is surprisingly highly correlated with <code>average_rating</code>, showing that more recent games tend to be rated more highly.  Games for older players (<code>minage</code> is high) tend to be more highly rated.  The more "weighty" a game is (<code>average_weight</code> is high), the more highly it tends to be rated.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LinearRegression</span>
+
+<span class="n">reg</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span>
+<span class="n">cols</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s2">&quot;average_rating&quot;</span><span class="p">)</span>
+<span class="n">cols</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s2">&quot;bayes_average_rating&quot;</span><span class="p">)</span>
+<span class="n">reg</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">board_games</span><span class="p">[</span><span class="n">cols</span><span class="p">],</span> <span class="n">board_games</span><span class="p">[</span><span class="s2">&quot;average_rating&quot;</span><span class="p">])</span>
+<span class="n">predictions</span> <span class="o">=</span> <span class="n">reg</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">board_games</span><span class="p">[</span><span class="n">cols</span><span class="p">])</span>
+
+<span class="n">numpy</span><span class="o">.</span><span class="n">mean</span><span class="p">((</span><span class="n">predictions</span> <span class="o">-</span> <span class="n">board_games</span><span class="p">[</span><span class="s2">&quot;average_rating&quot;</span><span class="p">])</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[40]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>2.0933969758339361</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Game-clusters">Game clusters<a class="anchor-link" href="#Game-clusters">&#182;</a></h2><p>The error rate is close to the standard deviation of all board game ratings.  This indicates that our model may not have high predictive power.  We'll need to dig more into which games were scored well, and which ones weren't.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+ 
+
+
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = '//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: 'center'," +
+        "    displayIndent: '0em'," +
+        "    showMathMenu: true," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['$','$'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        " linebreaks: { automatic: true, width: '95% container' }, " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'black ! important'} }" +
+        "    } " +
+        "}); ";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="./tag/python.html">python</a>
+    </p>
+  </div>
+
+
+
+
+
+</article>
+
+    <footer>
+<p>&copy;  </p>
+<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Ram Shanker G ",
+  "url" : ".",
+  "image": "",
+  "description": ""
+}
+</script>
+
+</body>
+</html>

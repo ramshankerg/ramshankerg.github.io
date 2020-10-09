@@ -1,0 +1,4165 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="./theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="./theme/pygments/github.min.css">
+  <link rel="stylesheet" type="text/css" href="./theme/font-awesome/css/font-awesome.min.css">
+
+
+    <link href="ramshankerg.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Ram Shanker G Atom">
+
+
+
+
+
+<meta name="author" content="me" />
+<meta name="description" content="Click on read more link to find out more about the project" />
+<meta name="keywords" content="python">
+
+<meta property="og:site_name" content="Ram Shanker G"/>
+<meta property="og:title" content="Guided Project: Clean and Analyze Employee Exit Surveys"/>
+<meta property="og:description" content="Click on read more link to find out more about the project"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="./Guided Project: Clean and Analyze Employee Exit Surveys.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2015-07-08 20:00:00+05:30"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="./author/me.html">
+<meta property="article:section" content="Projects"/>
+<meta property="article:tag" content="python"/>
+<meta property="og:image" content="">
+
+  <title>Ram Shanker G &ndash; Guided Project: Clean and Analyze Employee Exit Surveys</title>
+
+</head>
+<body>
+  <aside>
+    <div>
+      <a href=".">
+        <img src="./theme/img/profile.png" alt="" title="">
+      </a>
+      <h1><a href="."></a></h1>
+
+
+      <nav>
+        <ul class="list">
+          <li><a href="./pages/about-me.html#about-me">About me</a></li>
+
+          <li><a href="http://getpelican.com/" target="_blank">Pelican</a></li>
+          <li><a href="http://python.org/" target="_blank">Python.org</a></li>
+          <li><a href="http://jinja.pocoo.org/" target="_blank">Jinja2</a></li>
+          <li><a href="#" target="_blank">You can modify these links in your config file</a></li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+        <li><a class="sc-GitHub" href="https://github.com/ramshankerg" target="_blank"><i class="fa fa-GitHub"></i></a></li>
+        <li><a class="sc-Linkedin" href="https://www.linkedin.com/in/ram-shanker-g/" target="_blank"><i class="fa fa-Linkedin"></i></a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+
+<article class="single">
+  <header>
+      
+    <h1 id="Guided Project: Clean and Analyze Employee Exit Surveys">Guided Project: Clean and Analyze Employee Exit Surveys</h1>
+    <p>
+          Posted on Wed 08 July 2015 in <a href="./category/projects.html">Projects</a>
+
+
+    </p>
+  </header>
+
+
+  <div>
+    <style type="text/css">/*!
+*
+* IPython notebook
+*
+*/
+/* CSS font colors for translated ANSI escape sequences */
+/* The color values are a mix of
+   http://www.xcolors.net/dl/baskerville-ivorylight and
+   http://www.xcolors.net/dl/euphrasia */
+.ansi-black-fg {
+  color: #3E424D;
+}
+.ansi-black-bg {
+  background-color: #3E424D;
+}
+.ansi-black-intense-fg {
+  color: #282C36;
+}
+.ansi-black-intense-bg {
+  background-color: #282C36;
+}
+.ansi-red-fg {
+  color: #E75C58;
+}
+.ansi-red-bg {
+  background-color: #E75C58;
+}
+.ansi-red-intense-fg {
+  color: #B22B31;
+}
+.ansi-red-intense-bg {
+  background-color: #B22B31;
+}
+.ansi-green-fg {
+  color: #00A250;
+}
+.ansi-green-bg {
+  background-color: #00A250;
+}
+.ansi-green-intense-fg {
+  color: #007427;
+}
+.ansi-green-intense-bg {
+  background-color: #007427;
+}
+.ansi-yellow-fg {
+  color: #DDB62B;
+}
+.ansi-yellow-bg {
+  background-color: #DDB62B;
+}
+.ansi-yellow-intense-fg {
+  color: #B27D12;
+}
+.ansi-yellow-intense-bg {
+  background-color: #B27D12;
+}
+.ansi-blue-fg {
+  color: #208FFB;
+}
+.ansi-blue-bg {
+  background-color: #208FFB;
+}
+.ansi-blue-intense-fg {
+  color: #0065CA;
+}
+.ansi-blue-intense-bg {
+  background-color: #0065CA;
+}
+.ansi-magenta-fg {
+  color: #D160C4;
+}
+.ansi-magenta-bg {
+  background-color: #D160C4;
+}
+.ansi-magenta-intense-fg {
+  color: #A03196;
+}
+.ansi-magenta-intense-bg {
+  background-color: #A03196;
+}
+.ansi-cyan-fg {
+  color: #60C6C8;
+}
+.ansi-cyan-bg {
+  background-color: #60C6C8;
+}
+.ansi-cyan-intense-fg {
+  color: #258F8F;
+}
+.ansi-cyan-intense-bg {
+  background-color: #258F8F;
+}
+.ansi-white-fg {
+  color: #C5C1B4;
+}
+.ansi-white-bg {
+  background-color: #C5C1B4;
+}
+.ansi-white-intense-fg {
+  color: #A1A6B2;
+}
+.ansi-white-intense-bg {
+  background-color: #A1A6B2;
+}
+.ansi-default-inverse-fg {
+  color: #FFFFFF;
+}
+.ansi-default-inverse-bg {
+  background-color: #000000;
+}
+.ansi-bold {
+  font-weight: bold;
+}
+.ansi-underline {
+  text-decoration: underline;
+}
+/* The following styles are deprecated an will be removed in a future version */
+.ansibold {
+  font-weight: bold;
+}
+.ansi-inverse {
+  outline: 0.5px dotted;
+}
+/* use dark versions for foreground, to improve visibility */
+.ansiblack {
+  color: black;
+}
+.ansired {
+  color: darkred;
+}
+.ansigreen {
+  color: darkgreen;
+}
+.ansiyellow {
+  color: #c4a000;
+}
+.ansiblue {
+  color: darkblue;
+}
+.ansipurple {
+  color: darkviolet;
+}
+.ansicyan {
+  color: steelblue;
+}
+.ansigray {
+  color: gray;
+}
+/* and light for background, for the same reason */
+.ansibgblack {
+  background-color: black;
+}
+.ansibgred {
+  background-color: red;
+}
+.ansibggreen {
+  background-color: green;
+}
+.ansibgyellow {
+  background-color: yellow;
+}
+.ansibgblue {
+  background-color: blue;
+}
+.ansibgpurple {
+  background-color: magenta;
+}
+.ansibgcyan {
+  background-color: cyan;
+}
+.ansibggray {
+  background-color: gray;
+}
+div.cell {
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  border-radius: 2px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+  width: 100%;
+  padding: 5px;
+  /* This acts as a spacer between cells, that is outside the border */
+  margin: 0px;
+  outline: none;
+  position: relative;
+  overflow: visible;
+}
+div.cell:before {
+  position: absolute;
+  display: block;
+  top: -1px;
+  left: -1px;
+  width: 5px;
+  height: calc(100% +  2px);
+  content: '';
+  background: transparent;
+}
+div.cell.jupyter-soft-selected {
+  border-left-color: #E3F2FD;
+  border-left-width: 1px;
+  padding-left: 5px;
+  border-right-color: #E3F2FD;
+  border-right-width: 1px;
+  background: #E3F2FD;
+}
+@media print {
+  div.cell.jupyter-soft-selected {
+    border-color: transparent;
+  }
+}
+div.cell.selected,
+div.cell.selected.jupyter-soft-selected {
+  border-color: #ababab;
+}
+div.cell.selected:before,
+div.cell.selected.jupyter-soft-selected:before {
+  position: absolute;
+  display: block;
+  top: -1px;
+  left: -1px;
+  width: 5px;
+  height: calc(100% +  2px);
+  content: '';
+  background: #42A5F5;
+}
+@media print {
+  div.cell.selected,
+  div.cell.selected.jupyter-soft-selected {
+    border-color: transparent;
+  }
+}
+.edit_mode div.cell.selected {
+  border-color: #66BB6A;
+}
+.edit_mode div.cell.selected:before {
+  position: absolute;
+  display: block;
+  top: -1px;
+  left: -1px;
+  width: 5px;
+  height: calc(100% +  2px);
+  content: '';
+  background: #66BB6A;
+}
+@media print {
+  .edit_mode div.cell.selected {
+    border-color: transparent;
+  }
+}
+.prompt {
+  /* This needs to be wide enough for 3 digit prompt numbers: In[100]: */
+  min-width: 14ex;
+  /* This padding is tuned to match the padding on the CodeMirror editor. */
+  padding: 0.4em;
+  margin: 0px;
+  font-family: monospace;
+  text-align: right;
+  /* This has to match that of the the CodeMirror class line-height below */
+  line-height: 1.21429em;
+  /* Don't highlight prompt number selection */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  /* Use default cursor */
+  cursor: default;
+}
+@media (max-width: 540px) {
+  .prompt {
+    text-align: left;
+  }
+}
+div.inner_cell {
+  min-width: 0;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  /* Old browsers */
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  /* Modern browsers */
+  flex: 1;
+}
+/* input_area and input_prompt must match in top border and margin for alignment */
+div.input_area {
+  border: 1px solid #cfcfcf;
+  border-radius: 2px;
+  background: #f7f7f7;
+  line-height: 1.21429em;
+}
+/* This is needed so that empty prompt areas can collapse to zero height when there
+   is no content in the output_subarea and the prompt. The main purpose of this is
+   to make sure that empty JavaScript output_subareas have no height. */
+div.prompt:empty {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+div.unrecognized_cell {
+  padding: 5px 5px 5px 0px;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: horizontal;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+div.unrecognized_cell .inner_cell {
+  border-radius: 2px;
+  padding: 5px;
+  font-weight: bold;
+  color: red;
+  border: 1px solid #cfcfcf;
+  background: #eaeaea;
+}
+div.unrecognized_cell .inner_cell a {
+  color: inherit;
+  text-decoration: none;
+}
+div.unrecognized_cell .inner_cell a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+@media (max-width: 540px) {
+  div.unrecognized_cell > div.prompt {
+    display: none;
+  }
+}
+div.code_cell {
+  /* avoid page breaking on code cells when printing */
+}
+@media print {
+  div.code_cell {
+    page-break-inside: avoid;
+  }
+}
+/* any special styling for code cells that are currently running goes here */
+div.input {
+  page-break-inside: avoid;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: horizontal;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+@media (max-width: 540px) {
+  div.input {
+    /* Old browsers */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-align: stretch;
+    display: -moz-box;
+    -moz-box-orient: vertical;
+    -moz-box-align: stretch;
+    display: box;
+    box-orient: vertical;
+    box-align: stretch;
+    /* Modern browsers */
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+/* input_area and input_prompt must match in top border and margin for alignment */
+div.input_prompt {
+  color: #303F9F;
+  border-top: 1px solid transparent;
+}
+div.input_area > div.highlight {
+  margin: 0.4em;
+  border: none;
+  padding: 0px;
+  background-color: transparent;
+}
+div.input_area > div.highlight > pre {
+  margin: 0px;
+  border: none;
+  padding: 0px;
+  background-color: transparent;
+}
+/* The following gets added to the <head> if it is detected that the user has a
+ * monospace font with inconsistent normal/bold/italic height.  See
+ * notebookmain.js.  Such fonts will have keywords vertically offset with
+ * respect to the rest of the text.  The user should select a better font.
+ * See: https://github.com/ipython/ipython/issues/1503
+ *
+ * .CodeMirror span {
+ *      vertical-align: bottom;
+ * }
+ */
+.CodeMirror {
+  line-height: 1.21429em;
+  /* Changed from 1em to our global default */
+  font-size: 14px;
+  height: auto;
+  /* Changed to auto to autogrow */
+  background: none;
+  /* Changed from white to allow our bg to show through */
+}
+.CodeMirror-scroll {
+  /*  The CodeMirror docs are a bit fuzzy on if overflow-y should be hidden or visible.*/
+  /*  We have found that if it is visible, vertical scrollbars appear with font size changes.*/
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+.CodeMirror-lines {
+  /* In CM2, this used to be 0.4em, but in CM3 it went to 4px. We need the em value because */
+  /* we have set a different line-height and want this to scale with that. */
+  /* Note that this should set vertical padding only, since CodeMirror assumes
+       that horizontal padding will be set on CodeMirror pre */
+  padding: 0.4em 0;
+}
+.CodeMirror-linenumber {
+  padding: 0 8px 0 4px;
+}
+.CodeMirror-gutters {
+  border-bottom-left-radius: 2px;
+  border-top-left-radius: 2px;
+}
+.CodeMirror pre {
+  /* In CM3 this went to 4px from 0 in CM2. This sets horizontal padding only,
+    use .CodeMirror-lines for vertical */
+  padding: 0 0.4em;
+  border: 0;
+  border-radius: 0;
+}
+.CodeMirror-cursor {
+  border-left: 1.4px solid black;
+}
+@media screen and (min-width: 2138px) and (max-width: 4319px) {
+  .CodeMirror-cursor {
+    border-left: 2px solid black;
+  }
+}
+@media screen and (min-width: 4320px) {
+  .CodeMirror-cursor {
+    border-left: 4px solid black;
+  }
+}
+/*
+
+Original style from softwaremaniacs.org (c) Ivan Sagalaev <Maniac@SoftwareManiacs.Org>
+Adapted from GitHub theme
+
+*/
+.highlight-base {
+  color: #000;
+}
+.highlight-variable {
+  color: #000;
+}
+.highlight-variable-2 {
+  color: #1a1a1a;
+}
+.highlight-variable-3 {
+  color: #333333;
+}
+.highlight-string {
+  color: #BA2121;
+}
+.highlight-comment {
+  color: #408080;
+  font-style: italic;
+}
+.highlight-number {
+  color: #080;
+}
+.highlight-atom {
+  color: #88F;
+}
+.highlight-keyword {
+  color: #008000;
+  font-weight: bold;
+}
+.highlight-builtin {
+  color: #008000;
+}
+.highlight-error {
+  color: #f00;
+}
+.highlight-operator {
+  color: #AA22FF;
+  font-weight: bold;
+}
+.highlight-meta {
+  color: #AA22FF;
+}
+/* previously not defined, copying from default codemirror */
+.highlight-def {
+  color: #00f;
+}
+.highlight-string-2 {
+  color: #f50;
+}
+.highlight-qualifier {
+  color: #555;
+}
+.highlight-bracket {
+  color: #997;
+}
+.highlight-tag {
+  color: #170;
+}
+.highlight-attribute {
+  color: #00c;
+}
+.highlight-header {
+  color: blue;
+}
+.highlight-quote {
+  color: #090;
+}
+.highlight-link {
+  color: #00c;
+}
+/* apply the same style to codemirror */
+.cm-s-ipython span.cm-keyword {
+  color: #008000;
+  font-weight: bold;
+}
+.cm-s-ipython span.cm-atom {
+  color: #88F;
+}
+.cm-s-ipython span.cm-number {
+  color: #080;
+}
+.cm-s-ipython span.cm-def {
+  color: #00f;
+}
+.cm-s-ipython span.cm-variable {
+  color: #000;
+}
+.cm-s-ipython span.cm-operator {
+  color: #AA22FF;
+  font-weight: bold;
+}
+.cm-s-ipython span.cm-variable-2 {
+  color: #1a1a1a;
+}
+.cm-s-ipython span.cm-variable-3 {
+  color: #333333;
+}
+.cm-s-ipython span.cm-comment {
+  color: #408080;
+  font-style: italic;
+}
+.cm-s-ipython span.cm-string {
+  color: #BA2121;
+}
+.cm-s-ipython span.cm-string-2 {
+  color: #f50;
+}
+.cm-s-ipython span.cm-meta {
+  color: #AA22FF;
+}
+.cm-s-ipython span.cm-qualifier {
+  color: #555;
+}
+.cm-s-ipython span.cm-builtin {
+  color: #008000;
+}
+.cm-s-ipython span.cm-bracket {
+  color: #997;
+}
+.cm-s-ipython span.cm-tag {
+  color: #170;
+}
+.cm-s-ipython span.cm-attribute {
+  color: #00c;
+}
+.cm-s-ipython span.cm-header {
+  color: blue;
+}
+.cm-s-ipython span.cm-quote {
+  color: #090;
+}
+.cm-s-ipython span.cm-link {
+  color: #00c;
+}
+.cm-s-ipython span.cm-error {
+  color: #f00;
+}
+.cm-s-ipython span.cm-tab {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAMCAYAAAAkuj5RAAAAAXNSR0IArs4c6QAAAGFJREFUSMft1LsRQFAQheHPowAKoACx3IgEKtaEHujDjORSgWTH/ZOdnZOcM/sgk/kFFWY0qV8foQwS4MKBCS3qR6ixBJvElOobYAtivseIE120FaowJPN75GMu8j/LfMwNjh4HUpwg4LUAAAAASUVORK5CYII=);
+  background-position: right;
+  background-repeat: no-repeat;
+}
+div.output_wrapper {
+  /* this position must be relative to enable descendents to be absolute within it */
+  position: relative;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  z-index: 1;
+}
+/* class for the output area when it should be height-limited */
+div.output_scroll {
+  /* ideally, this would be max-height, but FF barfs all over that */
+  height: 24em;
+  /* FF needs this *and the wrapper* to specify full width, or it will shrinkwrap */
+  width: 100%;
+  overflow: auto;
+  border-radius: 2px;
+  -webkit-box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.8);
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.8);
+  display: block;
+}
+/* output div while it is collapsed */
+div.output_collapsed {
+  margin: 0px;
+  padding: 0px;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+div.out_prompt_overlay {
+  height: 100%;
+  padding: 0px 0.4em;
+  position: absolute;
+  border-radius: 2px;
+}
+div.out_prompt_overlay:hover {
+  /* use inner shadow to get border that is computed the same on WebKit/FF */
+  -webkit-box-shadow: inset 0 0 1px #000;
+  box-shadow: inset 0 0 1px #000;
+  background: rgba(240, 240, 240, 0.5);
+}
+div.output_prompt {
+  color: #D84315;
+}
+/* This class is the outer container of all output sections. */
+div.output_area {
+  padding: 0px;
+  page-break-inside: avoid;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: horizontal;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+div.output_area .MathJax_Display {
+  text-align: left !important;
+}
+div.output_area 
+div.output_area 
+div.output_area img,
+div.output_area svg {
+  max-width: 100%;
+  height: auto;
+}
+div.output_area img.unconfined,
+div.output_area svg.unconfined {
+  max-width: none;
+}
+div.output_area .mglyph > img {
+  max-width: none;
+}
+/* This is needed to protect the pre formating from global settings such
+   as that of bootstrap */
+.output {
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+@media (max-width: 540px) {
+  div.output_area {
+    /* Old browsers */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-align: stretch;
+    display: -moz-box;
+    -moz-box-orient: vertical;
+    -moz-box-align: stretch;
+    display: box;
+    box-orient: vertical;
+    box-align: stretch;
+    /* Modern browsers */
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+div.output_area pre {
+  margin: 0;
+  padding: 1px 0 1px 0;
+  border: 0;
+  vertical-align: baseline;
+  color: black;
+  background-color: transparent;
+  border-radius: 0;
+}
+/* This class is for the output subarea inside the output_area and after
+   the prompt div. */
+div.output_subarea {
+  overflow-x: auto;
+  padding: 0.4em;
+  /* Old browsers */
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  /* Modern browsers */
+  flex: 1;
+  max-width: calc(100% - 14ex);
+}
+div.output_scroll div.output_subarea {
+  overflow-x: visible;
+}
+/* The rest of the output_* classes are for special styling of the different
+   output types */
+/* all text output has this class: */
+div.output_text {
+  text-align: left;
+  color: #000;
+  /* This has to match that of the the CodeMirror class line-height below */
+  line-height: 1.21429em;
+}
+/* stdout/stderr are 'text' as well as 'stream', but execute_result/error are *not* streams */
+div.output_stderr {
+  background: #fdd;
+  /* very light red background for stderr */
+}
+div.output_latex {
+  text-align: left;
+}
+/* Empty output_javascript divs should have no height */
+div.output_javascript:empty {
+  padding: 0;
+}
+.js-error {
+  color: darkred;
+}
+/* raw_input styles */
+div.raw_input_container {
+  line-height: 1.21429em;
+  padding-top: 5px;
+}
+pre.raw_input_prompt {
+  /* nothing needed here. */
+}
+input.raw_input {
+  font-family: monospace;
+  font-size: inherit;
+  color: inherit;
+  width: auto;
+  /* make sure input baseline aligns with prompt */
+  vertical-align: baseline;
+  /* padding + margin = 0.5em between prompt and cursor */
+  padding: 0em 0.25em;
+  margin: 0em 0.25em;
+}
+input.raw_input:focus {
+  box-shadow: none;
+}
+p.p-space {
+  margin-bottom: 10px;
+}
+div.output_unrecognized {
+  padding: 5px;
+  font-weight: bold;
+  color: red;
+}
+div.output_unrecognized a {
+  color: inherit;
+  text-decoration: none;
+}
+div.output_unrecognized a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+.rendered_html {
+  color: #000;
+  /* any extras will just be numbers: */
+}
+
+
+
+.rendered_html :link {
+  text-decoration: underline;
+}
+.rendered_html :visited {
+  text-decoration: underline;
+}
+
+
+
+
+
+
+.rendered_html h1:first-child {
+  margin-top: 0.538em;
+}
+.rendered_html h2:first-child {
+  margin-top: 0.636em;
+}
+.rendered_html h3:first-child {
+  margin-top: 0.777em;
+}
+.rendered_html h4:first-child {
+  margin-top: 1em;
+}
+.rendered_html h5:first-child {
+  margin-top: 1em;
+}
+.rendered_html h6:first-child {
+  margin-top: 1em;
+}
+.rendered_html ul:not(.list-inline),
+.rendered_html ol:not(.list-inline) {
+  padding-left: 2em;
+}
+
+
+
+
+
+
+
+
+.rendered_html * + ul {
+  margin-top: 1em;
+}
+.rendered_html * + ol {
+  margin-top: 1em;
+}
+
+
+
+
+
+.rendered_html pre,
+
+
+
+
+.rendered_html tr,
+.rendered_html th,
+
+
+.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
+}
+.rendered_html * + table {
+  margin-top: 1em;
+}
+
+.rendered_html * + p {
+  margin-top: 1em;
+}
+
+.rendered_html * + img {
+  margin-top: 1em;
+}
+.rendered_html img,
+
+.rendered_html img.unconfined,
+
+
+.rendered_html * + .alert {
+  margin-top: 1em;
+}
+[dir="rtl"] 
+div.text_cell {
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: horizontal;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+@media (max-width: 540px) {
+  div.text_cell > div.prompt {
+    display: none;
+  }
+}
+div.text_cell_render {
+  /*font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;*/
+  outline: none;
+  resize: none;
+  width: inherit;
+  border-style: none;
+  padding: 0.5em 0.5em 0.5em 0.4em;
+  color: #000;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+a.anchor-link:link {
+  text-decoration: none;
+  padding: 0px 20px;
+  visibility: hidden;
+}
+h1:hover .anchor-link,
+h2:hover .anchor-link,
+h3:hover .anchor-link,
+h4:hover .anchor-link,
+h5:hover .anchor-link,
+h6:hover .anchor-link {
+  visibility: visible;
+}
+.text_cell.rendered .input_area {
+  display: none;
+}
+.text_cell.rendered 
+.text_cell.rendered .rendered_html tr,
+.text_cell.rendered .rendered_html th,
+.text_cell.rendered 
+.text_cell.unrendered .text_cell_render {
+  display: none;
+}
+.text_cell .dropzone .input_area {
+  border: 2px dashed #bababa;
+  margin: -1px;
+}
+.cm-header-1,
+.cm-header-2,
+.cm-header-3,
+.cm-header-4,
+.cm-header-5,
+.cm-header-6 {
+  font-weight: bold;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.cm-header-1 {
+  font-size: 185.7%;
+}
+.cm-header-2 {
+  font-size: 157.1%;
+}
+.cm-header-3 {
+  font-size: 128.6%;
+}
+.cm-header-4 {
+  font-size: 110%;
+}
+.cm-header-5 {
+  font-size: 100%;
+  font-style: italic;
+}
+.cm-header-6 {
+  font-size: 100%;
+  font-style: italic;
+}
+</style>
+<style type="text/css">.highlight .hll { background-color: #ffffcc }
+.highlight  { background: #f8f8f8; }
+.highlight .c { color: #408080; font-style: italic } /* Comment */
+.highlight .err { border: 1px solid #FF0000 } /* Error */
+.highlight .k { color: #008000; font-weight: bold } /* Keyword */
+.highlight .o { color: #666666 } /* Operator */
+.highlight .ch { color: #408080; font-style: italic } /* Comment.Hashbang */
+.highlight .cm { color: #408080; font-style: italic } /* Comment.Multiline */
+.highlight .cp { color: #BC7A00 } /* Comment.Preproc */
+.highlight .cpf { color: #408080; font-style: italic } /* Comment.PreprocFile */
+.highlight .c1 { color: #408080; font-style: italic } /* Comment.Single */
+.highlight .cs { color: #408080; font-style: italic } /* Comment.Special */
+.highlight .gd { color: #A00000 } /* Generic.Deleted */
+.highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .gr { color: #FF0000 } /* Generic.Error */
+.highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.highlight .gi { color: #00A000 } /* Generic.Inserted */
+.highlight .go { color: #888888 } /* Generic.Output */
+.highlight .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+.highlight .gs { font-weight: bold } /* Generic.Strong */
+.highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.highlight .gt { color: #0044DD } /* Generic.Traceback */
+.highlight .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+.highlight .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+.highlight .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+.highlight .kp { color: #008000 } /* Keyword.Pseudo */
+.highlight .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+.highlight .kt { color: #B00040 } /* Keyword.Type */
+.highlight .m { color: #666666 } /* Literal.Number */
+.highlight .s { color: #BA2121 } /* Literal.String */
+.highlight .na { color: #7D9029 } /* Name.Attribute */
+.highlight .nb { color: #008000 } /* Name.Builtin */
+.highlight .nc { color: #0000FF; font-weight: bold } /* Name.Class */
+.highlight .no { color: #880000 } /* Name.Constant */
+.highlight .nd { color: #AA22FF } /* Name.Decorator */
+.highlight .ni { color: #999999; font-weight: bold } /* Name.Entity */
+.highlight .ne { color: #D2413A; font-weight: bold } /* Name.Exception */
+.highlight .nf { color: #0000FF } /* Name.Function */
+.highlight .nl { color: #A0A000 } /* Name.Label */
+.highlight .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+.highlight .nt { color: #008000; font-weight: bold } /* Name.Tag */
+.highlight .nv { color: #19177C } /* Name.Variable */
+.highlight .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+.highlight .w { color: #bbbbbb } /* Text.Whitespace */
+.highlight .mb { color: #666666 } /* Literal.Number.Bin */
+.highlight .mf { color: #666666 } /* Literal.Number.Float */
+.highlight .mh { color: #666666 } /* Literal.Number.Hex */
+.highlight .mi { color: #666666 } /* Literal.Number.Integer */
+.highlight .mo { color: #666666 } /* Literal.Number.Oct */
+.highlight .sa { color: #BA2121 } /* Literal.String.Affix */
+.highlight .sb { color: #BA2121 } /* Literal.String.Backtick */
+.highlight .sc { color: #BA2121 } /* Literal.String.Char */
+.highlight .dl { color: #BA2121 } /* Literal.String.Delimiter */
+.highlight .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+.highlight .s2 { color: #BA2121 } /* Literal.String.Double */
+.highlight .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
+.highlight .sh { color: #BA2121 } /* Literal.String.Heredoc */
+.highlight .si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
+.highlight .sx { color: #008000 } /* Literal.String.Other */
+.highlight .sr { color: #BB6688 } /* Literal.String.Regex */
+.highlight .s1 { color: #BA2121 } /* Literal.String.Single */
+.highlight .ss { color: #19177C } /* Literal.String.Symbol */
+.highlight .bp { color: #008000 } /* Name.Builtin.Pseudo */
+.highlight .fm { color: #0000FF } /* Name.Function.Magic */
+.highlight .vc { color: #19177C } /* Name.Variable.Class */
+.highlight .vg { color: #19177C } /* Name.Variable.Global */
+.highlight .vi { color: #19177C } /* Name.Variable.Instance */
+.highlight .vm { color: #19177C } /* Name.Variable.Magic */
+.highlight .il { color: #666666 } /* Literal.Number.Integer.Long */</style><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Clean-and-Analyze-Employee-Exit-Surveys">Clean and Analyze Employee Exit Surveys<a class="anchor-link" href="#Clean-and-Analyze-Employee-Exit-Surveys">&#182;</a></h1><p>In this project, we'll clean and analyze exit surveys from employees of the <a href="https://en.wikipedia.org/wiki/Department_of_Education_and_Training_(Queensland">Department of Education, Training and Employment (DETE)</a>}) and the Technical and Further Education (TAFE) body of the Queensland government in Australia. The TAFE exit survey can be found <a href="https://data.gov.au/dataset/ds-qld-89970a3b-182b-41ea-aea2-6f9f17b5907e/details?q=exit%20survey">here</a> and the survey for the DETE can be found <a href="https://data.gov.au/dataset/ds-qld-fe96ff30-d157-4a81-851d-215f2a0fe26d/details?q=exit%20survey">here</a>.</p>
+<p>We'll pretend our stakeholders want us to combine the results for <em>both</em> surveys to answer the following question:</p>
+<ul>
+<li>Are employees who only worked for the institutes for a short period of time resigning due to some kind of dissatisfaction? What about employees who have been there longer?</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Introduction">Introduction<a class="anchor-link" href="#Introduction">&#182;</a></h1><p>First, we'll read in the datasets and do some initial exporation.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Read in the data</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">dete_survey</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;dete_survey.csv&#39;</span><span class="p">)</span>
+
+<span class="c1">#Quick exploration of the data</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">max_columns</span> <span class="o">=</span> <span class="mi">150</span> <span class="c1"># to avoid truncated output </span>
+<span class="n">dete_survey</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[31]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ID</th>
+      <th>SeparationType</th>
+      <th>Cease Date</th>
+      <th>DETE Start Date</th>
+      <th>Role Start Date</th>
+      <th>Position</th>
+      <th>Classification</th>
+      <th>Region</th>
+      <th>Business Unit</th>
+      <th>Employment Status</th>
+      <th>Career move to public sector</th>
+      <th>Career move to private sector</th>
+      <th>Interpersonal conflicts</th>
+      <th>Job dissatisfaction</th>
+      <th>Dissatisfaction with the department</th>
+      <th>Physical work environment</th>
+      <th>Lack of recognition</th>
+      <th>Lack of job security</th>
+      <th>Work location</th>
+      <th>Employment conditions</th>
+      <th>Maternity/family</th>
+      <th>Relocation</th>
+      <th>Study/Travel</th>
+      <th>Ill Health</th>
+      <th>Traumatic incident</th>
+      <th>Work life balance</th>
+      <th>Workload</th>
+      <th>None of the above</th>
+      <th>Professional Development</th>
+      <th>Opportunities for promotion</th>
+      <th>Staff morale</th>
+      <th>Workplace issue</th>
+      <th>Physical environment</th>
+      <th>Worklife balance</th>
+      <th>Stress and pressure support</th>
+      <th>Performance of supervisor</th>
+      <th>Peer support</th>
+      <th>Initiative</th>
+      <th>Skills</th>
+      <th>Coach</th>
+      <th>Career Aspirations</th>
+      <th>Feedback</th>
+      <th>Further PD</th>
+      <th>Communication</th>
+      <th>My say</th>
+      <th>Information</th>
+      <th>Kept informed</th>
+      <th>Wellness programs</th>
+      <th>Health &amp; Safety</th>
+      <th>Gender</th>
+      <th>Age</th>
+      <th>Aboriginal</th>
+      <th>Torres Strait</th>
+      <th>South Sea</th>
+      <th>Disability</th>
+      <th>NESB</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>Ill Health Retirement</td>
+      <td>08/2012</td>
+      <td>1984</td>
+      <td>2004</td>
+      <td>Public Servant</td>
+      <td>A01-A04</td>
+      <td>Central Office</td>
+      <td>Corporate Strategy and Peformance</td>
+      <td>Permanent Full-time</td>
+      <td>True</td>
+      <td>False</td>
+      <td>False</td>
+      <td>True</td>
+      <td>False</td>
+      <td>False</td>
+      <td>True</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>True</td>
+      <td>A</td>
+      <td>A</td>
+      <td>N</td>
+      <td>N</td>
+      <td>N</td>
+      <td>A</td>
+      <td>A</td>
+      <td>A</td>
+      <td>A</td>
+      <td>N</td>
+      <td>N</td>
+      <td>N</td>
+      <td>A</td>
+      <td>A</td>
+      <td>A</td>
+      <td>N</td>
+      <td>A</td>
+      <td>A</td>
+      <td>N</td>
+      <td>N</td>
+      <td>N</td>
+      <td>Male</td>
+      <td>56-60</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>Voluntary Early Retirement (VER)</td>
+      <td>08/2012</td>
+      <td>Not Stated</td>
+      <td>Not Stated</td>
+      <td>Public Servant</td>
+      <td>AO5-AO7</td>
+      <td>Central Office</td>
+      <td>Corporate Strategy and Peformance</td>
+      <td>Permanent Full-time</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>A</td>
+      <td>A</td>
+      <td>N</td>
+      <td>N</td>
+      <td>N</td>
+      <td>N</td>
+      <td>A</td>
+      <td>A</td>
+      <td>A</td>
+      <td>N</td>
+      <td>N</td>
+      <td>N</td>
+      <td>A</td>
+      <td>A</td>
+      <td>A</td>
+      <td>N</td>
+      <td>A</td>
+      <td>A</td>
+      <td>N</td>
+      <td>N</td>
+      <td>N</td>
+      <td>Male</td>
+      <td>56-60</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>Voluntary Early Retirement (VER)</td>
+      <td>05/2012</td>
+      <td>2011</td>
+      <td>2011</td>
+      <td>Schools Officer</td>
+      <td>NaN</td>
+      <td>Central Office</td>
+      <td>Education Queensland</td>
+      <td>Permanent Full-time</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>True</td>
+      <td>N</td>
+      <td>N</td>
+      <td>N</td>
+      <td>N</td>
+      <td>N</td>
+      <td>N</td>
+      <td>N</td>
+      <td>N</td>
+      <td>N</td>
+      <td>N</td>
+      <td>N</td>
+      <td>N</td>
+      <td>N</td>
+      <td>N</td>
+      <td>N</td>
+      <td>A</td>
+      <td>A</td>
+      <td>N</td>
+      <td>N</td>
+      <td>N</td>
+      <td>N</td>
+      <td>Male</td>
+      <td>61 or older</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>Resignation-Other reasons</td>
+      <td>05/2012</td>
+      <td>2005</td>
+      <td>2006</td>
+      <td>Teacher</td>
+      <td>Primary</td>
+      <td>Central Queensland</td>
+      <td>NaN</td>
+      <td>Permanent Full-time</td>
+      <td>False</td>
+      <td>True</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>A</td>
+      <td>N</td>
+      <td>N</td>
+      <td>N</td>
+      <td>A</td>
+      <td>A</td>
+      <td>N</td>
+      <td>N</td>
+      <td>A</td>
+      <td>A</td>
+      <td>A</td>
+      <td>A</td>
+      <td>A</td>
+      <td>A</td>
+      <td>A</td>
+      <td>A</td>
+      <td>A</td>
+      <td>A</td>
+      <td>A</td>
+      <td>N</td>
+      <td>A</td>
+      <td>Female</td>
+      <td>36-40</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>Age Retirement</td>
+      <td>05/2012</td>
+      <td>1970</td>
+      <td>1989</td>
+      <td>Head of Curriculum/Head of Special Education</td>
+      <td>NaN</td>
+      <td>South East</td>
+      <td>NaN</td>
+      <td>Permanent Full-time</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>True</td>
+      <td>False</td>
+      <td>False</td>
+      <td>A</td>
+      <td>A</td>
+      <td>N</td>
+      <td>N</td>
+      <td>D</td>
+      <td>D</td>
+      <td>N</td>
+      <td>A</td>
+      <td>A</td>
+      <td>A</td>
+      <td>A</td>
+      <td>A</td>
+      <td>A</td>
+      <td>SA</td>
+      <td>SA</td>
+      <td>D</td>
+      <td>D</td>
+      <td>A</td>
+      <td>N</td>
+      <td>A</td>
+      <td>M</td>
+      <td>Female</td>
+      <td>61 or older</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dete_survey</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 822 entries, 0 to 821
+Data columns (total 56 columns):
+ID                                     822 non-null int64
+SeparationType                         822 non-null object
+Cease Date                             822 non-null object
+DETE Start Date                        822 non-null object
+Role Start Date                        822 non-null object
+Position                               817 non-null object
+Classification                         455 non-null object
+Region                                 822 non-null object
+Business Unit                          126 non-null object
+Employment Status                      817 non-null object
+Career move to public sector           822 non-null bool
+Career move to private sector          822 non-null bool
+Interpersonal conflicts                822 non-null bool
+Job dissatisfaction                    822 non-null bool
+Dissatisfaction with the department    822 non-null bool
+Physical work environment              822 non-null bool
+Lack of recognition                    822 non-null bool
+Lack of job security                   822 non-null bool
+Work location                          822 non-null bool
+Employment conditions                  822 non-null bool
+Maternity/family                       822 non-null bool
+Relocation                             822 non-null bool
+Study/Travel                           822 non-null bool
+Ill Health                             822 non-null bool
+Traumatic incident                     822 non-null bool
+Work life balance                      822 non-null bool
+Workload                               822 non-null bool
+None of the above                      822 non-null bool
+Professional Development               808 non-null object
+Opportunities for promotion            735 non-null object
+Staff morale                           816 non-null object
+Workplace issue                        788 non-null object
+Physical environment                   817 non-null object
+Worklife balance                       815 non-null object
+Stress and pressure support            810 non-null object
+Performance of supervisor              813 non-null object
+Peer support                           812 non-null object
+Initiative                             813 non-null object
+Skills                                 811 non-null object
+Coach                                  767 non-null object
+Career Aspirations                     746 non-null object
+Feedback                               792 non-null object
+Further PD                             768 non-null object
+Communication                          814 non-null object
+My say                                 812 non-null object
+Information                            816 non-null object
+Kept informed                          813 non-null object
+Wellness programs                      766 non-null object
+Health &amp; Safety                        793 non-null object
+Gender                                 798 non-null object
+Age                                    811 non-null object
+Aboriginal                             16 non-null object
+Torres Strait                          3 non-null object
+South Sea                              7 non-null object
+Disability                             23 non-null object
+NESB                                   32 non-null object
+dtypes: bool(18), int64(1), object(37)
+memory usage: 258.6+ KB
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Read in the data</span>
+<span class="n">tafe_survey</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;tafe_survey.csv&quot;</span><span class="p">)</span>
+
+<span class="c1">#Quick exploration of the data</span>
+<span class="n">tafe_survey</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[33]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Record ID</th>
+      <th>Institute</th>
+      <th>WorkArea</th>
+      <th>CESSATION YEAR</th>
+      <th>Reason for ceasing employment</th>
+      <th>Contributing Factors. Career Move - Public Sector</th>
+      <th>Contributing Factors. Career Move - Private Sector</th>
+      <th>Contributing Factors. Career Move - Self-employment</th>
+      <th>Contributing Factors. Ill Health</th>
+      <th>Contributing Factors. Maternity/Family</th>
+      <th>Contributing Factors. Dissatisfaction</th>
+      <th>Contributing Factors. Job Dissatisfaction</th>
+      <th>Contributing Factors. Interpersonal Conflict</th>
+      <th>Contributing Factors. Study</th>
+      <th>Contributing Factors. Travel</th>
+      <th>Contributing Factors. Other</th>
+      <th>Contributing Factors. NONE</th>
+      <th>Main Factor. Which of these was the main factor for leaving?</th>
+      <th>InstituteViews. Topic:1. I feel the senior leadership had a clear vision and direction</th>
+      <th>InstituteViews. Topic:2. I was given access to skills training to help me do my job better</th>
+      <th>InstituteViews. Topic:3. I was given adequate opportunities for personal development</th>
+      <th>InstituteViews. Topic:4. I was given adequate opportunities for promotion within %Institute]Q25LBL%</th>
+      <th>InstituteViews. Topic:5. I felt the salary for the job was right for the responsibilities I had</th>
+      <th>InstituteViews. Topic:6. The organisation recognised when staff did good work</th>
+      <th>InstituteViews. Topic:7. Management was generally supportive of me</th>
+      <th>InstituteViews. Topic:8. Management was generally supportive of my team</th>
+      <th>InstituteViews. Topic:9. I was kept informed of the changes in the organisation which would affect me</th>
+      <th>InstituteViews. Topic:10. Staff morale was positive within the Institute</th>
+      <th>InstituteViews. Topic:11. If I had a workplace issue it was dealt with quickly</th>
+      <th>InstituteViews. Topic:12. If I had a workplace issue it was dealt with efficiently</th>
+      <th>InstituteViews. Topic:13. If I had a workplace issue it was dealt with discreetly</th>
+      <th>WorkUnitViews. Topic:14. I was satisfied with the quality of the management and supervision within my work unit</th>
+      <th>WorkUnitViews. Topic:15. I worked well with my colleagues</th>
+      <th>WorkUnitViews. Topic:16. My job was challenging and interesting</th>
+      <th>WorkUnitViews. Topic:17. I was encouraged to use my initiative in the course of my work</th>
+      <th>WorkUnitViews. Topic:18. I had sufficient contact with other people in my job</th>
+      <th>WorkUnitViews. Topic:19. I was given adequate support and co-operation by my peers to enable me to do my job</th>
+      <th>WorkUnitViews. Topic:20. I was able to use the full range of my skills in my job</th>
+      <th>WorkUnitViews. Topic:21. I was able to use the full range of my abilities in my job. ; Category:Level of Agreement; Question:YOUR VIEWS ABOUT YOUR WORK UNIT]</th>
+      <th>WorkUnitViews. Topic:22. I was able to use the full range of my knowledge in my job</th>
+      <th>WorkUnitViews. Topic:23. My job provided sufficient variety</th>
+      <th>WorkUnitViews. Topic:24. I was able to cope with the level of stress and pressure in my job</th>
+      <th>WorkUnitViews. Topic:25. My job allowed me to balance the demands of work and family to my satisfaction</th>
+      <th>WorkUnitViews. Topic:26. My supervisor gave me adequate personal recognition and feedback on my performance</th>
+      <th>WorkUnitViews. Topic:27. My working environment was satisfactory e.g. sufficient space, good lighting, suitable seating and working area</th>
+      <th>WorkUnitViews. Topic:28. I was given the opportunity to mentor and coach others in order for me to pass on my skills and knowledge prior to my cessation date</th>
+      <th>WorkUnitViews. Topic:29. There was adequate communication between staff in my unit</th>
+      <th>WorkUnitViews. Topic:30. Staff morale was positive within my work unit</th>
+      <th>Induction. Did you undertake Workplace Induction?</th>
+      <th>InductionInfo. Topic:Did you undertake a Corporate Induction?</th>
+      <th>InductionInfo. Topic:Did you undertake a Institute Induction?</th>
+      <th>InductionInfo. Topic: Did you undertake Team Induction?</th>
+      <th>InductionInfo. Face to Face Topic:Did you undertake a Corporate Induction; Category:How it was conducted?</th>
+      <th>InductionInfo. On-line Topic:Did you undertake a Corporate Induction; Category:How it was conducted?</th>
+      <th>InductionInfo. Induction Manual Topic:Did you undertake a Corporate Induction?</th>
+      <th>InductionInfo. Face to Face Topic:Did you undertake a Institute Induction?</th>
+      <th>InductionInfo. On-line Topic:Did you undertake a Institute Induction?</th>
+      <th>InductionInfo. Induction Manual Topic:Did you undertake a Institute Induction?</th>
+      <th>InductionInfo. Face to Face Topic: Did you undertake Team Induction; Category?</th>
+      <th>InductionInfo. On-line Topic: Did you undertake Team Induction?process you undertook and how it was conducted.]</th>
+      <th>InductionInfo. Induction Manual Topic: Did you undertake Team Induction?</th>
+      <th>Workplace. Topic:Did you and your Manager develop a Performance and Professional Development Plan (PPDP)?</th>
+      <th>Workplace. Topic:Does your workplace promote a work culture free from all forms of unlawful discrimination?</th>
+      <th>Workplace. Topic:Does your workplace promote and practice the principles of employment equity?</th>
+      <th>Workplace. Topic:Does your workplace value the diversity of its employees?</th>
+      <th>Workplace. Topic:Would you recommend the Institute as an employer to others?</th>
+      <th>Gender. What is your Gender?</th>
+      <th>CurrentAge. Current Age</th>
+      <th>Employment Type. Employment Type</th>
+      <th>Classification. Classification</th>
+      <th>LengthofServiceOverall. Overall Length of Service at Institute (in years)</th>
+      <th>LengthofServiceCurrent. Length of Service at current workplace (in years)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>6.341330e+17</td>
+      <td>Southern Queensland Institute of TAFE</td>
+      <td>Non-Delivery (corporate)</td>
+      <td>2010.0</td>
+      <td>Contract Expired</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Agree</td>
+      <td>Agree</td>
+      <td>Agree</td>
+      <td>Neutral</td>
+      <td>Agree</td>
+      <td>Agree</td>
+      <td>Agree</td>
+      <td>Agree</td>
+      <td>Agree</td>
+      <td>Agree</td>
+      <td>Agree</td>
+      <td>Agree</td>
+      <td>Agree</td>
+      <td>Agree</td>
+      <td>Agree</td>
+      <td>Agree</td>
+      <td>Strongly Agree</td>
+      <td>Agree</td>
+      <td>Agree</td>
+      <td>Agree</td>
+      <td>Agree</td>
+      <td>Agree</td>
+      <td>Agree</td>
+      <td>Agree</td>
+      <td>Agree</td>
+      <td>Agree</td>
+      <td>Agree</td>
+      <td>Neutral</td>
+      <td>Agree</td>
+      <td>Agree</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Face to Face</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Face to Face</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Face to Face</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Female</td>
+      <td>26  30</td>
+      <td>Temporary Full-time</td>
+      <td>Administration (AO)</td>
+      <td>1-2</td>
+      <td>1-2</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>6.341337e+17</td>
+      <td>Mount Isa Institute of TAFE</td>
+      <td>Non-Delivery (corporate)</td>
+      <td>2010.0</td>
+      <td>Retirement</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Travel</td>
+      <td>-</td>
+      <td>-</td>
+      <td>NaN</td>
+      <td>Agree</td>
+      <td>Agree</td>
+      <td>Agree</td>
+      <td>Agree</td>
+      <td>Agree</td>
+      <td>Strongly Agree</td>
+      <td>Strongly Agree</td>
+      <td>Agree</td>
+      <td>Strongly Agree</td>
+      <td>Agree</td>
+      <td>Agree</td>
+      <td>Agree</td>
+      <td>Disagree</td>
+      <td>Strongly Agree</td>
+      <td>Strongly Agree</td>
+      <td>Strongly Agree</td>
+      <td>Agree</td>
+      <td>Agree</td>
+      <td>Agree</td>
+      <td>Strongly Agree</td>
+      <td>Agree</td>
+      <td>Agree</td>
+      <td>Agree</td>
+      <td>Strongly Agree</td>
+      <td>Agree</td>
+      <td>Strongly Agree</td>
+      <td>Strongly Agree</td>
+      <td>Agree</td>
+      <td>Agree</td>
+      <td>Strongly Agree</td>
+      <td>No</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>6.341388e+17</td>
+      <td>Mount Isa Institute of TAFE</td>
+      <td>Delivery (teaching)</td>
+      <td>2010.0</td>
+      <td>Retirement</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>NONE</td>
+      <td>NaN</td>
+      <td>Agree</td>
+      <td>Agree</td>
+      <td>Agree</td>
+      <td>Agree</td>
+      <td>Agree</td>
+      <td>Agree</td>
+      <td>Strongly Agree</td>
+      <td>Agree</td>
+      <td>Agree</td>
+      <td>Agree</td>
+      <td>Agree</td>
+      <td>Neutral</td>
+      <td>Neutral</td>
+      <td>Strongly Agree</td>
+      <td>Strongly Agree</td>
+      <td>Agree</td>
+      <td>Agree</td>
+      <td>Agree</td>
+      <td>Agree</td>
+      <td>Agree</td>
+      <td>Agree</td>
+      <td>Agree</td>
+      <td>Agree</td>
+      <td>Agree</td>
+      <td>Agree</td>
+      <td>Agree</td>
+      <td>Agree</td>
+      <td>Agree</td>
+      <td>Agree</td>
+      <td>Agree</td>
+      <td>No</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>6.341399e+17</td>
+      <td>Mount Isa Institute of TAFE</td>
+      <td>Non-Delivery (corporate)</td>
+      <td>2010.0</td>
+      <td>Resignation</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Travel</td>
+      <td>-</td>
+      <td>-</td>
+      <td>NaN</td>
+      <td>Agree</td>
+      <td>Agree</td>
+      <td>Agree</td>
+      <td>Agree</td>
+      <td>Agree</td>
+      <td>Agree</td>
+      <td>Agree</td>
+      <td>Agree</td>
+      <td>Agree</td>
+      <td>Agree</td>
+      <td>Agree</td>
+      <td>Agree</td>
+      <td>Agree</td>
+      <td>Strongly Agree</td>
+      <td>Strongly Agree</td>
+      <td>Strongly Agree</td>
+      <td>Strongly Agree</td>
+      <td>Strongly Agree</td>
+      <td>Strongly Agree</td>
+      <td>Strongly Agree</td>
+      <td>Strongly Agree</td>
+      <td>Strongly Agree</td>
+      <td>Strongly Agree</td>
+      <td>Strongly Agree</td>
+      <td>Strongly Agree</td>
+      <td>Strongly Agree</td>
+      <td>Strongly Agree</td>
+      <td>Strongly Agree</td>
+      <td>Strongly Agree</td>
+      <td>Strongly Agree</td>
+      <td>Yes</td>
+      <td>No</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>NaN</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>6.341466e+17</td>
+      <td>Southern Queensland Institute of TAFE</td>
+      <td>Delivery (teaching)</td>
+      <td>2010.0</td>
+      <td>Resignation</td>
+      <td>-</td>
+      <td>Career Move - Private Sector</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>NaN</td>
+      <td>Agree</td>
+      <td>Agree</td>
+      <td>Strongly Agree</td>
+      <td>Agree</td>
+      <td>Strongly Agree</td>
+      <td>Strongly Agree</td>
+      <td>Strongly Agree</td>
+      <td>Strongly Agree</td>
+      <td>Agree</td>
+      <td>Strongly Agree</td>
+      <td>Strongly Agree</td>
+      <td>Agree</td>
+      <td>Strongly Agree</td>
+      <td>Strongly Agree</td>
+      <td>Strongly Agree</td>
+      <td>Strongly Agree</td>
+      <td>Strongly Agree</td>
+      <td>Strongly Agree</td>
+      <td>Strongly Agree</td>
+      <td>Strongly Agree</td>
+      <td>Strongly Agree</td>
+      <td>Strongly Agree</td>
+      <td>Strongly Agree</td>
+      <td>Strongly Agree</td>
+      <td>Strongly Agree</td>
+      <td>Strongly Agree</td>
+      <td>Strongly Agree</td>
+      <td>Strongly Agree</td>
+      <td>Strongly Agree</td>
+      <td>Strongly Agree</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Induction Manual</td>
+      <td>Face to Face</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Face to Face</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Male</td>
+      <td>41  45</td>
+      <td>Permanent Full-time</td>
+      <td>Teacher (including LVT)</td>
+      <td>3-4</td>
+      <td>3-4</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">tafe_survey</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 702 entries, 0 to 701
+Data columns (total 72 columns):
+Record ID                                                                                                                                                        702 non-null float64
+Institute                                                                                                                                                        702 non-null object
+WorkArea                                                                                                                                                         702 non-null object
+CESSATION YEAR                                                                                                                                                   695 non-null float64
+Reason for ceasing employment                                                                                                                                    701 non-null object
+Contributing Factors. Career Move - Public Sector                                                                                                                437 non-null object
+Contributing Factors. Career Move - Private Sector                                                                                                               437 non-null object
+Contributing Factors. Career Move - Self-employment                                                                                                              437 non-null object
+Contributing Factors. Ill Health                                                                                                                                 437 non-null object
+Contributing Factors. Maternity/Family                                                                                                                           437 non-null object
+Contributing Factors. Dissatisfaction                                                                                                                            437 non-null object
+Contributing Factors. Job Dissatisfaction                                                                                                                        437 non-null object
+Contributing Factors. Interpersonal Conflict                                                                                                                     437 non-null object
+Contributing Factors. Study                                                                                                                                      437 non-null object
+Contributing Factors. Travel                                                                                                                                     437 non-null object
+Contributing Factors. Other                                                                                                                                      437 non-null object
+Contributing Factors. NONE                                                                                                                                       437 non-null object
+Main Factor. Which of these was the main factor for leaving?                                                                                                     113 non-null object
+InstituteViews. Topic:1. I feel the senior leadership had a clear vision and direction                                                                           608 non-null object
+InstituteViews. Topic:2. I was given access to skills training to help me do my job better                                                                       613 non-null object
+InstituteViews. Topic:3. I was given adequate opportunities for personal development                                                                             610 non-null object
+InstituteViews. Topic:4. I was given adequate opportunities for promotion within %Institute]Q25LBL%                                                              608 non-null object
+InstituteViews. Topic:5. I felt the salary for the job was right for the responsibilities I had                                                                  615 non-null object
+InstituteViews. Topic:6. The organisation recognised when staff did good work                                                                                    607 non-null object
+InstituteViews. Topic:7. Management was generally supportive of me                                                                                               614 non-null object
+InstituteViews. Topic:8. Management was generally supportive of my team                                                                                          608 non-null object
+InstituteViews. Topic:9. I was kept informed of the changes in the organisation which would affect me                                                            610 non-null object
+InstituteViews. Topic:10. Staff morale was positive within the Institute                                                                                         602 non-null object
+InstituteViews. Topic:11. If I had a workplace issue it was dealt with quickly                                                                                   601 non-null object
+InstituteViews. Topic:12. If I had a workplace issue it was dealt with efficiently                                                                               597 non-null object
+InstituteViews. Topic:13. If I had a workplace issue it was dealt with discreetly                                                                                601 non-null object
+WorkUnitViews. Topic:14. I was satisfied with the quality of the management and supervision within my work unit                                                  609 non-null object
+WorkUnitViews. Topic:15. I worked well with my colleagues                                                                                                        605 non-null object
+WorkUnitViews. Topic:16. My job was challenging and interesting                                                                                                  607 non-null object
+WorkUnitViews. Topic:17. I was encouraged to use my initiative in the course of my work                                                                          610 non-null object
+WorkUnitViews. Topic:18. I had sufficient contact with other people in my job                                                                                    613 non-null object
+WorkUnitViews. Topic:19. I was given adequate support and co-operation by my peers to enable me to do my job                                                     609 non-null object
+WorkUnitViews. Topic:20. I was able to use the full range of my skills in my job                                                                                 609 non-null object
+WorkUnitViews. Topic:21. I was able to use the full range of my abilities in my job. ; Category:Level of Agreement; Question:YOUR VIEWS ABOUT YOUR WORK UNIT]    608 non-null object
+WorkUnitViews. Topic:22. I was able to use the full range of my knowledge in my job                                                                              608 non-null object
+WorkUnitViews. Topic:23. My job provided sufficient variety                                                                                                      611 non-null object
+WorkUnitViews. Topic:24. I was able to cope with the level of stress and pressure in my job                                                                      610 non-null object
+WorkUnitViews. Topic:25. My job allowed me to balance the demands of work and family to my satisfaction                                                          611 non-null object
+WorkUnitViews. Topic:26. My supervisor gave me adequate personal recognition and feedback on my performance                                                      606 non-null object
+WorkUnitViews. Topic:27. My working environment was satisfactory e.g. sufficient space, good lighting, suitable seating and working area                         610 non-null object
+WorkUnitViews. Topic:28. I was given the opportunity to mentor and coach others in order for me to pass on my skills and knowledge prior to my cessation date    609 non-null object
+WorkUnitViews. Topic:29. There was adequate communication between staff in my unit                                                                               603 non-null object
+WorkUnitViews. Topic:30. Staff morale was positive within my work unit                                                                                           606 non-null object
+Induction. Did you undertake Workplace Induction?                                                                                                                619 non-null object
+InductionInfo. Topic:Did you undertake a Corporate Induction?                                                                                                    432 non-null object
+InductionInfo. Topic:Did you undertake a Institute Induction?                                                                                                    483 non-null object
+InductionInfo. Topic: Did you undertake Team Induction?                                                                                                          440 non-null object
+InductionInfo. Face to Face Topic:Did you undertake a Corporate Induction; Category:How it was conducted?                                                        555 non-null object
+InductionInfo. On-line Topic:Did you undertake a Corporate Induction; Category:How it was conducted?                                                             555 non-null object
+InductionInfo. Induction Manual Topic:Did you undertake a Corporate Induction?                                                                                   555 non-null object
+InductionInfo. Face to Face Topic:Did you undertake a Institute Induction?                                                                                       530 non-null object
+InductionInfo. On-line Topic:Did you undertake a Institute Induction?                                                                                            555 non-null object
+InductionInfo. Induction Manual Topic:Did you undertake a Institute Induction?                                                                                   553 non-null object
+InductionInfo. Face to Face Topic: Did you undertake Team Induction; Category?                                                                                   555 non-null object
+InductionInfo. On-line Topic: Did you undertake Team Induction?process you undertook and how it was conducted.]                                                  555 non-null object
+InductionInfo. Induction Manual Topic: Did you undertake Team Induction?                                                                                         555 non-null object
+Workplace. Topic:Did you and your Manager develop a Performance and Professional Development Plan (PPDP)?                                                        608 non-null object
+Workplace. Topic:Does your workplace promote a work culture free from all forms of unlawful discrimination?                                                      594 non-null object
+Workplace. Topic:Does your workplace promote and practice the principles of employment equity?                                                                   587 non-null object
+Workplace. Topic:Does your workplace value the diversity of its employees?                                                                                       586 non-null object
+Workplace. Topic:Would you recommend the Institute as an employer to others?                                                                                     581 non-null object
+Gender. What is your Gender?                                                                                                                                     596 non-null object
+CurrentAge. Current Age                                                                                                                                          596 non-null object
+Employment Type. Employment Type                                                                                                                                 596 non-null object
+Classification. Classification                                                                                                                                   596 non-null object
+LengthofServiceOverall. Overall Length of Service at Institute (in years)                                                                                        596 non-null object
+LengthofServiceCurrent. Length of Service at current workplace (in years)                                                                                        596 non-null object
+dtypes: float64(2), object(70)
+memory usage: 395.0+ KB
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We can make the following observations based on the work above:</p>
+<ul>
+<li>The <code>dete_survey</code> dataframe contains <code>'Not Stated'</code> values that indicate values are missing, but they aren't represented as <code>NaN</code>.</li>
+<li>Both the <code>dete_survey</code> and <code>tafe_survey</code> contain many columns that we don't need to complete our analysis.</li>
+<li>Each dataframe contains many of the same columns, but the column names are different.</li>
+<li>There are multiple columns/answers that indicate an employee resigned because they were dissatisfied.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Identify-Missing-Values-and-Drop-Unneccessary-Columns">Identify Missing Values and Drop Unneccessary Columns<a class="anchor-link" href="#Identify-Missing-Values-and-Drop-Unneccessary-Columns">&#182;</a></h1><p>First, we'll correct the <code>Not Stated</code> values and drop some of the columns we don't need for our analysis.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Read in the data again, but this time read `Not Stated` values as `NaN`</span>
+<span class="n">dete_survey</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;dete_survey.csv&#39;</span><span class="p">,</span> <span class="n">na_values</span><span class="o">=</span><span class="s1">&#39;Not Stated&#39;</span><span class="p">)</span>
+
+<span class="c1"># Quick exploration of the data</span>
+<span class="n">dete_survey</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[35]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ID</th>
+      <th>SeparationType</th>
+      <th>Cease Date</th>
+      <th>DETE Start Date</th>
+      <th>Role Start Date</th>
+      <th>Position</th>
+      <th>Classification</th>
+      <th>Region</th>
+      <th>Business Unit</th>
+      <th>Employment Status</th>
+      <th>Career move to public sector</th>
+      <th>Career move to private sector</th>
+      <th>Interpersonal conflicts</th>
+      <th>Job dissatisfaction</th>
+      <th>Dissatisfaction with the department</th>
+      <th>Physical work environment</th>
+      <th>Lack of recognition</th>
+      <th>Lack of job security</th>
+      <th>Work location</th>
+      <th>Employment conditions</th>
+      <th>Maternity/family</th>
+      <th>Relocation</th>
+      <th>Study/Travel</th>
+      <th>Ill Health</th>
+      <th>Traumatic incident</th>
+      <th>Work life balance</th>
+      <th>Workload</th>
+      <th>None of the above</th>
+      <th>Professional Development</th>
+      <th>Opportunities for promotion</th>
+      <th>Staff morale</th>
+      <th>Workplace issue</th>
+      <th>Physical environment</th>
+      <th>Worklife balance</th>
+      <th>Stress and pressure support</th>
+      <th>Performance of supervisor</th>
+      <th>Peer support</th>
+      <th>Initiative</th>
+      <th>Skills</th>
+      <th>Coach</th>
+      <th>Career Aspirations</th>
+      <th>Feedback</th>
+      <th>Further PD</th>
+      <th>Communication</th>
+      <th>My say</th>
+      <th>Information</th>
+      <th>Kept informed</th>
+      <th>Wellness programs</th>
+      <th>Health &amp; Safety</th>
+      <th>Gender</th>
+      <th>Age</th>
+      <th>Aboriginal</th>
+      <th>Torres Strait</th>
+      <th>South Sea</th>
+      <th>Disability</th>
+      <th>NESB</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>Ill Health Retirement</td>
+      <td>08/2012</td>
+      <td>1984.0</td>
+      <td>2004.0</td>
+      <td>Public Servant</td>
+      <td>A01-A04</td>
+      <td>Central Office</td>
+      <td>Corporate Strategy and Peformance</td>
+      <td>Permanent Full-time</td>
+      <td>True</td>
+      <td>False</td>
+      <td>False</td>
+      <td>True</td>
+      <td>False</td>
+      <td>False</td>
+      <td>True</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>True</td>
+      <td>A</td>
+      <td>A</td>
+      <td>N</td>
+      <td>N</td>
+      <td>N</td>
+      <td>A</td>
+      <td>A</td>
+      <td>A</td>
+      <td>A</td>
+      <td>N</td>
+      <td>N</td>
+      <td>N</td>
+      <td>A</td>
+      <td>A</td>
+      <td>A</td>
+      <td>N</td>
+      <td>A</td>
+      <td>A</td>
+      <td>N</td>
+      <td>N</td>
+      <td>N</td>
+      <td>Male</td>
+      <td>56-60</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>Voluntary Early Retirement (VER)</td>
+      <td>08/2012</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Public Servant</td>
+      <td>AO5-AO7</td>
+      <td>Central Office</td>
+      <td>Corporate Strategy and Peformance</td>
+      <td>Permanent Full-time</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>A</td>
+      <td>A</td>
+      <td>N</td>
+      <td>N</td>
+      <td>N</td>
+      <td>N</td>
+      <td>A</td>
+      <td>A</td>
+      <td>A</td>
+      <td>N</td>
+      <td>N</td>
+      <td>N</td>
+      <td>A</td>
+      <td>A</td>
+      <td>A</td>
+      <td>N</td>
+      <td>A</td>
+      <td>A</td>
+      <td>N</td>
+      <td>N</td>
+      <td>N</td>
+      <td>Male</td>
+      <td>56-60</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>Voluntary Early Retirement (VER)</td>
+      <td>05/2012</td>
+      <td>2011.0</td>
+      <td>2011.0</td>
+      <td>Schools Officer</td>
+      <td>NaN</td>
+      <td>Central Office</td>
+      <td>Education Queensland</td>
+      <td>Permanent Full-time</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>True</td>
+      <td>N</td>
+      <td>N</td>
+      <td>N</td>
+      <td>N</td>
+      <td>N</td>
+      <td>N</td>
+      <td>N</td>
+      <td>N</td>
+      <td>N</td>
+      <td>N</td>
+      <td>N</td>
+      <td>N</td>
+      <td>N</td>
+      <td>N</td>
+      <td>N</td>
+      <td>A</td>
+      <td>A</td>
+      <td>N</td>
+      <td>N</td>
+      <td>N</td>
+      <td>N</td>
+      <td>Male</td>
+      <td>61 or older</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>Resignation-Other reasons</td>
+      <td>05/2012</td>
+      <td>2005.0</td>
+      <td>2006.0</td>
+      <td>Teacher</td>
+      <td>Primary</td>
+      <td>Central Queensland</td>
+      <td>NaN</td>
+      <td>Permanent Full-time</td>
+      <td>False</td>
+      <td>True</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>A</td>
+      <td>N</td>
+      <td>N</td>
+      <td>N</td>
+      <td>A</td>
+      <td>A</td>
+      <td>N</td>
+      <td>N</td>
+      <td>A</td>
+      <td>A</td>
+      <td>A</td>
+      <td>A</td>
+      <td>A</td>
+      <td>A</td>
+      <td>A</td>
+      <td>A</td>
+      <td>A</td>
+      <td>A</td>
+      <td>A</td>
+      <td>N</td>
+      <td>A</td>
+      <td>Female</td>
+      <td>36-40</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>Age Retirement</td>
+      <td>05/2012</td>
+      <td>1970.0</td>
+      <td>1989.0</td>
+      <td>Head of Curriculum/Head of Special Education</td>
+      <td>NaN</td>
+      <td>South East</td>
+      <td>NaN</td>
+      <td>Permanent Full-time</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>True</td>
+      <td>False</td>
+      <td>False</td>
+      <td>A</td>
+      <td>A</td>
+      <td>N</td>
+      <td>N</td>
+      <td>D</td>
+      <td>D</td>
+      <td>N</td>
+      <td>A</td>
+      <td>A</td>
+      <td>A</td>
+      <td>A</td>
+      <td>A</td>
+      <td>A</td>
+      <td>SA</td>
+      <td>SA</td>
+      <td>D</td>
+      <td>D</td>
+      <td>A</td>
+      <td>N</td>
+      <td>A</td>
+      <td>M</td>
+      <td>Female</td>
+      <td>61 or older</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Remove columns we don&#39;t need for our analysis</span>
+<span class="n">dete_survey_updated</span> <span class="o">=</span> <span class="n">dete_survey</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">dete_survey</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">28</span><span class="p">:</span><span class="mi">49</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">tafe_survey_updated</span> <span class="o">=</span> <span class="n">tafe_survey</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">tafe_survey</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">17</span><span class="p">:</span><span class="mi">66</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1">#Check that the columns were dropped</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dete_survey_updated</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tafe_survey_updated</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Index([&#39;ID&#39;, &#39;SeparationType&#39;, &#39;Cease Date&#39;, &#39;DETE Start Date&#39;,
+       &#39;Role Start Date&#39;, &#39;Position&#39;, &#39;Classification&#39;, &#39;Region&#39;,
+       &#39;Business Unit&#39;, &#39;Employment Status&#39;, &#39;Career move to public sector&#39;,
+       &#39;Career move to private sector&#39;, &#39;Interpersonal conflicts&#39;,
+       &#39;Job dissatisfaction&#39;, &#39;Dissatisfaction with the department&#39;,
+       &#39;Physical work environment&#39;, &#39;Lack of recognition&#39;,
+       &#39;Lack of job security&#39;, &#39;Work location&#39;, &#39;Employment conditions&#39;,
+       &#39;Maternity/family&#39;, &#39;Relocation&#39;, &#39;Study/Travel&#39;, &#39;Ill Health&#39;,
+       &#39;Traumatic incident&#39;, &#39;Work life balance&#39;, &#39;Workload&#39;,
+       &#39;None of the above&#39;, &#39;Gender&#39;, &#39;Age&#39;, &#39;Aboriginal&#39;, &#39;Torres Strait&#39;,
+       &#39;South Sea&#39;, &#39;Disability&#39;, &#39;NESB&#39;],
+      dtype=&#39;object&#39;)
+Index([&#39;Record ID&#39;, &#39;Institute&#39;, &#39;WorkArea&#39;, &#39;CESSATION YEAR&#39;,
+       &#39;Reason for ceasing employment&#39;,
+       &#39;Contributing Factors. Career Move - Public Sector &#39;,
+       &#39;Contributing Factors. Career Move - Private Sector &#39;,
+       &#39;Contributing Factors. Career Move - Self-employment&#39;,
+       &#39;Contributing Factors. Ill Health&#39;,
+       &#39;Contributing Factors. Maternity/Family&#39;,
+       &#39;Contributing Factors. Dissatisfaction&#39;,
+       &#39;Contributing Factors. Job Dissatisfaction&#39;,
+       &#39;Contributing Factors. Interpersonal Conflict&#39;,
+       &#39;Contributing Factors. Study&#39;, &#39;Contributing Factors. Travel&#39;,
+       &#39;Contributing Factors. Other&#39;, &#39;Contributing Factors. NONE&#39;,
+       &#39;Gender. What is your Gender?&#39;, &#39;CurrentAge. Current Age&#39;,
+       &#39;Employment Type. Employment Type&#39;, &#39;Classification. Classification&#39;,
+       &#39;LengthofServiceOverall. Overall Length of Service at Institute (in years)&#39;,
+       &#39;LengthofServiceCurrent. Length of Service at current workplace (in years)&#39;],
+      dtype=&#39;object&#39;)
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Rename-Columns">Rename Columns<a class="anchor-link" href="#Rename-Columns">&#182;</a></h1><p>Next, we'll standardize the names of the columns we want to work with, because we eventually want to combine the dataframes.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Clean the column names</span>
+<span class="n">dete_survey_updated</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="n">dete_survey_updated</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="s1">&#39;_&#39;</span><span class="p">)</span>
+
+<span class="c1"># Check that the column names were updated correctly</span>
+<span class="n">dete_survey_updated</span><span class="o">.</span><span class="n">columns</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[37]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>Index([&#39;id&#39;, &#39;separationtype&#39;, &#39;cease_date&#39;, &#39;dete_start_date&#39;,
+       &#39;role_start_date&#39;, &#39;position&#39;, &#39;classification&#39;, &#39;region&#39;,
+       &#39;business_unit&#39;, &#39;employment_status&#39;, &#39;career_move_to_public_sector&#39;,
+       &#39;career_move_to_private_sector&#39;, &#39;interpersonal_conflicts&#39;,
+       &#39;job_dissatisfaction&#39;, &#39;dissatisfaction_with_the_department&#39;,
+       &#39;physical_work_environment&#39;, &#39;lack_of_recognition&#39;,
+       &#39;lack_of_job_security&#39;, &#39;work_location&#39;, &#39;employment_conditions&#39;,
+       &#39;maternity/family&#39;, &#39;relocation&#39;, &#39;study/travel&#39;, &#39;ill_health&#39;,
+       &#39;traumatic_incident&#39;, &#39;work_life_balance&#39;, &#39;workload&#39;,
+       &#39;none_of_the_above&#39;, &#39;gender&#39;, &#39;age&#39;, &#39;aboriginal&#39;, &#39;torres_strait&#39;,
+       &#39;south_sea&#39;, &#39;disability&#39;, &#39;nesb&#39;],
+      dtype=&#39;object&#39;)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Update column names to match the names in dete_survey_updated</span>
+<span class="n">mapping</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Record ID&#39;</span><span class="p">:</span> <span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="s1">&#39;CESSATION YEAR&#39;</span><span class="p">:</span> <span class="s1">&#39;cease_date&#39;</span><span class="p">,</span> <span class="s1">&#39;Reason for ceasing employment&#39;</span><span class="p">:</span> <span class="s1">&#39;separationtype&#39;</span><span class="p">,</span> <span class="s1">&#39;Gender. What is your Gender?&#39;</span><span class="p">:</span> <span class="s1">&#39;gender&#39;</span><span class="p">,</span> <span class="s1">&#39;CurrentAge. Current Age&#39;</span><span class="p">:</span> <span class="s1">&#39;age&#39;</span><span class="p">,</span>
+       <span class="s1">&#39;Employment Type. Employment Type&#39;</span><span class="p">:</span> <span class="s1">&#39;employment_status&#39;</span><span class="p">,</span>
+       <span class="s1">&#39;Classification. Classification&#39;</span><span class="p">:</span> <span class="s1">&#39;position&#39;</span><span class="p">,</span>
+       <span class="s1">&#39;LengthofServiceOverall. Overall Length of Service at Institute (in years)&#39;</span><span class="p">:</span> <span class="s1">&#39;institute_service&#39;</span><span class="p">,</span>
+       <span class="s1">&#39;LengthofServiceCurrent. Length of Service at current workplace (in years)&#39;</span><span class="p">:</span> <span class="s1">&#39;role_service&#39;</span><span class="p">}</span>
+<span class="n">tafe_survey_updated</span> <span class="o">=</span> <span class="n">tafe_survey_updated</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">mapping</span><span class="p">,</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Check that the specified column names were updated correctly</span>
+<span class="n">tafe_survey_updated</span><span class="o">.</span><span class="n">columns</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[38]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>Index([&#39;id&#39;, &#39;Institute&#39;, &#39;WorkArea&#39;, &#39;cease_date&#39;, &#39;separationtype&#39;,
+       &#39;Contributing Factors. Career Move - Public Sector &#39;,
+       &#39;Contributing Factors. Career Move - Private Sector &#39;,
+       &#39;Contributing Factors. Career Move - Self-employment&#39;,
+       &#39;Contributing Factors. Ill Health&#39;,
+       &#39;Contributing Factors. Maternity/Family&#39;,
+       &#39;Contributing Factors. Dissatisfaction&#39;,
+       &#39;Contributing Factors. Job Dissatisfaction&#39;,
+       &#39;Contributing Factors. Interpersonal Conflict&#39;,
+       &#39;Contributing Factors. Study&#39;, &#39;Contributing Factors. Travel&#39;,
+       &#39;Contributing Factors. Other&#39;, &#39;Contributing Factors. NONE&#39;, &#39;gender&#39;,
+       &#39;age&#39;, &#39;employment_status&#39;, &#39;position&#39;, &#39;institute_service&#39;,
+       &#39;role_service&#39;],
+      dtype=&#39;object&#39;)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Filter-the-Data">Filter the Data<a class="anchor-link" href="#Filter-the-Data">&#182;</a></h1><p>For this project, we'll only analyze survey respondents who <em>resigned</em>, so we'll only select separation types containing the string <code>'Resignation'</code>.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Check the unique values for the separationtype column</span>
+<span class="n">tafe_survey_updated</span><span class="p">[</span><span class="s1">&#39;separationtype&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[39]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>Resignation                 340
+Contract Expired            127
+Retrenchment/ Redundancy    104
+Retirement                   82
+Transfer                     25
+Termination                  23
+Name: separationtype, dtype: int64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Check the unique values for the separationtype column</span>
+<span class="n">dete_survey_updated</span><span class="p">[</span><span class="s1">&#39;separationtype&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[40]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>Age Retirement                          285
+Resignation-Other reasons               150
+Resignation-Other employer               91
+Resignation-Move overseas/interstate     70
+Voluntary Early Retirement (VER)         67
+Ill Health Retirement                    61
+Other                                    49
+Contract Expired                         34
+Termination                              15
+Name: separationtype, dtype: int64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[41]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Update all separation types containing the word &quot;resignation&quot; to &#39;Resignation&#39;</span>
+<span class="n">dete_survey_updated</span><span class="p">[</span><span class="s1">&#39;separationtype&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dete_survey_updated</span><span class="p">[</span><span class="s1">&#39;separationtype&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">str</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="c1"># Check the values in the separationtype column were updated correctly</span>
+<span class="n">dete_survey_updated</span><span class="p">[</span><span class="s1">&#39;separationtype&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[41]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>Resignation                         311
+Age Retirement                      285
+Voluntary Early Retirement (VER)     67
+Ill Health Retirement                61
+Other                                49
+Contract Expired                     34
+Termination                          15
+Name: separationtype, dtype: int64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[42]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Select only the resignation separation types from each dataframe</span>
+<span class="n">dete_resignations</span> <span class="o">=</span> <span class="n">dete_survey_updated</span><span class="p">[</span><span class="n">dete_survey_updated</span><span class="p">[</span><span class="s1">&#39;separationtype&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Resignation&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">tafe_resignations</span> <span class="o">=</span> <span class="n">tafe_survey_updated</span><span class="p">[</span><span class="n">tafe_survey_updated</span><span class="p">[</span><span class="s1">&#39;separationtype&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Resignation&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Verify-the-Data">Verify the Data<a class="anchor-link" href="#Verify-the-Data">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Below, we clean and explore the <code>cease_date</code> and <code>dete_start_date</code> columns to make sure all of the years make sense. We'll use the following criteria:</p>
+<ul>
+<li>Since the <code>cease_date</code> is the last year of the person's employment and the <code>dete_start_date</code> is the person's first year of employment, it wouldn't make sense to have years after the current date. </li>
+<li>Given that most people in this field start working in their 20s, it's also unlikely that the <code>dete_start_date</code> was before the year 1940.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Check the unique values</span>
+<span class="n">dete_resignations</span><span class="p">[</span><span class="s1">&#39;cease_date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[43]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>2012       126
+2013        74
+01/2014     22
+12/2013     17
+06/2013     14
+09/2013     11
+11/2013      9
+07/2013      9
+10/2013      6
+08/2013      4
+05/2012      2
+05/2013      2
+09/2010      1
+07/2006      1
+07/2012      1
+2010         1
+Name: cease_date, dtype: int64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[44]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Extract the years and convert them to a float type</span>
+<span class="n">dete_resignations</span><span class="p">[</span><span class="s1">&#39;cease_date&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dete_resignations</span><span class="p">[</span><span class="s1">&#39;cease_date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">str</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">dete_resignations</span><span class="p">[</span><span class="s1">&#39;cease_date&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dete_resignations</span><span class="p">[</span><span class="s1">&#39;cease_date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&quot;float&quot;</span><span class="p">)</span>
+
+<span class="c1"># Check the values again and look for outliers</span>
+<span class="n">dete_resignations</span><span class="p">[</span><span class="s1">&#39;cease_date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[44]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>2013.0    146
+2012.0    129
+2014.0     22
+2010.0      2
+2006.0      1
+Name: cease_date, dtype: int64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[45]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Check the unique values and look for outliers</span>
+<span class="n">dete_resignations</span><span class="p">[</span><span class="s1">&#39;dete_start_date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[45]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>1963.0     1
+1971.0     1
+1972.0     1
+1984.0     1
+1977.0     1
+1987.0     1
+1975.0     1
+1973.0     1
+1982.0     1
+1974.0     2
+1983.0     2
+1976.0     2
+1986.0     3
+1985.0     3
+2001.0     3
+1995.0     4
+1988.0     4
+1989.0     4
+1991.0     4
+1997.0     5
+1980.0     5
+1993.0     5
+1990.0     5
+1994.0     6
+2003.0     6
+1998.0     6
+1992.0     6
+2002.0     6
+1996.0     6
+1999.0     8
+2000.0     9
+2013.0    10
+2009.0    13
+2006.0    13
+2004.0    14
+2005.0    15
+2010.0    17
+2012.0    21
+2007.0    21
+2008.0    22
+2011.0    24
+Name: dete_start_date, dtype: int64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[46]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Check the unique values</span>
+<span class="n">tafe_resignations</span><span class="p">[</span><span class="s1">&#39;cease_date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[46]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>2009.0      2
+2013.0     55
+2010.0     68
+2012.0     94
+2011.0    116
+Name: cease_date, dtype: int64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Below are our findings:</p>
+<ul>
+<li>The years in both dataframes don't completely align. The <code>tafe_survey_updated</code> dataframe contains some cease dates in 2009, but the <code>dete_survey_updated</code> dataframe does not. The <code>tafe_survey_updated</code> dataframe also contains many more cease dates in 2010 than the <code>dete_survey_updaed</code> dataframe. Since we aren't concerned with analyzing the results by year, we'll leave them as is.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Create-a-New-Column">Create a New Column<a class="anchor-link" href="#Create-a-New-Column">&#182;</a></h1><p>Since our end goal is to answer the question below, we need a column containing the length of time an employee spent in their workplace, or years of service, in both dataframes.</p>
+<ul>
+<li>End goal: Are employees who have only worked for the institutes for a short period of time resigning due to some kind of dissatisfaction? What about employees who have been at the job longer?</li>
+</ul>
+<p>The <code>tafe_resignations</code> dataframe already contains a "service" column, which we renamed to <code>institute_service</code>.</p>
+<p>Below, we calculate the  years of service in the <code>dete_survey_updated</code> dataframe by subtracting the <code>dete_start_date</code> from the <code>cease_date</code> and create a new column named <code>institute_service</code>.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Calculate the length of time an employee spent in their respective workplace and create a new column</span>
+<span class="n">dete_resignations</span><span class="p">[</span><span class="s1">&#39;institute_service&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dete_resignations</span><span class="p">[</span><span class="s1">&#39;cease_date&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">dete_resignations</span><span class="p">[</span><span class="s1">&#39;dete_start_date&#39;</span><span class="p">]</span>
+
+<span class="c1"># Quick check of the result</span>
+<span class="n">dete_resignations</span><span class="p">[</span><span class="s1">&#39;institute_service&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[47]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>3      7.0
+5     18.0
+8      3.0
+9     15.0
+11     3.0
+Name: institute_service, dtype: float64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Identify-Dissatisfied-Employees">Identify Dissatisfied Employees<a class="anchor-link" href="#Identify-Dissatisfied-Employees">&#182;</a></h1><p>Next, we'll identify any employees who resigned because they were dissatisfied. Below are the columns we'll use to categorize employees as "dissatisfied" from each dataframe:</p>
+<ol>
+<li>tafe_survey_updated:<ul>
+<li><code>Contributing Factors. Dissatisfaction</code></li>
+<li><code>Contributing Factors. Job Dissatisfaction</code></li>
+</ul>
+</li>
+<li>dafe_survey_updated:<ul>
+<li><code>job_dissatisfaction</code></li>
+<li><code>dissatisfaction_with_the_department</code></li>
+<li><code>physical_work_environment</code></li>
+<li><code>lack_of_recognition</code></li>
+<li><code>lack_of_job_security</code></li>
+<li><code>work_location</code></li>
+<li><code>employment_conditions</code></li>
+<li><code>work_life_balance</code></li>
+<li><code>workload</code></li>
+</ul>
+</li>
+</ol>
+<p>If the employee indicated any of the factors above caused them to resign, we'll mark them as <code>dissatisfied</code> in a new column. After our changes, the new <code>dissatisfied</code> column will contain just the following values:</p>
+<ul>
+<li><code>True</code>: indicates a person resigned because they were dissatisfied in some way</li>
+<li><code>False</code>: indicates a person resigned because of a reason other than dissatisfaction with the job</li>
+<li><code>NaN</code>: indicates the value is missing</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[48]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Check the unique values</span>
+<span class="n">tafe_resignations</span><span class="p">[</span><span class="s1">&#39;Contributing Factors. Dissatisfaction&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[48]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>-                                         277
+Contributing Factors. Dissatisfaction      55
+Name: Contributing Factors. Dissatisfaction, dtype: int64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[49]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Check the unique values</span>
+<span class="n">tafe_resignations</span><span class="p">[</span><span class="s1">&#39;Contributing Factors. Job Dissatisfaction&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[49]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>-                      270
+Job Dissatisfaction     62
+Name: Contributing Factors. Job Dissatisfaction, dtype: int64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[50]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Update the values in the contributing factors columns to be either True, False, or NaN</span>
+<span class="k">def</span> <span class="nf">update_vals</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="s1">&#39;-&#39;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+    <span class="k">elif</span> <span class="n">pd</span><span class="o">.</span><span class="n">isnull</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">True</span>
+<span class="n">tafe_resignations</span><span class="p">[</span><span class="s1">&#39;dissatisfied&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">tafe_resignations</span><span class="p">[[</span><span class="s1">&#39;Contributing Factors. Dissatisfaction&#39;</span><span class="p">,</span> <span class="s1">&#39;Contributing Factors. Job Dissatisfaction&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">applymap</span><span class="p">(</span><span class="n">update_vals</span><span class="p">)</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">skipna</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">tafe_resignations_up</span> <span class="o">=</span> <span class="n">tafe_resignations</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="c1"># Check the unique values after the updates</span>
+<span class="n">tafe_resignations_up</span><span class="p">[</span><span class="s1">&#39;dissatisfied&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">(</span><span class="n">dropna</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[50]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>False    241
+True      91
+NaN        8
+Name: dissatisfied, dtype: int64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[51]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Update the values in columns related to dissatisfaction to be either True, False, or NaN</span>
+<span class="n">dete_resignations</span><span class="p">[</span><span class="s1">&#39;dissatisfied&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dete_resignations</span><span class="p">[[</span><span class="s1">&#39;job_dissatisfaction&#39;</span><span class="p">,</span>
+       <span class="s1">&#39;dissatisfaction_with_the_department&#39;</span><span class="p">,</span> <span class="s1">&#39;physical_work_environment&#39;</span><span class="p">,</span>
+       <span class="s1">&#39;lack_of_recognition&#39;</span><span class="p">,</span> <span class="s1">&#39;lack_of_job_security&#39;</span><span class="p">,</span> <span class="s1">&#39;work_location&#39;</span><span class="p">,</span>
+       <span class="s1">&#39;employment_conditions&#39;</span><span class="p">,</span> <span class="s1">&#39;work_life_balance&#39;</span><span class="p">,</span>
+       <span class="s1">&#39;workload&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">skipna</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">dete_resignations_up</span> <span class="o">=</span> <span class="n">dete_resignations</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">dete_resignations_up</span><span class="p">[</span><span class="s1">&#39;dissatisfied&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">(</span><span class="n">dropna</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[51]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>False    162
+True     149
+Name: dissatisfied, dtype: int64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Combining-the-Data">Combining the Data<a class="anchor-link" href="#Combining-the-Data">&#182;</a></h1><p>Below, we'll add an institute column so that we can differentiate the data from each survey after we combine them. Then, we'll combine the dataframes and drop any remaining columns we don't need.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[52]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Add an institute column</span>
+<span class="n">dete_resignations_up</span><span class="p">[</span><span class="s1">&#39;institute&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;DETE&#39;</span>
+<span class="n">tafe_resignations_up</span><span class="p">[</span><span class="s1">&#39;institute&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;TAFE&#39;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[53]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Combine the dataframes</span>
+<span class="n">combined</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">dete_resignations_up</span><span class="p">,</span> <span class="n">tafe_resignations_up</span><span class="p">],</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Verify the number of non null values in each column</span>
+<span class="n">combined</span><span class="o">.</span><span class="n">notnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>/usr/local/lib/python3.6/dist-packages/ipykernel_launcher.py:2: FutureWarning: Sorting because non-concatenation axis is not aligned. A future version
+of pandas will change to not sort by default.
+
+To accept the future behavior, pass &#39;sort=False&#39;.
+
+To retain the current behavior and silence the warning, pass &#39;sort=True&#39;.
+
+  
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[53]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>torres_strait                                            0
+south_sea                                                3
+aboriginal                                               7
+disability                                               8
+nesb                                                     9
+business_unit                                           32
+classification                                         161
+region                                                 265
+role_start_date                                        271
+dete_start_date                                        283
+role_service                                           290
+career_move_to_public_sector                           311
+employment_conditions                                  311
+work_location                                          311
+lack_of_job_security                                   311
+job_dissatisfaction                                    311
+dissatisfaction_with_the_department                    311
+workload                                               311
+lack_of_recognition                                    311
+interpersonal_conflicts                                311
+maternity/family                                       311
+none_of_the_above                                      311
+physical_work_environment                              311
+relocation                                             311
+study/travel                                           311
+traumatic_incident                                     311
+work_life_balance                                      311
+career_move_to_private_sector                          311
+ill_health                                             311
+Contributing Factors. Career Move - Private Sector     332
+Contributing Factors. Other                            332
+Contributing Factors. Career Move - Public Sector      332
+Contributing Factors. Career Move - Self-employment    332
+Contributing Factors. Travel                           332
+Contributing Factors. Study                            332
+Contributing Factors. Dissatisfaction                  332
+Contributing Factors. Ill Health                       332
+Contributing Factors. NONE                             332
+Contributing Factors. Maternity/Family                 332
+Contributing Factors. Job Dissatisfaction              332
+Contributing Factors. Interpersonal Conflict           332
+WorkArea                                               340
+Institute                                              340
+institute_service                                      563
+gender                                                 592
+age                                                    596
+employment_status                                      597
+position                                               598
+cease_date                                             635
+dissatisfied                                           643
+id                                                     651
+separationtype                                         651
+institute                                              651
+dtype: int64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[54]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Drop columns with less than 500 non null values</span>
+<span class="n">combined_updated</span> <span class="o">=</span> <span class="n">combined</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">thresh</span> <span class="o">=</span> <span class="mi">500</span><span class="p">,</span> <span class="n">axis</span> <span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Clean-the-Service-Column">Clean the Service Column<a class="anchor-link" href="#Clean-the-Service-Column">&#182;</a></h1><p>Next, we'll clean the <code>institute_service</code> column and categorize employees according to the following definitions:</p>
+<ul>
+<li>New: Less than 3 years in the workplace</li>
+<li>Experienced: 3-6 years in the workplace</li>
+<li>Established: 7-10 years in the workplace</li>
+<li>Veteran: 11 or more years in the workplace</li>
+</ul>
+<p>Our analysis is based on <a href="https://www.businesswire.com/news/home/20171108006002/en/Age-Number-Engage-Employees-Career-Stage">this article</a>, which makes the argument that understanding employee's needs according to career stage instead of age is more effective.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[55]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Check the unique values</span>
+<span class="n">combined_updated</span><span class="p">[</span><span class="s1">&#39;institute_service&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">(</span><span class="n">dropna</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[55]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>NaN                   88
+Less than 1 year      73
+1-2                   64
+3-4                   63
+5-6                   33
+11-20                 26
+5.0                   23
+1.0                   22
+7-10                  21
+0.0                   20
+3.0                   20
+6.0                   17
+4.0                   16
+9.0                   14
+2.0                   14
+7.0                   13
+More than 20 years    10
+8.0                    8
+13.0                   8
+15.0                   7
+20.0                   7
+10.0                   6
+12.0                   6
+14.0                   6
+17.0                   6
+22.0                   6
+18.0                   5
+16.0                   5
+11.0                   4
+23.0                   4
+24.0                   4
+19.0                   3
+32.0                   3
+39.0                   3
+21.0                   3
+28.0                   2
+30.0                   2
+26.0                   2
+36.0                   2
+25.0                   2
+29.0                   1
+31.0                   1
+27.0                   1
+34.0                   1
+35.0                   1
+38.0                   1
+41.0                   1
+42.0                   1
+49.0                   1
+33.0                   1
+Name: institute_service, dtype: int64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[56]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Extract the years of service and convert the type to float</span>
+<span class="n">combined_updated</span><span class="p">[</span><span class="s1">&#39;institute_service_up&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">combined_updated</span><span class="p">[</span><span class="s1">&#39;institute_service&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;str&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">extract</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;(\d+)&#39;</span><span class="p">)</span>
+<span class="n">combined_updated</span><span class="p">[</span><span class="s1">&#39;institute_service_up&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">combined_updated</span><span class="p">[</span><span class="s1">&#39;institute_service_up&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;float&#39;</span><span class="p">)</span>
+
+<span class="c1"># Check the years extracted are correct</span>
+<span class="n">combined_updated</span><span class="p">[</span><span class="s1">&#39;institute_service_up&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[56]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>1.0     159
+3.0      83
+5.0      56
+7.0      34
+11.0     30
+0.0      20
+20.0     17
+6.0      17
+4.0      16
+9.0      14
+2.0      14
+13.0      8
+8.0       8
+15.0      7
+17.0      6
+10.0      6
+12.0      6
+14.0      6
+22.0      6
+16.0      5
+18.0      5
+24.0      4
+23.0      4
+39.0      3
+19.0      3
+21.0      3
+32.0      3
+28.0      2
+36.0      2
+25.0      2
+30.0      2
+26.0      2
+29.0      1
+38.0      1
+42.0      1
+27.0      1
+41.0      1
+35.0      1
+49.0      1
+34.0      1
+33.0      1
+31.0      1
+Name: institute_service_up, dtype: int64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[57]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Convert years of service to categories</span>
+<span class="k">def</span> <span class="nf">transform_service</span><span class="p">(</span><span class="n">val</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">val</span> <span class="o">&gt;=</span> <span class="mi">11</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;Veteran&quot;</span>
+    <span class="k">elif</span> <span class="mi">7</span> <span class="o">&lt;=</span> <span class="n">val</span> <span class="o">&lt;</span> <span class="mi">11</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;Established&quot;</span>
+    <span class="k">elif</span> <span class="mi">3</span> <span class="o">&lt;=</span> <span class="n">val</span> <span class="o">&lt;</span> <span class="mi">7</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;Experienced&quot;</span>
+    <span class="k">elif</span> <span class="n">pd</span><span class="o">.</span><span class="n">isnull</span><span class="p">(</span><span class="n">val</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;New&quot;</span>
+<span class="n">combined_updated</span><span class="p">[</span><span class="s1">&#39;service_cat&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">combined_updated</span><span class="p">[</span><span class="s1">&#39;institute_service_up&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">transform_service</span><span class="p">)</span>
+
+<span class="c1"># Quick check of the update</span>
+<span class="n">combined_updated</span><span class="p">[</span><span class="s1">&#39;service_cat&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[57]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>New            193
+Experienced    172
+Veteran        136
+Established     62
+Name: service_cat, dtype: int64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Perform-Some-Initial-Analysis">Perform Some Initial Analysis<a class="anchor-link" href="#Perform-Some-Initial-Analysis">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Finally, we'll replace the missing values in the <code>dissatisfied</code> column with the most frequent value, <code>False</code>. Then, we'll calculate the percentage of employees who resigned due to dissatisfaction in each <code>service_cat</code> group and plot the results.</p>
+<p>Note that since we still have additional missing values left to deal with, this is meant to be an initial introduction to the analysis, <em>not</em> the final analysis.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[58]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Verify the unique values</span>
+<span class="n">combined_updated</span><span class="p">[</span><span class="s1">&#39;dissatisfied&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">(</span><span class="n">dropna</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[58]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>False    403
+True     240
+NaN        8
+Name: dissatisfied, dtype: int64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[59]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Replace missing values with the most frequent value, False</span>
+<span class="n">combined_updated</span><span class="p">[</span><span class="s1">&#39;dissatisfied&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">combined_updated</span><span class="p">[</span><span class="s1">&#39;dissatisfied&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[60]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Calculate the percentage of employees who resigned due to dissatisfaction in each category</span>
+<span class="n">dis_pct</span> <span class="o">=</span> <span class="n">combined_updated</span><span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="s1">&#39;service_cat&#39;</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="s1">&#39;dissatisfied&#39;</span><span class="p">)</span>
+
+<span class="c1"># Plot the results</span>
+<span class="o">%</span><span class="k">matplotlib</span> inline
+<span class="n">dis_pct</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">,</span> <span class="n">rot</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[60]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7fd2346d8be0&gt;</pre>
+</div>
+
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>From the initial analysis above, we can tentatively conclude that employees with 7 or more years of service are more likely to resign due to some kind of dissatisfaction with the job than employees with less than 7 years of service. However, we need to handle the rest of the missing data to finalize our analysis.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+ 
+
+
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = '//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: 'center'," +
+        "    displayIndent: '0em'," +
+        "    showMathMenu: true," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['$','$'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        " linebreaks: { automatic: true, width: '95% container' }, " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'black ! important'} }" +
+        "    } " +
+        "}); ";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="./tag/python.html">python</a>
+    </p>
+  </div>
+
+
+
+
+
+</article>
+
+    <footer>
+<p>&copy;  </p>
+<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Ram Shanker G ",
+  "url" : ".",
+  "image": "",
+  "description": ""
+}
+</script>
+
+</body>
+</html>

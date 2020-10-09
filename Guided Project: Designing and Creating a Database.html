@@ -1,0 +1,6570 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="./theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="./theme/pygments/github.min.css">
+  <link rel="stylesheet" type="text/css" href="./theme/font-awesome/css/font-awesome.min.css">
+
+
+    <link href="ramshankerg.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Ram Shanker G Atom">
+
+
+
+
+
+<meta name="author" content="me" />
+<meta name="description" content="Click on read more link to find out more about the project" />
+<meta name="keywords" content="python">
+
+<meta property="og:site_name" content="Ram Shanker G"/>
+<meta property="og:title" content="Guided Project: Designing and Creating a Database"/>
+<meta property="og:description" content="Click on read more link to find out more about the project"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="./Guided Project: Designing and Creating a Database.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2015-07-08 20:00:00+05:30"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="./author/me.html">
+<meta property="article:section" content="Projects"/>
+<meta property="article:tag" content="python"/>
+<meta property="og:image" content="">
+
+  <title>Ram Shanker G &ndash; Guided Project: Designing and Creating a Database</title>
+
+</head>
+<body>
+  <aside>
+    <div>
+      <a href=".">
+        <img src="./theme/img/profile.png" alt="" title="">
+      </a>
+      <h1><a href="."></a></h1>
+
+
+      <nav>
+        <ul class="list">
+          <li><a href="./pages/about-me.html#about-me">About me</a></li>
+
+          <li><a href="http://getpelican.com/" target="_blank">Pelican</a></li>
+          <li><a href="http://python.org/" target="_blank">Python.org</a></li>
+          <li><a href="http://jinja.pocoo.org/" target="_blank">Jinja2</a></li>
+          <li><a href="#" target="_blank">You can modify these links in your config file</a></li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+        <li><a class="sc-GitHub" href="https://github.com/ramshankerg" target="_blank"><i class="fa fa-GitHub"></i></a></li>
+        <li><a class="sc-Linkedin" href="https://www.linkedin.com/in/ram-shanker-g/" target="_blank"><i class="fa fa-Linkedin"></i></a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+
+<article class="single">
+  <header>
+      
+    <h1 id="Guided Project: Designing and Creating a Database">Guided Project: Designing and Creating a Database</h1>
+    <p>
+          Posted on Wed 08 July 2015 in <a href="./category/projects.html">Projects</a>
+
+
+    </p>
+  </header>
+
+
+  <div>
+    <style type="text/css">/*!
+*
+* IPython notebook
+*
+*/
+/* CSS font colors for translated ANSI escape sequences */
+/* The color values are a mix of
+   http://www.xcolors.net/dl/baskerville-ivorylight and
+   http://www.xcolors.net/dl/euphrasia */
+.ansi-black-fg {
+  color: #3E424D;
+}
+.ansi-black-bg {
+  background-color: #3E424D;
+}
+.ansi-black-intense-fg {
+  color: #282C36;
+}
+.ansi-black-intense-bg {
+  background-color: #282C36;
+}
+.ansi-red-fg {
+  color: #E75C58;
+}
+.ansi-red-bg {
+  background-color: #E75C58;
+}
+.ansi-red-intense-fg {
+  color: #B22B31;
+}
+.ansi-red-intense-bg {
+  background-color: #B22B31;
+}
+.ansi-green-fg {
+  color: #00A250;
+}
+.ansi-green-bg {
+  background-color: #00A250;
+}
+.ansi-green-intense-fg {
+  color: #007427;
+}
+.ansi-green-intense-bg {
+  background-color: #007427;
+}
+.ansi-yellow-fg {
+  color: #DDB62B;
+}
+.ansi-yellow-bg {
+  background-color: #DDB62B;
+}
+.ansi-yellow-intense-fg {
+  color: #B27D12;
+}
+.ansi-yellow-intense-bg {
+  background-color: #B27D12;
+}
+.ansi-blue-fg {
+  color: #208FFB;
+}
+.ansi-blue-bg {
+  background-color: #208FFB;
+}
+.ansi-blue-intense-fg {
+  color: #0065CA;
+}
+.ansi-blue-intense-bg {
+  background-color: #0065CA;
+}
+.ansi-magenta-fg {
+  color: #D160C4;
+}
+.ansi-magenta-bg {
+  background-color: #D160C4;
+}
+.ansi-magenta-intense-fg {
+  color: #A03196;
+}
+.ansi-magenta-intense-bg {
+  background-color: #A03196;
+}
+.ansi-cyan-fg {
+  color: #60C6C8;
+}
+.ansi-cyan-bg {
+  background-color: #60C6C8;
+}
+.ansi-cyan-intense-fg {
+  color: #258F8F;
+}
+.ansi-cyan-intense-bg {
+  background-color: #258F8F;
+}
+.ansi-white-fg {
+  color: #C5C1B4;
+}
+.ansi-white-bg {
+  background-color: #C5C1B4;
+}
+.ansi-white-intense-fg {
+  color: #A1A6B2;
+}
+.ansi-white-intense-bg {
+  background-color: #A1A6B2;
+}
+.ansi-default-inverse-fg {
+  color: #FFFFFF;
+}
+.ansi-default-inverse-bg {
+  background-color: #000000;
+}
+.ansi-bold {
+  font-weight: bold;
+}
+.ansi-underline {
+  text-decoration: underline;
+}
+/* The following styles are deprecated an will be removed in a future version */
+.ansibold {
+  font-weight: bold;
+}
+.ansi-inverse {
+  outline: 0.5px dotted;
+}
+/* use dark versions for foreground, to improve visibility */
+.ansiblack {
+  color: black;
+}
+.ansired {
+  color: darkred;
+}
+.ansigreen {
+  color: darkgreen;
+}
+.ansiyellow {
+  color: #c4a000;
+}
+.ansiblue {
+  color: darkblue;
+}
+.ansipurple {
+  color: darkviolet;
+}
+.ansicyan {
+  color: steelblue;
+}
+.ansigray {
+  color: gray;
+}
+/* and light for background, for the same reason */
+.ansibgblack {
+  background-color: black;
+}
+.ansibgred {
+  background-color: red;
+}
+.ansibggreen {
+  background-color: green;
+}
+.ansibgyellow {
+  background-color: yellow;
+}
+.ansibgblue {
+  background-color: blue;
+}
+.ansibgpurple {
+  background-color: magenta;
+}
+.ansibgcyan {
+  background-color: cyan;
+}
+.ansibggray {
+  background-color: gray;
+}
+div.cell {
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  border-radius: 2px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+  width: 100%;
+  padding: 5px;
+  /* This acts as a spacer between cells, that is outside the border */
+  margin: 0px;
+  outline: none;
+  position: relative;
+  overflow: visible;
+}
+div.cell:before {
+  position: absolute;
+  display: block;
+  top: -1px;
+  left: -1px;
+  width: 5px;
+  height: calc(100% +  2px);
+  content: '';
+  background: transparent;
+}
+div.cell.jupyter-soft-selected {
+  border-left-color: #E3F2FD;
+  border-left-width: 1px;
+  padding-left: 5px;
+  border-right-color: #E3F2FD;
+  border-right-width: 1px;
+  background: #E3F2FD;
+}
+@media print {
+  div.cell.jupyter-soft-selected {
+    border-color: transparent;
+  }
+}
+div.cell.selected,
+div.cell.selected.jupyter-soft-selected {
+  border-color: #ababab;
+}
+div.cell.selected:before,
+div.cell.selected.jupyter-soft-selected:before {
+  position: absolute;
+  display: block;
+  top: -1px;
+  left: -1px;
+  width: 5px;
+  height: calc(100% +  2px);
+  content: '';
+  background: #42A5F5;
+}
+@media print {
+  div.cell.selected,
+  div.cell.selected.jupyter-soft-selected {
+    border-color: transparent;
+  }
+}
+.edit_mode div.cell.selected {
+  border-color: #66BB6A;
+}
+.edit_mode div.cell.selected:before {
+  position: absolute;
+  display: block;
+  top: -1px;
+  left: -1px;
+  width: 5px;
+  height: calc(100% +  2px);
+  content: '';
+  background: #66BB6A;
+}
+@media print {
+  .edit_mode div.cell.selected {
+    border-color: transparent;
+  }
+}
+.prompt {
+  /* This needs to be wide enough for 3 digit prompt numbers: In[100]: */
+  min-width: 14ex;
+  /* This padding is tuned to match the padding on the CodeMirror editor. */
+  padding: 0.4em;
+  margin: 0px;
+  font-family: monospace;
+  text-align: right;
+  /* This has to match that of the the CodeMirror class line-height below */
+  line-height: 1.21429em;
+  /* Don't highlight prompt number selection */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  /* Use default cursor */
+  cursor: default;
+}
+@media (max-width: 540px) {
+  .prompt {
+    text-align: left;
+  }
+}
+div.inner_cell {
+  min-width: 0;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  /* Old browsers */
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  /* Modern browsers */
+  flex: 1;
+}
+/* input_area and input_prompt must match in top border and margin for alignment */
+div.input_area {
+  border: 1px solid #cfcfcf;
+  border-radius: 2px;
+  background: #f7f7f7;
+  line-height: 1.21429em;
+}
+/* This is needed so that empty prompt areas can collapse to zero height when there
+   is no content in the output_subarea and the prompt. The main purpose of this is
+   to make sure that empty JavaScript output_subareas have no height. */
+div.prompt:empty {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+div.unrecognized_cell {
+  padding: 5px 5px 5px 0px;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: horizontal;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+div.unrecognized_cell .inner_cell {
+  border-radius: 2px;
+  padding: 5px;
+  font-weight: bold;
+  color: red;
+  border: 1px solid #cfcfcf;
+  background: #eaeaea;
+}
+div.unrecognized_cell .inner_cell a {
+  color: inherit;
+  text-decoration: none;
+}
+div.unrecognized_cell .inner_cell a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+@media (max-width: 540px) {
+  div.unrecognized_cell > div.prompt {
+    display: none;
+  }
+}
+div.code_cell {
+  /* avoid page breaking on code cells when printing */
+}
+@media print {
+  div.code_cell {
+    page-break-inside: avoid;
+  }
+}
+/* any special styling for code cells that are currently running goes here */
+div.input {
+  page-break-inside: avoid;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: horizontal;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+@media (max-width: 540px) {
+  div.input {
+    /* Old browsers */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-align: stretch;
+    display: -moz-box;
+    -moz-box-orient: vertical;
+    -moz-box-align: stretch;
+    display: box;
+    box-orient: vertical;
+    box-align: stretch;
+    /* Modern browsers */
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+/* input_area and input_prompt must match in top border and margin for alignment */
+div.input_prompt {
+  color: #303F9F;
+  border-top: 1px solid transparent;
+}
+div.input_area > div.highlight {
+  margin: 0.4em;
+  border: none;
+  padding: 0px;
+  background-color: transparent;
+}
+div.input_area > div.highlight > pre {
+  margin: 0px;
+  border: none;
+  padding: 0px;
+  background-color: transparent;
+}
+/* The following gets added to the <head> if it is detected that the user has a
+ * monospace font with inconsistent normal/bold/italic height.  See
+ * notebookmain.js.  Such fonts will have keywords vertically offset with
+ * respect to the rest of the text.  The user should select a better font.
+ * See: https://github.com/ipython/ipython/issues/1503
+ *
+ * .CodeMirror span {
+ *      vertical-align: bottom;
+ * }
+ */
+.CodeMirror {
+  line-height: 1.21429em;
+  /* Changed from 1em to our global default */
+  font-size: 14px;
+  height: auto;
+  /* Changed to auto to autogrow */
+  background: none;
+  /* Changed from white to allow our bg to show through */
+}
+.CodeMirror-scroll {
+  /*  The CodeMirror docs are a bit fuzzy on if overflow-y should be hidden or visible.*/
+  /*  We have found that if it is visible, vertical scrollbars appear with font size changes.*/
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+.CodeMirror-lines {
+  /* In CM2, this used to be 0.4em, but in CM3 it went to 4px. We need the em value because */
+  /* we have set a different line-height and want this to scale with that. */
+  /* Note that this should set vertical padding only, since CodeMirror assumes
+       that horizontal padding will be set on CodeMirror pre */
+  padding: 0.4em 0;
+}
+.CodeMirror-linenumber {
+  padding: 0 8px 0 4px;
+}
+.CodeMirror-gutters {
+  border-bottom-left-radius: 2px;
+  border-top-left-radius: 2px;
+}
+.CodeMirror pre {
+  /* In CM3 this went to 4px from 0 in CM2. This sets horizontal padding only,
+    use .CodeMirror-lines for vertical */
+  padding: 0 0.4em;
+  border: 0;
+  border-radius: 0;
+}
+.CodeMirror-cursor {
+  border-left: 1.4px solid black;
+}
+@media screen and (min-width: 2138px) and (max-width: 4319px) {
+  .CodeMirror-cursor {
+    border-left: 2px solid black;
+  }
+}
+@media screen and (min-width: 4320px) {
+  .CodeMirror-cursor {
+    border-left: 4px solid black;
+  }
+}
+/*
+
+Original style from softwaremaniacs.org (c) Ivan Sagalaev <Maniac@SoftwareManiacs.Org>
+Adapted from GitHub theme
+
+*/
+.highlight-base {
+  color: #000;
+}
+.highlight-variable {
+  color: #000;
+}
+.highlight-variable-2 {
+  color: #1a1a1a;
+}
+.highlight-variable-3 {
+  color: #333333;
+}
+.highlight-string {
+  color: #BA2121;
+}
+.highlight-comment {
+  color: #408080;
+  font-style: italic;
+}
+.highlight-number {
+  color: #080;
+}
+.highlight-atom {
+  color: #88F;
+}
+.highlight-keyword {
+  color: #008000;
+  font-weight: bold;
+}
+.highlight-builtin {
+  color: #008000;
+}
+.highlight-error {
+  color: #f00;
+}
+.highlight-operator {
+  color: #AA22FF;
+  font-weight: bold;
+}
+.highlight-meta {
+  color: #AA22FF;
+}
+/* previously not defined, copying from default codemirror */
+.highlight-def {
+  color: #00f;
+}
+.highlight-string-2 {
+  color: #f50;
+}
+.highlight-qualifier {
+  color: #555;
+}
+.highlight-bracket {
+  color: #997;
+}
+.highlight-tag {
+  color: #170;
+}
+.highlight-attribute {
+  color: #00c;
+}
+.highlight-header {
+  color: blue;
+}
+.highlight-quote {
+  color: #090;
+}
+.highlight-link {
+  color: #00c;
+}
+/* apply the same style to codemirror */
+.cm-s-ipython span.cm-keyword {
+  color: #008000;
+  font-weight: bold;
+}
+.cm-s-ipython span.cm-atom {
+  color: #88F;
+}
+.cm-s-ipython span.cm-number {
+  color: #080;
+}
+.cm-s-ipython span.cm-def {
+  color: #00f;
+}
+.cm-s-ipython span.cm-variable {
+  color: #000;
+}
+.cm-s-ipython span.cm-operator {
+  color: #AA22FF;
+  font-weight: bold;
+}
+.cm-s-ipython span.cm-variable-2 {
+  color: #1a1a1a;
+}
+.cm-s-ipython span.cm-variable-3 {
+  color: #333333;
+}
+.cm-s-ipython span.cm-comment {
+  color: #408080;
+  font-style: italic;
+}
+.cm-s-ipython span.cm-string {
+  color: #BA2121;
+}
+.cm-s-ipython span.cm-string-2 {
+  color: #f50;
+}
+.cm-s-ipython span.cm-meta {
+  color: #AA22FF;
+}
+.cm-s-ipython span.cm-qualifier {
+  color: #555;
+}
+.cm-s-ipython span.cm-builtin {
+  color: #008000;
+}
+.cm-s-ipython span.cm-bracket {
+  color: #997;
+}
+.cm-s-ipython span.cm-tag {
+  color: #170;
+}
+.cm-s-ipython span.cm-attribute {
+  color: #00c;
+}
+.cm-s-ipython span.cm-header {
+  color: blue;
+}
+.cm-s-ipython span.cm-quote {
+  color: #090;
+}
+.cm-s-ipython span.cm-link {
+  color: #00c;
+}
+.cm-s-ipython span.cm-error {
+  color: #f00;
+}
+.cm-s-ipython span.cm-tab {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAMCAYAAAAkuj5RAAAAAXNSR0IArs4c6QAAAGFJREFUSMft1LsRQFAQheHPowAKoACx3IgEKtaEHujDjORSgWTH/ZOdnZOcM/sgk/kFFWY0qV8foQwS4MKBCS3qR6ixBJvElOobYAtivseIE120FaowJPN75GMu8j/LfMwNjh4HUpwg4LUAAAAASUVORK5CYII=);
+  background-position: right;
+  background-repeat: no-repeat;
+}
+div.output_wrapper {
+  /* this position must be relative to enable descendents to be absolute within it */
+  position: relative;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  z-index: 1;
+}
+/* class for the output area when it should be height-limited */
+div.output_scroll {
+  /* ideally, this would be max-height, but FF barfs all over that */
+  height: 24em;
+  /* FF needs this *and the wrapper* to specify full width, or it will shrinkwrap */
+  width: 100%;
+  overflow: auto;
+  border-radius: 2px;
+  -webkit-box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.8);
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.8);
+  display: block;
+}
+/* output div while it is collapsed */
+div.output_collapsed {
+  margin: 0px;
+  padding: 0px;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+div.out_prompt_overlay {
+  height: 100%;
+  padding: 0px 0.4em;
+  position: absolute;
+  border-radius: 2px;
+}
+div.out_prompt_overlay:hover {
+  /* use inner shadow to get border that is computed the same on WebKit/FF */
+  -webkit-box-shadow: inset 0 0 1px #000;
+  box-shadow: inset 0 0 1px #000;
+  background: rgba(240, 240, 240, 0.5);
+}
+div.output_prompt {
+  color: #D84315;
+}
+/* This class is the outer container of all output sections. */
+div.output_area {
+  padding: 0px;
+  page-break-inside: avoid;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: horizontal;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+div.output_area .MathJax_Display {
+  text-align: left !important;
+}
+div.output_area 
+div.output_area 
+div.output_area img,
+div.output_area svg {
+  max-width: 100%;
+  height: auto;
+}
+div.output_area img.unconfined,
+div.output_area svg.unconfined {
+  max-width: none;
+}
+div.output_area .mglyph > img {
+  max-width: none;
+}
+/* This is needed to protect the pre formating from global settings such
+   as that of bootstrap */
+.output {
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+@media (max-width: 540px) {
+  div.output_area {
+    /* Old browsers */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-align: stretch;
+    display: -moz-box;
+    -moz-box-orient: vertical;
+    -moz-box-align: stretch;
+    display: box;
+    box-orient: vertical;
+    box-align: stretch;
+    /* Modern browsers */
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+div.output_area pre {
+  margin: 0;
+  padding: 1px 0 1px 0;
+  border: 0;
+  vertical-align: baseline;
+  color: black;
+  background-color: transparent;
+  border-radius: 0;
+}
+/* This class is for the output subarea inside the output_area and after
+   the prompt div. */
+div.output_subarea {
+  overflow-x: auto;
+  padding: 0.4em;
+  /* Old browsers */
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  /* Modern browsers */
+  flex: 1;
+  max-width: calc(100% - 14ex);
+}
+div.output_scroll div.output_subarea {
+  overflow-x: visible;
+}
+/* The rest of the output_* classes are for special styling of the different
+   output types */
+/* all text output has this class: */
+div.output_text {
+  text-align: left;
+  color: #000;
+  /* This has to match that of the the CodeMirror class line-height below */
+  line-height: 1.21429em;
+}
+/* stdout/stderr are 'text' as well as 'stream', but execute_result/error are *not* streams */
+div.output_stderr {
+  background: #fdd;
+  /* very light red background for stderr */
+}
+div.output_latex {
+  text-align: left;
+}
+/* Empty output_javascript divs should have no height */
+div.output_javascript:empty {
+  padding: 0;
+}
+.js-error {
+  color: darkred;
+}
+/* raw_input styles */
+div.raw_input_container {
+  line-height: 1.21429em;
+  padding-top: 5px;
+}
+pre.raw_input_prompt {
+  /* nothing needed here. */
+}
+input.raw_input {
+  font-family: monospace;
+  font-size: inherit;
+  color: inherit;
+  width: auto;
+  /* make sure input baseline aligns with prompt */
+  vertical-align: baseline;
+  /* padding + margin = 0.5em between prompt and cursor */
+  padding: 0em 0.25em;
+  margin: 0em 0.25em;
+}
+input.raw_input:focus {
+  box-shadow: none;
+}
+p.p-space {
+  margin-bottom: 10px;
+}
+div.output_unrecognized {
+  padding: 5px;
+  font-weight: bold;
+  color: red;
+}
+div.output_unrecognized a {
+  color: inherit;
+  text-decoration: none;
+}
+div.output_unrecognized a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+.rendered_html {
+  color: #000;
+  /* any extras will just be numbers: */
+}
+
+
+
+.rendered_html :link {
+  text-decoration: underline;
+}
+.rendered_html :visited {
+  text-decoration: underline;
+}
+
+
+
+
+
+
+.rendered_html h1:first-child {
+  margin-top: 0.538em;
+}
+.rendered_html h2:first-child {
+  margin-top: 0.636em;
+}
+.rendered_html h3:first-child {
+  margin-top: 0.777em;
+}
+.rendered_html h4:first-child {
+  margin-top: 1em;
+}
+.rendered_html h5:first-child {
+  margin-top: 1em;
+}
+.rendered_html h6:first-child {
+  margin-top: 1em;
+}
+.rendered_html ul:not(.list-inline),
+.rendered_html ol:not(.list-inline) {
+  padding-left: 2em;
+}
+
+
+
+
+
+
+
+
+.rendered_html * + ul {
+  margin-top: 1em;
+}
+.rendered_html * + ol {
+  margin-top: 1em;
+}
+
+
+
+
+
+.rendered_html pre,
+
+
+
+
+.rendered_html tr,
+.rendered_html th,
+
+
+.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
+}
+.rendered_html * + table {
+  margin-top: 1em;
+}
+
+.rendered_html * + p {
+  margin-top: 1em;
+}
+
+.rendered_html * + img {
+  margin-top: 1em;
+}
+.rendered_html img,
+
+.rendered_html img.unconfined,
+
+
+.rendered_html * + .alert {
+  margin-top: 1em;
+}
+[dir="rtl"] 
+div.text_cell {
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: horizontal;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+@media (max-width: 540px) {
+  div.text_cell > div.prompt {
+    display: none;
+  }
+}
+div.text_cell_render {
+  /*font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;*/
+  outline: none;
+  resize: none;
+  width: inherit;
+  border-style: none;
+  padding: 0.5em 0.5em 0.5em 0.4em;
+  color: #000;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+a.anchor-link:link {
+  text-decoration: none;
+  padding: 0px 20px;
+  visibility: hidden;
+}
+h1:hover .anchor-link,
+h2:hover .anchor-link,
+h3:hover .anchor-link,
+h4:hover .anchor-link,
+h5:hover .anchor-link,
+h6:hover .anchor-link {
+  visibility: visible;
+}
+.text_cell.rendered .input_area {
+  display: none;
+}
+.text_cell.rendered 
+.text_cell.rendered .rendered_html tr,
+.text_cell.rendered .rendered_html th,
+.text_cell.rendered 
+.text_cell.unrendered .text_cell_render {
+  display: none;
+}
+.text_cell .dropzone .input_area {
+  border: 2px dashed #bababa;
+  margin: -1px;
+}
+.cm-header-1,
+.cm-header-2,
+.cm-header-3,
+.cm-header-4,
+.cm-header-5,
+.cm-header-6 {
+  font-weight: bold;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.cm-header-1 {
+  font-size: 185.7%;
+}
+.cm-header-2 {
+  font-size: 157.1%;
+}
+.cm-header-3 {
+  font-size: 128.6%;
+}
+.cm-header-4 {
+  font-size: 110%;
+}
+.cm-header-5 {
+  font-size: 100%;
+  font-style: italic;
+}
+.cm-header-6 {
+  font-size: 100%;
+  font-style: italic;
+}
+</style>
+<style type="text/css">.highlight .hll { background-color: #ffffcc }
+.highlight  { background: #f8f8f8; }
+.highlight .c { color: #408080; font-style: italic } /* Comment */
+.highlight .err { border: 1px solid #FF0000 } /* Error */
+.highlight .k { color: #008000; font-weight: bold } /* Keyword */
+.highlight .o { color: #666666 } /* Operator */
+.highlight .ch { color: #408080; font-style: italic } /* Comment.Hashbang */
+.highlight .cm { color: #408080; font-style: italic } /* Comment.Multiline */
+.highlight .cp { color: #BC7A00 } /* Comment.Preproc */
+.highlight .cpf { color: #408080; font-style: italic } /* Comment.PreprocFile */
+.highlight .c1 { color: #408080; font-style: italic } /* Comment.Single */
+.highlight .cs { color: #408080; font-style: italic } /* Comment.Special */
+.highlight .gd { color: #A00000 } /* Generic.Deleted */
+.highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .gr { color: #FF0000 } /* Generic.Error */
+.highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.highlight .gi { color: #00A000 } /* Generic.Inserted */
+.highlight .go { color: #888888 } /* Generic.Output */
+.highlight .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+.highlight .gs { font-weight: bold } /* Generic.Strong */
+.highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.highlight .gt { color: #0044DD } /* Generic.Traceback */
+.highlight .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+.highlight .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+.highlight .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+.highlight .kp { color: #008000 } /* Keyword.Pseudo */
+.highlight .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+.highlight .kt { color: #B00040 } /* Keyword.Type */
+.highlight .m { color: #666666 } /* Literal.Number */
+.highlight .s { color: #BA2121 } /* Literal.String */
+.highlight .na { color: #7D9029 } /* Name.Attribute */
+.highlight .nb { color: #008000 } /* Name.Builtin */
+.highlight .nc { color: #0000FF; font-weight: bold } /* Name.Class */
+.highlight .no { color: #880000 } /* Name.Constant */
+.highlight .nd { color: #AA22FF } /* Name.Decorator */
+.highlight .ni { color: #999999; font-weight: bold } /* Name.Entity */
+.highlight .ne { color: #D2413A; font-weight: bold } /* Name.Exception */
+.highlight .nf { color: #0000FF } /* Name.Function */
+.highlight .nl { color: #A0A000 } /* Name.Label */
+.highlight .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+.highlight .nt { color: #008000; font-weight: bold } /* Name.Tag */
+.highlight .nv { color: #19177C } /* Name.Variable */
+.highlight .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+.highlight .w { color: #bbbbbb } /* Text.Whitespace */
+.highlight .mb { color: #666666 } /* Literal.Number.Bin */
+.highlight .mf { color: #666666 } /* Literal.Number.Float */
+.highlight .mh { color: #666666 } /* Literal.Number.Hex */
+.highlight .mi { color: #666666 } /* Literal.Number.Integer */
+.highlight .mo { color: #666666 } /* Literal.Number.Oct */
+.highlight .sa { color: #BA2121 } /* Literal.String.Affix */
+.highlight .sb { color: #BA2121 } /* Literal.String.Backtick */
+.highlight .sc { color: #BA2121 } /* Literal.String.Char */
+.highlight .dl { color: #BA2121 } /* Literal.String.Delimiter */
+.highlight .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+.highlight .s2 { color: #BA2121 } /* Literal.String.Double */
+.highlight .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
+.highlight .sh { color: #BA2121 } /* Literal.String.Heredoc */
+.highlight .si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
+.highlight .sx { color: #008000 } /* Literal.String.Other */
+.highlight .sr { color: #BB6688 } /* Literal.String.Regex */
+.highlight .s1 { color: #BA2121 } /* Literal.String.Single */
+.highlight .ss { color: #19177C } /* Literal.String.Symbol */
+.highlight .bp { color: #008000 } /* Name.Builtin.Pseudo */
+.highlight .fm { color: #0000FF } /* Name.Function.Magic */
+.highlight .vc { color: #19177C } /* Name.Variable.Class */
+.highlight .vg { color: #19177C } /* Name.Variable.Global */
+.highlight .vi { color: #19177C } /* Name.Variable.Instance */
+.highlight .vm { color: #19177C } /* Name.Variable.Magic */
+.highlight .il { color: #666666 } /* Literal.Number.Integer.Long */</style><div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">csv</span>
+
+<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;max_columns&#39;</span><span class="p">,</span> <span class="mi">180</span><span class="p">)</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;max_rows&#39;</span><span class="p">,</span> <span class="mi">200000</span><span class="p">)</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;max_colwidth&#39;</span><span class="p">,</span> <span class="mi">5000</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Getting-to-Know-the-Data">Getting to Know the Data<a class="anchor-link" href="#Getting-to-Know-the-Data">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">log</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;game_log.csv&quot;</span><span class="p">,</span><span class="n">low_memory</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">log</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="n">log</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>(171907, 161)
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[2]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>date</th>
+      <th>number_of_game</th>
+      <th>day_of_week</th>
+      <th>v_name</th>
+      <th>v_league</th>
+      <th>v_game_number</th>
+      <th>h_name</th>
+      <th>h_league</th>
+      <th>h_game_number</th>
+      <th>v_score</th>
+      <th>h_score</th>
+      <th>length_outs</th>
+      <th>day_night</th>
+      <th>completion</th>
+      <th>forefeit</th>
+      <th>protest</th>
+      <th>park_id</th>
+      <th>attendance</th>
+      <th>length_minutes</th>
+      <th>v_line_score</th>
+      <th>h_line_score</th>
+      <th>v_at_bats</th>
+      <th>v_hits</th>
+      <th>v_doubles</th>
+      <th>v_triples</th>
+      <th>v_homeruns</th>
+      <th>v_rbi</th>
+      <th>v_sacrifice_hits</th>
+      <th>v_sacrifice_flies</th>
+      <th>v_hit_by_pitch</th>
+      <th>v_walks</th>
+      <th>v_intentional_walks</th>
+      <th>v_strikeouts</th>
+      <th>v_stolen_bases</th>
+      <th>v_caught_stealing</th>
+      <th>v_grounded_into_double</th>
+      <th>v_first_catcher_interference</th>
+      <th>v_left_on_base</th>
+      <th>v_pitchers_used</th>
+      <th>v_individual_earned_runs</th>
+      <th>v_team_earned_runs</th>
+      <th>v_wild_pitches</th>
+      <th>v_balks</th>
+      <th>v_putouts</th>
+      <th>v_assists</th>
+      <th>v_errors</th>
+      <th>v_passed_balls</th>
+      <th>v_double_plays</th>
+      <th>v_triple_plays</th>
+      <th>h_at_bats</th>
+      <th>h_hits</th>
+      <th>h_doubles</th>
+      <th>h_triples</th>
+      <th>h_homeruns</th>
+      <th>h_rbi</th>
+      <th>h_sacrifice_hits</th>
+      <th>h_sacrifice_flies</th>
+      <th>h_hit_by_pitch</th>
+      <th>h_walks</th>
+      <th>h_intentional_walks</th>
+      <th>h_strikeouts</th>
+      <th>h_stolen_bases</th>
+      <th>h_caught_stealing</th>
+      <th>h_grounded_into_double</th>
+      <th>h_first_catcher_interference</th>
+      <th>h_left_on_base</th>
+      <th>h_pitchers_used</th>
+      <th>h_individual_earned_runs</th>
+      <th>h_team_earned_runs</th>
+      <th>h_wild_pitches</th>
+      <th>h_balks</th>
+      <th>h_putouts</th>
+      <th>h_assists</th>
+      <th>h_errors</th>
+      <th>h_passed_balls</th>
+      <th>h_double_plays</th>
+      <th>h_triple_plays</th>
+      <th>hp_umpire_id</th>
+      <th>hp_umpire_name</th>
+      <th>1b_umpire_id</th>
+      <th>1b_umpire_name</th>
+      <th>2b_umpire_id</th>
+      <th>2b_umpire_name</th>
+      <th>3b_umpire_id</th>
+      <th>3b_umpire_name</th>
+      <th>lf_umpire_id</th>
+      <th>lf_umpire_name</th>
+      <th>rf_umpire_id</th>
+      <th>rf_umpire_name</th>
+      <th>v_manager_id</th>
+      <th>v_manager_name</th>
+      <th>h_manager_id</th>
+      <th>h_manager_name</th>
+      <th>winning_pitcher_id</th>
+      <th>winning_pitcher_name</th>
+      <th>losing_pitcher_id</th>
+      <th>losing_pitcher_name</th>
+      <th>saving_pitcher_id</th>
+      <th>saving_pitcher_name</th>
+      <th>winning_rbi_batter_id</th>
+      <th>winning_rbi_batter_id_name</th>
+      <th>v_starting_pitcher_id</th>
+      <th>v_starting_pitcher_name</th>
+      <th>h_starting_pitcher_id</th>
+      <th>h_starting_pitcher_name</th>
+      <th>v_player_1_id</th>
+      <th>v_player_1_name</th>
+      <th>v_player_1_def_pos</th>
+      <th>v_player_2_id</th>
+      <th>v_player_2_name</th>
+      <th>v_player_2_def_pos</th>
+      <th>v_player_3_id</th>
+      <th>v_player_3_name</th>
+      <th>v_player_3_def_pos</th>
+      <th>v_player_4_id</th>
+      <th>v_player_4_name</th>
+      <th>v_player_4_def_pos</th>
+      <th>v_player_5_id</th>
+      <th>v_player_5_name</th>
+      <th>v_player_5_def_pos</th>
+      <th>v_player_6_id</th>
+      <th>v_player_6_name</th>
+      <th>v_player_6_def_pos</th>
+      <th>v_player_7_id</th>
+      <th>v_player_7_name</th>
+      <th>v_player_7_def_pos</th>
+      <th>v_player_8_id</th>
+      <th>v_player_8_name</th>
+      <th>v_player_8_def_pos</th>
+      <th>v_player_9_id</th>
+      <th>v_player_9_name</th>
+      <th>v_player_9_def_pos</th>
+      <th>h_player_1_id</th>
+      <th>h_player_1_name</th>
+      <th>h_player_1_def_pos</th>
+      <th>h_player_2_id</th>
+      <th>h_player_2_name</th>
+      <th>h_player_2_def_pos</th>
+      <th>h_player_3_id</th>
+      <th>h_player_3_name</th>
+      <th>h_player_3_def_pos</th>
+      <th>h_player_4_id</th>
+      <th>h_player_4_name</th>
+      <th>h_player_4_def_pos</th>
+      <th>h_player_5_id</th>
+      <th>h_player_5_name</th>
+      <th>h_player_5_def_pos</th>
+      <th>h_player_6_id</th>
+      <th>h_player_6_name</th>
+      <th>h_player_6_def_pos</th>
+      <th>h_player_7_id</th>
+      <th>h_player_7_name</th>
+      <th>h_player_7_def_pos</th>
+      <th>h_player_8_id</th>
+      <th>h_player_8_name</th>
+      <th>h_player_8_def_pos</th>
+      <th>h_player_9_id</th>
+      <th>h_player_9_name</th>
+      <th>h_player_9_def_pos</th>
+      <th>additional_info</th>
+      <th>acquisition_info</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>18710504</td>
+      <td>0</td>
+      <td>Thu</td>
+      <td>CL1</td>
+      <td>NaN</td>
+      <td>1</td>
+      <td>FW1</td>
+      <td>NaN</td>
+      <td>1</td>
+      <td>0</td>
+      <td>2</td>
+      <td>54.0</td>
+      <td>D</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>FOR01</td>
+      <td>200.0</td>
+      <td>120.0</td>
+      <td>000000000</td>
+      <td>010010000</td>
+      <td>30.0</td>
+      <td>4.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>6.0</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>-1.0</td>
+      <td>NaN</td>
+      <td>4.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>27.0</td>
+      <td>9.0</td>
+      <td>0.0</td>
+      <td>3.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>31.0</td>
+      <td>4.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>2.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>NaN</td>
+      <td>-1.0</td>
+      <td>NaN</td>
+      <td>3.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>27.0</td>
+      <td>3.0</td>
+      <td>3.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>boakj901</td>
+      <td>John Boake</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>paboc101</td>
+      <td>Charlie Pabor</td>
+      <td>lennb101</td>
+      <td>Bill Lennon</td>
+      <td>mathb101</td>
+      <td>Bobby Mathews</td>
+      <td>prata101</td>
+      <td>Al Pratt</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>prata101</td>
+      <td>Al Pratt</td>
+      <td>mathb101</td>
+      <td>Bobby Mathews</td>
+      <td>whitd102</td>
+      <td>Deacon White</td>
+      <td>2.0</td>
+      <td>kimbg101</td>
+      <td>Gene Kimball</td>
+      <td>4.0</td>
+      <td>paboc101</td>
+      <td>Charlie Pabor</td>
+      <td>7.0</td>
+      <td>allia101</td>
+      <td>Art Allison</td>
+      <td>8.0</td>
+      <td>white104</td>
+      <td>Elmer White</td>
+      <td>9.0</td>
+      <td>prata101</td>
+      <td>Al Pratt</td>
+      <td>1.0</td>
+      <td>sutte101</td>
+      <td>Ezra Sutton</td>
+      <td>5.0</td>
+      <td>carlj102</td>
+      <td>Jim Carleton</td>
+      <td>3.0</td>
+      <td>bassj101</td>
+      <td>John Bass</td>
+      <td>6.0</td>
+      <td>selmf101</td>
+      <td>Frank Sellman</td>
+      <td>5.0</td>
+      <td>mathb101</td>
+      <td>Bobby Mathews</td>
+      <td>1.0</td>
+      <td>foraj101</td>
+      <td>Jim Foran</td>
+      <td>3.0</td>
+      <td>goldw101</td>
+      <td>Wally Goldsmith</td>
+      <td>6.0</td>
+      <td>lennb101</td>
+      <td>Bill Lennon</td>
+      <td>2.0</td>
+      <td>caret101</td>
+      <td>Tom Carey</td>
+      <td>4.0</td>
+      <td>mince101</td>
+      <td>Ed Mincher</td>
+      <td>7.0</td>
+      <td>mcdej101</td>
+      <td>James McDermott</td>
+      <td>8.0</td>
+      <td>kellb105</td>
+      <td>Bill Kelly</td>
+      <td>9.0</td>
+      <td>NaN</td>
+      <td>Y</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>18710505</td>
+      <td>0</td>
+      <td>Fri</td>
+      <td>BS1</td>
+      <td>NaN</td>
+      <td>1</td>
+      <td>WS3</td>
+      <td>NaN</td>
+      <td>1</td>
+      <td>20</td>
+      <td>18</td>
+      <td>54.0</td>
+      <td>D</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>WAS01</td>
+      <td>5000.0</td>
+      <td>145.0</td>
+      <td>107000435</td>
+      <td>640113030</td>
+      <td>41.0</td>
+      <td>13.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>0.0</td>
+      <td>13.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>18.0</td>
+      <td>NaN</td>
+      <td>5.0</td>
+      <td>3.0</td>
+      <td>NaN</td>
+      <td>-1.0</td>
+      <td>NaN</td>
+      <td>12.0</td>
+      <td>1.0</td>
+      <td>6.0</td>
+      <td>6.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>27.0</td>
+      <td>13.0</td>
+      <td>10.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>0.0</td>
+      <td>49.0</td>
+      <td>14.0</td>
+      <td>2.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>11.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>10.0</td>
+      <td>NaN</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>-1.0</td>
+      <td>NaN</td>
+      <td>14.0</td>
+      <td>1.0</td>
+      <td>7.0</td>
+      <td>7.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>27.0</td>
+      <td>20.0</td>
+      <td>10.0</td>
+      <td>2.0</td>
+      <td>3.0</td>
+      <td>0.0</td>
+      <td>dobsh901</td>
+      <td>Henry Dobson</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>wrigh101</td>
+      <td>Harry Wright</td>
+      <td>younn801</td>
+      <td>Nick Young</td>
+      <td>spala101</td>
+      <td>Al Spalding</td>
+      <td>braia102</td>
+      <td>Asa Brainard</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>spala101</td>
+      <td>Al Spalding</td>
+      <td>braia102</td>
+      <td>Asa Brainard</td>
+      <td>wrigg101</td>
+      <td>George Wright</td>
+      <td>6.0</td>
+      <td>barnr102</td>
+      <td>Ross Barnes</td>
+      <td>4.0</td>
+      <td>birdd102</td>
+      <td>Dave Birdsall</td>
+      <td>9.0</td>
+      <td>mcvec101</td>
+      <td>Cal McVey</td>
+      <td>2.0</td>
+      <td>wrigh101</td>
+      <td>Harry Wright</td>
+      <td>8.0</td>
+      <td>goulc101</td>
+      <td>Charlie Gould</td>
+      <td>3.0</td>
+      <td>schah101</td>
+      <td>Harry Schafer</td>
+      <td>5.0</td>
+      <td>conef101</td>
+      <td>Fred Cone</td>
+      <td>7.0</td>
+      <td>spala101</td>
+      <td>Al Spalding</td>
+      <td>1.0</td>
+      <td>watef102</td>
+      <td>Fred Waterman</td>
+      <td>5.0</td>
+      <td>forcd101</td>
+      <td>Davy Force</td>
+      <td>6.0</td>
+      <td>mille105</td>
+      <td>Everett Mills</td>
+      <td>3.0</td>
+      <td>allid101</td>
+      <td>Doug Allison</td>
+      <td>2.0</td>
+      <td>hallg101</td>
+      <td>George Hall</td>
+      <td>7.0</td>
+      <td>leona101</td>
+      <td>Andy Leonard</td>
+      <td>4.0</td>
+      <td>braia102</td>
+      <td>Asa Brainard</td>
+      <td>1.0</td>
+      <td>burrh101</td>
+      <td>Henry Burroughs</td>
+      <td>9.0</td>
+      <td>berth101</td>
+      <td>Henry Berthrong</td>
+      <td>8.0</td>
+      <td>HTBF</td>
+      <td>Y</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>18710506</td>
+      <td>0</td>
+      <td>Sat</td>
+      <td>CL1</td>
+      <td>NaN</td>
+      <td>2</td>
+      <td>RC1</td>
+      <td>NaN</td>
+      <td>1</td>
+      <td>12</td>
+      <td>4</td>
+      <td>54.0</td>
+      <td>D</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>RCK01</td>
+      <td>1000.0</td>
+      <td>140.0</td>
+      <td>610020003</td>
+      <td>010020100</td>
+      <td>49.0</td>
+      <td>11.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>8.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>NaN</td>
+      <td>-1.0</td>
+      <td>NaN</td>
+      <td>10.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>2.0</td>
+      <td>0.0</td>
+      <td>27.0</td>
+      <td>12.0</td>
+      <td>8.0</td>
+      <td>5.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>36.0</td>
+      <td>7.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>2.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>NaN</td>
+      <td>3.0</td>
+      <td>5.0</td>
+      <td>NaN</td>
+      <td>-1.0</td>
+      <td>NaN</td>
+      <td>5.0</td>
+      <td>1.0</td>
+      <td>3.0</td>
+      <td>3.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>27.0</td>
+      <td>12.0</td>
+      <td>13.0</td>
+      <td>3.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>mawnj901</td>
+      <td>J.H. Manny</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>paboc101</td>
+      <td>Charlie Pabor</td>
+      <td>hasts101</td>
+      <td>Scott Hastings</td>
+      <td>prata101</td>
+      <td>Al Pratt</td>
+      <td>fishc102</td>
+      <td>Cherokee Fisher</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>prata101</td>
+      <td>Al Pratt</td>
+      <td>fishc102</td>
+      <td>Cherokee Fisher</td>
+      <td>whitd102</td>
+      <td>Deacon White</td>
+      <td>2.0</td>
+      <td>kimbg101</td>
+      <td>Gene Kimball</td>
+      <td>4.0</td>
+      <td>paboc101</td>
+      <td>Charlie Pabor</td>
+      <td>7.0</td>
+      <td>allia101</td>
+      <td>Art Allison</td>
+      <td>8.0</td>
+      <td>white104</td>
+      <td>Elmer White</td>
+      <td>9.0</td>
+      <td>prata101</td>
+      <td>Al Pratt</td>
+      <td>1.0</td>
+      <td>sutte101</td>
+      <td>Ezra Sutton</td>
+      <td>5.0</td>
+      <td>carlj102</td>
+      <td>Jim Carleton</td>
+      <td>3.0</td>
+      <td>bassj101</td>
+      <td>John Bass</td>
+      <td>6.0</td>
+      <td>mackd101</td>
+      <td>Denny Mack</td>
+      <td>3.0</td>
+      <td>addyb101</td>
+      <td>Bob Addy</td>
+      <td>4.0</td>
+      <td>fishc102</td>
+      <td>Cherokee Fisher</td>
+      <td>1.0</td>
+      <td>hasts101</td>
+      <td>Scott Hastings</td>
+      <td>8.0</td>
+      <td>ham-r101</td>
+      <td>Ralph Ham</td>
+      <td>5.0</td>
+      <td>ansoc101</td>
+      <td>Cap Anson</td>
+      <td>2.0</td>
+      <td>sagep101</td>
+      <td>Pony Sager</td>
+      <td>6.0</td>
+      <td>birdg101</td>
+      <td>George Bird</td>
+      <td>7.0</td>
+      <td>stirg101</td>
+      <td>Gat Stires</td>
+      <td>9.0</td>
+      <td>NaN</td>
+      <td>Y</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>18710508</td>
+      <td>0</td>
+      <td>Mon</td>
+      <td>CL1</td>
+      <td>NaN</td>
+      <td>3</td>
+      <td>CH1</td>
+      <td>NaN</td>
+      <td>1</td>
+      <td>12</td>
+      <td>14</td>
+      <td>54.0</td>
+      <td>D</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>CHI01</td>
+      <td>5000.0</td>
+      <td>150.0</td>
+      <td>101403111</td>
+      <td>077000000</td>
+      <td>46.0</td>
+      <td>15.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>10.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>NaN</td>
+      <td>-1.0</td>
+      <td>NaN</td>
+      <td>7.0</td>
+      <td>1.0</td>
+      <td>6.0</td>
+      <td>6.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>27.0</td>
+      <td>15.0</td>
+      <td>11.0</td>
+      <td>6.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>43.0</td>
+      <td>11.0</td>
+      <td>2.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>8.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>4.0</td>
+      <td>NaN</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>-1.0</td>
+      <td>NaN</td>
+      <td>6.0</td>
+      <td>1.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>27.0</td>
+      <td>14.0</td>
+      <td>7.0</td>
+      <td>2.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>willg901</td>
+      <td>Gardner Willard</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>paboc101</td>
+      <td>Charlie Pabor</td>
+      <td>woodj106</td>
+      <td>Jimmy Wood</td>
+      <td>zettg101</td>
+      <td>George Zettlein</td>
+      <td>prata101</td>
+      <td>Al Pratt</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>prata101</td>
+      <td>Al Pratt</td>
+      <td>zettg101</td>
+      <td>George Zettlein</td>
+      <td>whitd102</td>
+      <td>Deacon White</td>
+      <td>2.0</td>
+      <td>kimbg101</td>
+      <td>Gene Kimball</td>
+      <td>4.0</td>
+      <td>paboc101</td>
+      <td>Charlie Pabor</td>
+      <td>7.0</td>
+      <td>allia101</td>
+      <td>Art Allison</td>
+      <td>8.0</td>
+      <td>white104</td>
+      <td>Elmer White</td>
+      <td>9.0</td>
+      <td>prata101</td>
+      <td>Al Pratt</td>
+      <td>1.0</td>
+      <td>sutte101</td>
+      <td>Ezra Sutton</td>
+      <td>5.0</td>
+      <td>carlj102</td>
+      <td>Jim Carleton</td>
+      <td>3.0</td>
+      <td>bassj101</td>
+      <td>John Bass</td>
+      <td>6.0</td>
+      <td>mcatb101</td>
+      <td>Bub McAtee</td>
+      <td>3.0</td>
+      <td>kingm101</td>
+      <td>Marshall King</td>
+      <td>8.0</td>
+      <td>hodec101</td>
+      <td>Charlie Hodes</td>
+      <td>2.0</td>
+      <td>woodj106</td>
+      <td>Jimmy Wood</td>
+      <td>4.0</td>
+      <td>simmj101</td>
+      <td>Joe Simmons</td>
+      <td>9.0</td>
+      <td>folet101</td>
+      <td>Tom Foley</td>
+      <td>7.0</td>
+      <td>duffe101</td>
+      <td>Ed Duffy</td>
+      <td>6.0</td>
+      <td>pinke101</td>
+      <td>Ed Pinkham</td>
+      <td>5.0</td>
+      <td>zettg101</td>
+      <td>George Zettlein</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>Y</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>18710509</td>
+      <td>0</td>
+      <td>Tue</td>
+      <td>BS1</td>
+      <td>NaN</td>
+      <td>2</td>
+      <td>TRO</td>
+      <td>NaN</td>
+      <td>1</td>
+      <td>9</td>
+      <td>5</td>
+      <td>54.0</td>
+      <td>D</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>TRO01</td>
+      <td>3250.0</td>
+      <td>145.0</td>
+      <td>000002232</td>
+      <td>101003000</td>
+      <td>46.0</td>
+      <td>17.0</td>
+      <td>4.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>6.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>2.0</td>
+      <td>NaN</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>-1.0</td>
+      <td>NaN</td>
+      <td>12.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>27.0</td>
+      <td>12.0</td>
+      <td>5.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>36.0</td>
+      <td>9.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>2.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>3.0</td>
+      <td>NaN</td>
+      <td>0.0</td>
+      <td>2.0</td>
+      <td>NaN</td>
+      <td>-1.0</td>
+      <td>NaN</td>
+      <td>7.0</td>
+      <td>1.0</td>
+      <td>3.0</td>
+      <td>3.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>27.0</td>
+      <td>11.0</td>
+      <td>7.0</td>
+      <td>3.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>leroi901</td>
+      <td>Isaac Leroy</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>wrigh101</td>
+      <td>Harry Wright</td>
+      <td>pikel101</td>
+      <td>Lip Pike</td>
+      <td>spala101</td>
+      <td>Al Spalding</td>
+      <td>mcmuj101</td>
+      <td>John McMullin</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>spala101</td>
+      <td>Al Spalding</td>
+      <td>mcmuj101</td>
+      <td>John McMullin</td>
+      <td>wrigg101</td>
+      <td>George Wright</td>
+      <td>6.0</td>
+      <td>barnr102</td>
+      <td>Ross Barnes</td>
+      <td>4.0</td>
+      <td>birdd102</td>
+      <td>Dave Birdsall</td>
+      <td>9.0</td>
+      <td>mcvec101</td>
+      <td>Cal McVey</td>
+      <td>2.0</td>
+      <td>wrigh101</td>
+      <td>Harry Wright</td>
+      <td>8.0</td>
+      <td>goulc101</td>
+      <td>Charlie Gould</td>
+      <td>3.0</td>
+      <td>schah101</td>
+      <td>Harry Schafer</td>
+      <td>5.0</td>
+      <td>conef101</td>
+      <td>Fred Cone</td>
+      <td>7.0</td>
+      <td>spala101</td>
+      <td>Al Spalding</td>
+      <td>1.0</td>
+      <td>flync101</td>
+      <td>Clipper Flynn</td>
+      <td>9.0</td>
+      <td>mcgem101</td>
+      <td>Mike McGeary</td>
+      <td>2.0</td>
+      <td>yorkt101</td>
+      <td>Tom York</td>
+      <td>8.0</td>
+      <td>mcmuj101</td>
+      <td>John McMullin</td>
+      <td>1.0</td>
+      <td>kings101</td>
+      <td>Steve King</td>
+      <td>7.0</td>
+      <td>beave101</td>
+      <td>Edward Beavens</td>
+      <td>4.0</td>
+      <td>bells101</td>
+      <td>Steve Bellan</td>
+      <td>5.0</td>
+      <td>pikel101</td>
+      <td>Lip Pike</td>
+      <td>3.0</td>
+      <td>cravb101</td>
+      <td>Bill Craver</td>
+      <td>6.0</td>
+      <td>HTBF</td>
+      <td>Y</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">log</span><span class="o">.</span><span class="n">tail</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[3]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>date</th>
+      <th>number_of_game</th>
+      <th>day_of_week</th>
+      <th>v_name</th>
+      <th>v_league</th>
+      <th>v_game_number</th>
+      <th>h_name</th>
+      <th>h_league</th>
+      <th>h_game_number</th>
+      <th>v_score</th>
+      <th>h_score</th>
+      <th>length_outs</th>
+      <th>day_night</th>
+      <th>completion</th>
+      <th>forefeit</th>
+      <th>protest</th>
+      <th>park_id</th>
+      <th>attendance</th>
+      <th>length_minutes</th>
+      <th>v_line_score</th>
+      <th>h_line_score</th>
+      <th>v_at_bats</th>
+      <th>v_hits</th>
+      <th>v_doubles</th>
+      <th>v_triples</th>
+      <th>v_homeruns</th>
+      <th>v_rbi</th>
+      <th>v_sacrifice_hits</th>
+      <th>v_sacrifice_flies</th>
+      <th>v_hit_by_pitch</th>
+      <th>v_walks</th>
+      <th>v_intentional_walks</th>
+      <th>v_strikeouts</th>
+      <th>v_stolen_bases</th>
+      <th>v_caught_stealing</th>
+      <th>v_grounded_into_double</th>
+      <th>v_first_catcher_interference</th>
+      <th>v_left_on_base</th>
+      <th>v_pitchers_used</th>
+      <th>v_individual_earned_runs</th>
+      <th>v_team_earned_runs</th>
+      <th>v_wild_pitches</th>
+      <th>v_balks</th>
+      <th>v_putouts</th>
+      <th>v_assists</th>
+      <th>v_errors</th>
+      <th>v_passed_balls</th>
+      <th>v_double_plays</th>
+      <th>v_triple_plays</th>
+      <th>h_at_bats</th>
+      <th>h_hits</th>
+      <th>h_doubles</th>
+      <th>h_triples</th>
+      <th>h_homeruns</th>
+      <th>h_rbi</th>
+      <th>h_sacrifice_hits</th>
+      <th>h_sacrifice_flies</th>
+      <th>h_hit_by_pitch</th>
+      <th>h_walks</th>
+      <th>h_intentional_walks</th>
+      <th>h_strikeouts</th>
+      <th>h_stolen_bases</th>
+      <th>h_caught_stealing</th>
+      <th>h_grounded_into_double</th>
+      <th>h_first_catcher_interference</th>
+      <th>h_left_on_base</th>
+      <th>h_pitchers_used</th>
+      <th>h_individual_earned_runs</th>
+      <th>h_team_earned_runs</th>
+      <th>h_wild_pitches</th>
+      <th>h_balks</th>
+      <th>h_putouts</th>
+      <th>h_assists</th>
+      <th>h_errors</th>
+      <th>h_passed_balls</th>
+      <th>h_double_plays</th>
+      <th>h_triple_plays</th>
+      <th>hp_umpire_id</th>
+      <th>hp_umpire_name</th>
+      <th>1b_umpire_id</th>
+      <th>1b_umpire_name</th>
+      <th>2b_umpire_id</th>
+      <th>2b_umpire_name</th>
+      <th>3b_umpire_id</th>
+      <th>3b_umpire_name</th>
+      <th>lf_umpire_id</th>
+      <th>lf_umpire_name</th>
+      <th>rf_umpire_id</th>
+      <th>rf_umpire_name</th>
+      <th>v_manager_id</th>
+      <th>v_manager_name</th>
+      <th>h_manager_id</th>
+      <th>h_manager_name</th>
+      <th>winning_pitcher_id</th>
+      <th>winning_pitcher_name</th>
+      <th>losing_pitcher_id</th>
+      <th>losing_pitcher_name</th>
+      <th>saving_pitcher_id</th>
+      <th>saving_pitcher_name</th>
+      <th>winning_rbi_batter_id</th>
+      <th>winning_rbi_batter_id_name</th>
+      <th>v_starting_pitcher_id</th>
+      <th>v_starting_pitcher_name</th>
+      <th>h_starting_pitcher_id</th>
+      <th>h_starting_pitcher_name</th>
+      <th>v_player_1_id</th>
+      <th>v_player_1_name</th>
+      <th>v_player_1_def_pos</th>
+      <th>v_player_2_id</th>
+      <th>v_player_2_name</th>
+      <th>v_player_2_def_pos</th>
+      <th>v_player_3_id</th>
+      <th>v_player_3_name</th>
+      <th>v_player_3_def_pos</th>
+      <th>v_player_4_id</th>
+      <th>v_player_4_name</th>
+      <th>v_player_4_def_pos</th>
+      <th>v_player_5_id</th>
+      <th>v_player_5_name</th>
+      <th>v_player_5_def_pos</th>
+      <th>v_player_6_id</th>
+      <th>v_player_6_name</th>
+      <th>v_player_6_def_pos</th>
+      <th>v_player_7_id</th>
+      <th>v_player_7_name</th>
+      <th>v_player_7_def_pos</th>
+      <th>v_player_8_id</th>
+      <th>v_player_8_name</th>
+      <th>v_player_8_def_pos</th>
+      <th>v_player_9_id</th>
+      <th>v_player_9_name</th>
+      <th>v_player_9_def_pos</th>
+      <th>h_player_1_id</th>
+      <th>h_player_1_name</th>
+      <th>h_player_1_def_pos</th>
+      <th>h_player_2_id</th>
+      <th>h_player_2_name</th>
+      <th>h_player_2_def_pos</th>
+      <th>h_player_3_id</th>
+      <th>h_player_3_name</th>
+      <th>h_player_3_def_pos</th>
+      <th>h_player_4_id</th>
+      <th>h_player_4_name</th>
+      <th>h_player_4_def_pos</th>
+      <th>h_player_5_id</th>
+      <th>h_player_5_name</th>
+      <th>h_player_5_def_pos</th>
+      <th>h_player_6_id</th>
+      <th>h_player_6_name</th>
+      <th>h_player_6_def_pos</th>
+      <th>h_player_7_id</th>
+      <th>h_player_7_name</th>
+      <th>h_player_7_def_pos</th>
+      <th>h_player_8_id</th>
+      <th>h_player_8_name</th>
+      <th>h_player_8_def_pos</th>
+      <th>h_player_9_id</th>
+      <th>h_player_9_name</th>
+      <th>h_player_9_def_pos</th>
+      <th>additional_info</th>
+      <th>acquisition_info</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>171902</th>
+      <td>20161002</td>
+      <td>0</td>
+      <td>Sun</td>
+      <td>MIL</td>
+      <td>NL</td>
+      <td>162</td>
+      <td>COL</td>
+      <td>NL</td>
+      <td>162</td>
+      <td>6</td>
+      <td>4</td>
+      <td>60.0</td>
+      <td>D</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>DEN02</td>
+      <td>27762.0</td>
+      <td>203.0</td>
+      <td>0200000202</td>
+      <td>1100100010</td>
+      <td>39.0</td>
+      <td>10.0</td>
+      <td>4.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>6.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>4.0</td>
+      <td>0.0</td>
+      <td>12.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>8.0</td>
+      <td>7.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>30.0</td>
+      <td>12.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>41.0</td>
+      <td>13.0</td>
+      <td>4.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>4.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>3.0</td>
+      <td>0.0</td>
+      <td>11.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>12.0</td>
+      <td>5.0</td>
+      <td>6.0</td>
+      <td>6.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>30.0</td>
+      <td>13.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>barrs901</td>
+      <td>Scott Barry</td>
+      <td>woodt901</td>
+      <td>Tom Woodring</td>
+      <td>randt901</td>
+      <td>Tony Randazzo</td>
+      <td>ortir901</td>
+      <td>Roberto Ortiz</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>counc001</td>
+      <td>Craig Counsell</td>
+      <td>weisw001</td>
+      <td>Walt Weiss</td>
+      <td>thort001</td>
+      <td>Tyler Thornburg</td>
+      <td>rusic001</td>
+      <td>Chris Rusin</td>
+      <td>knebc001</td>
+      <td>Corey Knebel</td>
+      <td>susaa001</td>
+      <td>Andrew Susac</td>
+      <td>cravt001</td>
+      <td>Tyler Cravy</td>
+      <td>marqg001</td>
+      <td>German Marquez</td>
+      <td>villj001</td>
+      <td>Jonathan Villar</td>
+      <td>5.0</td>
+      <td>genns001</td>
+      <td>Scooter Gennett</td>
+      <td>4.0</td>
+      <td>cartc002</td>
+      <td>Chris Carter</td>
+      <td>3.0</td>
+      <td>santd002</td>
+      <td>Domingo Santana</td>
+      <td>9.0</td>
+      <td>pereh001</td>
+      <td>Hernan Perez</td>
+      <td>8.0</td>
+      <td>arcio002</td>
+      <td>Orlando Arcia</td>
+      <td>6.0</td>
+      <td>susaa001</td>
+      <td>Andrew Susac</td>
+      <td>2.0</td>
+      <td>elmoj001</td>
+      <td>Jake Elmore</td>
+      <td>7.0</td>
+      <td>cravt001</td>
+      <td>Tyler Cravy</td>
+      <td>1.0</td>
+      <td>blacc001</td>
+      <td>Charlie Blackmon</td>
+      <td>8.0</td>
+      <td>dahld001</td>
+      <td>David Dahl</td>
+      <td>7.0</td>
+      <td>arenn001</td>
+      <td>Nolan Arenado</td>
+      <td>5.0</td>
+      <td>gonzc001</td>
+      <td>Carlos Gonzalez</td>
+      <td>9.0</td>
+      <td>murpt002</td>
+      <td>Tom Murphy</td>
+      <td>2.0</td>
+      <td>pattj005</td>
+      <td>Jordan Patterson</td>
+      <td>3.0</td>
+      <td>valap001</td>
+      <td>Pat Valaika</td>
+      <td>4.0</td>
+      <td>adamc001</td>
+      <td>Cristhian Adames</td>
+      <td>6.0</td>
+      <td>marqg001</td>
+      <td>German Marquez</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>Y</td>
+    </tr>
+    <tr>
+      <th>171903</th>
+      <td>20161002</td>
+      <td>0</td>
+      <td>Sun</td>
+      <td>NYN</td>
+      <td>NL</td>
+      <td>162</td>
+      <td>PHI</td>
+      <td>NL</td>
+      <td>162</td>
+      <td>2</td>
+      <td>5</td>
+      <td>51.0</td>
+      <td>D</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>PHI13</td>
+      <td>36935.0</td>
+      <td>159.0</td>
+      <td>000001100</td>
+      <td>00100031x</td>
+      <td>33.0</td>
+      <td>8.0</td>
+      <td>3.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>2.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>2.0</td>
+      <td>0.0</td>
+      <td>9.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>6.0</td>
+      <td>6.0</td>
+      <td>3.0</td>
+      <td>3.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>24.0</td>
+      <td>12.0</td>
+      <td>3.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>0.0</td>
+      <td>33.0</td>
+      <td>10.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>3.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>2.0</td>
+      <td>0.0</td>
+      <td>3.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>2.0</td>
+      <td>0.0</td>
+      <td>7.0</td>
+      <td>5.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>27.0</td>
+      <td>7.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>barkl901</td>
+      <td>Lance Barksdale</td>
+      <td>herna901</td>
+      <td>Angel Hernandez</td>
+      <td>barrt901</td>
+      <td>Ted Barrett</td>
+      <td>littw901</td>
+      <td>Will Little</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>collt801</td>
+      <td>Terry Collins</td>
+      <td>mackp101</td>
+      <td>Pete Mackanin</td>
+      <td>murrc002</td>
+      <td>Colton Murray</td>
+      <td>goede001</td>
+      <td>Erik Goeddel</td>
+      <td>nerih001</td>
+      <td>Hector Neris</td>
+      <td>hernc005</td>
+      <td>Cesar Hernandez</td>
+      <td>ynoag001</td>
+      <td>Gabriel Ynoa</td>
+      <td>eickj001</td>
+      <td>Jerad Eickhoff</td>
+      <td>granc001</td>
+      <td>Curtis Granderson</td>
+      <td>8.0</td>
+      <td>cabra002</td>
+      <td>Asdrubal Cabrera</td>
+      <td>6.0</td>
+      <td>brucj001</td>
+      <td>Jay Bruce</td>
+      <td>9.0</td>
+      <td>dudal001</td>
+      <td>Lucas Duda</td>
+      <td>3.0</td>
+      <td>johnk003</td>
+      <td>Kelly Johnson</td>
+      <td>4.0</td>
+      <td>confm001</td>
+      <td>Michael Conforto</td>
+      <td>7.0</td>
+      <td>campe001</td>
+      <td>Eric Campbell</td>
+      <td>5.0</td>
+      <td>plawk001</td>
+      <td>Kevin Plawecki</td>
+      <td>2.0</td>
+      <td>ynoag001</td>
+      <td>Gabriel Ynoa</td>
+      <td>1.0</td>
+      <td>hernc005</td>
+      <td>Cesar Hernandez</td>
+      <td>4.0</td>
+      <td>parej002</td>
+      <td>Jimmy Paredes</td>
+      <td>7.0</td>
+      <td>herro001</td>
+      <td>Odubel Herrera</td>
+      <td>8.0</td>
+      <td>franm004</td>
+      <td>Maikel Franco</td>
+      <td>5.0</td>
+      <td>howar001</td>
+      <td>Ryan Howard</td>
+      <td>3.0</td>
+      <td>ruppc001</td>
+      <td>Cameron Rupp</td>
+      <td>2.0</td>
+      <td>blana001</td>
+      <td>Andres Blanco</td>
+      <td>6.0</td>
+      <td>altha001</td>
+      <td>Aaron Altherr</td>
+      <td>9.0</td>
+      <td>eickj001</td>
+      <td>Jerad Eickhoff</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>Y</td>
+    </tr>
+    <tr>
+      <th>171904</th>
+      <td>20161002</td>
+      <td>0</td>
+      <td>Sun</td>
+      <td>LAN</td>
+      <td>NL</td>
+      <td>162</td>
+      <td>SFN</td>
+      <td>NL</td>
+      <td>162</td>
+      <td>1</td>
+      <td>7</td>
+      <td>51.0</td>
+      <td>D</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>SFO03</td>
+      <td>41445.0</td>
+      <td>184.0</td>
+      <td>000100000</td>
+      <td>23000002x</td>
+      <td>30.0</td>
+      <td>4.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>2.0</td>
+      <td>0.0</td>
+      <td>7.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>4.0</td>
+      <td>7.0</td>
+      <td>7.0</td>
+      <td>7.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>24.0</td>
+      <td>5.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>39.0</td>
+      <td>16.0</td>
+      <td>3.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>7.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>4.0</td>
+      <td>1.0</td>
+      <td>11.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>12.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>27.0</td>
+      <td>7.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>knigb901</td>
+      <td>Brian Knight</td>
+      <td>westj901</td>
+      <td>Joe West</td>
+      <td>fleta901</td>
+      <td>Andy Fletcher</td>
+      <td>danlk901</td>
+      <td>Kerwin Danley</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>robed001</td>
+      <td>Dave Roberts</td>
+      <td>bochb002</td>
+      <td>Bruce Bochy</td>
+      <td>moorm003</td>
+      <td>Matt Moore</td>
+      <td>maedk001</td>
+      <td>Kenta Maeda</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>poseb001</td>
+      <td>Buster Posey</td>
+      <td>maedk001</td>
+      <td>Kenta Maeda</td>
+      <td>moorm003</td>
+      <td>Matt Moore</td>
+      <td>kendh001</td>
+      <td>Howie Kendrick</td>
+      <td>7.0</td>
+      <td>turnj001</td>
+      <td>Justin Turner</td>
+      <td>5.0</td>
+      <td>seagc001</td>
+      <td>Corey Seager</td>
+      <td>6.0</td>
+      <td>puigy001</td>
+      <td>Yasiel Puig</td>
+      <td>9.0</td>
+      <td>gonza003</td>
+      <td>Adrian Gonzalez</td>
+      <td>3.0</td>
+      <td>grany001</td>
+      <td>Yasmani Grandal</td>
+      <td>2.0</td>
+      <td>pedej001</td>
+      <td>Joc Pederson</td>
+      <td>8.0</td>
+      <td>utlec001</td>
+      <td>Chase Utley</td>
+      <td>4.0</td>
+      <td>maedk001</td>
+      <td>Kenta Maeda</td>
+      <td>1.0</td>
+      <td>spand001</td>
+      <td>Denard Span</td>
+      <td>8.0</td>
+      <td>beltb001</td>
+      <td>Brandon Belt</td>
+      <td>3.0</td>
+      <td>poseb001</td>
+      <td>Buster Posey</td>
+      <td>2.0</td>
+      <td>pench001</td>
+      <td>Hunter Pence</td>
+      <td>9.0</td>
+      <td>crawb001</td>
+      <td>Brandon Crawford</td>
+      <td>6.0</td>
+      <td>pagaa001</td>
+      <td>Angel Pagan</td>
+      <td>7.0</td>
+      <td>panij002</td>
+      <td>Joe Panik</td>
+      <td>4.0</td>
+      <td>gillc001</td>
+      <td>Conor Gillaspie</td>
+      <td>5.0</td>
+      <td>moorm003</td>
+      <td>Matt Moore</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>Y</td>
+    </tr>
+    <tr>
+      <th>171905</th>
+      <td>20161002</td>
+      <td>0</td>
+      <td>Sun</td>
+      <td>PIT</td>
+      <td>NL</td>
+      <td>162</td>
+      <td>SLN</td>
+      <td>NL</td>
+      <td>162</td>
+      <td>4</td>
+      <td>10</td>
+      <td>51.0</td>
+      <td>D</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>STL10</td>
+      <td>44615.0</td>
+      <td>192.0</td>
+      <td>000020200</td>
+      <td>00100360x</td>
+      <td>35.0</td>
+      <td>9.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>4.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>4.0</td>
+      <td>0.0</td>
+      <td>11.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>8.0</td>
+      <td>6.0</td>
+      <td>8.0</td>
+      <td>8.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>24.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>36.0</td>
+      <td>12.0</td>
+      <td>2.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>10.0</td>
+      <td>0.0</td>
+      <td>2.0</td>
+      <td>0.0</td>
+      <td>4.0</td>
+      <td>0.0</td>
+      <td>5.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>8.0</td>
+      <td>3.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>27.0</td>
+      <td>7.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>cuzzp901</td>
+      <td>Phil Cuzzi</td>
+      <td>ticht901</td>
+      <td>Todd Tichenor</td>
+      <td>vanol901</td>
+      <td>Larry Vanover</td>
+      <td>marqa901</td>
+      <td>Alfonso Marquez</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>hurdc001</td>
+      <td>Clint Hurdle</td>
+      <td>mathm001</td>
+      <td>Mike Matheny</td>
+      <td>broxj001</td>
+      <td>Jonathan Broxton</td>
+      <td>nicaj001</td>
+      <td>Juan Nicasio</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>piscs001</td>
+      <td>Stephen Piscotty</td>
+      <td>voger001</td>
+      <td>Ryan Vogelsong</td>
+      <td>waina001</td>
+      <td>Adam Wainwright</td>
+      <td>jasoj001</td>
+      <td>John Jaso</td>
+      <td>3.0</td>
+      <td>polag001</td>
+      <td>Gregory Polanco</td>
+      <td>9.0</td>
+      <td>mccua001</td>
+      <td>Andrew McCutchen</td>
+      <td>8.0</td>
+      <td>kangj001</td>
+      <td>Jung Ho Kang</td>
+      <td>5.0</td>
+      <td>joycm001</td>
+      <td>Matt Joyce</td>
+      <td>7.0</td>
+      <td>hansa001</td>
+      <td>Alen Hanson</td>
+      <td>4.0</td>
+      <td>fryee001</td>
+      <td>Eric Fryer</td>
+      <td>2.0</td>
+      <td>florp001</td>
+      <td>Pedro Florimon</td>
+      <td>6.0</td>
+      <td>voger001</td>
+      <td>Ryan Vogelsong</td>
+      <td>1.0</td>
+      <td>carpm002</td>
+      <td>Matt Carpenter</td>
+      <td>3.0</td>
+      <td>diaza003</td>
+      <td>Aledmys Diaz</td>
+      <td>6.0</td>
+      <td>moliy001</td>
+      <td>Yadier Molina</td>
+      <td>2.0</td>
+      <td>piscs001</td>
+      <td>Stephen Piscotty</td>
+      <td>9.0</td>
+      <td>peraj001</td>
+      <td>Jhonny Peralta</td>
+      <td>5.0</td>
+      <td>mossb001</td>
+      <td>Brandon Moss</td>
+      <td>7.0</td>
+      <td>gyorj001</td>
+      <td>Jedd Gyorko</td>
+      <td>4.0</td>
+      <td>gricr001</td>
+      <td>Randal Grichuk</td>
+      <td>8.0</td>
+      <td>waina001</td>
+      <td>Adam Wainwright</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>Y</td>
+    </tr>
+    <tr>
+      <th>171906</th>
+      <td>20161002</td>
+      <td>0</td>
+      <td>Sun</td>
+      <td>MIA</td>
+      <td>NL</td>
+      <td>161</td>
+      <td>WAS</td>
+      <td>NL</td>
+      <td>162</td>
+      <td>7</td>
+      <td>10</td>
+      <td>51.0</td>
+      <td>D</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>WAS11</td>
+      <td>28730.0</td>
+      <td>216.0</td>
+      <td>000230020</td>
+      <td>03023002x</td>
+      <td>38.0</td>
+      <td>14.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>7.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>3.0</td>
+      <td>2.0</td>
+      <td>10.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>8.0</td>
+      <td>7.0</td>
+      <td>10.0</td>
+      <td>10.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>24.0</td>
+      <td>11.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>30.0</td>
+      <td>10.0</td>
+      <td>2.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>10.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>8.0</td>
+      <td>0.0</td>
+      <td>3.0</td>
+      <td>2.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>7.0</td>
+      <td>6.0</td>
+      <td>7.0</td>
+      <td>7.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>27.0</td>
+      <td>11.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>tumpj901</td>
+      <td>John Tumpane</td>
+      <td>porta901</td>
+      <td>Alan Porter</td>
+      <td>onorb901</td>
+      <td>Brian O'Nora</td>
+      <td>kellj901</td>
+      <td>Jeff Kellogg</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>mattd001</td>
+      <td>Don Mattingly</td>
+      <td>baked002</td>
+      <td>Dusty Baker</td>
+      <td>schem001</td>
+      <td>Max Scherzer</td>
+      <td>brica001</td>
+      <td>Austin Brice</td>
+      <td>melam001</td>
+      <td>Mark Melancon</td>
+      <td>difow001</td>
+      <td>Wilmer Difo</td>
+      <td>koeht001</td>
+      <td>Tom Koehler</td>
+      <td>schem001</td>
+      <td>Max Scherzer</td>
+      <td>gordd002</td>
+      <td>Dee Gordon</td>
+      <td>4.0</td>
+      <td>telit001</td>
+      <td>Tomas Telis</td>
+      <td>2.0</td>
+      <td>pradm001</td>
+      <td>Martin Prado</td>
+      <td>5.0</td>
+      <td>yelic001</td>
+      <td>Christian Yelich</td>
+      <td>8.0</td>
+      <td>bourj002</td>
+      <td>Justin Bour</td>
+      <td>3.0</td>
+      <td>scrux001</td>
+      <td>Xavier Scruggs</td>
+      <td>7.0</td>
+      <td>hoodd001</td>
+      <td>Destin Hood</td>
+      <td>9.0</td>
+      <td>hecha001</td>
+      <td>Adeiny Hechavarria</td>
+      <td>6.0</td>
+      <td>koeht001</td>
+      <td>Tom Koehler</td>
+      <td>1.0</td>
+      <td>turnt001</td>
+      <td>Trea Turner</td>
+      <td>8.0</td>
+      <td>reveb001</td>
+      <td>Ben Revere</td>
+      <td>7.0</td>
+      <td>harpb003</td>
+      <td>Bryce Harper</td>
+      <td>9.0</td>
+      <td>zimmr001</td>
+      <td>Ryan Zimmerman</td>
+      <td>3.0</td>
+      <td>drews001</td>
+      <td>Stephen Drew</td>
+      <td>5.0</td>
+      <td>difow001</td>
+      <td>Wilmer Difo</td>
+      <td>4.0</td>
+      <td>espid001</td>
+      <td>Danny Espinosa</td>
+      <td>6.0</td>
+      <td>lobaj001</td>
+      <td>Jose Lobaton</td>
+      <td>2.0</td>
+      <td>schem001</td>
+      <td>Max Scherzer</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>Y</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>It looks like the game log has a record of over 170,000 games.  It looks like these games are chronologically ordered and occur between 1871 and 2016.</p>
+<p>For each game we have:</p>
+<ul>
+<li>general information on the game</li>
+<li>team level stats for each team</li>
+<li>a list of players from each team, numbered, with their defensive positions</li>
+<li>the umpires that officiated the game</li>
+<li>some 'awards', like winning and losing pitcher</li>
+</ul>
+<p>We have a <code>game_log_fields.txt</code> file that tell us that the player number corresponds with the order in which they batted.</p>
+<p>It's worth noting that there is no natural primary key column for this table.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">person</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;person_codes.csv&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">person</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="n">person</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>(20494, 7)
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[4]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>last</th>
+      <th>first</th>
+      <th>player_debut</th>
+      <th>mgr_debut</th>
+      <th>coach_debut</th>
+      <th>ump_debut</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>aardd001</td>
+      <td>Aardsma</td>
+      <td>David</td>
+      <td>04/06/2004</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>aaroh101</td>
+      <td>Aaron</td>
+      <td>Hank</td>
+      <td>04/13/1954</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>aarot101</td>
+      <td>Aaron</td>
+      <td>Tommie</td>
+      <td>04/10/1962</td>
+      <td>NaN</td>
+      <td>04/06/1979</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>aased001</td>
+      <td>Aase</td>
+      <td>Don</td>
+      <td>07/26/1977</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>abada001</td>
+      <td>Abad</td>
+      <td>Andy</td>
+      <td>09/10/2001</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This seems to be a list of people with IDs.  The IDs look like they match up with those used in the game log.  There are debut dates, for players, managers, coaches and umpires.  We can see that some people might have been one or more of these roles.</p>
+<p>It also looks like coaches and managers are two different things in baseball.  After some research, managers are what would be called a 'coach' or 'head coach' in other sports, and coaches are more specialized, like base coaches.  It also seems like coaches aren't recorded in the game log.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">park</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;park_codes.csv&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">park</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="n">park</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>(252, 9)
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[5]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>park_id</th>
+      <th>name</th>
+      <th>aka</th>
+      <th>city</th>
+      <th>state</th>
+      <th>start</th>
+      <th>end</th>
+      <th>league</th>
+      <th>notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>ALB01</td>
+      <td>Riverside Park</td>
+      <td>NaN</td>
+      <td>Albany</td>
+      <td>NY</td>
+      <td>09/11/1880</td>
+      <td>05/30/1882</td>
+      <td>NL</td>
+      <td>TRN:9/11/80;6/15&amp;9/10/1881;5/16-5/18&amp;5/30/1882</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>ALT01</td>
+      <td>Columbia Park</td>
+      <td>NaN</td>
+      <td>Altoona</td>
+      <td>PA</td>
+      <td>04/30/1884</td>
+      <td>05/31/1884</td>
+      <td>UA</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>ANA01</td>
+      <td>Angel Stadium of Anaheim</td>
+      <td>Edison Field; Anaheim Stadium</td>
+      <td>Anaheim</td>
+      <td>CA</td>
+      <td>04/19/1966</td>
+      <td>NaN</td>
+      <td>AL</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>ARL01</td>
+      <td>Arlington Stadium</td>
+      <td>NaN</td>
+      <td>Arlington</td>
+      <td>TX</td>
+      <td>04/21/1972</td>
+      <td>10/03/1993</td>
+      <td>AL</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>ARL02</td>
+      <td>Rangers Ballpark in Arlington</td>
+      <td>The Ballpark in Arlington; Ameriquest Fl</td>
+      <td>Arlington</td>
+      <td>TX</td>
+      <td>04/11/1994</td>
+      <td>NaN</td>
+      <td>AL</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This seems to be a list of all baseball parks.  There are IDs which seem to match with the game log, as well as names, nicknames, city and league.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">team</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;team_codes.csv&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">team</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="n">team</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>(150, 8)
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[6]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>team_id</th>
+      <th>league</th>
+      <th>start</th>
+      <th>end</th>
+      <th>city</th>
+      <th>nickname</th>
+      <th>franch_id</th>
+      <th>seq</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>ALT</td>
+      <td>UA</td>
+      <td>1884</td>
+      <td>1884</td>
+      <td>Altoona</td>
+      <td>Mountain Cities</td>
+      <td>ALT</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>ARI</td>
+      <td>NL</td>
+      <td>1998</td>
+      <td>0</td>
+      <td>Arizona</td>
+      <td>Diamondbacks</td>
+      <td>ARI</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>BFN</td>
+      <td>NL</td>
+      <td>1879</td>
+      <td>1885</td>
+      <td>Buffalo</td>
+      <td>Bisons</td>
+      <td>BFN</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>BFP</td>
+      <td>PL</td>
+      <td>1890</td>
+      <td>1890</td>
+      <td>Buffalo</td>
+      <td>Bisons</td>
+      <td>BFP</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>BL1</td>
+      <td>NaN</td>
+      <td>1872</td>
+      <td>1874</td>
+      <td>Baltimore</td>
+      <td>Canaries</td>
+      <td>BL1</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This seems to be a list of all teams, with team_ids which seem to match the game log. Interestingly, there is a <code>franch_id</code>, let's take a look at this:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">team</span><span class="p">[</span><span class="s2">&quot;franch_id&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[7]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>BS1    4
+TRN    3
+LAA    3
+SE1    3
+BR3    3
+Name: franch_id, dtype: int64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We might have <code>franch_id</code> occurring a few times for some teams, let's look at the first one in more detail.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">team</span><span class="p">[</span><span class="n">team</span><span class="p">[</span><span class="s2">&quot;franch_id&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;BS1&#39;</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[8]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>team_id</th>
+      <th>league</th>
+      <th>start</th>
+      <th>end</th>
+      <th>city</th>
+      <th>nickname</th>
+      <th>franch_id</th>
+      <th>seq</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>21</th>
+      <td>BS1</td>
+      <td>NaN</td>
+      <td>1871</td>
+      <td>1875</td>
+      <td>Boston</td>
+      <td>Braves</td>
+      <td>BS1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>BSN</td>
+      <td>NL</td>
+      <td>1876</td>
+      <td>1952</td>
+      <td>Boston</td>
+      <td>Braves</td>
+      <td>BS1</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>MLN</td>
+      <td>NL</td>
+      <td>1953</td>
+      <td>1965</td>
+      <td>Milwaukee</td>
+      <td>Braves</td>
+      <td>BS1</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>ATL</td>
+      <td>NL</td>
+      <td>1966</td>
+      <td>0</td>
+      <td>Atlanta</td>
+      <td>Braves</td>
+      <td>BS1</td>
+      <td>4</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>It appears that teams move between leagues and cities.  The team_id changes when this happens, <code>franch_id</code> (which is probably 'Franchise') helps us tie all of this together.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Defensive Positions</strong></p>
+<p>In the game log, each player has a defensive position listed, which seems to be a number between 1-10.  Doing some research around this, I found <a href="http://probaseballinsider.com/baseball-instruction/baseball-basics/baseball-basics-positions/">this article</a> which gives us a list of names for each numbered position:</p>
+<ol>
+<li>Pitcher</li>
+<li>Catcher</li>
+<li>1st Base</li>
+<li>2nd Base</li>
+<li>3rd Base</li>
+<li>Shortstop</li>
+<li>Left Field</li>
+<li>Center Field</li>
+<li>Right Field</li>
+</ol>
+<p>The 10th position isn't included, it may be a way of describing a designated hitter that does not field.  I can find a retrosheet page that indicates that position <code>0</code> is used for this, but we don't have any position 0 in our data.  I have chosen to make this an 'Unknown Position' so I'm not including data based on a hunch.</p>
+<p><strong>Leagues</strong></p>
+<p>Wikipedia tells us there are currently two leagues - the American (AL) and National (NL). Let's start by finding out what leagues are listed in the main game log:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">log</span><span class="p">[</span><span class="s2">&quot;h_league&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[9]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>NL    88867
+AL    74712
+AA     5039
+FL     1243
+PL      532
+UA      428
+Name: h_league, dtype: int64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>It looks like most of our games fall into the two current leagues, but that there are four other leagues.  Let's write a quick function to get some info on the years of these leagues:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">league_info</span><span class="p">(</span><span class="n">league</span><span class="p">):</span>
+    <span class="n">league_games</span> <span class="o">=</span> <span class="n">log</span><span class="p">[</span><span class="n">log</span><span class="p">[</span><span class="s2">&quot;h_league&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">league</span><span class="p">]</span>
+    <span class="n">earliest</span> <span class="o">=</span> <span class="n">league_games</span><span class="p">[</span><span class="s2">&quot;date&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+    <span class="n">latest</span> <span class="o">=</span> <span class="n">league_games</span><span class="p">[</span><span class="s2">&quot;date&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2"> went from </span><span class="si">{}</span><span class="s2"> to </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">league</span><span class="p">,</span><span class="n">earliest</span><span class="p">,</span><span class="n">latest</span><span class="p">))</span>
+
+<span class="k">for</span> <span class="n">league</span> <span class="ow">in</span> <span class="n">log</span><span class="p">[</span><span class="s2">&quot;h_league&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">():</span>
+    <span class="n">league_info</span><span class="p">(</span><span class="n">league</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>nan went from nan to nan
+NL went from 18760422 to 20161002
+AA went from 18820502 to 18911006
+UA went from 18840417 to 18841019
+PL went from 18900419 to 18901004
+AL went from 19010424 to 20161002
+FL went from 19140413 to 19151003
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Now we have some years which will help us do some research.  After some googling we come up with:</p>
+<ul>
+<li><code>NL</code>: National League</li>
+<li><code>AL</code>: American League</li>
+<li><code>AA</code>: <a href="https://en.wikipedia.org/wiki/American_Association_%2819th_century%29">American Association</a></li>
+<li><code>FL</code>: <a href="https://en.wikipedia.org/wiki/Federal_League">Federal League</a></li>
+<li><code>PL</code>: <a href="https://en.wikipedia.org/wiki/Players%27_League">Players League</a></li>
+<li><code>UA</code>: <a href="https://en.wikipedia.org/wiki/Union_Association">Union Association</a></li>
+</ul>
+<p>It also looks like we have about 1000 games where the home team doesn't have a value for league.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Importing-Data-into-SQLite">Importing Data into SQLite<a class="anchor-link" href="#Importing-Data-into-SQLite">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># These helper functions will be useful as we work</span>
+<span class="c1"># with the SQLite database from python</span>
+
+<span class="n">DB</span> <span class="o">=</span> <span class="s2">&quot;mlb.db&quot;</span>
+
+<span class="k">def</span> <span class="nf">run_query</span><span class="p">(</span><span class="n">q</span><span class="p">):</span>
+    <span class="k">with</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">DB</span><span class="p">)</span> <span class="k">as</span> <span class="n">conn</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span><span class="n">q</span><span class="p">,</span><span class="n">conn</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">run_command</span><span class="p">(</span><span class="n">c</span><span class="p">):</span>
+    <span class="k">with</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">DB</span><span class="p">)</span> <span class="k">as</span> <span class="n">conn</span><span class="p">:</span>
+        <span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;PRAGMA foreign_keys = ON;&#39;</span><span class="p">)</span>
+        <span class="n">conn</span><span class="o">.</span><span class="n">isolation_level</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">show_tables</span><span class="p">():</span>
+    <span class="n">q</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">    SELECT</span>
+<span class="s1">        name,</span>
+<span class="s1">        type</span>
+<span class="s1">    FROM sqlite_master</span>
+<span class="s1">    WHERE type IN (&quot;table&quot;,&quot;view&quot;);</span>
+<span class="s1">    &#39;&#39;&#39;</span>
+    <span class="k">return</span> <span class="n">run_query</span><span class="p">(</span><span class="n">q</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">tables</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;game_log&quot;</span><span class="p">:</span> <span class="n">log</span><span class="p">,</span>
+    <span class="s2">&quot;person_codes&quot;</span><span class="p">:</span> <span class="n">person</span><span class="p">,</span>
+    <span class="s2">&quot;team_codes&quot;</span><span class="p">:</span> <span class="n">team</span><span class="p">,</span>
+    <span class="s2">&quot;park_codes&quot;</span><span class="p">:</span> <span class="n">park</span>
+<span class="p">}</span>
+
+<span class="k">with</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">DB</span><span class="p">)</span> <span class="k">as</span> <span class="n">conn</span><span class="p">:</span>    
+    <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">tables</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;DROP TABLE IF EXISTS </span><span class="si">{}</span><span class="s2">;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">))</span>
+        <span class="n">data</span><span class="o">.</span><span class="n">to_sql</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="n">conn</span><span class="p">,</span><span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">show_tables</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[13]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>game_log</td>
+      <td>table</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>park_codes</td>
+      <td>table</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>team_codes</td>
+      <td>table</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>person_codes</td>
+      <td>table</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">c1</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">ALTER TABLE game_log</span>
+<span class="s2">ADD COLUMN game_id TEXT;</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="c1"># try/except loop since ALTER TABLE</span>
+<span class="c1"># doesn&#39;t support IF NOT EXISTS</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">run_command</span><span class="p">(</span><span class="n">c1</span><span class="p">)</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="k">pass</span>
+
+<span class="n">c2</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">UPDATE game_log</span>
+<span class="s2">SET game_id = date || h_name || number_of_game</span>
+<span class="s2">/* WHERE prevents this if it has already been done */</span>
+<span class="s2">WHERE game_id IS NULL; </span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="n">run_command</span><span class="p">(</span><span class="n">c2</span><span class="p">)</span>
+
+<span class="n">q</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">SELECT</span>
+<span class="s2">    game_id,</span>
+<span class="s2">    date,</span>
+<span class="s2">    h_name,</span>
+<span class="s2">    number_of_game</span>
+<span class="s2">FROM game_log</span>
+<span class="s2">LIMIT 5;</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="n">run_query</span><span class="p">(</span><span class="n">q</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[14]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>game_id</th>
+      <th>date</th>
+      <th>h_name</th>
+      <th>number_of_game</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>18710504FW10</td>
+      <td>18710504</td>
+      <td>FW1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>18710505WS30</td>
+      <td>18710505</td>
+      <td>WS3</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>18710506RC10</td>
+      <td>18710506</td>
+      <td>RC1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>18710508CH10</td>
+      <td>18710508</td>
+      <td>CH1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>18710509TRO0</td>
+      <td>18710509</td>
+      <td>TRO</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Looking-for-Normalization-Opportunities">Looking for Normalization Opportunities<a class="anchor-link" href="#Looking-for-Normalization-Opportunities">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The following are opportunities for normalization of our data:</p>
+<ul>
+<li>In <code>person_codes</code>, all the debut dates will be able to be reproduced using game log data.</li>
+<li>In <code>team_codes</code>, the start, end and sequence columns will be able to be reproduced using game log data.</li>
+<li>In <code>park_codes</code>, the start and end years will be able to be reproduced using game log data.  While technically the state is an attribute of the city, we might not want to have a an incomplete city/state table so we will leave this in.</li>
+<li>There are lots of places in <code>game</code> log where we have a player ID followed by the players name.  We will be able to remove this and use the name data in <code>person_codes</code></li>
+<li>In <code>game_log</code>, all offensive and defensive stats are repeated for the home team and the visiting team.  We could break these out and have a table that lists each game twice, one for each team, and cut out this column repetition.</li>
+<li>Similarly, in <code>game_log</code>, we have a listing for 9 players on each team with their positions - we can remove these and have one table that tracks player appearances and their positions.</li>
+<li>We can do a similar thing with the umpires from <code>game_log</code>, instead of listing all four positions as columns, we can put the umpires either in their own table or make one table for players, umpires and managers.</li>
+<li>We have several awards in <code>game_log</code> like winning pitcher and losing pitcher.  We can either break these out into their own table, have a table for awards, or combine the awards in with general appearances like the players and umpires.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Planning-a-Normalized-Schema">Planning a Normalized Schema<a class="anchor-link" href="#Planning-a-Normalized-Schema">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The following schema was planned using <a href="https://dbdesigner.net/">DbDesigner.net</a>:</p>
+<p><img src="images/schema-screenshot.png" alt="schema"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Creating-Tables-Without-Foreign-Keys">Creating Tables Without Foreign Keys<a class="anchor-link" href="#Creating-Tables-Without-Foreign-Keys">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">c1</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">CREATE TABLE IF NOT EXISTS person (</span>
+<span class="s2">    person_id TEXT PRIMARY KEY,</span>
+<span class="s2">    first_name TEXT,</span>
+<span class="s2">    last_name TEXT</span>
+<span class="s2">);</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="n">c2</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">INSERT OR IGNORE INTO person</span>
+<span class="s2">SELECT</span>
+<span class="s2">    id,</span>
+<span class="s2">    first,</span>
+<span class="s2">    last</span>
+<span class="s2">FROM person_codes;</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="n">q</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">SELECT * FROM person</span>
+<span class="s2">LIMIT 5;</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="n">run_command</span><span class="p">(</span><span class="n">c1</span><span class="p">)</span>
+<span class="n">run_command</span><span class="p">(</span><span class="n">c2</span><span class="p">)</span>
+<span class="n">run_query</span><span class="p">(</span><span class="n">q</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[15]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>person_id</th>
+      <th>first_name</th>
+      <th>last_name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>aardd001</td>
+      <td>David</td>
+      <td>Aardsma</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>aaroh101</td>
+      <td>Hank</td>
+      <td>Aaron</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>aarot101</td>
+      <td>Tommie</td>
+      <td>Aaron</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>aased001</td>
+      <td>Don</td>
+      <td>Aase</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>abada001</td>
+      <td>Andy</td>
+      <td>Abad</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">c1</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">CREATE TABLE IF NOT EXISTS park (</span>
+<span class="s2">    park_id TEXT PRIMARY KEY,</span>
+<span class="s2">    name TEXT,</span>
+<span class="s2">    nickname TEXT,</span>
+<span class="s2">    city TEXT,</span>
+<span class="s2">    state TEXT,</span>
+<span class="s2">    notes TEXT</span>
+<span class="s2">);</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="n">c2</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">INSERT OR IGNORE INTO park</span>
+<span class="s2">SELECT</span>
+<span class="s2">    park_id,</span>
+<span class="s2">    name,</span>
+<span class="s2">    aka,</span>
+<span class="s2">    city,</span>
+<span class="s2">    state,</span>
+<span class="s2">    notes</span>
+<span class="s2">FROM park_codes;</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="n">q</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">SELECT * FROM park</span>
+<span class="s2">LIMIT 5;</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="n">run_command</span><span class="p">(</span><span class="n">c1</span><span class="p">)</span>
+<span class="n">run_command</span><span class="p">(</span><span class="n">c2</span><span class="p">)</span>
+<span class="n">run_query</span><span class="p">(</span><span class="n">q</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[16]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>park_id</th>
+      <th>name</th>
+      <th>nickname</th>
+      <th>city</th>
+      <th>state</th>
+      <th>notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>ALB01</td>
+      <td>Riverside Park</td>
+      <td>None</td>
+      <td>Albany</td>
+      <td>NY</td>
+      <td>TRN:9/11/80;6/15&amp;9/10/1881;5/16-5/18&amp;5/30/1882</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>ALT01</td>
+      <td>Columbia Park</td>
+      <td>None</td>
+      <td>Altoona</td>
+      <td>PA</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>ANA01</td>
+      <td>Angel Stadium of Anaheim</td>
+      <td>Edison Field; Anaheim Stadium</td>
+      <td>Anaheim</td>
+      <td>CA</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>ARL01</td>
+      <td>Arlington Stadium</td>
+      <td>None</td>
+      <td>Arlington</td>
+      <td>TX</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>ARL02</td>
+      <td>Rangers Ballpark in Arlington</td>
+      <td>The Ballpark in Arlington; Ameriquest Fl</td>
+      <td>Arlington</td>
+      <td>TX</td>
+      <td>None</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">c1</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">CREATE TABLE IF NOT EXISTS league (</span>
+<span class="s2">    league_id TEXT PRIMARY KEY,</span>
+<span class="s2">    name TEXT</span>
+<span class="s2">);</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="n">c2</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">INSERT OR IGNORE INTO league</span>
+<span class="s2">VALUES</span>
+<span class="s2">    (&quot;NL&quot;, &quot;National League&quot;),</span>
+<span class="s2">    (&quot;AL&quot;, &quot;American League&quot;),</span>
+<span class="s2">    (&quot;AA&quot;, &quot;American Association&quot;),</span>
+<span class="s2">    (&quot;FL&quot;, &quot;Federal League&quot;),</span>
+<span class="s2">    (&quot;PL&quot;, &quot;Players League&quot;),</span>
+<span class="s2">    (&quot;UA&quot;, &quot;Union Association&quot;)</span>
+<span class="s2">;</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="n">q</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">SELECT * FROM league</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="n">run_command</span><span class="p">(</span><span class="n">c1</span><span class="p">)</span>
+<span class="n">run_command</span><span class="p">(</span><span class="n">c2</span><span class="p">)</span>
+<span class="n">run_query</span><span class="p">(</span><span class="n">q</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[17]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>league_id</th>
+      <th>name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>NL</td>
+      <td>National League</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>AL</td>
+      <td>American League</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>AA</td>
+      <td>American Association</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>FL</td>
+      <td>Federal League</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>PL</td>
+      <td>Players League</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>UA</td>
+      <td>Union Association</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">c1</span> <span class="o">=</span> <span class="s2">&quot;DROP TABLE IF EXISTS appearance_type;&quot;</span>
+
+<span class="n">run_command</span><span class="p">(</span><span class="n">c1</span><span class="p">)</span>
+
+<span class="n">c2</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">CREATE TABLE appearance_type (</span>
+<span class="s2">    appearance_type_id TEXT PRIMARY KEY,</span>
+<span class="s2">    name TEXT,</span>
+<span class="s2">    category TEXT</span>
+<span class="s2">);</span>
+<span class="s2">&quot;&quot;&quot;</span>
+<span class="n">run_command</span><span class="p">(</span><span class="n">c2</span><span class="p">)</span>
+
+<span class="n">appearance_type</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;appearance_type.csv&#39;</span><span class="p">)</span>
+
+<span class="k">with</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;mlb.db&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">conn</span><span class="p">:</span>
+    <span class="n">appearance_type</span><span class="o">.</span><span class="n">to_sql</span><span class="p">(</span><span class="s1">&#39;appearance_type&#39;</span><span class="p">,</span>
+                           <span class="n">conn</span><span class="p">,</span>
+                           <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                           <span class="n">if_exists</span><span class="o">=</span><span class="s1">&#39;append&#39;</span><span class="p">)</span>
+
+<span class="n">q</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">SELECT * FROM appearance_type;</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="n">run_query</span><span class="p">(</span><span class="n">q</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[18]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>appearance_type_id</th>
+      <th>name</th>
+      <th>category</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>O1</td>
+      <td>Batter 1</td>
+      <td>offense</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>O2</td>
+      <td>Batter 2</td>
+      <td>offense</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>O3</td>
+      <td>Batter 3</td>
+      <td>offense</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>O4</td>
+      <td>Batter 4</td>
+      <td>offense</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>O5</td>
+      <td>Batter 5</td>
+      <td>offense</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>O6</td>
+      <td>Batter 6</td>
+      <td>offense</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>O7</td>
+      <td>Batter 7</td>
+      <td>offense</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>O8</td>
+      <td>Batter 8</td>
+      <td>offense</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>O9</td>
+      <td>Batter 9</td>
+      <td>offense</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>D1</td>
+      <td>Pitcher</td>
+      <td>defense</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>D2</td>
+      <td>Catcher</td>
+      <td>defense</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>D3</td>
+      <td>1st Base</td>
+      <td>defense</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>D4</td>
+      <td>2nd Base</td>
+      <td>defense</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>D5</td>
+      <td>3rd Base</td>
+      <td>defense</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>D6</td>
+      <td>Shortstop</td>
+      <td>defense</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>D7</td>
+      <td>Left Field</td>
+      <td>defense</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>D8</td>
+      <td>Center Field</td>
+      <td>defense</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>D9</td>
+      <td>Right Field</td>
+      <td>defense</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>D10</td>
+      <td>Unknown Position</td>
+      <td>defense</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>UHP</td>
+      <td>Home Plate</td>
+      <td>umpire</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>U1B</td>
+      <td>First Base</td>
+      <td>umpire</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>U2B</td>
+      <td>Second Base</td>
+      <td>umpire</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>U3B</td>
+      <td>Third Base</td>
+      <td>umpire</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>ULF</td>
+      <td>Left Field</td>
+      <td>umpire</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>URF</td>
+      <td>Right Field</td>
+      <td>umpire</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>MM</td>
+      <td>Manager</td>
+      <td>manager</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>AWP</td>
+      <td>Winning Pitcher</td>
+      <td>award</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>ALP</td>
+      <td>Losing Pitcher</td>
+      <td>award</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td>ASP</td>
+      <td>Saving Pitcher</td>
+      <td>award</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td>AWB</td>
+      <td>Winning RBI Batter</td>
+      <td>award</td>
+    </tr>
+    <tr>
+      <th>30</th>
+      <td>PSP</td>
+      <td>Starting Pitcher</td>
+      <td>pitcher</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Adding-The-Team-and-Game-Tables">Adding The Team and Game Tables<a class="anchor-link" href="#Adding-The-Team-and-Game-Tables">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">c1</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">CREATE TABLE IF NOT EXISTS team (</span>
+<span class="s2">    team_id TEXT PRIMARY KEY,</span>
+<span class="s2">    league_id TEXT,</span>
+<span class="s2">    city TEXT,</span>
+<span class="s2">    nickname TEXT,</span>
+<span class="s2">    franch_id TEXT,</span>
+<span class="s2">    FOREIGN KEY (league_id) REFERENCES league(league_id)</span>
+<span class="s2">);</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="n">c2</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">INSERT OR IGNORE INTO team</span>
+<span class="s2">SELECT</span>
+<span class="s2">    team_id,</span>
+<span class="s2">    league,</span>
+<span class="s2">    city,</span>
+<span class="s2">    nickname,</span>
+<span class="s2">    franch_id</span>
+<span class="s2">FROM team_codes;</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="n">q</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">SELECT * FROM team</span>
+<span class="s2">LIMIT 5;</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="n">run_command</span><span class="p">(</span><span class="n">c1</span><span class="p">)</span>
+<span class="n">run_command</span><span class="p">(</span><span class="n">c2</span><span class="p">)</span>
+<span class="n">run_query</span><span class="p">(</span><span class="n">q</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[19]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>team_id</th>
+      <th>league_id</th>
+      <th>city</th>
+      <th>nickname</th>
+      <th>franch_id</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>ALT</td>
+      <td>UA</td>
+      <td>Altoona</td>
+      <td>Mountain Cities</td>
+      <td>ALT</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>ARI</td>
+      <td>NL</td>
+      <td>Arizona</td>
+      <td>Diamondbacks</td>
+      <td>ARI</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>BFN</td>
+      <td>NL</td>
+      <td>Buffalo</td>
+      <td>Bisons</td>
+      <td>BFN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>BFP</td>
+      <td>PL</td>
+      <td>Buffalo</td>
+      <td>Bisons</td>
+      <td>BFP</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>BL1</td>
+      <td>None</td>
+      <td>Baltimore</td>
+      <td>Canaries</td>
+      <td>BL1</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">c1</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">CREATE TABLE IF NOT EXISTS game (</span>
+<span class="s2">    game_id TEXT PRIMARY KEY,</span>
+<span class="s2">    date TEXT,</span>
+<span class="s2">    number_of_game INTEGER,</span>
+<span class="s2">    park_id TEXT,</span>
+<span class="s2">    length_outs INTEGER,</span>
+<span class="s2">    day BOOLEAN,</span>
+<span class="s2">    completion TEXT,</span>
+<span class="s2">    forefeit TEXT,</span>
+<span class="s2">    protest TEXT,</span>
+<span class="s2">    attendance INTEGER,</span>
+<span class="s2">    legnth_minutes INTEGER,</span>
+<span class="s2">    additional_info TEXT,</span>
+<span class="s2">    acquisition_info TEXT,</span>
+<span class="s2">    FOREIGN KEY (park_id) REFERENCES park(park_id)</span>
+<span class="s2">);</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="n">c2</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">INSERT OR IGNORE INTO game</span>
+<span class="s2">SELECT</span>
+<span class="s2">    game_id,</span>
+<span class="s2">    date,</span>
+<span class="s2">    number_of_game,</span>
+<span class="s2">    park_id,</span>
+<span class="s2">    length_outs,</span>
+<span class="s2">    CASE</span>
+<span class="s2">        WHEN day_night = &quot;D&quot; THEN 1</span>
+<span class="s2">        WHEN day_night = &quot;N&quot; THEN 0</span>
+<span class="s2">        ELSE NULL</span>
+<span class="s2">        END</span>
+<span class="s2">        AS day,</span>
+<span class="s2">    completion,</span>
+<span class="s2">    forefeit,</span>
+<span class="s2">    protest,</span>
+<span class="s2">    attendance,</span>
+<span class="s2">    length_minutes,</span>
+<span class="s2">    additional_info,</span>
+<span class="s2">    acquisition_info</span>
+<span class="s2">FROM game_log;</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="n">q</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">SELECT * FROM game</span>
+<span class="s2">LIMIT 5;</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="n">run_command</span><span class="p">(</span><span class="n">c1</span><span class="p">)</span>
+<span class="n">run_command</span><span class="p">(</span><span class="n">c2</span><span class="p">)</span>
+<span class="n">run_query</span><span class="p">(</span><span class="n">q</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[20]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>game_id</th>
+      <th>date</th>
+      <th>number_of_game</th>
+      <th>park_id</th>
+      <th>length_outs</th>
+      <th>day</th>
+      <th>completion</th>
+      <th>forefeit</th>
+      <th>protest</th>
+      <th>attendance</th>
+      <th>legnth_minutes</th>
+      <th>additional_info</th>
+      <th>acquisition_info</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>18710504FW10</td>
+      <td>18710504</td>
+      <td>0</td>
+      <td>FOR01</td>
+      <td>54</td>
+      <td>1</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>200</td>
+      <td>120</td>
+      <td>None</td>
+      <td>Y</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>18710505WS30</td>
+      <td>18710505</td>
+      <td>0</td>
+      <td>WAS01</td>
+      <td>54</td>
+      <td>1</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>5000</td>
+      <td>145</td>
+      <td>HTBF</td>
+      <td>Y</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>18710506RC10</td>
+      <td>18710506</td>
+      <td>0</td>
+      <td>RCK01</td>
+      <td>54</td>
+      <td>1</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>1000</td>
+      <td>140</td>
+      <td>None</td>
+      <td>Y</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>18710508CH10</td>
+      <td>18710508</td>
+      <td>0</td>
+      <td>CHI01</td>
+      <td>54</td>
+      <td>1</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>5000</td>
+      <td>150</td>
+      <td>None</td>
+      <td>Y</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>18710509TRO0</td>
+      <td>18710509</td>
+      <td>0</td>
+      <td>TRO01</td>
+      <td>54</td>
+      <td>1</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>3250</td>
+      <td>145</td>
+      <td>HTBF</td>
+      <td>Y</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Adding-the-Team-Appearance-Table">Adding the Team Appearance Table<a class="anchor-link" href="#Adding-the-Team-Appearance-Table">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">c1</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">CREATE TABLE IF NOT EXISTS team_appearance (</span>
+<span class="s2">    team_id TEXT,</span>
+<span class="s2">    game_id TEXT,</span>
+<span class="s2">    home BOOLEAN,</span>
+<span class="s2">    league_id TEXT,</span>
+<span class="s2">    score INTEGER,</span>
+<span class="s2">    line_score TEXT,</span>
+<span class="s2">    at_bats INTEGER,</span>
+<span class="s2">    hits INTEGER,</span>
+<span class="s2">    doubles INTEGER,</span>
+<span class="s2">    triples INTEGER,</span>
+<span class="s2">    homeruns INTEGER,</span>
+<span class="s2">    rbi INTEGER,</span>
+<span class="s2">    sacrifice_hits INTEGER,</span>
+<span class="s2">    sacrifice_flies INTEGER,</span>
+<span class="s2">    hit_by_pitch INTEGER,</span>
+<span class="s2">    walks INTEGER,</span>
+<span class="s2">    intentional_walks INTEGER,</span>
+<span class="s2">    strikeouts INTEGER,</span>
+<span class="s2">    stolen_bases INTEGER,</span>
+<span class="s2">    caught_stealing INTEGER,</span>
+<span class="s2">    grounded_into_double INTEGER,</span>
+<span class="s2">    first_catcher_interference INTEGER,</span>
+<span class="s2">    left_on_base INTEGER,</span>
+<span class="s2">    pitchers_used INTEGER,</span>
+<span class="s2">    individual_earned_runs INTEGER,</span>
+<span class="s2">    team_earned_runs INTEGER,</span>
+<span class="s2">    wild_pitches INTEGER,</span>
+<span class="s2">    balks INTEGER,</span>
+<span class="s2">    putouts INTEGER,</span>
+<span class="s2">    assists INTEGER,</span>
+<span class="s2">    errors INTEGER,</span>
+<span class="s2">    passed_balls INTEGER,</span>
+<span class="s2">    double_plays INTEGER,</span>
+<span class="s2">    triple_plays INTEGER,</span>
+<span class="s2">    PRIMARY KEY (team_id, game_id),</span>
+<span class="s2">    FOREIGN KEY (team_id) REFERENCES team(team_id),</span>
+<span class="s2">    FOREIGN KEY (game_id) REFERENCES game(game_id),</span>
+<span class="s2">    FOREIGN KEY (team_id) REFERENCES team(team_id)</span>
+<span class="s2">);</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="n">run_command</span><span class="p">(</span><span class="n">c1</span><span class="p">)</span>
+
+<span class="n">c2</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">INSERT OR IGNORE INTO team_appearance</span>
+<span class="s2">    SELECT</span>
+<span class="s2">        h_name,</span>
+<span class="s2">        game_id,</span>
+<span class="s2">        1 AS home,</span>
+<span class="s2">        h_league,</span>
+<span class="s2">        h_score,</span>
+<span class="s2">        h_line_score,</span>
+<span class="s2">        h_at_bats,</span>
+<span class="s2">        h_hits,</span>
+<span class="s2">        h_doubles,</span>
+<span class="s2">        h_triples,</span>
+<span class="s2">        h_homeruns,</span>
+<span class="s2">        h_rbi,</span>
+<span class="s2">        h_sacrifice_hits,</span>
+<span class="s2">        h_sacrifice_flies,</span>
+<span class="s2">        h_hit_by_pitch,</span>
+<span class="s2">        h_walks,</span>
+<span class="s2">        h_intentional_walks,</span>
+<span class="s2">        h_strikeouts,</span>
+<span class="s2">        h_stolen_bases,</span>
+<span class="s2">        h_caught_stealing,</span>
+<span class="s2">        h_grounded_into_double,</span>
+<span class="s2">        h_first_catcher_interference,</span>
+<span class="s2">        h_left_on_base,</span>
+<span class="s2">        h_pitchers_used,</span>
+<span class="s2">        h_individual_earned_runs,</span>
+<span class="s2">        h_team_earned_runs,</span>
+<span class="s2">        h_wild_pitches,</span>
+<span class="s2">        h_balks,</span>
+<span class="s2">        h_putouts,</span>
+<span class="s2">        h_assists,</span>
+<span class="s2">        h_errors,</span>
+<span class="s2">        h_passed_balls,</span>
+<span class="s2">        h_double_plays,</span>
+<span class="s2">        h_triple_plays</span>
+<span class="s2">    FROM game_log</span>
+
+<span class="s2">UNION</span>
+
+<span class="s2">    SELECT    </span>
+<span class="s2">        v_name,</span>
+<span class="s2">        game_id,</span>
+<span class="s2">        0 AS home,</span>
+<span class="s2">        v_league,</span>
+<span class="s2">        v_score,</span>
+<span class="s2">        v_line_score,</span>
+<span class="s2">        v_at_bats,</span>
+<span class="s2">        v_hits,</span>
+<span class="s2">        v_doubles,</span>
+<span class="s2">        v_triples,</span>
+<span class="s2">        v_homeruns,</span>
+<span class="s2">        v_rbi,</span>
+<span class="s2">        v_sacrifice_hits,</span>
+<span class="s2">        v_sacrifice_flies,</span>
+<span class="s2">        v_hit_by_pitch,</span>
+<span class="s2">        v_walks,</span>
+<span class="s2">        v_intentional_walks,</span>
+<span class="s2">        v_strikeouts,</span>
+<span class="s2">        v_stolen_bases,</span>
+<span class="s2">        v_caught_stealing,</span>
+<span class="s2">        v_grounded_into_double,</span>
+<span class="s2">        v_first_catcher_interference,</span>
+<span class="s2">        v_left_on_base,</span>
+<span class="s2">        v_pitchers_used,</span>
+<span class="s2">        v_individual_earned_runs,</span>
+<span class="s2">        v_team_earned_runs,</span>
+<span class="s2">        v_wild_pitches,</span>
+<span class="s2">        v_balks,</span>
+<span class="s2">        v_putouts,</span>
+<span class="s2">        v_assists,</span>
+<span class="s2">        v_errors,</span>
+<span class="s2">        v_passed_balls,</span>
+<span class="s2">        v_double_plays,</span>
+<span class="s2">        v_triple_plays</span>
+<span class="s2">    from game_log;</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="n">run_command</span><span class="p">(</span><span class="n">c2</span><span class="p">)</span>
+
+<span class="n">q</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">SELECT * FROM team_appearance</span>
+<span class="s2">WHERE game_id = (</span>
+<span class="s2">                 SELECT MIN(game_id) from game</span>
+<span class="s2">                )</span>
+<span class="s2">   OR game_id = (</span>
+<span class="s2">                 SELECT MAX(game_id) from game</span>
+<span class="s2">                )</span>
+<span class="s2">ORDER By game_id, home;</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="n">run_query</span><span class="p">(</span><span class="n">q</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[21]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>team_id</th>
+      <th>game_id</th>
+      <th>home</th>
+      <th>league_id</th>
+      <th>score</th>
+      <th>line_score</th>
+      <th>at_bats</th>
+      <th>hits</th>
+      <th>doubles</th>
+      <th>triples</th>
+      <th>homeruns</th>
+      <th>rbi</th>
+      <th>sacrifice_hits</th>
+      <th>sacrifice_flies</th>
+      <th>hit_by_pitch</th>
+      <th>walks</th>
+      <th>intentional_walks</th>
+      <th>strikeouts</th>
+      <th>stolen_bases</th>
+      <th>caught_stealing</th>
+      <th>grounded_into_double</th>
+      <th>first_catcher_interference</th>
+      <th>left_on_base</th>
+      <th>pitchers_used</th>
+      <th>individual_earned_runs</th>
+      <th>team_earned_runs</th>
+      <th>wild_pitches</th>
+      <th>balks</th>
+      <th>putouts</th>
+      <th>assists</th>
+      <th>errors</th>
+      <th>passed_balls</th>
+      <th>double_plays</th>
+      <th>triple_plays</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>CL1</td>
+      <td>18710504FW10</td>
+      <td>0</td>
+      <td>None</td>
+      <td>0</td>
+      <td>000000000</td>
+      <td>30</td>
+      <td>4</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>6</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>-1</td>
+      <td>NaN</td>
+      <td>4</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>27</td>
+      <td>9</td>
+      <td>0</td>
+      <td>3</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>FW1</td>
+      <td>18710504FW10</td>
+      <td>1</td>
+      <td>None</td>
+      <td>2</td>
+      <td>010010000</td>
+      <td>31</td>
+      <td>4</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>-1</td>
+      <td>NaN</td>
+      <td>3</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>27</td>
+      <td>3</td>
+      <td>3</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>MIA</td>
+      <td>20161002WAS0</td>
+      <td>0</td>
+      <td>NL</td>
+      <td>7</td>
+      <td>000230020</td>
+      <td>38</td>
+      <td>14</td>
+      <td>1</td>
+      <td>1</td>
+      <td>2</td>
+      <td>7</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>3</td>
+      <td>2.0</td>
+      <td>10</td>
+      <td>1</td>
+      <td>1.0</td>
+      <td>1</td>
+      <td>0.0</td>
+      <td>8</td>
+      <td>7</td>
+      <td>10</td>
+      <td>10</td>
+      <td>1</td>
+      <td>0</td>
+      <td>24</td>
+      <td>11</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>WAS</td>
+      <td>20161002WAS0</td>
+      <td>1</td>
+      <td>NL</td>
+      <td>10</td>
+      <td>03023002x</td>
+      <td>30</td>
+      <td>10</td>
+      <td>2</td>
+      <td>0</td>
+      <td>1</td>
+      <td>10</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>8</td>
+      <td>0.0</td>
+      <td>3</td>
+      <td>2</td>
+      <td>0.0</td>
+      <td>1</td>
+      <td>0.0</td>
+      <td>7</td>
+      <td>6</td>
+      <td>7</td>
+      <td>7</td>
+      <td>1</td>
+      <td>0</td>
+      <td>27</td>
+      <td>11</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Adding-the-Person-Appearance-Table">Adding the Person Appearance Table<a class="anchor-link" href="#Adding-the-Person-Appearance-Table">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">c0</span> <span class="o">=</span> <span class="s2">&quot;DROP TABLE IF EXISTS person_appearance&quot;</span>
+
+<span class="n">run_command</span><span class="p">(</span><span class="n">c0</span><span class="p">)</span>
+
+<span class="n">c1</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">CREATE TABLE person_appearance (</span>
+<span class="s2">    appearance_id INTEGER PRIMARY KEY,</span>
+<span class="s2">    person_id TEXT,</span>
+<span class="s2">    team_id TEXT,</span>
+<span class="s2">    game_id TEXT,</span>
+<span class="s2">    appearance_type_id,</span>
+<span class="s2">    FOREIGN KEY (person_id) REFERENCES person(person_id),</span>
+<span class="s2">    FOREIGN KEY (team_id) REFERENCES team(team_id),</span>
+<span class="s2">    FOREIGN KEY (game_id) REFERENCES game(game_id),</span>
+<span class="s2">    FOREIGN KEY (appearance_type_id) REFERENCES appearance_type(appearance_type_id)</span>
+<span class="s2">);</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="n">c2</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">INSERT OR IGNORE INTO person_appearance (</span>
+<span class="s2">    game_id,</span>
+<span class="s2">    team_id,</span>
+<span class="s2">    person_id,</span>
+<span class="s2">    appearance_type_id</span>
+<span class="s2">) </span>
+<span class="s2">    SELECT</span>
+<span class="s2">        game_id,</span>
+<span class="s2">        NULL,</span>
+<span class="s2">        hp_umpire_id,</span>
+<span class="s2">        &quot;UHP&quot;</span>
+<span class="s2">    FROM game_log</span>
+<span class="s2">    WHERE hp_umpire_id IS NOT NULL    </span>
+
+<span class="s2">UNION</span>
+
+<span class="s2">    SELECT</span>
+<span class="s2">        game_id,</span>
+<span class="s2">        NULL,</span>
+<span class="s2">        [1b_umpire_id],</span>
+<span class="s2">        &quot;U1B&quot;</span>
+<span class="s2">    FROM game_log</span>
+<span class="s2">    WHERE &quot;1b_umpire_id&quot; IS NOT NULL</span>
+
+<span class="s2">UNION</span>
+
+<span class="s2">    SELECT</span>
+<span class="s2">        game_id,</span>
+<span class="s2">        NULL,</span>
+<span class="s2">        [2b_umpire_id],</span>
+<span class="s2">        &quot;U2B&quot;</span>
+<span class="s2">    FROM game_log</span>
+<span class="s2">    WHERE [2b_umpire_id] IS NOT NULL</span>
+
+<span class="s2">UNION</span>
+
+<span class="s2">    SELECT</span>
+<span class="s2">        game_id,</span>
+<span class="s2">        NULL,</span>
+<span class="s2">        [3b_umpire_id],</span>
+<span class="s2">        &quot;U3B&quot;</span>
+<span class="s2">    FROM game_log</span>
+<span class="s2">    WHERE [3b_umpire_id] IS NOT NULL</span>
+
+<span class="s2">UNION</span>
+
+<span class="s2">    SELECT</span>
+<span class="s2">        game_id,</span>
+<span class="s2">        NULL,</span>
+<span class="s2">        lf_umpire_id,</span>
+<span class="s2">        &quot;ULF&quot;</span>
+<span class="s2">    FROM game_log</span>
+<span class="s2">    WHERE lf_umpire_id IS NOT NULL</span>
+
+<span class="s2">UNION</span>
+
+<span class="s2">    SELECT</span>
+<span class="s2">        game_id,</span>
+<span class="s2">        NULL,</span>
+<span class="s2">        rf_umpire_id,</span>
+<span class="s2">        &quot;URF&quot;</span>
+<span class="s2">    FROM game_log</span>
+<span class="s2">    WHERE rf_umpire_id IS NOT NULL</span>
+
+<span class="s2">UNION</span>
+
+<span class="s2">    SELECT</span>
+<span class="s2">        game_id,</span>
+<span class="s2">        v_name,</span>
+<span class="s2">        v_manager_id,</span>
+<span class="s2">        &quot;MM&quot;</span>
+<span class="s2">    FROM game_log</span>
+<span class="s2">    WHERE v_manager_id IS NOT NULL</span>
+
+<span class="s2">UNION</span>
+
+<span class="s2">    SELECT</span>
+<span class="s2">        game_id,</span>
+<span class="s2">        h_name,</span>
+<span class="s2">        h_manager_id,</span>
+<span class="s2">        &quot;MM&quot;</span>
+<span class="s2">    FROM game_log</span>
+<span class="s2">    WHERE h_manager_id IS NOT NULL</span>
+
+<span class="s2">UNION</span>
+
+<span class="s2">    SELECT</span>
+<span class="s2">        game_id,</span>
+<span class="s2">        CASE</span>
+<span class="s2">            WHEN h_score &gt; v_score THEN h_name</span>
+<span class="s2">            ELSE v_name</span>
+<span class="s2">            END,</span>
+<span class="s2">        winning_pitcher_id,</span>
+<span class="s2">        &quot;AWP&quot;</span>
+<span class="s2">    FROM game_log</span>
+<span class="s2">    WHERE winning_pitcher_id IS NOT NULL</span>
+
+<span class="s2">UNION</span>
+
+<span class="s2">    SELECT</span>
+<span class="s2">        game_id,</span>
+<span class="s2">        CASE</span>
+<span class="s2">            WHEN h_score &lt; v_score THEN h_name</span>
+<span class="s2">            ELSE v_name</span>
+<span class="s2">            END,</span>
+<span class="s2">        losing_pitcher_id,</span>
+<span class="s2">        &quot;ALP&quot;</span>
+<span class="s2">    FROM game_log</span>
+<span class="s2">    WHERE losing_pitcher_id IS NOT NULL</span>
+
+<span class="s2">UNION</span>
+
+<span class="s2">    SELECT</span>
+<span class="s2">        game_id,</span>
+<span class="s2">        CASE</span>
+<span class="s2">            WHEN h_score &gt; v_score THEN h_name</span>
+<span class="s2">            ELSE v_name</span>
+<span class="s2">            END,</span>
+<span class="s2">        saving_pitcher_id,</span>
+<span class="s2">        &quot;ASP&quot;</span>
+<span class="s2">    FROM game_log</span>
+<span class="s2">    WHERE saving_pitcher_id IS NOT NULL</span>
+
+<span class="s2">UNION</span>
+
+<span class="s2">    SELECT</span>
+<span class="s2">        game_id,</span>
+<span class="s2">        CASE</span>
+<span class="s2">            WHEN h_score &gt; v_score THEN h_name</span>
+<span class="s2">            ELSE v_name</span>
+<span class="s2">            END,</span>
+<span class="s2">        winning_rbi_batter_id,</span>
+<span class="s2">        &quot;AWB&quot;</span>
+<span class="s2">    FROM game_log</span>
+<span class="s2">    WHERE winning_rbi_batter_id IS NOT NULL</span>
+
+<span class="s2">UNION</span>
+
+<span class="s2">    SELECT</span>
+<span class="s2">        game_id,</span>
+<span class="s2">        v_name,</span>
+<span class="s2">        v_starting_pitcher_id,</span>
+<span class="s2">        &quot;PSP&quot;</span>
+<span class="s2">    FROM game_log</span>
+<span class="s2">    WHERE v_starting_pitcher_id IS NOT NULL</span>
+
+<span class="s2">UNION</span>
+
+<span class="s2">    SELECT</span>
+<span class="s2">        game_id,</span>
+<span class="s2">        h_name,</span>
+<span class="s2">        h_starting_pitcher_id,</span>
+<span class="s2">        &quot;PSP&quot;</span>
+<span class="s2">    FROM game_log</span>
+<span class="s2">    WHERE h_starting_pitcher_id IS NOT NULL;</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="n">template</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">INSERT INTO person_appearance (</span>
+<span class="s2">    game_id,</span>
+<span class="s2">    team_id,</span>
+<span class="s2">    person_id,</span>
+<span class="s2">    appearance_type_id</span>
+<span class="s2">) </span>
+<span class="s2">    SELECT</span>
+<span class="s2">        game_id,</span>
+<span class="s2">        </span><span class="si">{hv}</span><span class="s2">_name,</span>
+<span class="s2">        </span><span class="si">{hv}</span><span class="s2">_player_</span><span class="si">{num}</span><span class="s2">_id,</span>
+<span class="s2">        &quot;O</span><span class="si">{num}</span><span class="s2">&quot;</span>
+<span class="s2">    FROM game_log</span>
+<span class="s2">    WHERE </span><span class="si">{hv}</span><span class="s2">_player_</span><span class="si">{num}</span><span class="s2">_id IS NOT NULL</span>
+
+<span class="s2">UNION</span>
+
+<span class="s2">    SELECT</span>
+<span class="s2">        game_id,</span>
+<span class="s2">        </span><span class="si">{hv}</span><span class="s2">_name,</span>
+<span class="s2">        </span><span class="si">{hv}</span><span class="s2">_player_</span><span class="si">{num}</span><span class="s2">_id,</span>
+<span class="s2">        &quot;D&quot; || CAST(</span><span class="si">{hv}</span><span class="s2">_player_</span><span class="si">{num}</span><span class="s2">_def_pos AS INT)</span>
+<span class="s2">    FROM game_log</span>
+<span class="s2">    WHERE </span><span class="si">{hv}</span><span class="s2">_player_</span><span class="si">{num}</span><span class="s2">_id IS NOT NULL;</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="n">run_command</span><span class="p">(</span><span class="n">c1</span><span class="p">)</span>
+<span class="n">run_command</span><span class="p">(</span><span class="n">c2</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">hv</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;h&quot;</span><span class="p">,</span><span class="s2">&quot;v&quot;</span><span class="p">]:</span>
+    <span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">):</span>
+        <span class="n">query_vars</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;hv&quot;</span><span class="p">:</span> <span class="n">hv</span><span class="p">,</span>
+            <span class="s2">&quot;num&quot;</span><span class="p">:</span> <span class="n">num</span>
+        <span class="p">}</span>
+        <span class="n">run_command</span><span class="p">(</span><span class="n">template</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">**</span><span class="n">query_vars</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">run_query</span><span class="p">(</span><span class="s2">&quot;SELECT COUNT(DISTINCT game_id) games_game FROM game&quot;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">run_query</span><span class="p">(</span><span class="s2">&quot;SELECT COUNT(DISTINCT game_id) games_person_appearance FROM person_appearance&quot;</span><span class="p">))</span>
+
+<span class="n">q</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">SELECT</span>
+<span class="s2">    pa.*,</span>
+<span class="s2">    at.name,</span>
+<span class="s2">    at.category</span>
+<span class="s2">FROM person_appearance pa</span>
+<span class="s2">INNER JOIN appearance_type at on at.appearance_type_id = pa.appearance_type_id</span>
+<span class="s2">WHERE PA.game_id = (</span>
+<span class="s2">                   SELECT max(game_id)</span>
+<span class="s2">                    FROM person_appearance</span>
+<span class="s2">                   )</span>
+<span class="s2">ORDER BY team_id, appearance_type_id</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="n">run_query</span><span class="p">(</span><span class="n">q</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>   games_game
+0      171907
+   games_person_appearance
+0                   171907
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[23]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>appearance_id</th>
+      <th>person_id</th>
+      <th>team_id</th>
+      <th>game_id</th>
+      <th>appearance_type_id</th>
+      <th>name</th>
+      <th>category</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1646109</td>
+      <td>porta901</td>
+      <td>None</td>
+      <td>20161002WAS0</td>
+      <td>U1B</td>
+      <td>First Base</td>
+      <td>umpire</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1646108</td>
+      <td>onorb901</td>
+      <td>None</td>
+      <td>20161002WAS0</td>
+      <td>U2B</td>
+      <td>Second Base</td>
+      <td>umpire</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1646107</td>
+      <td>kellj901</td>
+      <td>None</td>
+      <td>20161002WAS0</td>
+      <td>U3B</td>
+      <td>Third Base</td>
+      <td>umpire</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1646110</td>
+      <td>tumpj901</td>
+      <td>None</td>
+      <td>20161002WAS0</td>
+      <td>UHP</td>
+      <td>Home Plate</td>
+      <td>umpire</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1646111</td>
+      <td>brica001</td>
+      <td>MIA</td>
+      <td>20161002WAS0</td>
+      <td>ALP</td>
+      <td>Losing Pitcher</td>
+      <td>award</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>6716279</td>
+      <td>koeht001</td>
+      <td>MIA</td>
+      <td>20161002WAS0</td>
+      <td>D1</td>
+      <td>Pitcher</td>
+      <td>defense</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>4744553</td>
+      <td>telit001</td>
+      <td>MIA</td>
+      <td>20161002WAS0</td>
+      <td>D2</td>
+      <td>Catcher</td>
+      <td>defense</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>5589581</td>
+      <td>bourj002</td>
+      <td>MIA</td>
+      <td>20161002WAS0</td>
+      <td>D3</td>
+      <td>1st Base</td>
+      <td>defense</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>4462877</td>
+      <td>gordd002</td>
+      <td>MIA</td>
+      <td>20161002WAS0</td>
+      <td>D4</td>
+      <td>2nd Base</td>
+      <td>defense</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>5026229</td>
+      <td>pradm001</td>
+      <td>MIA</td>
+      <td>20161002WAS0</td>
+      <td>D5</td>
+      <td>3rd Base</td>
+      <td>defense</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>6434609</td>
+      <td>hecha001</td>
+      <td>MIA</td>
+      <td>20161002WAS0</td>
+      <td>D6</td>
+      <td>Shortstop</td>
+      <td>defense</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>5871257</td>
+      <td>scrux001</td>
+      <td>MIA</td>
+      <td>20161002WAS0</td>
+      <td>D7</td>
+      <td>Left Field</td>
+      <td>defense</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>5307905</td>
+      <td>yelic001</td>
+      <td>MIA</td>
+      <td>20161002WAS0</td>
+      <td>D8</td>
+      <td>Center Field</td>
+      <td>defense</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>6152933</td>
+      <td>hoodd001</td>
+      <td>MIA</td>
+      <td>20161002WAS0</td>
+      <td>D9</td>
+      <td>Right Field</td>
+      <td>defense</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>1646113</td>
+      <td>mattd001</td>
+      <td>MIA</td>
+      <td>20161002WAS0</td>
+      <td>MM</td>
+      <td>Manager</td>
+      <td>manager</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>4462878</td>
+      <td>gordd002</td>
+      <td>MIA</td>
+      <td>20161002WAS0</td>
+      <td>O1</td>
+      <td>Batter 1</td>
+      <td>offense</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>4744554</td>
+      <td>telit001</td>
+      <td>MIA</td>
+      <td>20161002WAS0</td>
+      <td>O2</td>
+      <td>Batter 2</td>
+      <td>offense</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>5026230</td>
+      <td>pradm001</td>
+      <td>MIA</td>
+      <td>20161002WAS0</td>
+      <td>O3</td>
+      <td>Batter 3</td>
+      <td>offense</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>5307906</td>
+      <td>yelic001</td>
+      <td>MIA</td>
+      <td>20161002WAS0</td>
+      <td>O4</td>
+      <td>Batter 4</td>
+      <td>offense</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>5589582</td>
+      <td>bourj002</td>
+      <td>MIA</td>
+      <td>20161002WAS0</td>
+      <td>O5</td>
+      <td>Batter 5</td>
+      <td>offense</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>5871258</td>
+      <td>scrux001</td>
+      <td>MIA</td>
+      <td>20161002WAS0</td>
+      <td>O6</td>
+      <td>Batter 6</td>
+      <td>offense</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>6152934</td>
+      <td>hoodd001</td>
+      <td>MIA</td>
+      <td>20161002WAS0</td>
+      <td>O7</td>
+      <td>Batter 7</td>
+      <td>offense</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>6434610</td>
+      <td>hecha001</td>
+      <td>MIA</td>
+      <td>20161002WAS0</td>
+      <td>O8</td>
+      <td>Batter 8</td>
+      <td>offense</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>6716280</td>
+      <td>koeht001</td>
+      <td>MIA</td>
+      <td>20161002WAS0</td>
+      <td>O9</td>
+      <td>Batter 9</td>
+      <td>offense</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>1646112</td>
+      <td>koeht001</td>
+      <td>MIA</td>
+      <td>20161002WAS0</td>
+      <td>PSP</td>
+      <td>Starting Pitcher</td>
+      <td>pitcher</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>1646116</td>
+      <td>melam001</td>
+      <td>WAS</td>
+      <td>20161002WAS0</td>
+      <td>ASP</td>
+      <td>Saving Pitcher</td>
+      <td>award</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>1646115</td>
+      <td>difow001</td>
+      <td>WAS</td>
+      <td>20161002WAS0</td>
+      <td>AWB</td>
+      <td>Winning RBI Batter</td>
+      <td>award</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>1646117</td>
+      <td>schem001</td>
+      <td>WAS</td>
+      <td>20161002WAS0</td>
+      <td>AWP</td>
+      <td>Winning Pitcher</td>
+      <td>award</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td>4181201</td>
+      <td>schem001</td>
+      <td>WAS</td>
+      <td>20161002WAS0</td>
+      <td>D1</td>
+      <td>Pitcher</td>
+      <td>defense</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td>3899525</td>
+      <td>lobaj001</td>
+      <td>WAS</td>
+      <td>20161002WAS0</td>
+      <td>D2</td>
+      <td>Catcher</td>
+      <td>defense</td>
+    </tr>
+    <tr>
+      <th>30</th>
+      <td>2772821</td>
+      <td>zimmr001</td>
+      <td>WAS</td>
+      <td>20161002WAS0</td>
+      <td>D3</td>
+      <td>1st Base</td>
+      <td>defense</td>
+    </tr>
+    <tr>
+      <th>31</th>
+      <td>3336173</td>
+      <td>difow001</td>
+      <td>WAS</td>
+      <td>20161002WAS0</td>
+      <td>D4</td>
+      <td>2nd Base</td>
+      <td>defense</td>
+    </tr>
+    <tr>
+      <th>32</th>
+      <td>3054497</td>
+      <td>drews001</td>
+      <td>WAS</td>
+      <td>20161002WAS0</td>
+      <td>D5</td>
+      <td>3rd Base</td>
+      <td>defense</td>
+    </tr>
+    <tr>
+      <th>33</th>
+      <td>3617849</td>
+      <td>espid001</td>
+      <td>WAS</td>
+      <td>20161002WAS0</td>
+      <td>D6</td>
+      <td>Shortstop</td>
+      <td>defense</td>
+    </tr>
+    <tr>
+      <th>34</th>
+      <td>2209469</td>
+      <td>reveb001</td>
+      <td>WAS</td>
+      <td>20161002WAS0</td>
+      <td>D7</td>
+      <td>Left Field</td>
+      <td>defense</td>
+    </tr>
+    <tr>
+      <th>35</th>
+      <td>1927793</td>
+      <td>turnt001</td>
+      <td>WAS</td>
+      <td>20161002WAS0</td>
+      <td>D8</td>
+      <td>Center Field</td>
+      <td>defense</td>
+    </tr>
+    <tr>
+      <th>36</th>
+      <td>2491145</td>
+      <td>harpb003</td>
+      <td>WAS</td>
+      <td>20161002WAS0</td>
+      <td>D9</td>
+      <td>Right Field</td>
+      <td>defense</td>
+    </tr>
+    <tr>
+      <th>37</th>
+      <td>1646114</td>
+      <td>baked002</td>
+      <td>WAS</td>
+      <td>20161002WAS0</td>
+      <td>MM</td>
+      <td>Manager</td>
+      <td>manager</td>
+    </tr>
+    <tr>
+      <th>38</th>
+      <td>1927794</td>
+      <td>turnt001</td>
+      <td>WAS</td>
+      <td>20161002WAS0</td>
+      <td>O1</td>
+      <td>Batter 1</td>
+      <td>offense</td>
+    </tr>
+    <tr>
+      <th>39</th>
+      <td>2209470</td>
+      <td>reveb001</td>
+      <td>WAS</td>
+      <td>20161002WAS0</td>
+      <td>O2</td>
+      <td>Batter 2</td>
+      <td>offense</td>
+    </tr>
+    <tr>
+      <th>40</th>
+      <td>2491146</td>
+      <td>harpb003</td>
+      <td>WAS</td>
+      <td>20161002WAS0</td>
+      <td>O3</td>
+      <td>Batter 3</td>
+      <td>offense</td>
+    </tr>
+    <tr>
+      <th>41</th>
+      <td>2772822</td>
+      <td>zimmr001</td>
+      <td>WAS</td>
+      <td>20161002WAS0</td>
+      <td>O4</td>
+      <td>Batter 4</td>
+      <td>offense</td>
+    </tr>
+    <tr>
+      <th>42</th>
+      <td>3054498</td>
+      <td>drews001</td>
+      <td>WAS</td>
+      <td>20161002WAS0</td>
+      <td>O5</td>
+      <td>Batter 5</td>
+      <td>offense</td>
+    </tr>
+    <tr>
+      <th>43</th>
+      <td>3336174</td>
+      <td>difow001</td>
+      <td>WAS</td>
+      <td>20161002WAS0</td>
+      <td>O6</td>
+      <td>Batter 6</td>
+      <td>offense</td>
+    </tr>
+    <tr>
+      <th>44</th>
+      <td>3617850</td>
+      <td>espid001</td>
+      <td>WAS</td>
+      <td>20161002WAS0</td>
+      <td>O7</td>
+      <td>Batter 7</td>
+      <td>offense</td>
+    </tr>
+    <tr>
+      <th>45</th>
+      <td>3899526</td>
+      <td>lobaj001</td>
+      <td>WAS</td>
+      <td>20161002WAS0</td>
+      <td>O8</td>
+      <td>Batter 8</td>
+      <td>offense</td>
+    </tr>
+    <tr>
+      <th>46</th>
+      <td>4181202</td>
+      <td>schem001</td>
+      <td>WAS</td>
+      <td>20161002WAS0</td>
+      <td>O9</td>
+      <td>Batter 9</td>
+      <td>offense</td>
+    </tr>
+    <tr>
+      <th>47</th>
+      <td>1646118</td>
+      <td>schem001</td>
+      <td>WAS</td>
+      <td>20161002WAS0</td>
+      <td>PSP</td>
+      <td>Starting Pitcher</td>
+      <td>pitcher</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Removing-the-Original-Tables">Removing the Original Tables<a class="anchor-link" href="#Removing-the-Original-Tables">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">show_tables</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[24]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>game_log</td>
+      <td>table</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>park_codes</td>
+      <td>table</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>team_codes</td>
+      <td>table</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>person_codes</td>
+      <td>table</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>person</td>
+      <td>table</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>park</td>
+      <td>table</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>league</td>
+      <td>table</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>appearance_type</td>
+      <td>table</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>team</td>
+      <td>table</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>game</td>
+      <td>table</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>team_appearance</td>
+      <td>table</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>person_appearance</td>
+      <td>table</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">tables</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;game_log&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;park_codes&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;team_codes&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;person_codes&quot;</span>
+<span class="p">]</span>
+
+<span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">tables</span><span class="p">:</span>
+    <span class="n">c</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">    DROP TABLE </span><span class="si">{}</span><span class="s1"></span>
+<span class="s1">    &#39;&#39;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+    
+    <span class="n">run_command</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+
+<span class="n">show_tables</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[25]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>person</td>
+      <td>table</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>park</td>
+      <td>table</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>league</td>
+      <td>table</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>appearance_type</td>
+      <td>table</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>team</td>
+      <td>table</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>game</td>
+      <td>table</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>team_appearance</td>
+      <td>table</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>person_appearance</td>
+      <td>table</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+ 
+
+
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = '//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: 'center'," +
+        "    displayIndent: '0em'," +
+        "    showMathMenu: true," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['$','$'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        " linebreaks: { automatic: true, width: '95% container' }, " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'black ! important'} }" +
+        "    } " +
+        "}); ";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="./tag/python.html">python</a>
+    </p>
+  </div>
+
+
+
+
+
+</article>
+
+    <footer>
+<p>&copy;  </p>
+<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Ram Shanker G ",
+  "url" : ".",
+  "image": "",
+  "description": ""
+}
+</script>
+
+</body>
+</html>

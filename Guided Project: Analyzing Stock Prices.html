@@ -1,0 +1,3200 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="./theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="./theme/pygments/github.min.css">
+  <link rel="stylesheet" type="text/css" href="./theme/font-awesome/css/font-awesome.min.css">
+
+
+    <link href="ramshankerg.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Ram Shanker G Atom">
+
+
+
+
+
+<meta name="author" content="me" />
+<meta name="description" content="Click on read more link to find out more about the project" />
+<meta name="keywords" content="python">
+
+<meta property="og:site_name" content="Ram Shanker G"/>
+<meta property="og:title" content="Guided Project: Analyzing Stock Prices"/>
+<meta property="og:description" content="Click on read more link to find out more about the project"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="./Guided Project: Analyzing Stock Prices.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2015-07-08 20:00:00+05:30"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="./author/me.html">
+<meta property="article:section" content="Projects"/>
+<meta property="article:tag" content="python"/>
+<meta property="og:image" content="">
+
+  <title>Ram Shanker G &ndash; Guided Project: Analyzing Stock Prices</title>
+
+</head>
+<body>
+  <aside>
+    <div>
+      <a href=".">
+        <img src="./theme/img/profile.png" alt="" title="">
+      </a>
+      <h1><a href="."></a></h1>
+
+
+      <nav>
+        <ul class="list">
+          <li><a href="./pages/about-me.html#about-me">About me</a></li>
+
+          <li><a href="http://getpelican.com/" target="_blank">Pelican</a></li>
+          <li><a href="http://python.org/" target="_blank">Python.org</a></li>
+          <li><a href="http://jinja.pocoo.org/" target="_blank">Jinja2</a></li>
+          <li><a href="#" target="_blank">You can modify these links in your config file</a></li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+        <li><a class="sc-GitHub" href="https://github.com/ramshankerg" target="_blank"><i class="fa fa-GitHub"></i></a></li>
+        <li><a class="sc-Linkedin" href="https://www.linkedin.com/in/ram-shanker-g/" target="_blank"><i class="fa fa-Linkedin"></i></a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+
+<article class="single">
+  <header>
+      
+    <h1 id="Guided Project: Analyzing Stock Prices">Guided Project: Analyzing Stock Prices</h1>
+    <p>
+          Posted on Wed 08 July 2015 in <a href="./category/projects.html">Projects</a>
+
+
+    </p>
+  </header>
+
+
+  <div>
+    <style type="text/css">/*!
+*
+* IPython notebook
+*
+*/
+/* CSS font colors for translated ANSI escape sequences */
+/* The color values are a mix of
+   http://www.xcolors.net/dl/baskerville-ivorylight and
+   http://www.xcolors.net/dl/euphrasia */
+.ansi-black-fg {
+  color: #3E424D;
+}
+.ansi-black-bg {
+  background-color: #3E424D;
+}
+.ansi-black-intense-fg {
+  color: #282C36;
+}
+.ansi-black-intense-bg {
+  background-color: #282C36;
+}
+.ansi-red-fg {
+  color: #E75C58;
+}
+.ansi-red-bg {
+  background-color: #E75C58;
+}
+.ansi-red-intense-fg {
+  color: #B22B31;
+}
+.ansi-red-intense-bg {
+  background-color: #B22B31;
+}
+.ansi-green-fg {
+  color: #00A250;
+}
+.ansi-green-bg {
+  background-color: #00A250;
+}
+.ansi-green-intense-fg {
+  color: #007427;
+}
+.ansi-green-intense-bg {
+  background-color: #007427;
+}
+.ansi-yellow-fg {
+  color: #DDB62B;
+}
+.ansi-yellow-bg {
+  background-color: #DDB62B;
+}
+.ansi-yellow-intense-fg {
+  color: #B27D12;
+}
+.ansi-yellow-intense-bg {
+  background-color: #B27D12;
+}
+.ansi-blue-fg {
+  color: #208FFB;
+}
+.ansi-blue-bg {
+  background-color: #208FFB;
+}
+.ansi-blue-intense-fg {
+  color: #0065CA;
+}
+.ansi-blue-intense-bg {
+  background-color: #0065CA;
+}
+.ansi-magenta-fg {
+  color: #D160C4;
+}
+.ansi-magenta-bg {
+  background-color: #D160C4;
+}
+.ansi-magenta-intense-fg {
+  color: #A03196;
+}
+.ansi-magenta-intense-bg {
+  background-color: #A03196;
+}
+.ansi-cyan-fg {
+  color: #60C6C8;
+}
+.ansi-cyan-bg {
+  background-color: #60C6C8;
+}
+.ansi-cyan-intense-fg {
+  color: #258F8F;
+}
+.ansi-cyan-intense-bg {
+  background-color: #258F8F;
+}
+.ansi-white-fg {
+  color: #C5C1B4;
+}
+.ansi-white-bg {
+  background-color: #C5C1B4;
+}
+.ansi-white-intense-fg {
+  color: #A1A6B2;
+}
+.ansi-white-intense-bg {
+  background-color: #A1A6B2;
+}
+.ansi-default-inverse-fg {
+  color: #FFFFFF;
+}
+.ansi-default-inverse-bg {
+  background-color: #000000;
+}
+.ansi-bold {
+  font-weight: bold;
+}
+.ansi-underline {
+  text-decoration: underline;
+}
+/* The following styles are deprecated an will be removed in a future version */
+.ansibold {
+  font-weight: bold;
+}
+.ansi-inverse {
+  outline: 0.5px dotted;
+}
+/* use dark versions for foreground, to improve visibility */
+.ansiblack {
+  color: black;
+}
+.ansired {
+  color: darkred;
+}
+.ansigreen {
+  color: darkgreen;
+}
+.ansiyellow {
+  color: #c4a000;
+}
+.ansiblue {
+  color: darkblue;
+}
+.ansipurple {
+  color: darkviolet;
+}
+.ansicyan {
+  color: steelblue;
+}
+.ansigray {
+  color: gray;
+}
+/* and light for background, for the same reason */
+.ansibgblack {
+  background-color: black;
+}
+.ansibgred {
+  background-color: red;
+}
+.ansibggreen {
+  background-color: green;
+}
+.ansibgyellow {
+  background-color: yellow;
+}
+.ansibgblue {
+  background-color: blue;
+}
+.ansibgpurple {
+  background-color: magenta;
+}
+.ansibgcyan {
+  background-color: cyan;
+}
+.ansibggray {
+  background-color: gray;
+}
+div.cell {
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  border-radius: 2px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+  width: 100%;
+  padding: 5px;
+  /* This acts as a spacer between cells, that is outside the border */
+  margin: 0px;
+  outline: none;
+  position: relative;
+  overflow: visible;
+}
+div.cell:before {
+  position: absolute;
+  display: block;
+  top: -1px;
+  left: -1px;
+  width: 5px;
+  height: calc(100% +  2px);
+  content: '';
+  background: transparent;
+}
+div.cell.jupyter-soft-selected {
+  border-left-color: #E3F2FD;
+  border-left-width: 1px;
+  padding-left: 5px;
+  border-right-color: #E3F2FD;
+  border-right-width: 1px;
+  background: #E3F2FD;
+}
+@media print {
+  div.cell.jupyter-soft-selected {
+    border-color: transparent;
+  }
+}
+div.cell.selected,
+div.cell.selected.jupyter-soft-selected {
+  border-color: #ababab;
+}
+div.cell.selected:before,
+div.cell.selected.jupyter-soft-selected:before {
+  position: absolute;
+  display: block;
+  top: -1px;
+  left: -1px;
+  width: 5px;
+  height: calc(100% +  2px);
+  content: '';
+  background: #42A5F5;
+}
+@media print {
+  div.cell.selected,
+  div.cell.selected.jupyter-soft-selected {
+    border-color: transparent;
+  }
+}
+.edit_mode div.cell.selected {
+  border-color: #66BB6A;
+}
+.edit_mode div.cell.selected:before {
+  position: absolute;
+  display: block;
+  top: -1px;
+  left: -1px;
+  width: 5px;
+  height: calc(100% +  2px);
+  content: '';
+  background: #66BB6A;
+}
+@media print {
+  .edit_mode div.cell.selected {
+    border-color: transparent;
+  }
+}
+.prompt {
+  /* This needs to be wide enough for 3 digit prompt numbers: In[100]: */
+  min-width: 14ex;
+  /* This padding is tuned to match the padding on the CodeMirror editor. */
+  padding: 0.4em;
+  margin: 0px;
+  font-family: monospace;
+  text-align: right;
+  /* This has to match that of the the CodeMirror class line-height below */
+  line-height: 1.21429em;
+  /* Don't highlight prompt number selection */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  /* Use default cursor */
+  cursor: default;
+}
+@media (max-width: 540px) {
+  .prompt {
+    text-align: left;
+  }
+}
+div.inner_cell {
+  min-width: 0;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  /* Old browsers */
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  /* Modern browsers */
+  flex: 1;
+}
+/* input_area and input_prompt must match in top border and margin for alignment */
+div.input_area {
+  border: 1px solid #cfcfcf;
+  border-radius: 2px;
+  background: #f7f7f7;
+  line-height: 1.21429em;
+}
+/* This is needed so that empty prompt areas can collapse to zero height when there
+   is no content in the output_subarea and the prompt. The main purpose of this is
+   to make sure that empty JavaScript output_subareas have no height. */
+div.prompt:empty {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+div.unrecognized_cell {
+  padding: 5px 5px 5px 0px;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: horizontal;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+div.unrecognized_cell .inner_cell {
+  border-radius: 2px;
+  padding: 5px;
+  font-weight: bold;
+  color: red;
+  border: 1px solid #cfcfcf;
+  background: #eaeaea;
+}
+div.unrecognized_cell .inner_cell a {
+  color: inherit;
+  text-decoration: none;
+}
+div.unrecognized_cell .inner_cell a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+@media (max-width: 540px) {
+  div.unrecognized_cell > div.prompt {
+    display: none;
+  }
+}
+div.code_cell {
+  /* avoid page breaking on code cells when printing */
+}
+@media print {
+  div.code_cell {
+    page-break-inside: avoid;
+  }
+}
+/* any special styling for code cells that are currently running goes here */
+div.input {
+  page-break-inside: avoid;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: horizontal;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+@media (max-width: 540px) {
+  div.input {
+    /* Old browsers */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-align: stretch;
+    display: -moz-box;
+    -moz-box-orient: vertical;
+    -moz-box-align: stretch;
+    display: box;
+    box-orient: vertical;
+    box-align: stretch;
+    /* Modern browsers */
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+/* input_area and input_prompt must match in top border and margin for alignment */
+div.input_prompt {
+  color: #303F9F;
+  border-top: 1px solid transparent;
+}
+div.input_area > div.highlight {
+  margin: 0.4em;
+  border: none;
+  padding: 0px;
+  background-color: transparent;
+}
+div.input_area > div.highlight > pre {
+  margin: 0px;
+  border: none;
+  padding: 0px;
+  background-color: transparent;
+}
+/* The following gets added to the <head> if it is detected that the user has a
+ * monospace font with inconsistent normal/bold/italic height.  See
+ * notebookmain.js.  Such fonts will have keywords vertically offset with
+ * respect to the rest of the text.  The user should select a better font.
+ * See: https://github.com/ipython/ipython/issues/1503
+ *
+ * .CodeMirror span {
+ *      vertical-align: bottom;
+ * }
+ */
+.CodeMirror {
+  line-height: 1.21429em;
+  /* Changed from 1em to our global default */
+  font-size: 14px;
+  height: auto;
+  /* Changed to auto to autogrow */
+  background: none;
+  /* Changed from white to allow our bg to show through */
+}
+.CodeMirror-scroll {
+  /*  The CodeMirror docs are a bit fuzzy on if overflow-y should be hidden or visible.*/
+  /*  We have found that if it is visible, vertical scrollbars appear with font size changes.*/
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+.CodeMirror-lines {
+  /* In CM2, this used to be 0.4em, but in CM3 it went to 4px. We need the em value because */
+  /* we have set a different line-height and want this to scale with that. */
+  /* Note that this should set vertical padding only, since CodeMirror assumes
+       that horizontal padding will be set on CodeMirror pre */
+  padding: 0.4em 0;
+}
+.CodeMirror-linenumber {
+  padding: 0 8px 0 4px;
+}
+.CodeMirror-gutters {
+  border-bottom-left-radius: 2px;
+  border-top-left-radius: 2px;
+}
+.CodeMirror pre {
+  /* In CM3 this went to 4px from 0 in CM2. This sets horizontal padding only,
+    use .CodeMirror-lines for vertical */
+  padding: 0 0.4em;
+  border: 0;
+  border-radius: 0;
+}
+.CodeMirror-cursor {
+  border-left: 1.4px solid black;
+}
+@media screen and (min-width: 2138px) and (max-width: 4319px) {
+  .CodeMirror-cursor {
+    border-left: 2px solid black;
+  }
+}
+@media screen and (min-width: 4320px) {
+  .CodeMirror-cursor {
+    border-left: 4px solid black;
+  }
+}
+/*
+
+Original style from softwaremaniacs.org (c) Ivan Sagalaev <Maniac@SoftwareManiacs.Org>
+Adapted from GitHub theme
+
+*/
+.highlight-base {
+  color: #000;
+}
+.highlight-variable {
+  color: #000;
+}
+.highlight-variable-2 {
+  color: #1a1a1a;
+}
+.highlight-variable-3 {
+  color: #333333;
+}
+.highlight-string {
+  color: #BA2121;
+}
+.highlight-comment {
+  color: #408080;
+  font-style: italic;
+}
+.highlight-number {
+  color: #080;
+}
+.highlight-atom {
+  color: #88F;
+}
+.highlight-keyword {
+  color: #008000;
+  font-weight: bold;
+}
+.highlight-builtin {
+  color: #008000;
+}
+.highlight-error {
+  color: #f00;
+}
+.highlight-operator {
+  color: #AA22FF;
+  font-weight: bold;
+}
+.highlight-meta {
+  color: #AA22FF;
+}
+/* previously not defined, copying from default codemirror */
+.highlight-def {
+  color: #00f;
+}
+.highlight-string-2 {
+  color: #f50;
+}
+.highlight-qualifier {
+  color: #555;
+}
+.highlight-bracket {
+  color: #997;
+}
+.highlight-tag {
+  color: #170;
+}
+.highlight-attribute {
+  color: #00c;
+}
+.highlight-header {
+  color: blue;
+}
+.highlight-quote {
+  color: #090;
+}
+.highlight-link {
+  color: #00c;
+}
+/* apply the same style to codemirror */
+.cm-s-ipython span.cm-keyword {
+  color: #008000;
+  font-weight: bold;
+}
+.cm-s-ipython span.cm-atom {
+  color: #88F;
+}
+.cm-s-ipython span.cm-number {
+  color: #080;
+}
+.cm-s-ipython span.cm-def {
+  color: #00f;
+}
+.cm-s-ipython span.cm-variable {
+  color: #000;
+}
+.cm-s-ipython span.cm-operator {
+  color: #AA22FF;
+  font-weight: bold;
+}
+.cm-s-ipython span.cm-variable-2 {
+  color: #1a1a1a;
+}
+.cm-s-ipython span.cm-variable-3 {
+  color: #333333;
+}
+.cm-s-ipython span.cm-comment {
+  color: #408080;
+  font-style: italic;
+}
+.cm-s-ipython span.cm-string {
+  color: #BA2121;
+}
+.cm-s-ipython span.cm-string-2 {
+  color: #f50;
+}
+.cm-s-ipython span.cm-meta {
+  color: #AA22FF;
+}
+.cm-s-ipython span.cm-qualifier {
+  color: #555;
+}
+.cm-s-ipython span.cm-builtin {
+  color: #008000;
+}
+.cm-s-ipython span.cm-bracket {
+  color: #997;
+}
+.cm-s-ipython span.cm-tag {
+  color: #170;
+}
+.cm-s-ipython span.cm-attribute {
+  color: #00c;
+}
+.cm-s-ipython span.cm-header {
+  color: blue;
+}
+.cm-s-ipython span.cm-quote {
+  color: #090;
+}
+.cm-s-ipython span.cm-link {
+  color: #00c;
+}
+.cm-s-ipython span.cm-error {
+  color: #f00;
+}
+.cm-s-ipython span.cm-tab {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAMCAYAAAAkuj5RAAAAAXNSR0IArs4c6QAAAGFJREFUSMft1LsRQFAQheHPowAKoACx3IgEKtaEHujDjORSgWTH/ZOdnZOcM/sgk/kFFWY0qV8foQwS4MKBCS3qR6ixBJvElOobYAtivseIE120FaowJPN75GMu8j/LfMwNjh4HUpwg4LUAAAAASUVORK5CYII=);
+  background-position: right;
+  background-repeat: no-repeat;
+}
+div.output_wrapper {
+  /* this position must be relative to enable descendents to be absolute within it */
+  position: relative;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  z-index: 1;
+}
+/* class for the output area when it should be height-limited */
+div.output_scroll {
+  /* ideally, this would be max-height, but FF barfs all over that */
+  height: 24em;
+  /* FF needs this *and the wrapper* to specify full width, or it will shrinkwrap */
+  width: 100%;
+  overflow: auto;
+  border-radius: 2px;
+  -webkit-box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.8);
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.8);
+  display: block;
+}
+/* output div while it is collapsed */
+div.output_collapsed {
+  margin: 0px;
+  padding: 0px;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+div.out_prompt_overlay {
+  height: 100%;
+  padding: 0px 0.4em;
+  position: absolute;
+  border-radius: 2px;
+}
+div.out_prompt_overlay:hover {
+  /* use inner shadow to get border that is computed the same on WebKit/FF */
+  -webkit-box-shadow: inset 0 0 1px #000;
+  box-shadow: inset 0 0 1px #000;
+  background: rgba(240, 240, 240, 0.5);
+}
+div.output_prompt {
+  color: #D84315;
+}
+/* This class is the outer container of all output sections. */
+div.output_area {
+  padding: 0px;
+  page-break-inside: avoid;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: horizontal;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+div.output_area .MathJax_Display {
+  text-align: left !important;
+}
+div.output_area 
+div.output_area 
+div.output_area img,
+div.output_area svg {
+  max-width: 100%;
+  height: auto;
+}
+div.output_area img.unconfined,
+div.output_area svg.unconfined {
+  max-width: none;
+}
+div.output_area .mglyph > img {
+  max-width: none;
+}
+/* This is needed to protect the pre formating from global settings such
+   as that of bootstrap */
+.output {
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+@media (max-width: 540px) {
+  div.output_area {
+    /* Old browsers */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-align: stretch;
+    display: -moz-box;
+    -moz-box-orient: vertical;
+    -moz-box-align: stretch;
+    display: box;
+    box-orient: vertical;
+    box-align: stretch;
+    /* Modern browsers */
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+div.output_area pre {
+  margin: 0;
+  padding: 1px 0 1px 0;
+  border: 0;
+  vertical-align: baseline;
+  color: black;
+  background-color: transparent;
+  border-radius: 0;
+}
+/* This class is for the output subarea inside the output_area and after
+   the prompt div. */
+div.output_subarea {
+  overflow-x: auto;
+  padding: 0.4em;
+  /* Old browsers */
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  /* Modern browsers */
+  flex: 1;
+  max-width: calc(100% - 14ex);
+}
+div.output_scroll div.output_subarea {
+  overflow-x: visible;
+}
+/* The rest of the output_* classes are for special styling of the different
+   output types */
+/* all text output has this class: */
+div.output_text {
+  text-align: left;
+  color: #000;
+  /* This has to match that of the the CodeMirror class line-height below */
+  line-height: 1.21429em;
+}
+/* stdout/stderr are 'text' as well as 'stream', but execute_result/error are *not* streams */
+div.output_stderr {
+  background: #fdd;
+  /* very light red background for stderr */
+}
+div.output_latex {
+  text-align: left;
+}
+/* Empty output_javascript divs should have no height */
+div.output_javascript:empty {
+  padding: 0;
+}
+.js-error {
+  color: darkred;
+}
+/* raw_input styles */
+div.raw_input_container {
+  line-height: 1.21429em;
+  padding-top: 5px;
+}
+pre.raw_input_prompt {
+  /* nothing needed here. */
+}
+input.raw_input {
+  font-family: monospace;
+  font-size: inherit;
+  color: inherit;
+  width: auto;
+  /* make sure input baseline aligns with prompt */
+  vertical-align: baseline;
+  /* padding + margin = 0.5em between prompt and cursor */
+  padding: 0em 0.25em;
+  margin: 0em 0.25em;
+}
+input.raw_input:focus {
+  box-shadow: none;
+}
+p.p-space {
+  margin-bottom: 10px;
+}
+div.output_unrecognized {
+  padding: 5px;
+  font-weight: bold;
+  color: red;
+}
+div.output_unrecognized a {
+  color: inherit;
+  text-decoration: none;
+}
+div.output_unrecognized a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+.rendered_html {
+  color: #000;
+  /* any extras will just be numbers: */
+}
+
+
+
+.rendered_html :link {
+  text-decoration: underline;
+}
+.rendered_html :visited {
+  text-decoration: underline;
+}
+
+
+
+
+
+
+.rendered_html h1:first-child {
+  margin-top: 0.538em;
+}
+.rendered_html h2:first-child {
+  margin-top: 0.636em;
+}
+.rendered_html h3:first-child {
+  margin-top: 0.777em;
+}
+.rendered_html h4:first-child {
+  margin-top: 1em;
+}
+.rendered_html h5:first-child {
+  margin-top: 1em;
+}
+.rendered_html h6:first-child {
+  margin-top: 1em;
+}
+.rendered_html ul:not(.list-inline),
+.rendered_html ol:not(.list-inline) {
+  padding-left: 2em;
+}
+
+
+
+
+
+
+
+
+.rendered_html * + ul {
+  margin-top: 1em;
+}
+.rendered_html * + ol {
+  margin-top: 1em;
+}
+
+
+
+
+
+.rendered_html pre,
+
+
+
+
+.rendered_html tr,
+.rendered_html th,
+
+
+.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
+}
+.rendered_html * + table {
+  margin-top: 1em;
+}
+
+.rendered_html * + p {
+  margin-top: 1em;
+}
+
+.rendered_html * + img {
+  margin-top: 1em;
+}
+.rendered_html img,
+
+.rendered_html img.unconfined,
+
+
+.rendered_html * + .alert {
+  margin-top: 1em;
+}
+[dir="rtl"] 
+div.text_cell {
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: horizontal;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+@media (max-width: 540px) {
+  div.text_cell > div.prompt {
+    display: none;
+  }
+}
+div.text_cell_render {
+  /*font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;*/
+  outline: none;
+  resize: none;
+  width: inherit;
+  border-style: none;
+  padding: 0.5em 0.5em 0.5em 0.4em;
+  color: #000;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+a.anchor-link:link {
+  text-decoration: none;
+  padding: 0px 20px;
+  visibility: hidden;
+}
+h1:hover .anchor-link,
+h2:hover .anchor-link,
+h3:hover .anchor-link,
+h4:hover .anchor-link,
+h5:hover .anchor-link,
+h6:hover .anchor-link {
+  visibility: visible;
+}
+.text_cell.rendered .input_area {
+  display: none;
+}
+.text_cell.rendered 
+.text_cell.rendered .rendered_html tr,
+.text_cell.rendered .rendered_html th,
+.text_cell.rendered 
+.text_cell.unrendered .text_cell_render {
+  display: none;
+}
+.text_cell .dropzone .input_area {
+  border: 2px dashed #bababa;
+  margin: -1px;
+}
+.cm-header-1,
+.cm-header-2,
+.cm-header-3,
+.cm-header-4,
+.cm-header-5,
+.cm-header-6 {
+  font-weight: bold;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.cm-header-1 {
+  font-size: 185.7%;
+}
+.cm-header-2 {
+  font-size: 157.1%;
+}
+.cm-header-3 {
+  font-size: 128.6%;
+}
+.cm-header-4 {
+  font-size: 110%;
+}
+.cm-header-5 {
+  font-size: 100%;
+  font-style: italic;
+}
+.cm-header-6 {
+  font-size: 100%;
+  font-style: italic;
+}
+</style>
+<style type="text/css">.highlight .hll { background-color: #ffffcc }
+.highlight  { background: #f8f8f8; }
+.highlight .c { color: #408080; font-style: italic } /* Comment */
+.highlight .err { border: 1px solid #FF0000 } /* Error */
+.highlight .k { color: #008000; font-weight: bold } /* Keyword */
+.highlight .o { color: #666666 } /* Operator */
+.highlight .ch { color: #408080; font-style: italic } /* Comment.Hashbang */
+.highlight .cm { color: #408080; font-style: italic } /* Comment.Multiline */
+.highlight .cp { color: #BC7A00 } /* Comment.Preproc */
+.highlight .cpf { color: #408080; font-style: italic } /* Comment.PreprocFile */
+.highlight .c1 { color: #408080; font-style: italic } /* Comment.Single */
+.highlight .cs { color: #408080; font-style: italic } /* Comment.Special */
+.highlight .gd { color: #A00000 } /* Generic.Deleted */
+.highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .gr { color: #FF0000 } /* Generic.Error */
+.highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.highlight .gi { color: #00A000 } /* Generic.Inserted */
+.highlight .go { color: #888888 } /* Generic.Output */
+.highlight .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+.highlight .gs { font-weight: bold } /* Generic.Strong */
+.highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.highlight .gt { color: #0044DD } /* Generic.Traceback */
+.highlight .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+.highlight .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+.highlight .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+.highlight .kp { color: #008000 } /* Keyword.Pseudo */
+.highlight .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+.highlight .kt { color: #B00040 } /* Keyword.Type */
+.highlight .m { color: #666666 } /* Literal.Number */
+.highlight .s { color: #BA2121 } /* Literal.String */
+.highlight .na { color: #7D9029 } /* Name.Attribute */
+.highlight .nb { color: #008000 } /* Name.Builtin */
+.highlight .nc { color: #0000FF; font-weight: bold } /* Name.Class */
+.highlight .no { color: #880000 } /* Name.Constant */
+.highlight .nd { color: #AA22FF } /* Name.Decorator */
+.highlight .ni { color: #999999; font-weight: bold } /* Name.Entity */
+.highlight .ne { color: #D2413A; font-weight: bold } /* Name.Exception */
+.highlight .nf { color: #0000FF } /* Name.Function */
+.highlight .nl { color: #A0A000 } /* Name.Label */
+.highlight .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+.highlight .nt { color: #008000; font-weight: bold } /* Name.Tag */
+.highlight .nv { color: #19177C } /* Name.Variable */
+.highlight .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+.highlight .w { color: #bbbbbb } /* Text.Whitespace */
+.highlight .mb { color: #666666 } /* Literal.Number.Bin */
+.highlight .mf { color: #666666 } /* Literal.Number.Float */
+.highlight .mh { color: #666666 } /* Literal.Number.Hex */
+.highlight .mi { color: #666666 } /* Literal.Number.Integer */
+.highlight .mo { color: #666666 } /* Literal.Number.Oct */
+.highlight .sa { color: #BA2121 } /* Literal.String.Affix */
+.highlight .sb { color: #BA2121 } /* Literal.String.Backtick */
+.highlight .sc { color: #BA2121 } /* Literal.String.Char */
+.highlight .dl { color: #BA2121 } /* Literal.String.Delimiter */
+.highlight .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+.highlight .s2 { color: #BA2121 } /* Literal.String.Double */
+.highlight .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
+.highlight .sh { color: #BA2121 } /* Literal.String.Heredoc */
+.highlight .si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
+.highlight .sx { color: #008000 } /* Literal.String.Other */
+.highlight .sr { color: #BB6688 } /* Literal.String.Regex */
+.highlight .s1 { color: #BA2121 } /* Literal.String.Single */
+.highlight .ss { color: #19177C } /* Literal.String.Symbol */
+.highlight .bp { color: #008000 } /* Name.Builtin.Pseudo */
+.highlight .fm { color: #0000FF } /* Name.Function.Magic */
+.highlight .vc { color: #19177C } /* Name.Variable.Class */
+.highlight .vg { color: #19177C } /* Name.Variable.Global */
+.highlight .vi { color: #19177C } /* Name.Variable.Instance */
+.highlight .vm { color: #19177C } /* Name.Variable.Magic */
+.highlight .il { color: #666666 } /* Literal.Number.Integer.Long */</style><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Stock-Price-Data">Stock Price Data<a class="anchor-link" href="#Stock-Price-Data">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[45]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">concurrent.futures</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="k">def</span> <span class="nf">read_file</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+    <span class="n">key</span> <span class="o">=</span> <span class="n">filename</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;.csv&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;prices/&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="n">d</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">)</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">data</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">key</span><span class="p">,</span> <span class="n">data</span>
+
+<span class="n">results</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">pool</span> <span class="o">=</span> <span class="n">concurrent</span><span class="o">.</span><span class="n">futures</span><span class="o">.</span><span class="n">ProcessPoolExecutor</span><span class="p">(</span><span class="n">max_workers</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">filenames</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;prices/</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">f</span><span class="p">)</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="s2">&quot;prices&quot;</span><span class="p">)]</span>
+<span class="n">prices</span> <span class="o">=</span> <span class="n">pool</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">read_file</span><span class="p">,</span> <span class="n">filenames</span><span class="p">)</span>
+<span class="n">prices</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span>
+<span class="n">prices</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>I chose to use a hash table, then a list, then another list.  This is because it closely mirrors the existing structure of the data.  It allows stock symbols to be easily looked up, and enables me to index values efficiently.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Computing-Aggregates">Computing Aggregates<a class="anchor-link" href="#Computing-Aggregates">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[46]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">dateutil.parser</span> <span class="kn">import</span> <span class="n">parse</span>
+
+<span class="n">prices_columns</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="n">prices</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="n">price</span> <span class="o">=</span> <span class="n">v</span>
+    <span class="n">headers</span> <span class="o">=</span> <span class="n">price</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">price_columns</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">header</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">headers</span><span class="p">):</span>
+        <span class="n">values</span> <span class="o">=</span> <span class="p">[</span><span class="n">p</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">price</span><span class="p">[</span><span class="mi">1</span><span class="p">:]]</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">values</span> <span class="o">=</span> <span class="p">[</span><span class="nb">float</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">values</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">values</span> <span class="o">=</span> <span class="p">[</span><span class="n">parse</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">values</span><span class="p">]</span>
+        <span class="n">price_columns</span><span class="p">[</span><span class="n">header</span><span class="p">]</span> <span class="o">=</span> <span class="n">values</span>
+    <span class="n">prices_columns</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">price_columns</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">statistics</span> <span class="kn">import</span> <span class="n">mean</span>
+
+<span class="n">average_closing</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="n">prices_columns</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="n">average_closing</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">mean</span><span class="p">(</span><span class="n">v</span><span class="p">[</span><span class="s2">&quot;close&quot;</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[48]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">closing_tuples</span> <span class="o">=</span> <span class="p">[(</span><span class="n">k</span><span class="p">,</span><span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="n">average_closing</span><span class="o">.</span><span class="n">items</span><span class="p">()]</span>
+<span class="nb">sorted</span><span class="p">(</span><span class="n">closing_tuples</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[48]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[(&#39;blfs&#39;, 0.8122763011583011),
+ (&#39;apdn&#39;, 0.8241009938223938),
+ (&#39;bmra&#39;, 0.901011583011583),
+ (&#39;bcli&#39;, 0.9969415324324323),
+ (&#39;cyrx&#39;, 1.1615408884169884),
+ (&#39;clrb&#39;, 1.2045711436293436),
+ (&#39;cpst&#39;, 1.206953667953668),
+ (&#39;csbr&#39;, 1.2282443845854418),
+ (&#39;egt&#39;, 1.3293513513513513),
+ (&#39;aemd&#39;, 1.398042471042471),
+ (&#39;dfbg&#39;, 1.4005010393822395),
+ (&#39;alqa&#39;, 1.405298283011583),
+ (&#39;cpah&#39;, 1.4116189448441248),
+ (&#39;astc&#39;, 1.4152123552123552),
+ (&#39;chci&#39;, 1.4581224154440156),
+ (&#39;ctic&#39;, 1.494366311969112),
+ (&#39;eltk&#39;, 1.5323436293436294),
+ (&#39;dzsi&#39;, 1.5382316602316601),
+ (&#39;cool&#39;, 1.5475988922779924),
+ (&#39;cgnt&#39;, 1.5946138996138997),
+ (&#39;creg&#39;, 1.6028996138996139),
+ (&#39;casi&#39;, 1.617906349034749),
+ (&#39;admp&#39;, 1.7122164397683397),
+ (&#39;bnso&#39;, 1.7172548262548262),
+ (&#39;aezs&#39;, 1.7391445949806952),
+ (&#39;dynt&#39;, 1.822119691119691),
+ (&#39;apps&#39;, 1.8256061776061776),
+ (&#39;dysl&#39;, 1.8631660231660232),
+ (&#39;apri&#39;, 1.8681738996138995),
+ (&#39;crds&#39;, 1.8903166015444017),
+ (&#39;dlhc&#39;, 1.8903745173745172),
+ (&#39;cur&#39;, 1.907691699604743),
+ (&#39;ardm&#39;, 1.928069498069498),
+ (&#39;cpsh&#39;, 1.9615839865149602),
+ (&#39;cprx&#39;, 1.9762007722007722),
+ (&#39;cidm&#39;, 1.9935057915057917),
+ (&#39;cytr&#39;, 1.9986748837837838),
+ (&#39;atrs&#39;, 2.035023166023166),
+ (&#39;dram&#39;, 2.0592628378378377),
+ (&#39;artx&#39;, 2.0992316602316605),
+ (&#39;aris&#39;, 2.1661389961389963),
+ (&#39;cfbk&#39;, 2.174841698841699),
+ (&#39;crtn&#39;, 2.1850579150579152),
+ (&#39;bosc&#39;, 2.188019305019305),
+ (&#39;ffhl&#39;, 2.192687258687259),
+ (&#39;emms&#39;, 2.2464208494208493),
+ (&#39;abio&#39;, 2.2518008),
+ (&#39;clbs&#39;, 2.2820694980694984),
+ (&#39;bldp&#39;, 2.3273861003861005),
+ (&#39;drrx&#39;, 2.3527799227799227),
+ (&#39;camt&#39;, 2.402606177606178),
+ (&#39;basi&#39;, 2.4194633204633202),
+ (&#39;cbak&#39;, 2.4378957528957526),
+ (&#39;cthr&#39;, 2.4644787644787645),
+ (&#39;cris&#39;, 2.4645714285714284),
+ (&#39;fll&#39;, 2.4715752895752896),
+ (&#39;capr&#39;, 2.473247462919594),
+ (&#39;cemi&#39;, 2.4821776061776064),
+ (&#39;casm&#39;, 2.4918),
+ (&#39;abeo&#39;, 2.593220077220077),
+ (&#39;cdor&#39;, 2.6057721938223937),
+ (&#39;aehr&#39;, 2.6085559845559847),
+ (&#39;clwt&#39;, 2.6171322247104247),
+ (&#39;biol&#39;, 2.6383436347490345),
+ (&#39;cntf&#39;, 2.659563711969112),
+ (&#39;cycc&#39;, 2.667563561003861),
+ (&#39;aey&#39;, 2.6871505791505794),
+ (&#39;atec&#39;, 2.702578042857143),
+ (&#39;cyrn&#39;, 2.7131410714285717),
+ (&#39;dxtr&#39;, 2.7493397683397682),
+ (&#39;aame&#39;, 2.7796795366795366),
+ (&#39;asrv&#39;, 2.801169884169884),
+ (&#39;axas&#39;, 2.8366293436293435),
+ (&#39;dcth&#39;, 2.891166023166023),
+ (&#39;agen&#39;, 2.999889955984556),
+ (&#39;clsn&#39;, 3.00828185019305),
+ (&#39;drad&#39;, 3.053988416988417),
+ (&#39;casc&#39;, 3.062540716602317),
+ (&#39;arci&#39;, 3.1327799227799225),
+ (&#39;adxs&#39;, 3.166938612355212),
+ (&#39;apwc&#39;, 3.2336409266409265),
+ (&#39;edap&#39;, 3.2358030888030886),
+ (&#39;cui&#39;, 3.2413753598455597),
+ (&#39;cort&#39;, 3.2995482625482624),
+ (&#39;cytx&#39;, 3.3293219922779924),
+ (&#39;acls&#39;, 3.343806946718147),
+ (&#39;avir&#39;, 3.4036661768339767),
+ (&#39;ahpi&#39;, 3.4043899613899615),
+ (&#39;byfc&#39;, 3.4977644787644784),
+ (&#39;dswl&#39;, 3.529177606177606),
+ (&#39;extr&#39;, 3.5375019305019304),
+ (&#39;egan&#39;, 3.5465791505791504),
+ (&#39;cnit&#39;, 3.604745173745174),
+ (&#39;falc&#39;, 3.6092123552123554),
+ (&#39;cbli&#39;, 3.61026641042471),
+ (&#39;eng&#39;, 3.644196910810811),
+ (&#39;daio&#39;, 3.651555984555985),
+ (&#39;cmls&#39;, 3.678938223938224),
+ (&#39;dtrm&#39;, 3.7235559845559845),
+ (&#39;cbmx&#39;, 3.7302140003861),
+ (&#39;axgn&#39;, 3.82023166023166),
+ (&#39;axti&#39;, 3.8255212355212356),
+ (&#39;asur&#39;, 3.873123663706564),
+ (&#39;arql&#39;, 3.8744247104247105),
+ (&#39;cpss&#39;, 3.9003629343629345),
+ (&#39;evlv&#39;, 3.972590733590734),
+ (&#39;amrn&#39;, 3.992459461003861),
+ (&#39;cdti&#39;, 4.001780249420849),
+ (&#39;esxb&#39;, 4.032393822393822),
+ (&#39;else&#39;, 4.060752895752896),
+ (&#39;awre&#39;, 4.083567567567568),
+ (&#39;arwr&#39;, 4.130016216216216),
+ (&#39;cyan&#39;, 4.164428571428572),
+ (&#39;cers&#39;, 4.2464787644787645),
+ (&#39;fhco&#39;, 4.288459459459459),
+ (&#39;bsqr&#39;, 4.305370656370656),
+ (&#39;attu&#39;, 4.317359073359073),
+ (&#39;audc&#39;, 4.375227799227799),
+ (&#39;cnty&#39;, 4.444320463320464),
+ (&#39;emkr&#39;, 4.458320463320463),
+ (&#39;ctib&#39;, 4.690494208494208),
+ (&#39;cytk&#39;, 4.7425641938223935),
+ (&#39;bdsi&#39;, 4.8207065644787646),
+ (&#39;cgen&#39;, 4.882621621621621),
+ (&#39;arna&#39;, 4.915745173745174),
+ (&#39;cyccp&#39;, 4.965254826254826),
+ (&#39;ccur&#39;, 4.987629343629343),
+ (&#39;exfo&#39;, 4.995563706563707),
+ (&#39;arry&#39;, 5.182899613899614),
+ (&#39;edgw&#39;, 5.274084942084942),
+ (&#39;bwen&#39;, 5.326498072200772),
+ (&#39;bbgi&#39;, 5.338297297297298),
+ (&#39;eght&#39;, 5.531308880694981),
+ (&#39;eqfn&#39;, 5.558436266023166),
+ (&#39;acfc&#39;, 5.596733538610039),
+ (&#39;crme&#39;, 5.622293436293436),
+ (&#39;crws&#39;, 5.629305019305019),
+ (&#39;evol&#39;, 5.701853281853282),
+ (&#39;arcw&#39;, 5.706739867181467),
+ (&#39;avnw&#39;, 5.723947867953668),
+ (&#39;denn&#39;, 5.761945945945946),
+ (&#39;flws&#39;, 5.78195752895753),
+ (&#39;bios&#39;, 5.790710422779923),
+ (&#39;cwbc&#39;, 5.892640926640927),
+ (&#39;achn&#39;, 5.9411776069498075),
+ (&#39;educ&#39;, 5.948108107722008),
+ (&#39;cown&#39;, 5.948822393822394),
+ (&#39;alsk&#39;, 5.9955675694980695),
+ (&#39;atax&#39;, 5.999752895752896),
+ (&#39;amd&#39;, 6.005552123166024),
+ (&#39;dvax&#39;, 6.033752898455599),
+ (&#39;cspi&#39;, 6.0528571428571425),
+ (&#39;boch&#39;, 6.063119691119691),
+ (&#39;bcrx&#39;, 6.095837838223938),
+ (&#39;dwsn&#39;, 6.19491095945946),
+ (&#39;atlc&#39;, 6.211756745173745),
+ (&#39;abtl&#39;, 6.233108108494209),
+ (&#39;crnt&#39;, 6.269598454826254),
+ (&#39;dxyn&#39;, 6.331316601930502),
+ (&#39;cart&#39;, 6.340498070270271),
+ (&#39;bebe&#39;, 6.4181969498069495),
+ (&#39;exel&#39;, 6.616277998455599),
+ (&#39;bybk&#39;, 6.642911204633204),
+ (&#39;atsg&#39;, 6.652401541698842),
+ (&#39;cwst&#39;, 6.658471042471042),
+ (&#39;clro&#39;, 6.852370656370656),
+ (&#39;carv&#39;, 6.87222652972973),
+ (&#39;bldr&#39;, 6.9454671849420855),
+ (&#39;elon&#39;, 6.949154477992279),
+ (&#39;amkr&#39;, 6.955822393436294),
+ (&#39;cacb&#39;, 7.012756795366795),
+ (&#39;bgcp&#39;, 7.162189189189189),
+ (&#39;bde&#39;, 7.226011583011583),
+ (&#39;club&#39;, 7.270509651737451),
+ (&#39;bkmu&#39;, 7.306324324324325),
+ (&#39;czwi&#39;, 7.406482625482626),
+ (&#39;arlz&#39;, 7.441718146718147),
+ (&#39;artw&#39;, 7.46590346911197),
+ (&#39;caas&#39;, 7.633440158301158),
+ (&#39;cfcb&#39;, 7.65700699961375),
+ (&#39;brcd&#39;, 7.668254826254826),
+ (&#39;dvcr&#39;, 7.688459461389961),
+ (&#39;cuba&#39;, 7.751552123552123),
+ (&#39;aray&#39;, 7.887376223391812),
+ (&#39;dwch&#39;, 8.038034755212355),
+ (&#39;egle&#39;, 8.046072912741312),
+ (&#39;clfd&#39;, 8.055154443629345),
+ (&#39;amswa&#39;, 8.076181467181467),
+ (&#39;brew&#39;, 8.094903474517373),
+ (&#39;chnr&#39;, 8.12607720965251),
+ (&#39;esca&#39;, 8.187945943243243),
+ (&#39;cban&#39;, 8.232640922779924),
+ (&#39;cbio&#39;, 8.433602686100386),
+ (&#39;evbs&#39;, 8.45465635868726),
+ (&#39;cvgi&#39;, 8.536474901930502),
+ (&#39;cald&#39;, 8.608965250965252),
+ (&#39;cvv&#39;, 8.624386101930503),
+ (&#39;axdx&#39;, 8.656428568339768),
+ (&#39;feim&#39;, 8.712000000000002),
+ (&#39;flex&#39;, 8.817428571814672),
+ (&#39;bvsn&#39;, 8.850015447876448),
+ (&#39;asys&#39;, 8.914054046332046),
+ (&#39;bsf&#39;, 8.928162200386101),
+ (&#39;brid&#39;, 8.972416988030888),
+ (&#39;elgx&#39;, 8.976440163706563),
+ (&#39;depo&#39;, 8.988274123938224),
+ (&#39;cldx&#39;, 9.006351276061777),
+ (&#39;cece&#39;, 9.062675674517374),
+ (&#39;allt&#39;, 9.180019302702703),
+ (&#39;dspg&#39;, 9.215841698069498),
+ (&#39;civb&#39;, 9.309308876833978),
+ (&#39;exas&#39;, 9.390011581081081),
+ (&#39;entg&#39;, 9.497733591505792),
+ (&#39;camp&#39;, 9.500046333590733),
+ (&#39;ctg&#39;, 9.576830107335908),
+ (&#39;cvcy&#39;, 9.671478766409265),
+ (&#39;dsgx&#39;, 9.768467180694982),
+ (&#39;czfc&#39;, 9.846169883783784),
+ (&#39;botj&#39;, 9.858123591891891),
+ (&#39;cplp&#39;, 9.927482215019763),
+ (&#39;ainv&#39;, 9.949749044015444),
+ (&#39;cybe&#39;, 9.964861003861005),
+ (&#39;amot&#39;, 9.96724324015444),
+ (&#39;ccrn&#39;, 10.054741314671816),
+ (&#39;cobz&#39;, 10.071579151737453),
+ (&#39;bont&#39;, 10.085776056370657),
+ (&#39;call&#39;, 10.101200768339769),
+ (&#39;avdl&#39;, 10.10303474015444),
+ (&#39;aiq&#39;, 10.171544398841698),
+ (&#39;brkl&#39;, 10.241702702702701),
+ (&#39;csq&#39;, 10.269231660231661),
+ (&#39;alot&#39;, 10.286698842084942),
+ (&#39;agys&#39;, 10.3036139015444),
+ (&#39;amrb&#39;, 10.411073202702703),
+ (&#39;cvti&#39;, 10.437138995752894),
+ (&#39;dgii&#39;, 10.495293435521235),
+ (&#39;brks&#39;, 10.524733592277991),
+ (&#39;fcco&#39;, 10.537714290347491),
+ (&#39;aobc&#39;, 10.59406178030888),
+ (&#39;fccy&#39;, 10.679512464864866),
+ (&#39;cdzi&#39;, 10.901432437837839),
+ (&#39;bfin&#39;, 10.907671818146717),
+ (&#39;buse&#39;, 10.920324543629343),
+ (&#39;centa&#39;, 10.959813017140632),
+ (&#39;asfi&#39;, 11.159220083783783),
+ (&#39;cmct&#39;, 11.270061818532819),
+ (&#39;acta&#39;, 11.320559837065638),
+ (&#39;amri&#39;, 11.358054055598455),
+ (&#39;elos&#39;, 11.39328957027027),
+ (&#39;cent&#39;, 11.431996134749035),
+ (&#39;esio&#39;, 11.514586870656371),
+ (&#39;bcbp&#39;, 11.546521235135137),
+ (&#39;csbk&#39;, 11.708667741312741),
+ (&#39;cutr&#39;, 11.777822398841698),
+ (&#39;atrc&#39;, 11.84171041969112),
+ (&#39;aaxn&#39;, 11.863907341698841),
+ (&#39;csfl&#39;, 11.947644780694981),
+ (&#39;essa&#39;, 12.126070440047487),
+ (&#39;dakt&#39;, 12.215868713513514),
+ (&#39;ancx&#39;, 12.260374515444015),
+ (&#39;eei&#39;, 12.263416957915057),
+ (&#39;dave&#39;, 12.284664105405405),
+ (&#39;cvbf&#39;, 12.391718153667954),
+ (&#39;airt&#39;, 12.430108102316604),
+ (&#39;chy&#39;, 12.456038608880307),
+ (&#39;chi&#39;, 12.602803088416989),
+ (&#39;acet&#39;, 12.655212363320464),
+ (&#39;cohu&#39;, 12.740305017374517),
+ (&#39;emitf&#39;, 12.964027813127412),
+ (&#39;amsc&#39;, 13.049243415057914),
+ (&#39;cresy&#39;, 13.09593044787645),
+ (&#39;bgfv&#39;, 13.156471046718146),
+ (&#39;bcor&#39;, 13.260498064864864),
+ (&#39;cnob&#39;, 13.295115791505792),
+ (&#39;eric&#39;, 13.297131263706563),
+ (&#39;drys&#39;, 13.49853955019305),
+ (&#39;cwco&#39;, 13.618177600000001),
+ (&#39;ceco&#39;, 13.657787633204634),
+ (&#39;bksc&#39;, 13.711621528571428),
+ (&#39;cgo&#39;, 13.7736332),
+ (&#39;acad&#39;, 13.823586874903475),
+ (&#39;cfnb&#39;, 13.825111963706565),
+ (&#39;bset&#39;, 13.877702711583012),
+ (&#39;csii&#39;, 13.978281854440155),
+ (&#39;bncn&#39;, 13.986131252895753),
+ (&#39;cy&#39;, 14.158153035907336),
+ (&#39;fbms&#39;, 14.224830092664092),
+ (&#39;cdns&#39;, 14.24691891119691),
+ (&#39;cfnl&#39;, 14.268891889189188),
+ (&#39;cnxn&#39;, 14.347270266795366),
+ (&#39;clct&#39;, 14.4366796011583),
+ (&#39;dcom&#39;, 14.727355209652512),
+ (&#39;ango&#39;, 14.802289587258688),
+ (&#39;arcc&#39;, 14.933262535135134),
+ (&#39;etfc&#39;, 14.956660266795367),
+ (&#39;dgica&#39;, 14.986583006177607),
+ (&#39;fbss&#39;, 15.228308892277994),
+ (&#39;akrx&#39;, 15.387104233590733),
+ (&#39;cvly&#39;, 15.412107433976834),
+ (&#39;cray&#39;, 15.423347486486486),
+ (&#39;chfn&#39;, 15.70860224015444),
+ (&#39;ezpw&#39;, 15.789984552895755),
+ (&#39;brkr&#39;, 15.86540154247104),
+ (&#39;ccne&#39;, 15.950173729729729),
+ (&#39;actg&#39;, 15.997490346718147),
+ (&#39;cunb&#39;, 15.998223935135135),
+ (&#39;ffbc&#39;, 16.002316604633204),
+ (&#39;csiq&#39;, 16.0704556007722),
+ (&#39;fbnc&#39;, 16.11827027027027),
+ (&#39;bsrr&#39;, 16.140177604633205),
+ (&#39;ccbg&#39;, 16.26640926872587),
+ (&#39;ffic&#39;, 16.59364864787645),
+ (&#39;crox&#39;, 16.676393825482627),
+ (&#39;dnbf&#39;, 16.71552883088803),
+ (&#39;arrs&#39;, 17.104613885328185),
+ (&#39;amat&#39;, 17.116648652509653),
+ (&#39;ceva&#39;, 17.12422007104247),
+ (&#39;ebtc&#39;, 17.201536692277994),
+ (&#39;anip&#39;, 17.234360110038608),
+ (&#39;finl&#39;, 17.241752891505794),
+ (&#39;bpop&#39;, 17.295227834362933),
+ (&#39;eml&#39;, 17.330768325482623),
+ (&#39;acnb&#39;, 17.3435289003861),
+ (&#39;fmbi&#39;, 17.350911196138995),
+ (&#39;asna&#39;, 17.81176063204633),
+ (&#39;abcb&#39;, 17.990475994208495),
+ (&#39;acxm&#39;, 18.263061783783783),
+ (&#39;dgicb&#39;, 18.359567528185327),
+ (&#39;cenx&#39;, 18.39556755173745),
+ (&#39;efsc&#39;, 18.541934354826257),
+ (&#39;cznc&#39;, 18.655586874131274),
+ (&#39;cbfv&#39;, 18.728787650193052),
+ (&#39;cnsl&#39;, 18.772135127027028),
+ (&#39;dest&#39;, 18.788065616216215),
+ (&#39;ehth&#39;, 18.973142869111967),
+ (&#39;esbk&#39;, 19.142613947490347),
+ (&#39;chke&#39;, 19.15281466100386),
+ (&#39;ffkt&#39;, 19.47292279305019),
+ (&#39;exac&#39;, 19.531007741698843),
+ (&#39;fizz&#39;, 19.844949835907336),
+ (&#39;aegn&#39;, 19.89972970926641),
+ (&#39;atvi&#39;, 19.92204634131274),
+ (&#39;fisi&#39;, 19.93808495096525),
+ (&#39;aeis&#39;, 20.00321233899614),
+ (&#39;cmco&#39;, 20.1090116),
+ (&#39;fcap&#39;, 20.15421233976834),
+ (&#39;farm&#39;, 20.193166013513515),
+ (&#39;cizn&#39;, 20.43169879150579),
+ (&#39;arkr&#39;, 20.460409264092664),
+ (&#39;crus&#39;, 20.50549421969112),
+ (&#39;ctrn&#39;, 20.54685713976834),
+ (&#39;boom&#39;, 20.59703861119691),
+ (&#39;anik&#39;, 20.77447492046332),
+ (&#39;epay&#39;, 20.79650191235521),
+ (&#39;artna&#39;, 20.97944401119691),
+ (&#39;aimc&#39;, 20.999660249420852),
+ (&#39;belfa&#39;, 21.040139010810808),
+ (&#39;conn&#39;, 21.148482605791504),
+ (&#39;baby&#39;, 21.253150588803088),
+ (&#39;bpopn&#39;, 21.34707336023166),
+ (&#39;cffn&#39;, 21.4160772),
+ (&#39;belfb&#39;, 21.680702705791507),
+ (&#39;caty&#39;, 21.829671827027028),
+ (&#39;aal&#39;, 22.07495366679537),
+ (&#39;atlo&#39;, 22.101030884555986),
+ (&#39;amnb&#39;, 22.113752890347488),
+ (&#39;emcf&#39;, 22.219915054826256),
+ (&#39;dmrc&#39;, 22.26364027351097),
+ (&#39;dmlp&#39;, 22.28328186100386),
+ (&#39;adru&#39;, 22.371667961776062),
+ (&#39;avhi&#39;, 22.40623167915058),
+ (&#39;adrd&#39;, 22.517482620463323),
+ (&#39;flxs&#39;, 22.836366786486487),
+ (&#39;diod&#39;, 22.849976832046334),
+ (&#39;fbiz&#39;, 22.958876448262547),
+ (&#39;aplp&#39;, 23.031826284169885),
+ (&#39;bwina&#39;, 23.124262511969114),
+ (&#39;fdef&#39;, 23.23314284092664),
+ (&#39;ccoi&#39;, 23.236517377606177),
+ (&#39;clmt&#39;, 23.327073368339768),
+ (&#39;amtd&#39;, 23.490517397683398),
+ (&#39;csgs&#39;, 23.515061787258688),
+ (&#39;aubn&#39;, 23.598679533976835),
+ (&#39;colb&#39;, 23.599138993050193),
+ (&#39;aaon&#39;, 23.617386061776063),
+ (&#39;csco&#39;, 23.628822402702703),
+ (&#39;bwinb&#39;, 23.673023192664093),
+ (&#39;bmtc&#39;, 23.783575303088803),
+ (&#39;egbn&#39;, 23.78503891003861),
+ (&#39;adtn&#39;, 23.847494206177608),
+ (&#39;achc&#39;, 24.04779533822394),
+ (&#39;cetv&#39;, 24.057965252509653),
+ (&#39;bdge&#39;, 24.12035132432432),
+ (&#39;car&#39;, 24.829617774131272),
+ (&#39;azpn&#39;, 24.926833974517375),
+ (&#39;dgas&#39;, 24.959196903088802),
+ (&#39;ecpg&#39;, 24.97440927104247),
+ (&#39;asrvp&#39;, 25.09542473243243),
+ (&#39;bstc&#39;, 25.102737436293435),
+ (&#39;emci&#39;, 25.21568724942085),
+ (&#39;becn&#39;, 25.59151352046332),
+ (&#39;arow&#39;, 25.715315076833978),
+ (&#39;ca&#39;, 25.74628186023166),
+ (&#39;efii&#39;, 25.840223945945947),
+ (&#39;bbox&#39;, 25.997579137451737),
+ (&#39;apog&#39;, 26.00773359150579),
+ (&#39;banfp&#39;, 26.415837825482622),
+ (&#39;chmg&#39;, 26.421312745173747),
+ (&#39;exls&#39;, 26.46239382084942),
+ (&#39;avav&#39;, 26.558296459060923),
+ (&#39;arcb&#39;, 26.582247134362934),
+ (&#39;banr&#39;, 26.604234801930502),
+ (&#39;afsi&#39;, 26.69982658918919),
+ (&#39;ewbc&#39;, 26.819362960231658),
+ (&#39;crai&#39;, 27.154254832432432),
+ (&#39;chfc&#39;, 27.265100385714284),
+ (&#39;adra&#39;, 27.35145173976834),
+ (&#39;acor&#39;, 27.47286873938224),
+ (&#39;flic&#39;, 27.732250961776064),
+ (&#39;alks&#39;, 28.143567575675675),
+ (&#39;ecol&#39;, 28.210664105405407),
+ (&#39;aciw&#39;, 28.27269496023166),
+ (&#39;dxcm&#39;, 28.520806964092667),
+ (&#39;chscp&#39;, 29.073046355984555),
+ (&#39;afam&#39;, 29.434312770656373),
+ (&#39;cvgw&#39;, 29.56466022934363),
+ (&#39;cnbka&#39;, 30.143177581081083),
+ (&#39;amsf&#39;, 30.34488032162162),
+ (&#39;bbsi&#39;, 30.425525077220076),
+ (&#39;ctws&#39;, 30.461830105405404),
+ (&#39;crmt&#39;, 30.543277994594593),
+ (&#39;flir&#39;, 30.795725856370655),
+ (&#39;cmtl&#39;, 30.963007716216218),
+ (&#39;bofi&#39;, 31.210980661776063),
+ (&#39;evep&#39;, 31.358648642471042),
+ (&#39;arii&#39;, 31.491413133590733),
+ (&#39;amed&#39;, 31.845227816216216),
+ (&#39;bjri&#39;, 31.854320508108106),
+ (&#39;atro&#39;, 31.862567476833977),
+ (&#39;cnmd&#39;, 31.917447902316603),
+ (&#39;cigi&#39;, 32.206258406177604),
+ (&#39;cash&#39;, 32.26195366332046),
+ (&#39;cffi&#39;, 32.433154460617764),
+ (&#39;amag&#39;, 32.49387646872587),
+ (&#39;ebix&#39;, 32.532169762934366),
+ (&#39;cgnx&#39;, 32.55762165714285),
+ (&#39;ctbi&#39;, 32.61787694054054),
+ (&#39;abmd&#39;, 33.22242086100386),
+ (&#39;blkb&#39;, 33.75537838185328),
+ (&#39;cake&#39;, 34.3126757027027),
+ (&#39;amwd&#39;, 34.320258717374514),
+ (&#39;abax&#39;, 34.57868337992278),
+ (&#39;crzo&#39;, 34.66379924324325),
+ (&#39;alco&#39;, 34.68778766100386),
+ (&#39;dorm&#39;, 34.767818543243244),
+ (&#39;faro&#39;, 34.87222776949807),
+ (&#39;eeft&#39;, 35.11525484749035),
+ (&#39;ebay&#39;, 35.18885618648648),
+ (&#39;cac&#39;, 35.50384555559845),
+ (&#39;cmcsa&#39;, 35.904505792277995),
+ (&#39;cree&#39;, 36.52946716216216),
+ (&#39;algn&#39;, 36.75162934864865),
+ (&#39;cprt&#39;, 37.017694950579155),
+ (&#39;csx&#39;, 37.15074516833977),
+ (&#39;aste&#39;, 37.29283010849421),
+ (&#39;ea&#39;, 37.33655212046332),
+ (&#39;endp&#39;, 37.34726641737452),
+ (&#39;crvl&#39;, 37.4438649034749),
+ (&#39;bobe&#39;, 37.68301545907336),
+ (&#39;dox&#39;, 37.75929727606178),
+ (&#39;ahgp&#39;, 38.20530885868726),
+ (&#39;calm&#39;, 38.32738610810811),
+ (&#39;dxpe&#39;, 38.61513902084942),
+ (&#39;fele&#39;, 38.77260231583011),
+ (&#39;cvlt&#39;, 39.00099612741313),
+ (&#39;adre&#39;, 39.14505407104247),
+ (&#39;alny&#39;, 39.17148648803089),
+ (&#39;disca&#39;, 39.234679803474904),
+ (&#39;dish&#39;, 39.2437143050193),
+ (&#39;bmrc&#39;, 39.3548107945946),
+ (&#39;chco&#39;, 39.56640153011583),
+ (&#39;discb&#39;, 39.65275737837838),
+ (&#39;ccmp&#39;, 39.67996139150579),
+ (&#39;esnd&#39;, 40.798293426640925),
+ (&#39;agii&#39;, 40.817575337065634),
+ (&#39;bcpc&#39;, 41.03619678301158),
+ (&#39;ande&#39;, 41.82902698030888),
+ (&#39;cass&#39;, 42.141633734749036),
+ (&#39;ffin&#39;, 42.178899534749036),
+ (&#39;adi&#39;, 42.24018144826255),
+ (&#39;adsk&#39;, 42.24759463281853),
+ (&#39;cinf&#39;, 42.25041697451738),
+ (&#39;cbsh&#39;, 42.690903429343635),
+ (&#39;akam&#39;, 42.81851348687258),
+ (&#39;expd&#39;, 42.86821235366795),
+ (&#39;bbry&#39;, 43.67659082355212),
+ (&#39;core&#39;, 44.28576448223938),
+ (&#39;aaww&#39;, 44.33160229034749),
+ (&#39;fast&#39;, 44.40756368957529),
+ (&#39;cpsi&#39;, 44.44345173899614),
+ (&#39;ctrp&#39;, 45.163220061389964),
+ (&#39;expo&#39;, 46.09936678262548),
+ (&#39;airm&#39;, 46.918258888030884),
+ (&#39;arlp&#39;, 46.942791493436296),
+ (&#39;abco&#39;, 47.64705796756757),
+ (&#39;atni&#39;, 47.67885716216216),
+ (&#39;banf&#39;, 49.64349804169884),
+ (&#39;bbby&#39;, 50.183324364864866),
+ (&#39;ctas&#39;, 50.47888414247104),
+ (&#39;bmrn&#39;, 50.52171040733591),
+ (&#39;cmpr&#39;, 51.058057920077225),
+ (&#39;chkp&#39;, 51.12600387451738),
+ (&#39;adbe&#39;, 51.199436284169884),
+ (&#39;cvco&#39;, 53.36543631042471),
+ (&#39;cohr&#39;, 53.71215058262549),
+ (&#39;colm&#39;, 53.72719691235521),
+ (&#39;expe&#39;, 53.78315830308881),
+ (&#39;cpla&#39;, 54.80040545714285),
+ (&#39;dwaq&#39;, 55.77838609343629),
+ (&#39;bokf&#39;, 56.16893048532818),
+ (&#39;dltr&#39;, 57.418077247490345),
+ (&#39;ctsh&#39;, 57.91491119652509),
+ (&#39;ctxs&#39;, 58.02012394942085),
+ (&#39;casy&#39;, 58.495737440926646),
+ (&#39;eslt&#39;, 58.57627412471042),
+ (&#39;asml&#39;, 59.040315206563704),
+ (&#39;adp&#39;, 61.03234735559845),
+ (&#39;chrw&#39;, 61.98583785675676),
+ (&#39;anss&#39;, 62.32520078146718),
+ (&#39;acgl&#39;, 63.325907376833975),
+ (&#39;alog&#39;, 64.74335521467181),
+ (&#39;cern&#39;, 65.04237453166023),
+ (&#39;esrx&#39;, 67.4280848891892),
+ (&#39;fisv&#39;, 67.52742853513513),
+ (&#39;chdn&#39;, 72.21778764864865),
+ (&#39;cbrl&#39;, 76.63736287992278),
+ (&#39;cswc&#39;, 77.7559074069498),
+ (&#39;coke&#39;, 80.56527417181468),
+ (&#39;algt&#39;, 83.70168345444016),
+ (&#39;celg&#39;, 85.09483015984556),
+ (&#39;ffiv&#39;, 86.29457917374518),
+ (&#39;bwld&#39;, 89.39383399150579),
+ (&#39;amgn&#39;, 92.2331003965251),
+ (&#39;cacc&#39;, 95.49895756602317),
+ (&#39;cost&#39;, 96.17006946409266),
+ (&#39;alxn&#39;, 97.1099267011583),
+ (&#39;anat&#39;, 97.93825093397683),
+ (&#39;csgp&#39;, 103.10355984362934),
+ (&#39;dhil&#39;, 104.54806553783784),
+ (&#39;djco&#39;, 110.25166789845561),
+ (&#39;bbh&#39;, 113.28309655096525),
+ (&#39;esgr&#39;, 114.26885330617759),
+ (&#39;biib&#39;, 164.53822006138998),
+ (&#39;eqix&#39;, 165.3847721150579),
+ (&#39;bidu&#39;, 193.53191124478764),
+ (&#39;fcnca&#39;, 200.25248278146717),
+ (&#39;atri&#39;, 228.38977615984555),
+ (&#39;cme&#39;, 230.2946601100386),
+ (&#39;aapl&#39;, 257.17654040231656),
+ (&#39;amzn&#39;, 275.13407757104244)]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>It appears the <code>AMZN</code> and <code>AAPL</code> have the highest average closing prices, while <code>BLFS</code>, and <code>APDN</code> have the lowest average closing prices.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Finding-The-Most-Traded-Stock-Each-Day">Finding The Most Traded Stock Each Day<a class="anchor-link" href="#Finding-The-Most-Traded-Stock-Each-Day">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[49]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">trades</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">prices_columns</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">date</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">v</span><span class="p">[</span><span class="s2">&quot;date&quot;</span><span class="p">]):</span>
+        <span class="k">if</span> <span class="n">date</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">trades</span><span class="p">:</span>
+            <span class="n">trades</span><span class="p">[</span><span class="n">date</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">trades</span><span class="p">[</span><span class="n">date</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">k</span><span class="p">,</span><span class="n">v</span><span class="p">[</span><span class="s2">&quot;volume&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">]])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[50]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">most_traded</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">trades</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="n">ordered</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="n">symbol</span> <span class="o">=</span> <span class="n">ordered</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">most_traded</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">k</span><span class="p">,</span> <span class="n">symbol</span><span class="p">])</span>
+<span class="n">most_traded</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">most_traded</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+
+<span class="n">most_traded</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[50]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[[datetime.datetime(2007, 1, 3, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 1, 4, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 1, 5, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 1, 8, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 1, 9, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 1, 10, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 1, 11, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 1, 12, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 1, 16, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 1, 17, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 1, 18, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 1, 19, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 1, 22, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 1, 23, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 1, 24, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 1, 25, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 1, 26, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 1, 29, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 1, 30, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 1, 31, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 2, 1, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 2, 2, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 2, 5, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 2, 6, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 2, 7, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 2, 8, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 2, 9, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 2, 12, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 2, 13, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 2, 14, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 2, 15, 0, 0), &#39;bidu&#39;],
+ [datetime.datetime(2007, 2, 16, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 2, 20, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 2, 21, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 2, 22, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 2, 23, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 2, 26, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 2, 27, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 2, 28, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 3, 1, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 3, 2, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 3, 5, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 3, 6, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 3, 7, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 3, 8, 0, 0), &#39;cy&#39;],
+ [datetime.datetime(2007, 3, 9, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 3, 12, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 3, 13, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 3, 14, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 3, 15, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 3, 16, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 3, 19, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 3, 20, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 3, 21, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 3, 22, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 3, 23, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 3, 26, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 3, 27, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 3, 28, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 3, 29, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 3, 30, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 4, 2, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 4, 3, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 4, 4, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 4, 5, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 4, 9, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 4, 10, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 4, 11, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 4, 12, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 4, 13, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 4, 16, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 4, 17, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 4, 18, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 4, 19, 0, 0), &#39;ebay&#39;],
+ [datetime.datetime(2007, 4, 20, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 4, 23, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 4, 24, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 4, 25, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 4, 26, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 4, 27, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 4, 30, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 5, 1, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 5, 2, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 5, 3, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 5, 4, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 5, 7, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 5, 8, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 5, 9, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 5, 10, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 5, 11, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 5, 14, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 5, 15, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 5, 16, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 5, 17, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 5, 18, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 5, 21, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 5, 22, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 5, 23, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 5, 24, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 5, 25, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 5, 29, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 5, 30, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 5, 31, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 6, 1, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 6, 4, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 6, 5, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 6, 6, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 6, 7, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 6, 8, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 6, 11, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 6, 12, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 6, 13, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 6, 14, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 6, 15, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 6, 18, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 6, 19, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 6, 20, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 6, 21, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 6, 22, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 6, 25, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 6, 26, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 6, 27, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 6, 28, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 6, 29, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 7, 2, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 7, 3, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 7, 5, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 7, 6, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 7, 9, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 7, 10, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 7, 11, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 7, 12, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 7, 13, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 7, 16, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 7, 17, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 7, 18, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 7, 19, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 7, 20, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 7, 23, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 7, 24, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 7, 25, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 7, 26, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 7, 27, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 7, 30, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 7, 31, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 8, 1, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 8, 2, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 8, 3, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 8, 6, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 8, 7, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 8, 8, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 8, 9, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 8, 10, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 8, 13, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 8, 14, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 8, 15, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 8, 16, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 8, 17, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 8, 20, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 8, 21, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 8, 22, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 8, 23, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 8, 24, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 8, 27, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 8, 28, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 8, 29, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 8, 30, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 8, 31, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 9, 4, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 9, 5, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 9, 6, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 9, 7, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 9, 10, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 9, 11, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 9, 12, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 9, 13, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 9, 14, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 9, 17, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 9, 18, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 9, 19, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 9, 20, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 9, 21, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 9, 24, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 9, 25, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 9, 26, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 9, 27, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 9, 28, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 10, 1, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 10, 2, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 10, 3, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 10, 4, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 10, 5, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 10, 8, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 10, 9, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 10, 10, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 10, 11, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 10, 12, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 10, 15, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 10, 16, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 10, 17, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 10, 18, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 10, 19, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 10, 22, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 10, 23, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 10, 24, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 10, 25, 0, 0), &#39;cmcsa&#39;],
+ [datetime.datetime(2007, 10, 26, 0, 0), &#39;cmcsa&#39;],
+ [datetime.datetime(2007, 10, 29, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 10, 30, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 10, 31, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 11, 1, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 11, 2, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 11, 5, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 11, 6, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 11, 7, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 11, 8, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 11, 9, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 11, 12, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 11, 13, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 11, 14, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 11, 15, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 11, 16, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 11, 19, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 11, 20, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 11, 21, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 11, 23, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 11, 26, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 11, 27, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 11, 28, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 11, 29, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 11, 30, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 12, 3, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 12, 4, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 12, 5, 0, 0), &#39;cmcsa&#39;],
+ [datetime.datetime(2007, 12, 6, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 12, 7, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 12, 10, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 12, 11, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 12, 12, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 12, 13, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 12, 14, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 12, 17, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 12, 18, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 12, 19, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 12, 20, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 12, 21, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 12, 24, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 12, 26, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 12, 27, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 12, 28, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2007, 12, 31, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 1, 2, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 1, 3, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 1, 4, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 1, 7, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 1, 8, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 1, 9, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 1, 10, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 1, 11, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 1, 14, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 1, 15, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 1, 16, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 1, 17, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 1, 18, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 1, 22, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 1, 23, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 1, 24, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 1, 25, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 1, 28, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 1, 29, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 1, 30, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 1, 31, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 2, 1, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 2, 4, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 2, 5, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 2, 6, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 2, 7, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 2, 8, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 2, 11, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 2, 12, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 2, 13, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 2, 14, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 2, 15, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 2, 19, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 2, 20, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 2, 21, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 2, 22, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 2, 25, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 2, 26, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 2, 27, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 2, 28, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 2, 29, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 3, 3, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 3, 4, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 3, 5, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 3, 6, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 3, 7, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 3, 10, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 3, 11, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 3, 12, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 3, 13, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 3, 14, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 3, 17, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 3, 18, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 3, 19, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 3, 20, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 3, 24, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 3, 25, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 3, 26, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 3, 27, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 3, 28, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 3, 31, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 4, 1, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 4, 2, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 4, 3, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 4, 4, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 4, 7, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 4, 8, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 4, 9, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 4, 10, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 4, 11, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 4, 14, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 4, 15, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 4, 16, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 4, 17, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 4, 18, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 4, 21, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 4, 22, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 4, 23, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 4, 24, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 4, 25, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 4, 28, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 4, 29, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 4, 30, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 5, 1, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 5, 2, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 5, 5, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 5, 6, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 5, 7, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 5, 8, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 5, 9, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 5, 12, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 5, 13, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 5, 14, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 5, 15, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 5, 16, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 5, 19, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 5, 20, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 5, 21, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 5, 22, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 5, 23, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 5, 27, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 5, 28, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 5, 29, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 5, 30, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 6, 2, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 6, 3, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 6, 4, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 6, 5, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 6, 6, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 6, 9, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 6, 10, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 6, 11, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 6, 12, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 6, 13, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 6, 16, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 6, 17, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 6, 18, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 6, 19, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 6, 20, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 6, 23, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 6, 24, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 6, 25, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 6, 26, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 6, 27, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 6, 30, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 7, 1, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 7, 2, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 7, 3, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 7, 7, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 7, 8, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 7, 9, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 7, 10, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 7, 11, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 7, 14, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 7, 15, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 7, 16, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 7, 17, 0, 0), &#39;ebay&#39;],
+ [datetime.datetime(2008, 7, 18, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 7, 21, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 7, 22, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 7, 23, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 7, 24, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 7, 25, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 7, 28, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 7, 29, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 7, 30, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 7, 31, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 8, 1, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 8, 4, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 8, 5, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 8, 6, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 8, 7, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 8, 8, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 8, 11, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 8, 12, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 8, 13, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 8, 14, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 8, 15, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 8, 18, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 8, 19, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 8, 20, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 8, 21, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 8, 22, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 8, 25, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 8, 26, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 8, 27, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 8, 28, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 8, 29, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 9, 2, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 9, 3, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 9, 4, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 9, 5, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 9, 8, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 9, 9, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 9, 10, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 9, 11, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 9, 12, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 9, 15, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 9, 16, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 9, 17, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 9, 18, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 9, 19, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 9, 22, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 9, 23, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 9, 24, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 9, 25, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 9, 26, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 9, 29, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 9, 30, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 10, 1, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 10, 2, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 10, 3, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 10, 6, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 10, 7, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 10, 8, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 10, 9, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 10, 10, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 10, 13, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 10, 14, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 10, 15, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 10, 16, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 10, 17, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 10, 20, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 10, 21, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 10, 22, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 10, 23, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 10, 24, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 10, 27, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 10, 28, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 10, 29, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 10, 30, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 10, 31, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 11, 3, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 11, 4, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 11, 5, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 11, 6, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 11, 7, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 11, 10, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 11, 11, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 11, 12, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 11, 13, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 11, 14, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 11, 17, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 11, 18, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 11, 19, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 11, 20, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 11, 21, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 11, 24, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 11, 25, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 11, 26, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 11, 28, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 12, 1, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 12, 2, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 12, 3, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 12, 4, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 12, 5, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 12, 8, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 12, 9, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 12, 10, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 12, 11, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 12, 12, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 12, 15, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 12, 16, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 12, 17, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 12, 18, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 12, 19, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 12, 22, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 12, 23, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 12, 24, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 12, 26, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 12, 29, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 12, 30, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2008, 12, 31, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 1, 2, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 1, 5, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 1, 6, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 1, 7, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 1, 8, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 1, 9, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 1, 12, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 1, 13, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 1, 14, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 1, 15, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 1, 16, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 1, 20, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 1, 21, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 1, 22, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 1, 23, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 1, 26, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 1, 27, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 1, 28, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 1, 29, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 1, 30, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 2, 2, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 2, 3, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 2, 4, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 2, 5, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 2, 6, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 2, 9, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 2, 10, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 2, 11, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 2, 12, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 2, 13, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 2, 17, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 2, 18, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 2, 19, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 2, 20, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 2, 23, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 2, 24, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 2, 25, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 2, 26, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 2, 27, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 3, 2, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 3, 3, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 3, 4, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 3, 5, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 3, 6, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 3, 9, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 3, 10, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 3, 11, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 3, 12, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 3, 13, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 3, 16, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 3, 17, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 3, 18, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 3, 19, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 3, 20, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 3, 23, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 3, 24, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 3, 25, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 3, 26, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 3, 27, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 3, 30, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 3, 31, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 4, 1, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 4, 2, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 4, 3, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 4, 6, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 4, 7, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 4, 8, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 4, 9, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 4, 13, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 4, 14, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 4, 15, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 4, 16, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 4, 17, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 4, 20, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 4, 21, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 4, 22, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 4, 23, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 4, 24, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 4, 27, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 4, 28, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 4, 29, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 4, 30, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 5, 1, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 5, 4, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 5, 5, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 5, 6, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 5, 7, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 5, 8, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 5, 11, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 5, 12, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 5, 13, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 5, 14, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 5, 15, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 5, 18, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 5, 19, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 5, 20, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 5, 21, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 5, 22, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 5, 26, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 5, 27, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 5, 28, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 5, 29, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 6, 1, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 6, 2, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 6, 3, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 6, 4, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 6, 5, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 6, 8, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 6, 9, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 6, 10, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 6, 11, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 6, 12, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 6, 15, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 6, 16, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 6, 17, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 6, 18, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 6, 19, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 6, 22, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 6, 23, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 6, 24, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 6, 25, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 6, 26, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 6, 29, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 6, 30, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 7, 1, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 7, 2, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 7, 6, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 7, 7, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 7, 8, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 7, 9, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 7, 10, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 7, 13, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 7, 14, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 7, 15, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 7, 16, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 7, 17, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 7, 20, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 7, 21, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 7, 22, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 7, 23, 0, 0), &#39;ebay&#39;],
+ [datetime.datetime(2009, 7, 24, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 7, 27, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 7, 28, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 7, 29, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 7, 30, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 7, 31, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 8, 3, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 8, 4, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 8, 5, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 8, 6, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 8, 7, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 8, 10, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 8, 11, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 8, 12, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 8, 13, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 8, 14, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 8, 17, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 8, 18, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 8, 19, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 8, 20, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 8, 21, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 8, 24, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 8, 25, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 8, 26, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 8, 27, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 8, 28, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 8, 31, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 9, 1, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 9, 2, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 9, 3, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 9, 4, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 9, 8, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 9, 9, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 9, 10, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 9, 11, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 9, 14, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 9, 15, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 9, 16, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 9, 17, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 9, 18, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 9, 21, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 9, 22, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 9, 23, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 9, 24, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 9, 25, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 9, 28, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 9, 29, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 9, 30, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 10, 1, 0, 0), &#39;cmcsa&#39;],
+ [datetime.datetime(2009, 10, 2, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 10, 5, 0, 0), &#39;brcd&#39;],
+ [datetime.datetime(2009, 10, 6, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 10, 7, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 10, 8, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 10, 9, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 10, 12, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 10, 13, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 10, 14, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 10, 15, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 10, 16, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 10, 19, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 10, 20, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 10, 21, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 10, 22, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 10, 23, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 10, 26, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 10, 27, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 10, 28, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 10, 29, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 10, 30, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 11, 2, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 11, 3, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 11, 4, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 11, 5, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 11, 6, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 11, 9, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 11, 10, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 11, 11, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 11, 12, 0, 0), &#39;amd&#39;],
+ [datetime.datetime(2009, 11, 13, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 11, 16, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 11, 17, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 11, 18, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 11, 19, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 11, 20, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 11, 23, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 11, 24, 0, 0), &#39;brcd&#39;],
+ [datetime.datetime(2009, 11, 25, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 11, 27, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 11, 30, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 12, 1, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 12, 2, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 12, 3, 0, 0), &#39;cmcsa&#39;],
+ [datetime.datetime(2009, 12, 4, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 12, 7, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 12, 8, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 12, 9, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 12, 10, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 12, 11, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 12, 14, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 12, 15, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 12, 16, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 12, 17, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 12, 18, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 12, 21, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 12, 22, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 12, 23, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 12, 24, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 12, 28, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 12, 29, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 12, 30, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2009, 12, 31, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 1, 4, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 1, 5, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 1, 6, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 1, 7, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 1, 8, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 1, 11, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 1, 12, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 1, 13, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 1, 14, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 1, 15, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 1, 19, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 1, 20, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 1, 21, 0, 0), &#39;ebay&#39;],
+ [datetime.datetime(2010, 1, 22, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 1, 25, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 1, 26, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 1, 27, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 1, 28, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 1, 29, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 2, 1, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 2, 2, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 2, 3, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 2, 4, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 2, 5, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 2, 8, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 2, 9, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 2, 10, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 2, 11, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 2, 12, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 2, 16, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 2, 17, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 2, 18, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 2, 19, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 2, 22, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 2, 23, 0, 0), &#39;brcd&#39;],
+ [datetime.datetime(2010, 2, 24, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 2, 25, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 2, 26, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 3, 1, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 3, 2, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 3, 3, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 3, 4, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 3, 5, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 3, 8, 0, 0), &#39;csco&#39;],
+ [datetime.datetime(2010, 3, 9, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 3, 10, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 3, 11, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 3, 12, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 3, 15, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 3, 16, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 3, 17, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 3, 18, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 3, 19, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 3, 22, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 3, 23, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 3, 24, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 3, 25, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 3, 26, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 3, 29, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 3, 30, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 3, 31, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 4, 1, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 4, 5, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 4, 6, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 4, 7, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 4, 8, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 4, 9, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 4, 12, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 4, 13, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 4, 14, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 4, 15, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 4, 16, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 4, 19, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 4, 20, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 4, 21, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 4, 22, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 4, 23, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 4, 26, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 4, 27, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 4, 28, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 4, 29, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 4, 30, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 5, 3, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 5, 4, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 5, 5, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 5, 6, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 5, 7, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 5, 10, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 5, 11, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 5, 12, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 5, 13, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 5, 14, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 5, 17, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 5, 18, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 5, 19, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 5, 20, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 5, 21, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 5, 24, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 5, 25, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 5, 26, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 5, 27, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 5, 28, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 6, 1, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 6, 2, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 6, 3, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 6, 4, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 6, 7, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 6, 8, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 6, 9, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 6, 10, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 6, 11, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 6, 14, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 6, 15, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 6, 16, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 6, 17, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 6, 18, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 6, 21, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 6, 22, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 6, 23, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 6, 24, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 6, 25, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 6, 28, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 6, 29, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 6, 30, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 7, 1, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 7, 2, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 7, 6, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 7, 7, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 7, 8, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 7, 9, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 7, 12, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 7, 13, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 7, 14, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 7, 15, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 7, 16, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 7, 19, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 7, 20, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 7, 21, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 7, 22, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 7, 23, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 7, 26, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 7, 27, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 7, 28, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 7, 29, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 7, 30, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 8, 2, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 8, 3, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 8, 4, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 8, 5, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 8, 6, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 8, 9, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 8, 10, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 8, 11, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 8, 12, 0, 0), &#39;csco&#39;],
+ [datetime.datetime(2010, 8, 13, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 8, 16, 0, 0), &#39;csco&#39;],
+ [datetime.datetime(2010, 8, 17, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 8, 18, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 8, 19, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 8, 20, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 8, 23, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 8, 24, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 8, 25, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 8, 26, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 8, 27, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 8, 30, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 8, 31, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 9, 1, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 9, 2, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 9, 3, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 9, 7, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 9, 8, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 9, 9, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 9, 10, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 9, 13, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 9, 14, 0, 0), &#39;csco&#39;],
+ [datetime.datetime(2010, 9, 15, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 9, 16, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 9, 17, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 9, 20, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 9, 21, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 9, 22, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 9, 23, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 9, 24, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 9, 27, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 9, 28, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 9, 29, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 9, 30, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 10, 1, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 10, 4, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 10, 5, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 10, 6, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 10, 7, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 10, 8, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 10, 11, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 10, 12, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 10, 13, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 10, 14, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 10, 15, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 10, 18, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 10, 19, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 10, 20, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 10, 21, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 10, 22, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 10, 25, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 10, 26, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 10, 27, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 10, 28, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 10, 29, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 11, 1, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 11, 2, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 11, 3, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 11, 4, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 11, 5, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 11, 8, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 11, 9, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 11, 10, 0, 0), &#39;csco&#39;],
+ [datetime.datetime(2010, 11, 11, 0, 0), &#39;csco&#39;],
+ [datetime.datetime(2010, 11, 12, 0, 0), &#39;csco&#39;],
+ [datetime.datetime(2010, 11, 15, 0, 0), &#39;csco&#39;],
+ [datetime.datetime(2010, 11, 16, 0, 0), &#39;csco&#39;],
+ [datetime.datetime(2010, 11, 17, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 11, 18, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 11, 19, 0, 0), &#39;csco&#39;],
+ [datetime.datetime(2010, 11, 22, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 11, 23, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 11, 24, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 11, 26, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 11, 29, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 11, 30, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 12, 1, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 12, 2, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 12, 3, 0, 0), &#39;csco&#39;],
+ [datetime.datetime(2010, 12, 6, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 12, 7, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 12, 8, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 12, 9, 0, 0), &#39;csco&#39;],
+ [datetime.datetime(2010, 12, 10, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 12, 13, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 12, 14, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 12, 15, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 12, 16, 0, 0), &#39;aapl&#39;],
+ [datetime.datetime(2010, 12, 17, 0, 0), &#39;csco&#39;],
+ [datetime.datetime(2010, 12, 20, 0, 0), &#39;aapl&#39;],
+ ...]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Searching-For-High-Volume-Days">Searching For High Volume Days<a class="anchor-link" href="#Searching-For-High-Volume-Days">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[51]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">daily_volumes</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="n">most_traded</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">trades</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="n">volume</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">([</span><span class="n">item</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">v</span><span class="p">])</span>
+    <span class="n">daily_volumes</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">volume</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[52]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">volume_tuples</span> <span class="o">=</span> <span class="p">[[</span><span class="n">k</span><span class="p">,</span><span class="n">v</span><span class="p">]</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="n">daily_volumes</span><span class="o">.</span><span class="n">items</span><span class="p">()]</span>
+<span class="n">volume_tuples</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">volume_tuples</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+
+<span class="n">volume_tuples</span><span class="p">[</span><span class="o">-</span><span class="mi">10</span><span class="p">:]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[52]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[[datetime.datetime(2008, 1, 24, 0, 0), 1533363200.0],
+ [datetime.datetime(2008, 1, 16, 0, 0), 1536176400.0],
+ [datetime.datetime(2007, 11, 8, 0, 0), 1553880500.0],
+ [datetime.datetime(2008, 9, 29, 0, 0), 1555072400.0],
+ [datetime.datetime(2008, 2, 7, 0, 0), 1559032100.0],
+ [datetime.datetime(2008, 1, 22, 0, 0), 1578877700.0],
+ [datetime.datetime(2008, 10, 8, 0, 0), 1599183500.0],
+ [datetime.datetime(2007, 7, 26, 0, 0), 1611272800.0],
+ [datetime.datetime(2008, 10, 10, 0, 0), 1770266900.0],
+ [datetime.datetime(2008, 1, 23, 0, 0), 1964583900.0]]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[53]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+
+<span class="n">high_volume_days</span> <span class="o">=</span> <span class="p">[</span><span class="n">v</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">volume_tuples</span><span class="p">[</span><span class="o">-</span><span class="mi">10</span><span class="p">:]]</span>
+
+<span class="k">def</span> <span class="nf">binary_search</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">search</span><span class="p">):</span>
+    <span class="n">m</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">z</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">array</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+    <span class="k">while</span> <span class="n">i</span><span class="o">&lt;=</span> <span class="n">z</span><span class="p">:</span>
+        <span class="n">m</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="p">((</span><span class="n">z</span> <span class="o">-</span> <span class="n">i</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">array</span><span class="p">[</span><span class="n">m</span><span class="p">]</span> <span class="o">==</span> <span class="n">search</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">m</span>
+        <span class="k">elif</span> <span class="n">array</span><span class="p">[</span><span class="n">m</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">search</span><span class="p">:</span>
+            <span class="n">i</span> <span class="o">=</span> <span class="n">m</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="k">elif</span> <span class="n">array</span><span class="p">[</span><span class="n">m</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">search</span><span class="p">:</span>
+            <span class="n">z</span> <span class="o">=</span> <span class="n">m</span> <span class="o">-</span> <span class="mi">1</span>
+
+<span class="n">high_volume_transactions</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="n">prices_columns</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="k">for</span> <span class="n">day</span> <span class="ow">in</span> <span class="n">high_volume_days</span><span class="p">:</span>
+        <span class="n">ind</span> <span class="o">=</span> <span class="n">binary_search</span><span class="p">(</span><span class="n">v</span><span class="p">[</span><span class="s2">&quot;date&quot;</span><span class="p">],</span> <span class="n">day</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">ind</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">continue</span>
+        <span class="k">if</span> <span class="n">k</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">high_volume_transactions</span><span class="p">:</span>
+            <span class="n">high_volume_transactions</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">high_volume_transactions</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">prices</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="n">ind</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Finding-Profitable-Stocks">Finding Profitable Stocks<a class="anchor-link" href="#Finding-Profitable-Stocks">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[54]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">profits</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="n">prices_columns</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="n">percentage</span> <span class="o">=</span> <span class="p">(</span><span class="n">v</span><span class="p">[</span><span class="s2">&quot;close&quot;</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">v</span><span class="p">[</span><span class="s2">&quot;close&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span> <span class="o">/</span> <span class="n">v</span><span class="p">[</span><span class="s2">&quot;close&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">profits</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">k</span><span class="p">,</span><span class="n">percentage</span> <span class="o">*</span> <span class="mi">100</span><span class="p">])</span>
+
+<span class="n">profits</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">profits</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+
+<span class="n">profits</span><span class="p">[</span><span class="o">-</span><span class="mi">10</span><span class="p">:]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[54]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[[&#39;achc&#39;, 1330.0000666666667],
+ [&#39;bcli&#39;, 1339.2137535980346],
+ [&#39;cui&#39;, 1525.1625162516252],
+ [&#39;apdn&#39;, 1549.6700659868025],
+ [&#39;anip&#39;, 1707.3554472785033],
+ [&#39;amzn&#39;, 2230.7234281466817],
+ [&#39;blfs&#39;, 2437.4365640858978],
+ [&#39;arcw&#39;, 3898.60048982856],
+ [&#39;adxs&#39;, 4005.0000000000005],
+ [&#39;admp&#39;, 7483.8389225948395]]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The most profitable stock to buy in <code>2007</code> would have been <code>ADMP</code>, which appreciated from around <code>7</code> cents to its current price of <code>4.43</code>.</p>
+
+</div>
+</div>
+</div>
+ 
+
+
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = '//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: 'center'," +
+        "    displayIndent: '0em'," +
+        "    showMathMenu: true," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['$','$'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        " linebreaks: { automatic: true, width: '95% container' }, " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'black ! important'} }" +
+        "    } " +
+        "}); ";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="./tag/python.html">python</a>
+    </p>
+  </div>
+
+
+
+
+
+</article>
+
+    <footer>
+<p>&copy;  </p>
+<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Ram Shanker G ",
+  "url" : ".",
+  "image": "",
+  "description": ""
+}
+</script>
+
+</body>
+</html>

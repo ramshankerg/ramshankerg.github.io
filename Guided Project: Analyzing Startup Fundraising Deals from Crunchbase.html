@@ -1,0 +1,2975 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="./theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="./theme/pygments/github.min.css">
+  <link rel="stylesheet" type="text/css" href="./theme/font-awesome/css/font-awesome.min.css">
+
+
+    <link href="ramshankerg.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Ram Shanker G Atom">
+
+
+
+
+
+<meta name="author" content="me" />
+<meta name="description" content="Click on read more link to find out more about the project" />
+<meta name="keywords" content="python">
+
+<meta property="og:site_name" content="Ram Shanker G"/>
+<meta property="og:title" content="Guided Project: Analyzing Startup Fundraising Deals from Crunchbase"/>
+<meta property="og:description" content="Click on read more link to find out more about the project"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="./Guided Project: Analyzing Startup Fundraising Deals from Crunchbase.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2015-07-08 20:00:00+05:30"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="./author/me.html">
+<meta property="article:section" content="Projects"/>
+<meta property="article:tag" content="python"/>
+<meta property="og:image" content="">
+
+  <title>Ram Shanker G &ndash; Guided Project: Analyzing Startup Fundraising Deals from Crunchbase</title>
+
+</head>
+<body>
+  <aside>
+    <div>
+      <a href=".">
+        <img src="./theme/img/profile.png" alt="" title="">
+      </a>
+      <h1><a href="."></a></h1>
+
+
+      <nav>
+        <ul class="list">
+          <li><a href="./pages/about-me.html#about-me">About me</a></li>
+
+          <li><a href="http://getpelican.com/" target="_blank">Pelican</a></li>
+          <li><a href="http://python.org/" target="_blank">Python.org</a></li>
+          <li><a href="http://jinja.pocoo.org/" target="_blank">Jinja2</a></li>
+          <li><a href="#" target="_blank">You can modify these links in your config file</a></li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+        <li><a class="sc-GitHub" href="https://github.com/ramshankerg" target="_blank"><i class="fa fa-GitHub"></i></a></li>
+        <li><a class="sc-Linkedin" href="https://www.linkedin.com/in/ram-shanker-g/" target="_blank"><i class="fa fa-Linkedin"></i></a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+
+<article class="single">
+  <header>
+      
+    <h1 id="Guided Project: Analyzing Startup Fundraising Deals from Crunchbase">Guided Project: Analyzing Startup Fundraising Deals from Crunchbase</h1>
+    <p>
+          Posted on Wed 08 July 2015 in <a href="./category/projects.html">Projects</a>
+
+
+    </p>
+  </header>
+
+
+  <div>
+    <style type="text/css">/*!
+*
+* IPython notebook
+*
+*/
+/* CSS font colors for translated ANSI escape sequences */
+/* The color values are a mix of
+   http://www.xcolors.net/dl/baskerville-ivorylight and
+   http://www.xcolors.net/dl/euphrasia */
+.ansi-black-fg {
+  color: #3E424D;
+}
+.ansi-black-bg {
+  background-color: #3E424D;
+}
+.ansi-black-intense-fg {
+  color: #282C36;
+}
+.ansi-black-intense-bg {
+  background-color: #282C36;
+}
+.ansi-red-fg {
+  color: #E75C58;
+}
+.ansi-red-bg {
+  background-color: #E75C58;
+}
+.ansi-red-intense-fg {
+  color: #B22B31;
+}
+.ansi-red-intense-bg {
+  background-color: #B22B31;
+}
+.ansi-green-fg {
+  color: #00A250;
+}
+.ansi-green-bg {
+  background-color: #00A250;
+}
+.ansi-green-intense-fg {
+  color: #007427;
+}
+.ansi-green-intense-bg {
+  background-color: #007427;
+}
+.ansi-yellow-fg {
+  color: #DDB62B;
+}
+.ansi-yellow-bg {
+  background-color: #DDB62B;
+}
+.ansi-yellow-intense-fg {
+  color: #B27D12;
+}
+.ansi-yellow-intense-bg {
+  background-color: #B27D12;
+}
+.ansi-blue-fg {
+  color: #208FFB;
+}
+.ansi-blue-bg {
+  background-color: #208FFB;
+}
+.ansi-blue-intense-fg {
+  color: #0065CA;
+}
+.ansi-blue-intense-bg {
+  background-color: #0065CA;
+}
+.ansi-magenta-fg {
+  color: #D160C4;
+}
+.ansi-magenta-bg {
+  background-color: #D160C4;
+}
+.ansi-magenta-intense-fg {
+  color: #A03196;
+}
+.ansi-magenta-intense-bg {
+  background-color: #A03196;
+}
+.ansi-cyan-fg {
+  color: #60C6C8;
+}
+.ansi-cyan-bg {
+  background-color: #60C6C8;
+}
+.ansi-cyan-intense-fg {
+  color: #258F8F;
+}
+.ansi-cyan-intense-bg {
+  background-color: #258F8F;
+}
+.ansi-white-fg {
+  color: #C5C1B4;
+}
+.ansi-white-bg {
+  background-color: #C5C1B4;
+}
+.ansi-white-intense-fg {
+  color: #A1A6B2;
+}
+.ansi-white-intense-bg {
+  background-color: #A1A6B2;
+}
+.ansi-default-inverse-fg {
+  color: #FFFFFF;
+}
+.ansi-default-inverse-bg {
+  background-color: #000000;
+}
+.ansi-bold {
+  font-weight: bold;
+}
+.ansi-underline {
+  text-decoration: underline;
+}
+/* The following styles are deprecated an will be removed in a future version */
+.ansibold {
+  font-weight: bold;
+}
+.ansi-inverse {
+  outline: 0.5px dotted;
+}
+/* use dark versions for foreground, to improve visibility */
+.ansiblack {
+  color: black;
+}
+.ansired {
+  color: darkred;
+}
+.ansigreen {
+  color: darkgreen;
+}
+.ansiyellow {
+  color: #c4a000;
+}
+.ansiblue {
+  color: darkblue;
+}
+.ansipurple {
+  color: darkviolet;
+}
+.ansicyan {
+  color: steelblue;
+}
+.ansigray {
+  color: gray;
+}
+/* and light for background, for the same reason */
+.ansibgblack {
+  background-color: black;
+}
+.ansibgred {
+  background-color: red;
+}
+.ansibggreen {
+  background-color: green;
+}
+.ansibgyellow {
+  background-color: yellow;
+}
+.ansibgblue {
+  background-color: blue;
+}
+.ansibgpurple {
+  background-color: magenta;
+}
+.ansibgcyan {
+  background-color: cyan;
+}
+.ansibggray {
+  background-color: gray;
+}
+div.cell {
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  border-radius: 2px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+  width: 100%;
+  padding: 5px;
+  /* This acts as a spacer between cells, that is outside the border */
+  margin: 0px;
+  outline: none;
+  position: relative;
+  overflow: visible;
+}
+div.cell:before {
+  position: absolute;
+  display: block;
+  top: -1px;
+  left: -1px;
+  width: 5px;
+  height: calc(100% +  2px);
+  content: '';
+  background: transparent;
+}
+div.cell.jupyter-soft-selected {
+  border-left-color: #E3F2FD;
+  border-left-width: 1px;
+  padding-left: 5px;
+  border-right-color: #E3F2FD;
+  border-right-width: 1px;
+  background: #E3F2FD;
+}
+@media print {
+  div.cell.jupyter-soft-selected {
+    border-color: transparent;
+  }
+}
+div.cell.selected,
+div.cell.selected.jupyter-soft-selected {
+  border-color: #ababab;
+}
+div.cell.selected:before,
+div.cell.selected.jupyter-soft-selected:before {
+  position: absolute;
+  display: block;
+  top: -1px;
+  left: -1px;
+  width: 5px;
+  height: calc(100% +  2px);
+  content: '';
+  background: #42A5F5;
+}
+@media print {
+  div.cell.selected,
+  div.cell.selected.jupyter-soft-selected {
+    border-color: transparent;
+  }
+}
+.edit_mode div.cell.selected {
+  border-color: #66BB6A;
+}
+.edit_mode div.cell.selected:before {
+  position: absolute;
+  display: block;
+  top: -1px;
+  left: -1px;
+  width: 5px;
+  height: calc(100% +  2px);
+  content: '';
+  background: #66BB6A;
+}
+@media print {
+  .edit_mode div.cell.selected {
+    border-color: transparent;
+  }
+}
+.prompt {
+  /* This needs to be wide enough for 3 digit prompt numbers: In[100]: */
+  min-width: 14ex;
+  /* This padding is tuned to match the padding on the CodeMirror editor. */
+  padding: 0.4em;
+  margin: 0px;
+  font-family: monospace;
+  text-align: right;
+  /* This has to match that of the the CodeMirror class line-height below */
+  line-height: 1.21429em;
+  /* Don't highlight prompt number selection */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  /* Use default cursor */
+  cursor: default;
+}
+@media (max-width: 540px) {
+  .prompt {
+    text-align: left;
+  }
+}
+div.inner_cell {
+  min-width: 0;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  /* Old browsers */
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  /* Modern browsers */
+  flex: 1;
+}
+/* input_area and input_prompt must match in top border and margin for alignment */
+div.input_area {
+  border: 1px solid #cfcfcf;
+  border-radius: 2px;
+  background: #f7f7f7;
+  line-height: 1.21429em;
+}
+/* This is needed so that empty prompt areas can collapse to zero height when there
+   is no content in the output_subarea and the prompt. The main purpose of this is
+   to make sure that empty JavaScript output_subareas have no height. */
+div.prompt:empty {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+div.unrecognized_cell {
+  padding: 5px 5px 5px 0px;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: horizontal;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+div.unrecognized_cell .inner_cell {
+  border-radius: 2px;
+  padding: 5px;
+  font-weight: bold;
+  color: red;
+  border: 1px solid #cfcfcf;
+  background: #eaeaea;
+}
+div.unrecognized_cell .inner_cell a {
+  color: inherit;
+  text-decoration: none;
+}
+div.unrecognized_cell .inner_cell a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+@media (max-width: 540px) {
+  div.unrecognized_cell > div.prompt {
+    display: none;
+  }
+}
+div.code_cell {
+  /* avoid page breaking on code cells when printing */
+}
+@media print {
+  div.code_cell {
+    page-break-inside: avoid;
+  }
+}
+/* any special styling for code cells that are currently running goes here */
+div.input {
+  page-break-inside: avoid;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: horizontal;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+@media (max-width: 540px) {
+  div.input {
+    /* Old browsers */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-align: stretch;
+    display: -moz-box;
+    -moz-box-orient: vertical;
+    -moz-box-align: stretch;
+    display: box;
+    box-orient: vertical;
+    box-align: stretch;
+    /* Modern browsers */
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+/* input_area and input_prompt must match in top border and margin for alignment */
+div.input_prompt {
+  color: #303F9F;
+  border-top: 1px solid transparent;
+}
+div.input_area > div.highlight {
+  margin: 0.4em;
+  border: none;
+  padding: 0px;
+  background-color: transparent;
+}
+div.input_area > div.highlight > pre {
+  margin: 0px;
+  border: none;
+  padding: 0px;
+  background-color: transparent;
+}
+/* The following gets added to the <head> if it is detected that the user has a
+ * monospace font with inconsistent normal/bold/italic height.  See
+ * notebookmain.js.  Such fonts will have keywords vertically offset with
+ * respect to the rest of the text.  The user should select a better font.
+ * See: https://github.com/ipython/ipython/issues/1503
+ *
+ * .CodeMirror span {
+ *      vertical-align: bottom;
+ * }
+ */
+.CodeMirror {
+  line-height: 1.21429em;
+  /* Changed from 1em to our global default */
+  font-size: 14px;
+  height: auto;
+  /* Changed to auto to autogrow */
+  background: none;
+  /* Changed from white to allow our bg to show through */
+}
+.CodeMirror-scroll {
+  /*  The CodeMirror docs are a bit fuzzy on if overflow-y should be hidden or visible.*/
+  /*  We have found that if it is visible, vertical scrollbars appear with font size changes.*/
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+.CodeMirror-lines {
+  /* In CM2, this used to be 0.4em, but in CM3 it went to 4px. We need the em value because */
+  /* we have set a different line-height and want this to scale with that. */
+  /* Note that this should set vertical padding only, since CodeMirror assumes
+       that horizontal padding will be set on CodeMirror pre */
+  padding: 0.4em 0;
+}
+.CodeMirror-linenumber {
+  padding: 0 8px 0 4px;
+}
+.CodeMirror-gutters {
+  border-bottom-left-radius: 2px;
+  border-top-left-radius: 2px;
+}
+.CodeMirror pre {
+  /* In CM3 this went to 4px from 0 in CM2. This sets horizontal padding only,
+    use .CodeMirror-lines for vertical */
+  padding: 0 0.4em;
+  border: 0;
+  border-radius: 0;
+}
+.CodeMirror-cursor {
+  border-left: 1.4px solid black;
+}
+@media screen and (min-width: 2138px) and (max-width: 4319px) {
+  .CodeMirror-cursor {
+    border-left: 2px solid black;
+  }
+}
+@media screen and (min-width: 4320px) {
+  .CodeMirror-cursor {
+    border-left: 4px solid black;
+  }
+}
+/*
+
+Original style from softwaremaniacs.org (c) Ivan Sagalaev <Maniac@SoftwareManiacs.Org>
+Adapted from GitHub theme
+
+*/
+.highlight-base {
+  color: #000;
+}
+.highlight-variable {
+  color: #000;
+}
+.highlight-variable-2 {
+  color: #1a1a1a;
+}
+.highlight-variable-3 {
+  color: #333333;
+}
+.highlight-string {
+  color: #BA2121;
+}
+.highlight-comment {
+  color: #408080;
+  font-style: italic;
+}
+.highlight-number {
+  color: #080;
+}
+.highlight-atom {
+  color: #88F;
+}
+.highlight-keyword {
+  color: #008000;
+  font-weight: bold;
+}
+.highlight-builtin {
+  color: #008000;
+}
+.highlight-error {
+  color: #f00;
+}
+.highlight-operator {
+  color: #AA22FF;
+  font-weight: bold;
+}
+.highlight-meta {
+  color: #AA22FF;
+}
+/* previously not defined, copying from default codemirror */
+.highlight-def {
+  color: #00f;
+}
+.highlight-string-2 {
+  color: #f50;
+}
+.highlight-qualifier {
+  color: #555;
+}
+.highlight-bracket {
+  color: #997;
+}
+.highlight-tag {
+  color: #170;
+}
+.highlight-attribute {
+  color: #00c;
+}
+.highlight-header {
+  color: blue;
+}
+.highlight-quote {
+  color: #090;
+}
+.highlight-link {
+  color: #00c;
+}
+/* apply the same style to codemirror */
+.cm-s-ipython span.cm-keyword {
+  color: #008000;
+  font-weight: bold;
+}
+.cm-s-ipython span.cm-atom {
+  color: #88F;
+}
+.cm-s-ipython span.cm-number {
+  color: #080;
+}
+.cm-s-ipython span.cm-def {
+  color: #00f;
+}
+.cm-s-ipython span.cm-variable {
+  color: #000;
+}
+.cm-s-ipython span.cm-operator {
+  color: #AA22FF;
+  font-weight: bold;
+}
+.cm-s-ipython span.cm-variable-2 {
+  color: #1a1a1a;
+}
+.cm-s-ipython span.cm-variable-3 {
+  color: #333333;
+}
+.cm-s-ipython span.cm-comment {
+  color: #408080;
+  font-style: italic;
+}
+.cm-s-ipython span.cm-string {
+  color: #BA2121;
+}
+.cm-s-ipython span.cm-string-2 {
+  color: #f50;
+}
+.cm-s-ipython span.cm-meta {
+  color: #AA22FF;
+}
+.cm-s-ipython span.cm-qualifier {
+  color: #555;
+}
+.cm-s-ipython span.cm-builtin {
+  color: #008000;
+}
+.cm-s-ipython span.cm-bracket {
+  color: #997;
+}
+.cm-s-ipython span.cm-tag {
+  color: #170;
+}
+.cm-s-ipython span.cm-attribute {
+  color: #00c;
+}
+.cm-s-ipython span.cm-header {
+  color: blue;
+}
+.cm-s-ipython span.cm-quote {
+  color: #090;
+}
+.cm-s-ipython span.cm-link {
+  color: #00c;
+}
+.cm-s-ipython span.cm-error {
+  color: #f00;
+}
+.cm-s-ipython span.cm-tab {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAMCAYAAAAkuj5RAAAAAXNSR0IArs4c6QAAAGFJREFUSMft1LsRQFAQheHPowAKoACx3IgEKtaEHujDjORSgWTH/ZOdnZOcM/sgk/kFFWY0qV8foQwS4MKBCS3qR6ixBJvElOobYAtivseIE120FaowJPN75GMu8j/LfMwNjh4HUpwg4LUAAAAASUVORK5CYII=);
+  background-position: right;
+  background-repeat: no-repeat;
+}
+div.output_wrapper {
+  /* this position must be relative to enable descendents to be absolute within it */
+  position: relative;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  z-index: 1;
+}
+/* class for the output area when it should be height-limited */
+div.output_scroll {
+  /* ideally, this would be max-height, but FF barfs all over that */
+  height: 24em;
+  /* FF needs this *and the wrapper* to specify full width, or it will shrinkwrap */
+  width: 100%;
+  overflow: auto;
+  border-radius: 2px;
+  -webkit-box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.8);
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.8);
+  display: block;
+}
+/* output div while it is collapsed */
+div.output_collapsed {
+  margin: 0px;
+  padding: 0px;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+div.out_prompt_overlay {
+  height: 100%;
+  padding: 0px 0.4em;
+  position: absolute;
+  border-radius: 2px;
+}
+div.out_prompt_overlay:hover {
+  /* use inner shadow to get border that is computed the same on WebKit/FF */
+  -webkit-box-shadow: inset 0 0 1px #000;
+  box-shadow: inset 0 0 1px #000;
+  background: rgba(240, 240, 240, 0.5);
+}
+div.output_prompt {
+  color: #D84315;
+}
+/* This class is the outer container of all output sections. */
+div.output_area {
+  padding: 0px;
+  page-break-inside: avoid;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: horizontal;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+div.output_area .MathJax_Display {
+  text-align: left !important;
+}
+div.output_area 
+div.output_area 
+div.output_area img,
+div.output_area svg {
+  max-width: 100%;
+  height: auto;
+}
+div.output_area img.unconfined,
+div.output_area svg.unconfined {
+  max-width: none;
+}
+div.output_area .mglyph > img {
+  max-width: none;
+}
+/* This is needed to protect the pre formating from global settings such
+   as that of bootstrap */
+.output {
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+@media (max-width: 540px) {
+  div.output_area {
+    /* Old browsers */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-align: stretch;
+    display: -moz-box;
+    -moz-box-orient: vertical;
+    -moz-box-align: stretch;
+    display: box;
+    box-orient: vertical;
+    box-align: stretch;
+    /* Modern browsers */
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+div.output_area pre {
+  margin: 0;
+  padding: 1px 0 1px 0;
+  border: 0;
+  vertical-align: baseline;
+  color: black;
+  background-color: transparent;
+  border-radius: 0;
+}
+/* This class is for the output subarea inside the output_area and after
+   the prompt div. */
+div.output_subarea {
+  overflow-x: auto;
+  padding: 0.4em;
+  /* Old browsers */
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  /* Modern browsers */
+  flex: 1;
+  max-width: calc(100% - 14ex);
+}
+div.output_scroll div.output_subarea {
+  overflow-x: visible;
+}
+/* The rest of the output_* classes are for special styling of the different
+   output types */
+/* all text output has this class: */
+div.output_text {
+  text-align: left;
+  color: #000;
+  /* This has to match that of the the CodeMirror class line-height below */
+  line-height: 1.21429em;
+}
+/* stdout/stderr are 'text' as well as 'stream', but execute_result/error are *not* streams */
+div.output_stderr {
+  background: #fdd;
+  /* very light red background for stderr */
+}
+div.output_latex {
+  text-align: left;
+}
+/* Empty output_javascript divs should have no height */
+div.output_javascript:empty {
+  padding: 0;
+}
+.js-error {
+  color: darkred;
+}
+/* raw_input styles */
+div.raw_input_container {
+  line-height: 1.21429em;
+  padding-top: 5px;
+}
+pre.raw_input_prompt {
+  /* nothing needed here. */
+}
+input.raw_input {
+  font-family: monospace;
+  font-size: inherit;
+  color: inherit;
+  width: auto;
+  /* make sure input baseline aligns with prompt */
+  vertical-align: baseline;
+  /* padding + margin = 0.5em between prompt and cursor */
+  padding: 0em 0.25em;
+  margin: 0em 0.25em;
+}
+input.raw_input:focus {
+  box-shadow: none;
+}
+p.p-space {
+  margin-bottom: 10px;
+}
+div.output_unrecognized {
+  padding: 5px;
+  font-weight: bold;
+  color: red;
+}
+div.output_unrecognized a {
+  color: inherit;
+  text-decoration: none;
+}
+div.output_unrecognized a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+.rendered_html {
+  color: #000;
+  /* any extras will just be numbers: */
+}
+
+
+
+.rendered_html :link {
+  text-decoration: underline;
+}
+.rendered_html :visited {
+  text-decoration: underline;
+}
+
+
+
+
+
+
+.rendered_html h1:first-child {
+  margin-top: 0.538em;
+}
+.rendered_html h2:first-child {
+  margin-top: 0.636em;
+}
+.rendered_html h3:first-child {
+  margin-top: 0.777em;
+}
+.rendered_html h4:first-child {
+  margin-top: 1em;
+}
+.rendered_html h5:first-child {
+  margin-top: 1em;
+}
+.rendered_html h6:first-child {
+  margin-top: 1em;
+}
+.rendered_html ul:not(.list-inline),
+.rendered_html ol:not(.list-inline) {
+  padding-left: 2em;
+}
+
+
+
+
+
+
+
+
+.rendered_html * + ul {
+  margin-top: 1em;
+}
+.rendered_html * + ol {
+  margin-top: 1em;
+}
+
+
+
+
+
+.rendered_html pre,
+
+
+
+
+.rendered_html tr,
+.rendered_html th,
+
+
+.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
+}
+.rendered_html * + table {
+  margin-top: 1em;
+}
+
+.rendered_html * + p {
+  margin-top: 1em;
+}
+
+.rendered_html * + img {
+  margin-top: 1em;
+}
+.rendered_html img,
+
+.rendered_html img.unconfined,
+
+
+.rendered_html * + .alert {
+  margin-top: 1em;
+}
+[dir="rtl"] 
+div.text_cell {
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: horizontal;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+@media (max-width: 540px) {
+  div.text_cell > div.prompt {
+    display: none;
+  }
+}
+div.text_cell_render {
+  /*font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;*/
+  outline: none;
+  resize: none;
+  width: inherit;
+  border-style: none;
+  padding: 0.5em 0.5em 0.5em 0.4em;
+  color: #000;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+a.anchor-link:link {
+  text-decoration: none;
+  padding: 0px 20px;
+  visibility: hidden;
+}
+h1:hover .anchor-link,
+h2:hover .anchor-link,
+h3:hover .anchor-link,
+h4:hover .anchor-link,
+h5:hover .anchor-link,
+h6:hover .anchor-link {
+  visibility: visible;
+}
+.text_cell.rendered .input_area {
+  display: none;
+}
+.text_cell.rendered 
+.text_cell.rendered .rendered_html tr,
+.text_cell.rendered .rendered_html th,
+.text_cell.rendered 
+.text_cell.unrendered .text_cell_render {
+  display: none;
+}
+.text_cell .dropzone .input_area {
+  border: 2px dashed #bababa;
+  margin: -1px;
+}
+.cm-header-1,
+.cm-header-2,
+.cm-header-3,
+.cm-header-4,
+.cm-header-5,
+.cm-header-6 {
+  font-weight: bold;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.cm-header-1 {
+  font-size: 185.7%;
+}
+.cm-header-2 {
+  font-size: 157.1%;
+}
+.cm-header-3 {
+  font-size: 128.6%;
+}
+.cm-header-4 {
+  font-size: 110%;
+}
+.cm-header-5 {
+  font-size: 100%;
+  font-style: italic;
+}
+.cm-header-6 {
+  font-size: 100%;
+  font-style: italic;
+}
+</style>
+<style type="text/css">.highlight .hll { background-color: #ffffcc }
+.highlight  { background: #f8f8f8; }
+.highlight .c { color: #408080; font-style: italic } /* Comment */
+.highlight .err { border: 1px solid #FF0000 } /* Error */
+.highlight .k { color: #008000; font-weight: bold } /* Keyword */
+.highlight .o { color: #666666 } /* Operator */
+.highlight .ch { color: #408080; font-style: italic } /* Comment.Hashbang */
+.highlight .cm { color: #408080; font-style: italic } /* Comment.Multiline */
+.highlight .cp { color: #BC7A00 } /* Comment.Preproc */
+.highlight .cpf { color: #408080; font-style: italic } /* Comment.PreprocFile */
+.highlight .c1 { color: #408080; font-style: italic } /* Comment.Single */
+.highlight .cs { color: #408080; font-style: italic } /* Comment.Special */
+.highlight .gd { color: #A00000 } /* Generic.Deleted */
+.highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .gr { color: #FF0000 } /* Generic.Error */
+.highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.highlight .gi { color: #00A000 } /* Generic.Inserted */
+.highlight .go { color: #888888 } /* Generic.Output */
+.highlight .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+.highlight .gs { font-weight: bold } /* Generic.Strong */
+.highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.highlight .gt { color: #0044DD } /* Generic.Traceback */
+.highlight .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+.highlight .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+.highlight .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+.highlight .kp { color: #008000 } /* Keyword.Pseudo */
+.highlight .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+.highlight .kt { color: #B00040 } /* Keyword.Type */
+.highlight .m { color: #666666 } /* Literal.Number */
+.highlight .s { color: #BA2121 } /* Literal.String */
+.highlight .na { color: #7D9029 } /* Name.Attribute */
+.highlight .nb { color: #008000 } /* Name.Builtin */
+.highlight .nc { color: #0000FF; font-weight: bold } /* Name.Class */
+.highlight .no { color: #880000 } /* Name.Constant */
+.highlight .nd { color: #AA22FF } /* Name.Decorator */
+.highlight .ni { color: #999999; font-weight: bold } /* Name.Entity */
+.highlight .ne { color: #D2413A; font-weight: bold } /* Name.Exception */
+.highlight .nf { color: #0000FF } /* Name.Function */
+.highlight .nl { color: #A0A000 } /* Name.Label */
+.highlight .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+.highlight .nt { color: #008000; font-weight: bold } /* Name.Tag */
+.highlight .nv { color: #19177C } /* Name.Variable */
+.highlight .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+.highlight .w { color: #bbbbbb } /* Text.Whitespace */
+.highlight .mb { color: #666666 } /* Literal.Number.Bin */
+.highlight .mf { color: #666666 } /* Literal.Number.Float */
+.highlight .mh { color: #666666 } /* Literal.Number.Hex */
+.highlight .mi { color: #666666 } /* Literal.Number.Integer */
+.highlight .mo { color: #666666 } /* Literal.Number.Oct */
+.highlight .sa { color: #BA2121 } /* Literal.String.Affix */
+.highlight .sb { color: #BA2121 } /* Literal.String.Backtick */
+.highlight .sc { color: #BA2121 } /* Literal.String.Char */
+.highlight .dl { color: #BA2121 } /* Literal.String.Delimiter */
+.highlight .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+.highlight .s2 { color: #BA2121 } /* Literal.String.Double */
+.highlight .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
+.highlight .sh { color: #BA2121 } /* Literal.String.Heredoc */
+.highlight .si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
+.highlight .sx { color: #008000 } /* Literal.String.Other */
+.highlight .sr { color: #BB6688 } /* Literal.String.Regex */
+.highlight .s1 { color: #BA2121 } /* Literal.String.Single */
+.highlight .ss { color: #19177C } /* Literal.String.Symbol */
+.highlight .bp { color: #008000 } /* Name.Builtin.Pseudo */
+.highlight .fm { color: #0000FF } /* Name.Function.Magic */
+.highlight .vc { color: #19177C } /* Name.Variable.Class */
+.highlight .vg { color: #19177C } /* Name.Variable.Global */
+.highlight .vi { color: #19177C } /* Name.Variable.Instance */
+.highlight .vm { color: #19177C } /* Name.Variable.Magic */
+.highlight .il { color: #666666 } /* Literal.Number.Integer.Long */</style><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Introduction">Introduction<a class="anchor-link" href="#Introduction">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">max_columns</span> <span class="o">=</span> <span class="mi">99</span>
+<span class="n">chunk_iter</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;crunchbase-investments.csv&#39;</span><span class="p">,</span> <span class="n">chunksize</span><span class="o">=</span><span class="mi">5000</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;ISO-8859-1&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Compute each column's missing value counts</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mv_list</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">chunk</span> <span class="ow">in</span> <span class="n">chunk_iter</span><span class="p">:</span>
+    <span class="n">mv_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">chunk</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+    
+<span class="n">combined_mv_vc</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">mv_list</span><span class="p">)</span>
+<span class="n">unique_combined_mv_vc</span> <span class="o">=</span> <span class="n">combined_mv_vc</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">combined_mv_vc</span><span class="o">.</span><span class="n">index</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">unique_combined_mv_vc</span><span class="o">.</span><span class="n">sort_values</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[32]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>company_country_code          1
+company_name                  1
+company_permalink             1
+company_region                1
+investor_region               2
+investor_permalink            2
+investor_name                 2
+funded_quarter                3
+funded_at                     3
+funded_month                  3
+funded_year                   3
+funding_round_type            3
+company_state_code          492
+company_city                533
+company_category_code       643
+raised_amount_usd          3599
+investor_country_code     12001
+investor_city             12480
+investor_state_code       16809
+investor_category_code    50427
+dtype: int64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Total memory footprint for each column</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">chunk_iter</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;crunchbase-investments.csv&#39;</span><span class="p">,</span> <span class="n">chunksize</span><span class="o">=</span><span class="mi">5000</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;ISO-8859-1&#39;</span><span class="p">)</span>
+<span class="n">counter</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">series_memory_fp</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">chunk</span> <span class="ow">in</span> <span class="n">chunk_iter</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">counter</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">series_memory_fp</span> <span class="o">=</span> <span class="n">chunk</span><span class="o">.</span><span class="n">memory_usage</span><span class="p">(</span><span class="n">deep</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">series_memory_fp</span> <span class="o">+=</span> <span class="n">chunk</span><span class="o">.</span><span class="n">memory_usage</span><span class="p">(</span><span class="n">deep</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">counter</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="c1"># Drop memory footprint calculation for the index.</span>
+<span class="n">series_memory_fp</span> <span class="o">=</span> <span class="n">series_memory_fp</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;Index&#39;</span><span class="p">)</span>
+<span class="n">series_memory_fp</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[27]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>company_permalink         4057788
+company_name              3591326
+company_category_code     3421104
+company_country_code      3172176
+company_state_code        3106051
+company_region            3411585
+company_city              3505926
+investor_permalink        4980548
+investor_name             3915666
+investor_category_code     622424
+investor_country_code     2647292
+investor_state_code       2476607
+investor_region           3396281
+investor_city             2885083
+funding_round_type        3410707
+funded_at                 3542185
+funded_month              3383584
+funded_quarter            3383584
+funded_year                422960
+raised_amount_usd          422960
+dtype: int64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Total memory footprint of the data (in megabytes)</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">series_memory_fp</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1024</span> <span class="o">*</span> <span class="mi">1024</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[30]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>56.987607002258301</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">unique_combined_mv_vc</span><span class="o">.</span><span class="n">sort_values</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[35]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>company_country_code          1
+company_name                  1
+company_permalink             1
+company_region                1
+investor_region               2
+investor_permalink            2
+investor_name                 2
+funded_quarter                3
+funded_at                     3
+funded_month                  3
+funded_year                   3
+funding_round_type            3
+company_state_code          492
+company_city                533
+company_category_code       643
+raised_amount_usd          3599
+investor_country_code     12001
+investor_city             12480
+investor_state_code       16809
+investor_category_code    50427
+dtype: int64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[56]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Drop columns representing URL&#39;s or containing way too many missing values (&gt;90% missing)</span>
+<span class="n">drop_cols</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;investor_permalink&#39;</span><span class="p">,</span> <span class="s1">&#39;company_permalink&#39;</span><span class="p">,</span> <span class="s1">&#39;investor_category_code&#39;</span><span class="p">]</span>
+<span class="n">keep_cols</span> <span class="o">=</span> <span class="n">chunk</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">drop_cols</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[57]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">keep_cols</span><span class="o">.</span><span class="n">tolist</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[57]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>Index([&#39;company_name&#39;, &#39;company_category_code&#39;, &#39;company_country_code&#39;,
+       &#39;company_state_code&#39;, &#39;company_region&#39;, &#39;company_city&#39;, &#39;investor_name&#39;,
+       &#39;investor_country_code&#39;, &#39;investor_state_code&#39;, &#39;investor_region&#39;,
+       &#39;investor_city&#39;, &#39;funding_round_type&#39;, &#39;funded_at&#39;, &#39;funded_month&#39;,
+       &#39;funded_quarter&#39;, &#39;funded_year&#39;, &#39;raised_amount_usd&#39;],
+      dtype=&#39;object&#39;)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Selecting-Data-Types">Selecting Data Types<a class="anchor-link" href="#Selecting-Data-Types">&#182;</a></h2><p>Let's first determine which columns shift types across chunks. Note that we only lay the groundwork for this step.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[76]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Key: Column name, Value: List of types</span>
+<span class="n">col_types</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">chunk_iter</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;crunchbase-investments.csv&#39;</span><span class="p">,</span> <span class="n">chunksize</span><span class="o">=</span><span class="mi">5000</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;ISO-8859-1&#39;</span><span class="p">,</span> <span class="n">usecols</span><span class="o">=</span><span class="n">keep_cols</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">chunk</span> <span class="ow">in</span> <span class="n">chunk_iter</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">chunk</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">col</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">col_types</span><span class="p">:</span>
+            <span class="n">col_types</span><span class="p">[</span><span class="n">col</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">chunk</span><span class="o">.</span><span class="n">dtypes</span><span class="p">[</span><span class="n">col</span><span class="p">])]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">col_types</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">chunk</span><span class="o">.</span><span class="n">dtypes</span><span class="p">[</span><span class="n">col</span><span class="p">]))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[84]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">uniq_col_types</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="n">col_types</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="n">uniq_col_types</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">col_types</span><span class="p">[</span><span class="n">k</span><span class="p">])</span>
+<span class="n">uniq_col_types</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[84]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>{&#39;company_category_code&#39;: {&#39;object&#39;},
+ &#39;company_city&#39;: {&#39;object&#39;},
+ &#39;company_country_code&#39;: {&#39;object&#39;},
+ &#39;company_name&#39;: {&#39;object&#39;},
+ &#39;company_region&#39;: {&#39;object&#39;},
+ &#39;company_state_code&#39;: {&#39;object&#39;},
+ &#39;funded_at&#39;: {&#39;object&#39;},
+ &#39;funded_month&#39;: {&#39;object&#39;},
+ &#39;funded_quarter&#39;: {&#39;object&#39;},
+ &#39;funded_year&#39;: {&#39;float64&#39;, &#39;int64&#39;},
+ &#39;funding_round_type&#39;: {&#39;object&#39;},
+ &#39;investor_city&#39;: {&#39;float64&#39;, &#39;object&#39;},
+ &#39;investor_country_code&#39;: {&#39;float64&#39;, &#39;object&#39;},
+ &#39;investor_name&#39;: {&#39;object&#39;},
+ &#39;investor_region&#39;: {&#39;object&#39;},
+ &#39;investor_state_code&#39;: {&#39;float64&#39;, &#39;object&#39;},
+ &#39;raised_amount_usd&#39;: {&#39;float64&#39;}}</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[86]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">chunk</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[86]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>company_name</th>
+      <th>company_category_code</th>
+      <th>company_country_code</th>
+      <th>company_state_code</th>
+      <th>company_region</th>
+      <th>company_city</th>
+      <th>investor_name</th>
+      <th>investor_country_code</th>
+      <th>investor_state_code</th>
+      <th>investor_region</th>
+      <th>investor_city</th>
+      <th>funding_round_type</th>
+      <th>funded_at</th>
+      <th>funded_month</th>
+      <th>funded_quarter</th>
+      <th>funded_year</th>
+      <th>raised_amount_usd</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>50000</th>
+      <td>NuORDER</td>
+      <td>fashion</td>
+      <td>USA</td>
+      <td>CA</td>
+      <td>Los Angeles</td>
+      <td>West Hollywood</td>
+      <td>Mortimer Singer</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>unknown</td>
+      <td>NaN</td>
+      <td>series-a</td>
+      <td>2012-10-01</td>
+      <td>2012-10</td>
+      <td>2012-Q4</td>
+      <td>2012</td>
+      <td>3060000.0</td>
+    </tr>
+    <tr>
+      <th>50001</th>
+      <td>ChaCha</td>
+      <td>advertising</td>
+      <td>USA</td>
+      <td>IN</td>
+      <td>Indianapolis</td>
+      <td>Carmel</td>
+      <td>Morton Meyerson</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>unknown</td>
+      <td>NaN</td>
+      <td>series-b</td>
+      <td>2007-10-01</td>
+      <td>2007-10</td>
+      <td>2007-Q4</td>
+      <td>2007</td>
+      <td>12000000.0</td>
+    </tr>
+    <tr>
+      <th>50002</th>
+      <td>Binfire</td>
+      <td>software</td>
+      <td>USA</td>
+      <td>FL</td>
+      <td>Bocat Raton</td>
+      <td>Bocat Raton</td>
+      <td>Moshe Ariel</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>unknown</td>
+      <td>NaN</td>
+      <td>angel</td>
+      <td>2008-04-18</td>
+      <td>2008-04</td>
+      <td>2008-Q2</td>
+      <td>2008</td>
+      <td>500000.0</td>
+    </tr>
+    <tr>
+      <th>50003</th>
+      <td>Binfire</td>
+      <td>software</td>
+      <td>USA</td>
+      <td>FL</td>
+      <td>Bocat Raton</td>
+      <td>Bocat Raton</td>
+      <td>Moshe Ariel</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>unknown</td>
+      <td>NaN</td>
+      <td>angel</td>
+      <td>2010-01-01</td>
+      <td>2010-01</td>
+      <td>2010-Q1</td>
+      <td>2010</td>
+      <td>750000.0</td>
+    </tr>
+    <tr>
+      <th>50004</th>
+      <td>Unified Color</td>
+      <td>software</td>
+      <td>USA</td>
+      <td>CA</td>
+      <td>SF Bay</td>
+      <td>South San Frnacisco</td>
+      <td>Mr. Andrew Oung</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>unknown</td>
+      <td>NaN</td>
+      <td>angel</td>
+      <td>2010-01-01</td>
+      <td>2010-01</td>
+      <td>2010-Q1</td>
+      <td>2010</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>50005</th>
+      <td>HItviews</td>
+      <td>advertising</td>
+      <td>USA</td>
+      <td>NY</td>
+      <td>New York</td>
+      <td>New York City</td>
+      <td>multiple parties</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>unknown</td>
+      <td>NaN</td>
+      <td>angel</td>
+      <td>2007-11-29</td>
+      <td>2007-11</td>
+      <td>2007-Q4</td>
+      <td>2007</td>
+      <td>485000.0</td>
+    </tr>
+    <tr>
+      <th>50006</th>
+      <td>LockerDome</td>
+      <td>social</td>
+      <td>USA</td>
+      <td>MO</td>
+      <td>Saint Louis</td>
+      <td>St. Louis</td>
+      <td>multiple parties</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>unknown</td>
+      <td>NaN</td>
+      <td>angel</td>
+      <td>2012-04-17</td>
+      <td>2012-04</td>
+      <td>2012-Q2</td>
+      <td>2012</td>
+      <td>300000.0</td>
+    </tr>
+    <tr>
+      <th>50007</th>
+      <td>ThirdLove</td>
+      <td>ecommerce</td>
+      <td>USA</td>
+      <td>CA</td>
+      <td>SF Bay</td>
+      <td>San Francisco</td>
+      <td>Munjal Shah</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>unknown</td>
+      <td>NaN</td>
+      <td>series-a</td>
+      <td>2012-12-01</td>
+      <td>2012-12</td>
+      <td>2012-Q4</td>
+      <td>2012</td>
+      <td>5600000.0</td>
+    </tr>
+    <tr>
+      <th>50008</th>
+      <td>Hakia</td>
+      <td>search</td>
+      <td>USA</td>
+      <td>NaN</td>
+      <td>TBD</td>
+      <td>NaN</td>
+      <td>Murat Vargi</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>unknown</td>
+      <td>NaN</td>
+      <td>series-a</td>
+      <td>2006-11-01</td>
+      <td>2006-11</td>
+      <td>2006-Q4</td>
+      <td>2006</td>
+      <td>16000000.0</td>
+    </tr>
+    <tr>
+      <th>50009</th>
+      <td>bookacoach</td>
+      <td>sports</td>
+      <td>USA</td>
+      <td>IN</td>
+      <td>Indianapolis</td>
+      <td>Indianapolis</td>
+      <td>Myles Grote</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>unknown</td>
+      <td>NaN</td>
+      <td>angel</td>
+      <td>2012-11-01</td>
+      <td>2012-11</td>
+      <td>2012-Q4</td>
+      <td>2012</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>50010</th>
+      <td>LocalCircles</td>
+      <td>social</td>
+      <td>USA</td>
+      <td>CA</td>
+      <td>SF Bay</td>
+      <td>Santa Clara</td>
+      <td>Nadir Godrej</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>unknown</td>
+      <td>NaN</td>
+      <td>angel</td>
+      <td>2012-09-01</td>
+      <td>2012-09</td>
+      <td>2012-Q3</td>
+      <td>2012</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>50011</th>
+      <td>Graphdive</td>
+      <td>analytics</td>
+      <td>USA</td>
+      <td>CA</td>
+      <td>SF Bay</td>
+      <td>Menlo Park</td>
+      <td>Naguib Sawiris</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>unknown</td>
+      <td>NaN</td>
+      <td>angel</td>
+      <td>2012-10-04</td>
+      <td>2012-10</td>
+      <td>2012-Q4</td>
+      <td>2012</td>
+      <td>1000000.0</td>
+    </tr>
+    <tr>
+      <th>50012</th>
+      <td>Ribbon</td>
+      <td>ecommerce</td>
+      <td>USA</td>
+      <td>CA</td>
+      <td>SF Bay</td>
+      <td>San Francisco</td>
+      <td>Naguib Sawiris</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>unknown</td>
+      <td>NaN</td>
+      <td>series-a</td>
+      <td>2013-02-05</td>
+      <td>2013-02</td>
+      <td>2013-Q1</td>
+      <td>2013</td>
+      <td>1630000.0</td>
+    </tr>
+    <tr>
+      <th>50013</th>
+      <td>Dokkankom.com</td>
+      <td>ecommerce</td>
+      <td>USA</td>
+      <td>NY</td>
+      <td>New York</td>
+      <td>new york</td>
+      <td>Namek Zu'bi</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>unknown</td>
+      <td>NaN</td>
+      <td>angel</td>
+      <td>2011-10-10</td>
+      <td>2011-10</td>
+      <td>2011-Q4</td>
+      <td>2011</td>
+      <td>30000.0</td>
+    </tr>
+    <tr>
+      <th>50014</th>
+      <td>Lookery</td>
+      <td>web</td>
+      <td>USA</td>
+      <td>CA</td>
+      <td>SF Bay</td>
+      <td>San Francisco</td>
+      <td>Nana Shin</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>unknown</td>
+      <td>NaN</td>
+      <td>angel</td>
+      <td>2008-02-07</td>
+      <td>2008-02</td>
+      <td>2008-Q1</td>
+      <td>2008</td>
+      <td>900000.0</td>
+    </tr>
+    <tr>
+      <th>50015</th>
+      <td>TrustDegrees</td>
+      <td>web</td>
+      <td>USA</td>
+      <td>NY</td>
+      <td>Kenmore</td>
+      <td>Kenmore</td>
+      <td>Nancy Barrett</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>unknown</td>
+      <td>NaN</td>
+      <td>angel</td>
+      <td>2011-06-09</td>
+      <td>2011-06</td>
+      <td>2011-Q2</td>
+      <td>2011</td>
+      <td>8000.0</td>
+    </tr>
+    <tr>
+      <th>50016</th>
+      <td>Altavoz</td>
+      <td>games_video</td>
+      <td>USA</td>
+      <td>DC</td>
+      <td>Washington DC</td>
+      <td>Washington</td>
+      <td>Nancy Jacobsen</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>unknown</td>
+      <td>NaN</td>
+      <td>angel</td>
+      <td>2012-09-11</td>
+      <td>2012-09</td>
+      <td>2012-Q3</td>
+      <td>2012</td>
+      <td>150000.0</td>
+    </tr>
+    <tr>
+      <th>50017</th>
+      <td>EdSurge</td>
+      <td>education</td>
+      <td>USA</td>
+      <td>CA</td>
+      <td>SF Bay</td>
+      <td>Burlingame</td>
+      <td>Nancy Peretsman</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>unknown</td>
+      <td>NaN</td>
+      <td>angel</td>
+      <td>2012-08-29</td>
+      <td>2012-08</td>
+      <td>2012-Q3</td>
+      <td>2012</td>
+      <td>400000.0</td>
+    </tr>
+    <tr>
+      <th>50018</th>
+      <td>FullContact</td>
+      <td>enterprise</td>
+      <td>USA</td>
+      <td>CO</td>
+      <td>Denver</td>
+      <td>Denver</td>
+      <td>Nancy Pierce</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>unknown</td>
+      <td>NaN</td>
+      <td>series-b</td>
+      <td>2012-07-09</td>
+      <td>2012-07</td>
+      <td>2012-Q3</td>
+      <td>2012</td>
+      <td>7000000.0</td>
+    </tr>
+    <tr>
+      <th>50019</th>
+      <td>Rapt Media</td>
+      <td>enterprise</td>
+      <td>USA</td>
+      <td>CO</td>
+      <td>Denver</td>
+      <td>Boulder</td>
+      <td>Nancy Pierce</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>unknown</td>
+      <td>NaN</td>
+      <td>series-a</td>
+      <td>2013-01-23</td>
+      <td>2013-01</td>
+      <td>2013-Q1</td>
+      <td>2013</td>
+      <td>2288803.0</td>
+    </tr>
+    <tr>
+      <th>50020</th>
+      <td>Humanoid</td>
+      <td>software</td>
+      <td>USA</td>
+      <td>CA</td>
+      <td>SF Bay</td>
+      <td>San Francisco</td>
+      <td>Nat Friedman</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>unknown</td>
+      <td>NaN</td>
+      <td>angel</td>
+      <td>2010-12-01</td>
+      <td>2010-12</td>
+      <td>2010-Q4</td>
+      <td>2010</td>
+      <td>1100000.0</td>
+    </tr>
+    <tr>
+      <th>50021</th>
+      <td>Runscope</td>
+      <td>web</td>
+      <td>USA</td>
+      <td>CA</td>
+      <td>SF Bay</td>
+      <td>San Francisco</td>
+      <td>Nat Friedman</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>unknown</td>
+      <td>NaN</td>
+      <td>angel</td>
+      <td>2013-05-22</td>
+      <td>2013-05</td>
+      <td>2013-Q2</td>
+      <td>2013</td>
+      <td>1100000.0</td>
+    </tr>
+    <tr>
+      <th>50022</th>
+      <td>Adzerk</td>
+      <td>advertising</td>
+      <td>USA</td>
+      <td>NC</td>
+      <td>Raleigh-Durham</td>
+      <td>Durham</td>
+      <td>Nat Turner</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>unknown</td>
+      <td>NaN</td>
+      <td>angel</td>
+      <td>2011-07-12</td>
+      <td>2011-07</td>
+      <td>2011-Q3</td>
+      <td>2011</td>
+      <td>650000.0</td>
+    </tr>
+    <tr>
+      <th>50023</th>
+      <td>Adaptly</td>
+      <td>advertising</td>
+      <td>USA</td>
+      <td>NY</td>
+      <td>New York</td>
+      <td>New York</td>
+      <td>Nat Turner</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>unknown</td>
+      <td>NaN</td>
+      <td>series-a</td>
+      <td>2011-04-18</td>
+      <td>2011-04</td>
+      <td>2011-Q2</td>
+      <td>2011</td>
+      <td>2000000.0</td>
+    </tr>
+    <tr>
+      <th>50024</th>
+      <td>Lore</td>
+      <td>education</td>
+      <td>USA</td>
+      <td>NY</td>
+      <td>New York</td>
+      <td>New York</td>
+      <td>Nat Turner</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>unknown</td>
+      <td>NaN</td>
+      <td>angel</td>
+      <td>2011-06-27</td>
+      <td>2011-06</td>
+      <td>2011-Q2</td>
+      <td>2011</td>
+      <td>1000000.0</td>
+    </tr>
+    <tr>
+      <th>50025</th>
+      <td>Tasted Menu</td>
+      <td>hospitality</td>
+      <td>USA</td>
+      <td>MA</td>
+      <td>Boston</td>
+      <td>Boston</td>
+      <td>Nat Turner</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>unknown</td>
+      <td>NaN</td>
+      <td>angel</td>
+      <td>2011-05-01</td>
+      <td>2011-05</td>
+      <td>2011-Q2</td>
+      <td>2011</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>50026</th>
+      <td>Lua Technologies</td>
+      <td>mobile</td>
+      <td>USA</td>
+      <td>NY</td>
+      <td>New York</td>
+      <td>New York</td>
+      <td>Nat Turner</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>unknown</td>
+      <td>NaN</td>
+      <td>series-a</td>
+      <td>2012-08-01</td>
+      <td>2012-08</td>
+      <td>2012-Q3</td>
+      <td>2012</td>
+      <td>2500000.0</td>
+    </tr>
+    <tr>
+      <th>50027</th>
+      <td>Blue Apron</td>
+      <td>hospitality</td>
+      <td>USA</td>
+      <td>NY</td>
+      <td>New York</td>
+      <td>Brooklyn</td>
+      <td>Nat Turner</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>unknown</td>
+      <td>NaN</td>
+      <td>series-a</td>
+      <td>2013-02-19</td>
+      <td>2013-02</td>
+      <td>2013-Q1</td>
+      <td>2013</td>
+      <td>3000000.0</td>
+    </tr>
+    <tr>
+      <th>50028</th>
+      <td>ChatID</td>
+      <td>mobile</td>
+      <td>USA</td>
+      <td>NY</td>
+      <td>New York</td>
+      <td>New York</td>
+      <td>Nat Turner</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>unknown</td>
+      <td>NaN</td>
+      <td>angel</td>
+      <td>2012-01-01</td>
+      <td>2012-01</td>
+      <td>2012-Q1</td>
+      <td>2012</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>50029</th>
+      <td>Breakthrough Behavioral</td>
+      <td>health</td>
+      <td>USA</td>
+      <td>CA</td>
+      <td>SF Bay</td>
+      <td>Redwood City</td>
+      <td>Nat Turner</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>unknown</td>
+      <td>NaN</td>
+      <td>angel</td>
+      <td>2012-08-13</td>
+      <td>2012-08</td>
+      <td>2012-Q3</td>
+      <td>2012</td>
+      <td>900000.0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>52840</th>
+      <td>Meddik</td>
+      <td>health</td>
+      <td>USA</td>
+      <td>NY</td>
+      <td>New York</td>
+      <td>New York</td>
+      <td>Zach Weinberg</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>unknown</td>
+      <td>NaN</td>
+      <td>angel</td>
+      <td>2012-05-24</td>
+      <td>2012-05</td>
+      <td>2012-Q2</td>
+      <td>2012</td>
+      <td>750000.0</td>
+    </tr>
+    <tr>
+      <th>52841</th>
+      <td>Blue Apron</td>
+      <td>hospitality</td>
+      <td>USA</td>
+      <td>NY</td>
+      <td>New York</td>
+      <td>Brooklyn</td>
+      <td>Zach Weinberg</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>unknown</td>
+      <td>NaN</td>
+      <td>series-a</td>
+      <td>2013-02-19</td>
+      <td>2013-02</td>
+      <td>2013-Q1</td>
+      <td>2013</td>
+      <td>3000000.0</td>
+    </tr>
+    <tr>
+      <th>52842</th>
+      <td>ChatID</td>
+      <td>mobile</td>
+      <td>USA</td>
+      <td>NY</td>
+      <td>New York</td>
+      <td>New York</td>
+      <td>Zach Weinberg</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>unknown</td>
+      <td>NaN</td>
+      <td>angel</td>
+      <td>2012-01-01</td>
+      <td>2012-01</td>
+      <td>2012-Q1</td>
+      <td>2012</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>52843</th>
+      <td>Breakthrough Behavioral</td>
+      <td>health</td>
+      <td>USA</td>
+      <td>CA</td>
+      <td>SF Bay</td>
+      <td>Redwood City</td>
+      <td>Zach Weinberg</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>unknown</td>
+      <td>NaN</td>
+      <td>angel</td>
+      <td>2012-08-13</td>
+      <td>2012-08</td>
+      <td>2012-Q3</td>
+      <td>2012</td>
+      <td>900000.0</td>
+    </tr>
+    <tr>
+      <th>52844</th>
+      <td>Plaid</td>
+      <td>software</td>
+      <td>USA</td>
+      <td>CA</td>
+      <td>SF Bay</td>
+      <td>San Francisco</td>
+      <td>Zach Weinberg</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>unknown</td>
+      <td>NaN</td>
+      <td>series-a</td>
+      <td>2013-09-19</td>
+      <td>2013-09</td>
+      <td>2013-Q3</td>
+      <td>2013</td>
+      <td>2800000.0</td>
+    </tr>
+    <tr>
+      <th>52845</th>
+      <td>PokitDok</td>
+      <td>mobile</td>
+      <td>USA</td>
+      <td>CA</td>
+      <td>SF Bay</td>
+      <td>Menlo Park</td>
+      <td>Zach Zeitlin</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>unknown</td>
+      <td>NaN</td>
+      <td>angel</td>
+      <td>2012-07-12</td>
+      <td>2012-07</td>
+      <td>2012-Q3</td>
+      <td>2012</td>
+      <td>1300000.0</td>
+    </tr>
+    <tr>
+      <th>52846</th>
+      <td>Fitocracy</td>
+      <td>web</td>
+      <td>USA</td>
+      <td>NY</td>
+      <td>New York</td>
+      <td>New York</td>
+      <td>Zachary Aarons</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>unknown</td>
+      <td>NaN</td>
+      <td>angel</td>
+      <td>2011-09-01</td>
+      <td>2011-09</td>
+      <td>2011-Q3</td>
+      <td>2011</td>
+      <td>250000.0</td>
+    </tr>
+    <tr>
+      <th>52847</th>
+      <td>Square</td>
+      <td>mobile</td>
+      <td>USA</td>
+      <td>CA</td>
+      <td>SF Bay</td>
+      <td>San Francisco</td>
+      <td>Zachary Bogue</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>unknown</td>
+      <td>NaN</td>
+      <td>series-a</td>
+      <td>2009-11-01</td>
+      <td>2009-11</td>
+      <td>2009-Q4</td>
+      <td>2009</td>
+      <td>10000000.0</td>
+    </tr>
+    <tr>
+      <th>52848</th>
+      <td>MixRank</td>
+      <td>advertising</td>
+      <td>USA</td>
+      <td>CA</td>
+      <td>SF Bay</td>
+      <td>San Francisco</td>
+      <td>Zachary Bogue</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>unknown</td>
+      <td>NaN</td>
+      <td>series-a</td>
+      <td>2011-11-18</td>
+      <td>2011-11</td>
+      <td>2011-Q4</td>
+      <td>2011</td>
+      <td>1500000.0</td>
+    </tr>
+    <tr>
+      <th>52849</th>
+      <td>Socialcam</td>
+      <td>mobile</td>
+      <td>USA</td>
+      <td>CA</td>
+      <td>Santa Clara County</td>
+      <td>Santa Clara County</td>
+      <td>Zachary Bogue</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>unknown</td>
+      <td>NaN</td>
+      <td>angel</td>
+      <td>2012-04-30</td>
+      <td>2012-04</td>
+      <td>2012-Q2</td>
+      <td>2012</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>52850</th>
+      <td>Nuzzel</td>
+      <td>news</td>
+      <td>USA</td>
+      <td>CA</td>
+      <td>SF Bay</td>
+      <td>San Francisco</td>
+      <td>Zachary Bogue</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>unknown</td>
+      <td>NaN</td>
+      <td>venture</td>
+      <td>2012-11-15</td>
+      <td>2012-11</td>
+      <td>2012-Q4</td>
+      <td>2012</td>
+      <td>1700000.0</td>
+    </tr>
+    <tr>
+      <th>52851</th>
+      <td>ThirdLove</td>
+      <td>ecommerce</td>
+      <td>USA</td>
+      <td>CA</td>
+      <td>SF Bay</td>
+      <td>San Francisco</td>
+      <td>Zachary Bogue</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>unknown</td>
+      <td>NaN</td>
+      <td>series-a</td>
+      <td>2012-12-01</td>
+      <td>2012-12</td>
+      <td>2012-Q4</td>
+      <td>2012</td>
+      <td>5600000.0</td>
+    </tr>
+    <tr>
+      <th>52852</th>
+      <td>MXD3D</td>
+      <td>web</td>
+      <td>USA</td>
+      <td>CA</td>
+      <td>SF Bay</td>
+      <td>San Francisco</td>
+      <td>Zaid Ayoub</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>unknown</td>
+      <td>NaN</td>
+      <td>angel</td>
+      <td>2012-01-01</td>
+      <td>2012-01</td>
+      <td>2012-Q1</td>
+      <td>2012</td>
+      <td>300000.0</td>
+    </tr>
+    <tr>
+      <th>52853</th>
+      <td>MXD3D</td>
+      <td>web</td>
+      <td>USA</td>
+      <td>CA</td>
+      <td>SF Bay</td>
+      <td>San Francisco</td>
+      <td>Zaid Ayoub</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>unknown</td>
+      <td>NaN</td>
+      <td>angel</td>
+      <td>2011-01-01</td>
+      <td>2011-01</td>
+      <td>2011-Q1</td>
+      <td>2011</td>
+      <td>300000.0</td>
+    </tr>
+    <tr>
+      <th>52854</th>
+      <td>Verious</td>
+      <td>mobile</td>
+      <td>USA</td>
+      <td>CA</td>
+      <td>SF Bay</td>
+      <td>San Carlos</td>
+      <td>Zain Khan</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>unknown</td>
+      <td>NaN</td>
+      <td>angel</td>
+      <td>2011-05-30</td>
+      <td>2011-05</td>
+      <td>2011-Q2</td>
+      <td>2011</td>
+      <td>800000.0</td>
+    </tr>
+    <tr>
+      <th>52855</th>
+      <td>Identified</td>
+      <td>analytics</td>
+      <td>USA</td>
+      <td>CA</td>
+      <td>SF Bay</td>
+      <td>San Francisco</td>
+      <td>Zao Yang</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>unknown</td>
+      <td>NaN</td>
+      <td>series-b</td>
+      <td>2012-06-05</td>
+      <td>2012-06</td>
+      <td>2012-Q2</td>
+      <td>2012</td>
+      <td>21000000.0</td>
+    </tr>
+    <tr>
+      <th>52856</th>
+      <td>HaulerDeals</td>
+      <td>fashion</td>
+      <td>USA</td>
+      <td>CA</td>
+      <td>Los Angeles</td>
+      <td>Los Angeles</td>
+      <td>Zaw Thet</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>unknown</td>
+      <td>NaN</td>
+      <td>angel</td>
+      <td>2012-10-31</td>
+      <td>2012-10</td>
+      <td>2012-Q4</td>
+      <td>2012</td>
+      <td>1250000.0</td>
+    </tr>
+    <tr>
+      <th>52857</th>
+      <td>When You Wish</td>
+      <td>nonprofit</td>
+      <td>USA</td>
+      <td>CA</td>
+      <td>Los Angeles</td>
+      <td>Marina Del Rey</td>
+      <td>Zelda Marzec</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>unknown</td>
+      <td>NaN</td>
+      <td>series-a</td>
+      <td>2011-02-01</td>
+      <td>2011-02</td>
+      <td>2011-Q1</td>
+      <td>2011</td>
+      <td>1500000.0</td>
+    </tr>
+    <tr>
+      <th>52858</th>
+      <td>Farmeron</td>
+      <td>analytics</td>
+      <td>USA</td>
+      <td>CA</td>
+      <td>SF Bay</td>
+      <td>Mountain View</td>
+      <td>Zeljko Mataija</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>unknown</td>
+      <td>NaN</td>
+      <td>angel</td>
+      <td>2010-10-01</td>
+      <td>2010-10</td>
+      <td>2010-Q4</td>
+      <td>2010</td>
+      <td>15000.0</td>
+    </tr>
+    <tr>
+      <th>52859</th>
+      <td>Theraclone Sciences</td>
+      <td>biotech</td>
+      <td>USA</td>
+      <td>WA</td>
+      <td>Seattle</td>
+      <td>Seattle</td>
+      <td>Zenyaku Kogyo</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>unknown</td>
+      <td>NaN</td>
+      <td>series-b</td>
+      <td>2013-03-25</td>
+      <td>2013-03</td>
+      <td>2013-Q1</td>
+      <td>2013</td>
+      <td>8000000.0</td>
+    </tr>
+    <tr>
+      <th>52860</th>
+      <td>SimpleGeo</td>
+      <td>advertising</td>
+      <td>USA</td>
+      <td>CA</td>
+      <td>SF Bay</td>
+      <td>San Francisco</td>
+      <td>Ziv Navoth</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>unknown</td>
+      <td>NaN</td>
+      <td>other</td>
+      <td>2009-11-10</td>
+      <td>2009-11</td>
+      <td>2009-Q4</td>
+      <td>2009</td>
+      <td>195000.0</td>
+    </tr>
+    <tr>
+      <th>52861</th>
+      <td>Open Me</td>
+      <td>ecommerce</td>
+      <td>USA</td>
+      <td>CA</td>
+      <td>Los Angeles</td>
+      <td>Los Angeles</td>
+      <td>Ziver Birg</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>unknown</td>
+      <td>NaN</td>
+      <td>angel</td>
+      <td>2013-08-01</td>
+      <td>2013-08</td>
+      <td>2013-Q3</td>
+      <td>2013</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>52862</th>
+      <td>Comprehend Systems</td>
+      <td>enterprise</td>
+      <td>USA</td>
+      <td>CA</td>
+      <td>SF Bay</td>
+      <td>Palo Alto</td>
+      <td>Zod Nazem</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>unknown</td>
+      <td>NaN</td>
+      <td>series-a</td>
+      <td>2013-07-11</td>
+      <td>2013-07</td>
+      <td>2013-Q3</td>
+      <td>2013</td>
+      <td>8400000.0</td>
+    </tr>
+    <tr>
+      <th>52863</th>
+      <td>Payoneer</td>
+      <td>other</td>
+      <td>USA</td>
+      <td>NY</td>
+      <td>New York</td>
+      <td>New York</td>
+      <td>Zohar Gilon</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>unknown</td>
+      <td>NaN</td>
+      <td>series-a</td>
+      <td>2005-01-01</td>
+      <td>2005-01</td>
+      <td>2005-Q1</td>
+      <td>2005</td>
+      <td>2000000.0</td>
+    </tr>
+    <tr>
+      <th>52864</th>
+      <td>Outbrain</td>
+      <td>web</td>
+      <td>USA</td>
+      <td>NY</td>
+      <td>New York</td>
+      <td>New York City</td>
+      <td>Zohar Gilon</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>unknown</td>
+      <td>NaN</td>
+      <td>series-b</td>
+      <td>2009-02-11</td>
+      <td>2009-02</td>
+      <td>2009-Q1</td>
+      <td>2009</td>
+      <td>12000000.0</td>
+    </tr>
+    <tr>
+      <th>52865</th>
+      <td>Garantia Data</td>
+      <td>enterprise</td>
+      <td>USA</td>
+      <td>CA</td>
+      <td>SF Bay</td>
+      <td>Santa Clara</td>
+      <td>Zohar Gilon</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>unknown</td>
+      <td>NaN</td>
+      <td>series-a</td>
+      <td>2012-08-08</td>
+      <td>2012-08</td>
+      <td>2012-Q3</td>
+      <td>2012</td>
+      <td>3800000.0</td>
+    </tr>
+    <tr>
+      <th>52866</th>
+      <td>DudaMobile</td>
+      <td>mobile</td>
+      <td>USA</td>
+      <td>CA</td>
+      <td>SF Bay</td>
+      <td>Palo Alto</td>
+      <td>Zohar Gilon</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>unknown</td>
+      <td>NaN</td>
+      <td>series-c+</td>
+      <td>2013-04-08</td>
+      <td>2013-04</td>
+      <td>2013-Q2</td>
+      <td>2013</td>
+      <td>10300000.0</td>
+    </tr>
+    <tr>
+      <th>52867</th>
+      <td>SiteBrains</td>
+      <td>software</td>
+      <td>USA</td>
+      <td>CA</td>
+      <td>SF Bay</td>
+      <td>San Francisco</td>
+      <td>zohar israel</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>unknown</td>
+      <td>NaN</td>
+      <td>angel</td>
+      <td>2010-08-01</td>
+      <td>2010-08</td>
+      <td>2010-Q3</td>
+      <td>2010</td>
+      <td>350000.0</td>
+    </tr>
+    <tr>
+      <th>52868</th>
+      <td>Comprehend Systems</td>
+      <td>enterprise</td>
+      <td>USA</td>
+      <td>CA</td>
+      <td>SF Bay</td>
+      <td>Palo Alto</td>
+      <td>Zorba Lieberman</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>unknown</td>
+      <td>NaN</td>
+      <td>series-a</td>
+      <td>2013-07-11</td>
+      <td>2013-07</td>
+      <td>2013-Q3</td>
+      <td>2013</td>
+      <td>8400000.0</td>
+    </tr>
+    <tr>
+      <th>52869</th>
+      <td>SmartThings</td>
+      <td>mobile</td>
+      <td>USA</td>
+      <td>DC</td>
+      <td>unknown</td>
+      <td>Minneapolis</td>
+      <td>Zorik Gordon</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>unknown</td>
+      <td>NaN</td>
+      <td>series-a</td>
+      <td>2012-12-04</td>
+      <td>2012-12</td>
+      <td>2012-Q4</td>
+      <td>2012</td>
+      <td>3000000.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>2870 rows × 17 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Loading-Chunks-Into-SQLite">Loading Chunks Into SQLite<a class="anchor-link" href="#Loading-Chunks-Into-SQLite">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[94]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
+<span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;crunchbase.db&#39;</span><span class="p">)</span>
+<span class="n">chunk_iter</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;crunchbase-investments.csv&#39;</span><span class="p">,</span> <span class="n">chunksize</span><span class="o">=</span><span class="mi">5000</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;ISO-8859-1&#39;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">chunk</span> <span class="ow">in</span> <span class="n">chunk_iter</span><span class="p">:</span>
+    <span class="n">chunk</span><span class="o">.</span><span class="n">to_sql</span><span class="p">(</span><span class="s2">&quot;investments&quot;</span><span class="p">,</span> <span class="n">conn</span><span class="p">,</span> <span class="n">if_exists</span><span class="o">=</span><span class="s1">&#39;append&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+ 
+
+
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = '//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: 'center'," +
+        "    displayIndent: '0em'," +
+        "    showMathMenu: true," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['$','$'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        " linebreaks: { automatic: true, width: '95% container' }, " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'black ! important'} }" +
+        "    } " +
+        "}); ";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="./tag/python.html">python</a>
+    </p>
+  </div>
+
+
+
+
+
+</article>
+
+    <footer>
+<p>&copy;  </p>
+<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Ram Shanker G ",
+  "url" : ".",
+  "image": "",
+  "description": ""
+}
+</script>
+
+</body>
+</html>
